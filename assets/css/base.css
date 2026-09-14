@@ -1,0 +1,24 @@
+/* Reset, base typography, app shell, top bar. */
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{ background:var(--paper); font-family:'Rubik',sans-serif; color:var(--ink); min-height:100vh; }
+.he{ direction:rtl; unicode-bidi:isolate; }
+.serif{ font-family:'Frank Ruhl Libre', serif; }
+button{ font-family:inherit; }
+.app{ max-width:1000px; margin:0 auto; padding:0 18px 60px; }
+
+/* TOP BAR */
+.topbar{
+  background:var(--navy); color:#EDEAE0; padding:14px 20px; display:flex; align-items:center;
+  justify-content:space-between; position:sticky; top:0; z-index:10; border-bottom:3px solid var(--gold);
+}
+.topbar .brand{ font-weight:800; font-size:0.95rem; letter-spacing:0.3px; }
+.topbar .brand small{ display:block; font-weight:400; font-size:0.72rem; color:#B9C2C7; }
+.topbar .navbtns{ display:flex; gap:8px; }
+.navbtn{
+  background:rgba(255,255,255,0.08); color:#EDEAE0; border:1px solid rgba(255,255,255,0.18);
+  padding:7px 14px; border-radius:999px; font-size:0.82rem; font-weight:600; cursor:pointer;
+  transition:background .15s ease;
+}
+.navbtn:hover{ background:rgba(255,255,255,0.18); }
+
