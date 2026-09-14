@@ -1,9 +1,9 @@
 # THINK ABOUT IT! — Grade 6 English Learning Hub
 
 A practice site for Grade 6 English at Gevim School, built around the
-**THINK ABOUT IT!** Student's Book and Workbook.
+**THINK ABOUT IT!** Book and Workbook.
 
-Live site: <https://raayas.github.io/English-hub/>
+Live site: <https://ai-digitalprojects.github.io/English-hub/>
 
 ---
 
@@ -27,7 +27,7 @@ Inside a part the work is split in two, the same way the books are:
 
 | Lane | Comes from |
 |---|---|
-| 📘 **Learn** | the Student's Book — word lists, grammar rules, Read Better |
+| 📘 **Learn** | the Book — word lists, grammar rules, Read Better |
 | 📝 **Practice** | the Workbook — the exercises |
 
 Every activity shows the page it comes from (`SB p.20`, `WB p.17.3`) and the

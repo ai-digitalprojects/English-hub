@@ -564,7 +564,7 @@
         },
         "listening": {
           "active": false,
-          "reason": "The comparison task exists (Workbook p.13) but the audio it refers to (Student's Book p.18, exercises 1-2) was not in the scanned material.",
+          "reason": "The comparison task exists (Workbook p.13) but the audio it refers to (Book p.18, exercises 1-2) was not in the scanned material.",
           "task": {
             "type": "tick-two-columns",
             "source": {
@@ -3024,7 +3024,7 @@
       "skills": {
         "reading": {
           "active": false,
-          "reason": "The comprehension task exists (Workbook p.36) but the reading text itself (Student's Book p.45) was not in the scanned material.",
+          "reason": "The comprehension task exists (Workbook p.36) but the reading text itself (Book p.45) was not in the scanned material.",
           "task": {
             "type": "tick-two-columns",
             "source": {

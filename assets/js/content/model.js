@@ -102,7 +102,7 @@ function whyNotPlayable(part, activity){
   if(!PLAYABLE[activity.type]){
     const s = activity.source;
     if(s){
-      const book = s.book === 'students' ? "Student's Book" : 'Workbook';
+      const book = s.book === 'students' ? 'Book' : 'Workbook';
       const where = book + ' p.' + s.page + (s.exercise ? ', exercise ' + s.exercise : '');
       return 'The questions from ' + where + ' have not been added to the site yet.';
     }

@@ -64,8 +64,9 @@ function sourceRef(a){
     return '<span class="refs"><span class="ref wordlist">📚 Word list</span></span>';
   const one = s => 'p.' + s.page + (s.exercise ? '.' + s.exercise : '');
   const bits = [];
-  if(a.source) bits.push(`<span class="ref ${a.source.book}">${a.source.book === 'students' ? 'SB' : 'WB'} ${one(a.source)}</span>`);
-  if(a.linkedTo) bits.push(`<span class="ref ${a.linkedTo.book}">${a.linkedTo.book === 'students' ? 'SB' : 'WB'} ${one(a.linkedTo)}</span>`);
+  const name = b => b === 'students' ? 'Book' : 'Workbook';
+  if(a.source) bits.push(`<span class="ref ${a.source.book}">${name(a.source.book)} ${one(a.source)}</span>`);
+  if(a.linkedTo) bits.push(`<span class="ref ${a.linkedTo.book}">${name(a.linkedTo.book)} ${one(a.linkedTo)}</span>`);
   return bits.length ? `<span class="refs">${bits.join('')}</span>` : '';
 }
 

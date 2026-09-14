@@ -81,7 +81,7 @@ function worksheet(section, part){
     <div class="printHead">
       <h1>${part.title}</h1>
       <div class="printMeta">THINK ABOUT IT! &middot; Grade 6 &middot; ${section.label}${part.number ? ' &middot; Part ' + part.number : ''}
-        &middot; Student's Book p.${sb} &middot; Workbook p.${wb}</div>
+        &middot; Book p.${sb} &middot; Workbook p.${wb}</div>
       <div class="printName">Name: ______________________________　　Class: ____________　　Date: ____________</div>
     </div>
     <table class="wsTable">
@@ -112,7 +112,7 @@ function renderLanes(sectionId, part){
   ${(part.vocabulary || []).length ? `<div class="printRow printHide">
     <button class="pill outline" data-action="printWorksheet">🖨 Print a word worksheet</button>
   </div>` : ''}
-  ${lane(sectionId, part, 'learn', '📘 Learn', "Student's Book", learn)}
+  ${lane(sectionId, part, 'learn', '📘 Learn', 'Book', learn)}
   ${grammarBox(part)}
   ${lane(sectionId, part, 'practice', '📝 Practice', 'Workbook', practice)}
   ${inactiveSkills(part)}`;
@@ -130,7 +130,7 @@ function renderPart(){
     <div>
       <h2>${part.title}</h2>
       <p>${part.number ? 'Part ' + part.number : 'Review'} &middot; ${section.label}</p>
-      <p class="bookRef">📘 Student's Book p.${sb} &nbsp; 📝 Workbook p.${wb}</p>
+      <p class="bookRef">📘 Book p.${sb} &nbsp; 📝 Workbook p.${wb}</p>
     </div>
   </div>
   ${part.notes ? `<p class="sectionNote">${part.notes}</p>` : ''}

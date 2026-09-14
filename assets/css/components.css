@@ -374,3 +374,64 @@ button.bin{ width:100%; text-align:left; font:inherit; display:block; }
 /* The right-hand match column is always the Hebrew one. Setting direction here
    as well as on the element keeps it correct even if markup changes. */
 .matchGrid .matchCol:last-child .matchItem{ direction:rtl; unicode-bidi:isolate; }
+
+/* ===== Larger, roomier activity cards =====
+   Same colours, same rounded shape, same lanes — only scale and breathing
+   room, so a 12-year-old can read a card at a glance. */
+
+.laneGrid{ gap:18px; }
+.lane{ margin-top:34px; }
+.laneHead{ padding-bottom:9px; margin-bottom:18px; }
+.laneHead h3{ font-size:1.2rem; }
+.laneSub{ font-size:0.85rem; }
+
+.actItem{
+  padding:20px 22px 22px;
+  min-height:132px;
+  border-radius:16px;
+  gap:4px;
+}
+.actTop{ gap:10px; margin-bottom:10px; min-height:26px; }
+
+/* The activity name is the thing you read first. */
+.actItem h4{
+  font-size:1.22rem;
+  line-height:1.28;
+  margin:2px 0 12px;
+  font-weight:800;
+}
+
+.actSkill{ font-size:0.86rem; font-weight:700; }
+.actTick{ font-size:1.15rem; }
+
+/* Book / Workbook references, big enough to read without leaning in. */
+.ref{ font-size:0.82rem; padding:4px 10px; border-radius:7px; }
+.refs{ gap:8px; }
+
+.lvl{ font-size:0.8rem; padding:4px 11px; }
+
+.soon{ font-size:0.84rem; margin-top:10px; line-height:1.5; }
+.drillNote{ font-size:0.8rem; margin-top:8px; }
+
+/* Part cards get the same treatment so the two levels feel related. */
+.partGrid{ gap:18px; }
+.partCard{ padding:18px 20px 20px; border-radius:16px; }
+.partCard h3{ font-size:1.18rem; margin:6px 0 6px; }
+.partMeta{ font-size:0.85rem; line-height:1.5; min-height:2.6em; }
+.partNum{ font-size:0.78rem; }
+.partStatus{ font-size:0.88rem; }
+
+/* Headers and the progress line scale with them. */
+.unitHead h2{ font-size:1.9rem; }
+.unitHead .icon{ font-size:2.4rem; }
+.bookRef{ font-size:0.88rem !important; }
+.partProgress{ margin:22px 0 6px; }
+.pctLabel{ font-size:0.85rem; }
+
+@media(max-width:620px){
+  .actItem{ padding:16px 17px 18px; min-height:0; }
+  .actItem h4{ font-size:1.1rem; }
+  .laneGrid, .partGrid{ gap:14px; }
+  .unitHead h2{ font-size:1.5rem; }
+  .lane{ margin-top:26px; }
+}

@@ -19,7 +19,7 @@ function renderFlashcards(part, act){
     ${w.he ? `<div class="he">${w.he}</div>` : '<div class="he missingHe">— Hebrew not recorded yet —</div>'}
     ${w.definition ? `<div class="explain">${w.definition}</div>` : ''}
     ${w.example ? `<div class="example">"${w.example}"</div>` : ''}
-    <div class="wordSrc">📘 Student's Book p.${w.source.page}</div>
+    <div class="wordSrc">📘 Book p.${w.source.page}</div>
   </div>
   <div class="flashNav">
     <button class="pill outline" data-action="flashPrev" ${A.fIdx === 0 ? 'disabled' : ''}>← Previous</button>
