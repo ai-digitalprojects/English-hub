@@ -6,6 +6,7 @@ import { getSection, getPart, getActivity, wordsForActivity } from '../content/m
 import { escapeAttr } from '../helpers.js';
 import { hashFor } from '../router.js';
 import { activityTitle, levelBadge, sourceRef } from './labels.js';
+import { exerciseFor } from '../exercises/index.js';
 
 /* ---------- Learn the Words ---------- */
 function renderFlashcards(part, act){
@@ -70,8 +71,12 @@ function renderActivity(){
   const part = getPart(S.sectionId, S.partId);
   const act = getActivity(S.sectionId, S.partId, S.activityId);
   if(!section || !part || !act) return '';
+  const ex = exerciseFor(act);
   const fn = RENDERERS[act.type];
-  const body = fn ? fn(part, act) : '<p class="soon">This exercise is not built yet.</p>';
+  let body;
+  if(ex) body = ex.render(wordsForActivity(part, act), part);
+  else if(fn) body = fn(part, act);
+  else body = '<p class="soon">This exercise is not built yet.</p>';
   const done = isDone(section.id, part.id, act.id);
   const upHref = part.id
     ? hashFor({ view:'part', sectionId:section.id, partId:part.id })

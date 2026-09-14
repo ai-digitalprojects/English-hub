@@ -1,6 +1,7 @@
 /* Delegated listeners. Links carry navigation; data-action carries behaviour. */
 import { S, A, markDone, clearAllProgress } from './state.js';
 import { getPart, getActivity, wordsForActivity } from './content/model.js';
+import { exerciseFor } from './exercises/index.js';
 import { speak } from './speech.js';
 import { render } from './render.js';
 import { goUp } from './nav.js';
@@ -17,6 +18,14 @@ function initEvents(){
     const part = getPart(S.sectionId, S.partId);
 
     if(act === 'speak'){ speak(t.dataset.text); return; }
+
+    /* Exercise drills own their own actions. */
+    if(act === 'ex'){
+      const current = getActivity(S.sectionId, S.partId, S.activityId);
+      const ex = exerciseFor(current);
+      if(ex && ex.handle(t.dataset.do, t, wordsForActivity(part, current), render)) render();
+      return;
+    }
 
     if(act === 'finishActivity'){
       markDone(S.sectionId, S.partId, S.activityId);
@@ -46,7 +55,18 @@ function initEvents(){
   app.addEventListener('input', function(e){
     const t = e.target;
     const act = t.dataset.action;
-    if(act === 'wInput'){ A.wValue = t.value; }
+    const current = getActivity(S.sectionId, S.partId, S.activityId);
+    const ex = exerciseFor(current);
+    if(ex && ex.input && ex.input(act, t)){
+      if(act === 'frInput'){
+        const counter = t.parentElement.querySelector('.wordCounter');
+        if(counter){
+          const n = t.value.trim() ? t.value.trim().split(/\s+/).length : 0;
+          counter.textContent = n + ' words';
+        }
+      }
+    }
+    else if(act === 'wInput'){ A.wValue = t.value; }
     else return;
     scheduleDraftSave(currentRoute(), A);
   });

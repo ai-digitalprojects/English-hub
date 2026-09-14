@@ -286,3 +286,35 @@ a.actItem:hover{ border-color:var(--ink-soft); }
 .wordInput{ min-height:auto !important; padding:12px 14px !important; font-size:1.05rem; text-align:center; }
 a.statRow{ text-decoration:none; color:inherit; }
 a.statRow.link:hover{ background:rgba(0,0,0,0.03); }
+
+/* ===== PHASE 5 — exercise drills ===== */
+.exHint{ font-size:0.85rem; color:var(--ink-soft); margin:0 0 14px; }
+.drillNote{ font-size:0.72rem; color:var(--ink-soft); margin:6px 0 0; font-style:italic; }
+.ref.wordlist{ background:var(--green-bg); color:var(--green); }
+
+.prompt.bigWord{ font-size:1.6rem; font-weight:800; text-align:center; margin:10px 0 16px; }
+.opt.he{ direction:rtl; font-size:1.05rem; }
+
+/* sort into groups */
+.binRow{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:18px; }
+@media(max-width:560px){ .binRow{ grid-template-columns:1fr; } }
+.bin{
+  border:2px dashed var(--line); border-radius:var(--radius); padding:12px 14px;
+  min-height:110px; cursor:pointer; transition:border-color .15s ease, background .15s ease;
+}
+.bin:hover{ border-color:var(--blue); background:var(--blue-bg); }
+.binHead{ font-weight:800; font-size:0.85rem; margin-bottom:8px; color:var(--ink); }
+.binItems{ display:flex; flex-wrap:wrap; gap:6px; }
+.chip.done{ background:var(--green-bg); border-color:var(--green); color:var(--green); cursor:default; }
+.chip.selected{ background:var(--blue); color:#fff; border-color:var(--blue); }
+.chip.wrong{ background:var(--pink-bg); border-color:var(--pink); }
+.stripHint{ color:var(--ink-soft); font-size:0.82rem; }
+
+/* word puzzle */
+.scrambled{ display:flex; justify-content:center; gap:6px; flex-wrap:wrap; margin:14px 0 4px; }
+.letter{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:34px; height:40px; border-radius:8px; background:var(--gold-bg);
+  border:1px solid var(--gold); color:var(--ink); font-weight:800; font-size:1.1rem;
+  text-transform:uppercase;
+}

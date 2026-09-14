@@ -59,6 +59,9 @@ function levelBadge(level){
 
 /* "SB 20 · WB 16.1" — where this came from in the printed books. */
 function sourceRef(a){
+  /* A drill built over the word list cites no page: it is not a printed exercise. */
+  if(a.origin === 'word-list')
+    return '<span class="refs"><span class="ref wordlist">📚 Word list</span></span>';
   const one = s => 'p.' + s.page + (s.exercise ? '.' + s.exercise : '');
   const bits = [];
   if(a.source) bits.push(`<span class="ref ${a.source.book}">${a.source.book === 'students' ? 'SB' : 'WB'} ${one(a.source)}</span>`);

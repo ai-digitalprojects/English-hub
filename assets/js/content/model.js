@@ -3,6 +3,7 @@
    a section to content/manifest.json — no code in this file changes. */
 
 import { loadContent, partsOf } from './load.js';
+import { EXERCISES, drillType, isDrill } from '../exercises/index.js';
 
 let MODEL = null;          // { manifest, sections }
 const SECTIONS = new Map();
@@ -37,10 +38,33 @@ function getPart(sectionId, partId){ return PARTS.get(partKey(sectionId, partId)
    Getting Started does not). */
 function hasParts(section){ return !!(section && section.parts && section.parts.length); }
 
+/* Drills the site can build over this part's word list. They carry no
+   workbook page because they are not workbook exercises. */
+function derivedActivities(part){
+  const words = part.vocabulary || [];
+  if(!words.length) return [];
+  return EXERCISES.filter(ex => ex.needs(words)).map(ex => ({
+    id: 'drill-' + ex.id,
+    type: drillType(ex),
+    title: ex.title,
+    skill: ex.skill,
+    level: ex.level,
+    lane: 'practice',
+    origin: 'word-list',
+    generated: true,
+    status: 'ready'
+  }));
+}
+
+/* Everything on a part: the book's catalogued exercises plus the drills. */
+function activitiesOf(part){
+  return (part.activities || []).concat(derivedActivities(part));
+}
+
 function getActivity(sectionId, partId, activityId){
   const part = getPart(sectionId, partId);
   if(!part) return null;
-  return (part.activities || []).find(a => a.id === activityId) || null;
+  return activitiesOf(part).find(a => a.id === activityId) || null;
 }
 
 /* ---- what the UI can actually run ----
@@ -52,6 +76,7 @@ function getActivity(sectionId, partId, activityId){
    printed with, matched by the book page it cites. */
 function wordsForActivity(part, activity){
   const all = part.vocabulary || [];
+  if(activity && activity.origin === 'word-list') return all;
   const src = activity && activity.source;
   if(!src) return all;
   const hit = src.book === 'students'
@@ -66,6 +91,7 @@ const PLAYABLE = {
 };
 
 function isPlayable(part, activity){
+  if(isDrill(activity)) return true;      // a drill only exists when its data does
   const test = PLAYABLE[activity.type];
   return !!(test && test(part, activity));
 }
@@ -78,10 +104,11 @@ function whyNotPlayable(part, activity){
 }
 
 function playableActivities(part){
-  return (part.activities || []).filter(a => isPlayable(part, a));
+  return activitiesOf(part).filter(a => isPlayable(part, a));
 }
 
 export {
   initModel, manifest, sections, getSection, getPart, getActivity,
-  hasParts, partKey, isPlayable, whyNotPlayable, playableActivities, wordsForActivity
+  hasParts, partKey, isPlayable, whyNotPlayable, playableActivities, wordsForActivity,
+  derivedActivities, activitiesOf
 };

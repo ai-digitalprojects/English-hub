@@ -9,7 +9,7 @@
 const KEY = 'english-hub:drafts:v1';
 
 /* The ephemeral (A) fields that hold student-authored text. */
-const FIELDS = ['wValue', 'sbFreeText', 'rdFindText', 'rdThinkText', 'wrText', 'vpValues', 'crText', 'qzOpen'];
+const FIELDS = ['wValue', 'pValue', 'sbFreeText', 'rdFindText', 'rdThinkText', 'wrText', 'vpValues', 'crText', 'qzOpen'];
 
 /* One slot per Unit / Part / Activity. '-' stands in for "no part yet"; once
    Phase 4 introduces parts the same key shape keeps them apart. */

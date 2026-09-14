@@ -1,6 +1,7 @@
 /* Home: exactly two cards. Nothing else lives at this level. */
 import { sections } from '../content/model.js';
-import { sectionProgress, colorVar } from '../state.js';
+import { colorVar } from '../state.js';
+import { sectionProgress } from '../progress.js';
 import { hashFor } from '../router.js';
 
 function wordCount(section){

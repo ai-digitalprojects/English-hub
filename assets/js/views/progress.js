@@ -1,8 +1,9 @@
 /* Progress across every section and part, read from the content model so it
    lists exactly what exists — nothing hardcoded. */
-import { S, sectionProgress, partProgress, clearAllProgress, colorVar } from '../state.js';
+import { S, clearAllProgress, colorVar } from '../state.js';
+import { sectionProgress, partProgress } from '../progress.js';
 import { sections, getPart } from '../content/model.js';
-import { playableActivities } from '../content/model.js';
+import { playableActivities, activitiesOf } from '../content/model.js';
 import { hashFor } from '../router.js';
 
 function partRow(sectionId, part){
@@ -39,7 +40,7 @@ function renderProgress(){
   const pct = total ? Math.round(done / total * 100) : 0;
   const planned = all.reduce((n, s) => {
     const parts = (s.parts && s.parts.length) ? s.parts : [getPart(s.id, null)].filter(Boolean);
-    return n + parts.reduce((m, p) => m + (p.activities || []).length - playableActivities(p).length, 0);
+    return n + parts.reduce((m, p) => m + activitiesOf(p).length - playableActivities(p).length, 0);
   }, 0);
 
   return `

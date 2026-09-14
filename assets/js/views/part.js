@@ -1,7 +1,8 @@
 /* A Part screen: the Learn lane (Student's Book) above the Practice lane
    (Workbook), then whatever skills the model has but cannot yet activate. */
-import { S, isDone, partProgress, colorVar } from '../state.js';
-import { getSection, getPart, isPlayable, whyNotPlayable } from '../content/model.js';
+import { S, isDone, colorVar } from '../state.js';
+import { partProgress } from '../progress.js';
+import { getSection, getPart, isPlayable, whyNotPlayable, activitiesOf } from '../content/model.js';
 import { hashFor } from '../router.js';
 import { activityTitle, skillLabel, skillIcon, levelBadge, sourceRef } from './labels.js';
 
@@ -16,6 +17,7 @@ function activityCard(sectionId, part, a){
     </div>
     <h4>${activityTitle(a)}</h4>
     ${sourceRef(a)}
+    ${a.generated ? '<p class="drillNote">Built from this part’s word list</p>' : ''}
     ${playable ? '' : `<p class="soon">${whyNotPlayable(part, a)}</p>`}`;
   return playable
     ? `<a class="actItem${done ? ' done' : ''}" href="${hashFor({ view:'activity', sectionId, partId:part.id, activityId:a.id })}">${inner}</a>`
@@ -69,7 +71,7 @@ function inactiveSkills(part){
 
 /* Shared by the Part screen and by part-less sections such as Getting Started. */
 function renderLanes(sectionId, part){
-  const acts = part.activities || [];
+  const acts = activitiesOf(part);
   const learn = acts.filter(a => a.lane === 'learn');
   const practice = acts.filter(a => a.lane === 'practice');
   const pr = partProgress(sectionId, part);

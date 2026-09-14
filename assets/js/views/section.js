@@ -2,7 +2,8 @@
    Unit 1 shows its Parts. Getting Started has no parts, so it shows its own
    Learn / Practice lanes directly — one level shallower, by design. */
 import { getSection, getPart, hasParts } from '../content/model.js';
-import { partProgress, colorBg, colorVar } from '../state.js';
+import { colorBg, colorVar } from '../state.js';
+import { partProgress } from '../progress.js';
 import { S } from '../state.js';
 import { hashFor } from '../router.js';
 import { renderLanes } from './part.js';
