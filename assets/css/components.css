@@ -442,7 +442,10 @@ button.bin{ width:100%; text-align:left; font:inherit; display:block; }
 .biEn{ }
 .biHe{
   direction:rtl; unicode-bidi:isolate; color:var(--ink-soft);
-  font-size:0.94em; padding-inline-start:10px; border-inline-start:2px solid var(--line);
+  font-size:0.94em;
+  /* Physical left, not inline-start: the element is RTL, so inline-start
+     would put the rule after the Hebrew instead of between the two. */
+  padding-left:10px; border-left:2px solid var(--line);
 }
 .exHint{ font-size:0.95rem; color:var(--ink); margin:0 0 16px; line-height:1.6; }
 .exHint.sub{ font-size:0.86rem; color:var(--ink-soft); margin-top:-8px; }
@@ -450,11 +453,11 @@ button.bin{ width:100%; text-align:left; font:inherit; display:block; }
 
 /* Bilingual buttons keep both languages on one pill. */
 .biBtn .bi{ gap:8px; }
-.biBtn .biHe{ color:inherit; opacity:0.82; border-inline-start-color:currentColor; }
+.biBtn .biHe{ color:inherit; opacity:0.82; border-left-color:currentColor; }
 .pill.outline .biHe{ color:var(--ink-soft); }
 
 .feedbackMsg .bi{ gap:8px; }
-.feedbackMsg .biHe{ color:inherit; opacity:0.85; border-inline-start-color:currentColor; }
+.feedbackMsg .biHe{ color:inherit; opacity:0.85; border-left-color:currentColor; }
 .matchDone .bi{ justify-content:center; }
 
 /* Where an exercise came from. */
@@ -484,6 +487,6 @@ button.bin{ width:100%; text-align:left; font:inherit; display:block; }
 
 @media(max-width:620px){
   .bi{ gap:4px; }
-  .biHe{ border-inline-start:0; padding-inline-start:0; width:100%; }
+  .biHe{ border-left:0; padding-left:0; width:100%; }
   .biBtn .bi{ flex-direction:column; gap:2px; align-items:center; }
 }
