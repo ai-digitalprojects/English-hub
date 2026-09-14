@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "book": {
+    "title": "THINK ABOUT IT!",
+    "grade": 6,
+    "school": "Gevim School",
+    "languages": [
+      "en",
+      "he",
+      "ar"
+    ]
+  },
+  "levels": [
+    {
+      "level": 1,
+      "stars": "★",
+      "label": "Warm up",
+      "he": "חימום"
+    },
+    {
+      "level": 2,
+      "stars": "★★",
+      "label": "Practice",
+      "he": "תרגול"
+    },
+    {
+      "level": 3,
+      "stars": "★★★",
+      "label": "Challenge",
+      "he": "אתגר"
+    }
+  ],
+  "sections": [
+    {
+      "id": "getting-started",
+      "label": "Getting Started",
+      "icon": "🚀",
+      "color": "blue",
+      "file": "sections/getting-started.json"
+    },
+    {
+      "id": "unit-1",
+      "label": "Unit 1",
+      "icon": "🗾",
+      "color": "orange",
+      "file": "sections/unit-1.json"
+    }
+  ]
+}

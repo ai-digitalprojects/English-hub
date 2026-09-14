@@ -1,0 +1,3256 @@
+{
+  "id": "unit-1",
+  "label": "Unit 1",
+  "title": "Unit 1",
+  "subtitle": "Five parts, then a Unit Check",
+  "icon": "🗾",
+  "color": "orange",
+  "titleNote": "The book does not give Unit 1 a title of its own on any scanned page.",
+  "sources": {
+    "studentsBook": [
+      12,
+      17,
+      18,
+      20,
+      24,
+      25,
+      27,
+      28,
+      29,
+      34,
+      38,
+      39,
+      42,
+      45,
+      47,
+      51,
+      52
+    ],
+    "workbook": [
+      8,
+      10,
+      11,
+      12,
+      13,
+      16,
+      17,
+      18,
+      19,
+      21,
+      24,
+      28,
+      30,
+      31,
+      36,
+      38,
+      40,
+      41,
+      42
+    ]
+  },
+  "parts": [
+    {
+      "id": "part-1",
+      "number": 1,
+      "label": "Part 1 · All About Japan",
+      "title": "All About Japan",
+      "icon": "🗾",
+      "color": "orange",
+      "sources": {
+        "studentsBook": [
+          12,
+          17,
+          18
+        ],
+        "workbook": [
+          8,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "vocabulary": [
+        {
+          "en": "afraid",
+          "he": "פוחד",
+          "ar": null,
+          "definition": "feeling fear",
+          "example": "I am afraid of dogs.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "anything",
+          "he": "כל דבר",
+          "ar": null,
+          "definition": "any thing at all",
+          "example": "I can't see anything in the dark.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "Dear ...",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "glad",
+          "he": "שמח",
+          "ar": null,
+          "definition": "happy about something",
+          "example": "I'm glad you like it.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "hit",
+          "he": "להכות",
+          "ar": null,
+          "definition": "strike something",
+          "example": "He can hit the ball far.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "island",
+          "he": "אי",
+          "ar": null,
+          "definition": "land surrounded by water",
+          "example": "Japan is an island.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "leave",
+          "he": "להשאיר",
+          "ar": null,
+          "definition": "let something stay behind",
+          "example": "Please leave your shoes at the door.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "love",
+          "he": "לאהוב",
+          "ar": null,
+          "definition": "like very much",
+          "example": "I love ice cream.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "million",
+          "he": "מיליון",
+          "ar": null,
+          "definition": "1,000,000",
+          "example": "More than five million people live there.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "order",
+          "he": "להזמין",
+          "ar": null,
+          "definition": "ask for something",
+          "example": "You can order food at a restaurant.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "pick",
+          "he": "לבחור",
+          "ar": null,
+          "definition": "choose something",
+          "example": "Pick a color you like.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "popular",
+          "he": "פופולרי",
+          "ar": null,
+          "definition": "liked by many people",
+          "example": "Football is a popular sport.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "team",
+          "he": "קבוצה",
+          "ar": null,
+          "definition": "a group who play or work together",
+          "example": "I love my football team.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 8
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "id": "to-be",
+          "topic": "to be — positive / negative",
+          "lane": "learn",
+          "source": {
+            "book": "workbook",
+            "page": 10
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 17,
+            "exercise": 1
+          },
+          "points": [
+            "I am / He is / You are",
+            "contractions: I'm not, He isn't, We aren't"
+          ]
+        },
+        {
+          "id": "to-have",
+          "topic": "to have — have / has",
+          "lane": "learn",
+          "source": {
+            "book": "workbook",
+            "page": 11
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 18,
+            "exercise": 3
+          },
+          "points": [
+            "I / You / We / They have",
+            "He / She / It has"
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "id": "learn-words",
+          "type": "flashcards",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "status": "planned"
+        },
+        {
+          "id": "write-the-words",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 8
+          },
+          "status": "planned"
+        },
+        {
+          "id": "word-snake",
+          "type": "circle-write-translate",
+          "skill": "vocabulary",
+          "level": 1,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 8,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 17,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "highlight-to-be",
+          "type": "highlight-and-translate",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 10,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 17,
+            "exercise": 1
+          },
+          "status": "planned"
+        },
+        {
+          "id": "highlight-to-have",
+          "type": "highlight-and-translate",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 11,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "sort-am-is-are",
+          "type": "sort-into-columns",
+          "skill": "grammar",
+          "level": 1,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 11,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 18,
+            "exercise": 3
+          },
+          "status": "planned"
+        },
+        {
+          "id": "circle-be-have",
+          "type": "circle-the-correct-words",
+          "skill": "grammar",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 12,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "picture-be-have",
+          "type": "write-the-correct-words",
+          "skill": "grammar",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 12,
+            "exercise": 3
+          },
+          "status": "planned"
+        },
+        {
+          "id": "complete-be-have",
+          "type": "complete-the-sentences",
+          "skill": "grammar",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 12,
+            "exercise": 4
+          },
+          "status": "planned"
+        },
+        {
+          "id": "write-sentences",
+          "type": "write-sentences-from-table",
+          "skill": "writing",
+          "level": 3,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 13,
+            "exercise": 5
+          },
+          "status": "planned"
+        }
+      ],
+      "skills": {
+        "reading": {
+          "active": false,
+          "reason": "No reading text for this part in the scanned material."
+        },
+        "listening": {
+          "active": false,
+          "reason": "The comparison task exists (Workbook p.13) but the audio it refers to (Student's Book p.18, exercises 1-2) was not in the scanned material.",
+          "task": {
+            "type": "tick-two-columns",
+            "source": {
+              "book": "workbook",
+              "page": 13
+            },
+            "linkedTo": {
+              "book": "students",
+              "page": 18
+            },
+            "columns": [
+              "My school",
+              "School in Japan"
+            ],
+            "statements": [
+              "Children learn English at school.",
+              "Teachers say thank you to the children after each lesson.",
+              "Children wear special shoes at school.",
+              "Children bring their lunch to school.",
+              "Children eat lunch in their classrooms.",
+              "Children clean the classrooms."
+            ]
+          }
+        },
+        "speaking": {
+          "active": false,
+          "reason": "No speaking page for this part in the scanned material."
+        }
+      },
+      "phonics": null
+    },
+    {
+      "id": "part-2",
+      "number": 2,
+      "label": "Part 2 · Snow Monkeys",
+      "title": "Snow Monkeys",
+      "icon": "🐒",
+      "color": "green",
+      "sources": {
+        "studentsBook": [
+          20,
+          24,
+          25,
+          27
+        ],
+        "workbook": [
+          16,
+          17,
+          18,
+          19,
+          21
+        ]
+      },
+      "vocabulary": [
+        {
+          "en": "about",
+          "he": "בערך",
+          "ar": null,
+          "definition": "approximately",
+          "example": "I wake up at about seven o'clock.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "clever",
+          "he": "חכם",
+          "ar": null,
+          "definition": "smart",
+          "example": "The girl is very clever.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "decide",
+          "he": "להחליט",
+          "ar": null,
+          "definition": "choose after thinking",
+          "example": "I decided to buy the blue hat.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "famous",
+          "he": "מפורסם",
+          "ar": null,
+          "definition": "known by many people",
+          "example": "She is a famous singer.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "mountain",
+          "he": "הר",
+          "ar": null,
+          "definition": "a very high hill",
+          "example": "There's snow on the mountain.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "nature",
+          "he": "טבע",
+          "ar": null,
+          "definition": "the natural world",
+          "example": "The movie is about nature.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "reason",
+          "he": "סיבה",
+          "ar": null,
+          "definition": "why something happens",
+          "example": "What is the reason for the change?",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "return",
+          "he": "לחזור",
+          "ar": null,
+          "definition": "come back",
+          "example": "The monkeys return to the mountain.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "saw",
+          "he": "ראה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "several",
+          "he": "כמה",
+          "ar": null,
+          "definition": "more than two, but not many",
+          "example": "I have several books.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "still",
+          "he": "עדיין",
+          "ar": null,
+          "definition": "continuing until now",
+          "example": "She is still in bed.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "the cold",
+          "he": "הקור",
+          "ar": null,
+          "definition": "cold weather",
+          "example": "The monkeys enjoy the cold.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        },
+        {
+          "en": "thousand",
+          "he": "אלף",
+          "ar": null,
+          "definition": "1,000",
+          "example": "The stadium has a thousand seats.",
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 16
+            }
+          ],
+          "heSource": "site",
+          "needsReview": false,
+          "missing": [
+            "ar"
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "id": "to-be-questions",
+          "topic": "to be — Yes/No questions and short answers",
+          "lane": "learn",
+          "source": {
+            "book": "workbook",
+            "page": 18
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 25,
+            "exercise": 1
+          },
+          "points": [
+            "Am I ...? / Is he ...? / Are you ...?",
+            "Yes, he is. / No, he isn't."
+          ]
+        },
+        {
+          "id": "wh-questions",
+          "topic": "to be — Wh- questions",
+          "lane": "learn",
+          "source": {
+            "book": "workbook",
+            "page": 18
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 25,
+            "exercise": 1
+          },
+          "points": [
+            "What / When / Where / Who / Why + am / is / are"
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "id": "learn-words",
+          "type": "flashcards",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "status": "planned"
+        },
+        {
+          "id": "write-the-words",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 16
+          },
+          "status": "planned"
+        },
+        {
+          "id": "match-to-pictures",
+          "type": "match-sentences-to-pictures",
+          "skill": "vocabulary",
+          "level": 1,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 16,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 24,
+            "exercise": 3
+          },
+          "status": "planned"
+        },
+        {
+          "id": "complete-sentences",
+          "type": "complete-the-sentences",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 17,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "circle-correct",
+          "type": "circle-the-correct-words",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 17,
+            "exercise": 3
+          },
+          "status": "planned"
+        },
+        {
+          "id": "complete-about-you",
+          "type": "complete-the-sentences",
+          "skill": "vocabulary",
+          "level": 3,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 17,
+            "exercise": 4
+          },
+          "status": "planned"
+        },
+        {
+          "id": "highlight-questions",
+          "type": "highlight-and-translate",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 18,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 25,
+            "exercise": 1
+          },
+          "status": "planned"
+        },
+        {
+          "id": "complete-questions",
+          "type": "complete-the-questions",
+          "skill": "grammar",
+          "level": 1,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 19,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 25,
+            "exercise": 4
+          },
+          "status": "planned"
+        },
+        {
+          "id": "circle-wh",
+          "type": "circle-the-correct-words",
+          "skill": "grammar",
+          "level": 1,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 19,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "match-q-a",
+          "type": "match-a-to-b",
+          "skill": "grammar",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 19,
+            "exercise": 3
+          },
+          "status": "planned"
+        },
+        {
+          "id": "writing-complete",
+          "type": "complete-the-sentences",
+          "skill": "writing",
+          "level": 1,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 21,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 27
+          },
+          "status": "planned"
+        },
+        {
+          "id": "writing-another",
+          "type": "write-another-sentence",
+          "skill": "writing",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 21,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "writing-read-write",
+          "type": "read-and-write",
+          "skill": "writing",
+          "level": 3,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 21,
+            "exercise": 3
+          },
+          "status": "planned"
+        }
+      ],
+      "skills": {
+        "reading": {
+          "active": false,
+          "reason": "No reading text for this part in the scanned material."
+        },
+        "listening": {
+          "active": false,
+          "reason": "No listening material for this part in the scanned material."
+        },
+        "speaking": {
+          "active": false,
+          "reason": "No speaking page for this part in the scanned material."
+        }
+      },
+      "phonics": {
+        "id": "long-e",
+        "topic": "Read Better: long e",
+        "lane": "learn",
+        "source": {
+          "book": "students",
+          "page": 20
+        },
+        "practiceOn": {
+          "book": "workbook",
+          "page": 233
+        },
+        "patterns": [
+          {
+            "spelling": "ea",
+            "examples": [
+              "reason",
+              "eat",
+              "year"
+            ]
+          },
+          {
+            "spelling": "ee",
+            "examples": [
+              "sleep",
+              "keep",
+              "tree"
+            ]
+          }
+        ],
+        "active": false,
+        "reason": "The phonics practice pages (Workbook p.233) were not in the scanned material."
+      }
+    },
+    {
+      "id": "part-3",
+      "number": 3,
+      "label": "Part 3 · Let's Go",
+      "title": "Let's Go",
+      "icon": "🚆",
+      "color": "purple",
+      "sources": {
+        "studentsBook": [
+          28,
+          29
+        ],
+        "workbook": [
+          24
+        ]
+      },
+      "vocabulary": [
+        {
+          "en": "take a picture",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-1",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "take a train",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-1",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "take (something) away",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-1",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "Take care!",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-1",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "take (something) off",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-1",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "arrive",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-2",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "catch (a train)",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-2",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "comfortable",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-2",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "cost",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-2",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "directly",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-2",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "get off",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-2",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "get on",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-2",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "visitor",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-2",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "welcome",
+          "he": null,
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "word-power-2",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 24
+            }
+          ],
+          "heSource": null,
+          "needsReview": false,
+          "missing": [
+            "he",
+            "ar",
+            "definition",
+            "example"
+          ]
+        }
+      ],
+      "grammar": [],
+      "activities": [
+        {
+          "id": "learn-words-take",
+          "type": "flashcards",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "status": "planned",
+          "title": "Learn the Words — take"
+        },
+        {
+          "id": "learn-words-train",
+          "type": "flashcards",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "status": "planned",
+          "title": "Learn the Words — Riding the Train"
+        },
+        {
+          "id": "write-the-words",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 24
+          },
+          "status": "planned"
+        },
+        {
+          "id": "match-to-pictures",
+          "type": "match-sentences-to-pictures",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "students",
+            "page": 28,
+            "exercise": 1
+          },
+          "status": "planned"
+        },
+        {
+          "id": "match-a-b",
+          "type": "match-a-to-b",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "students",
+            "page": 29,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "choose-pictures",
+          "type": "choose-the-correct-pictures",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "students",
+            "page": 29,
+            "exercise": 4
+          },
+          "status": "planned"
+        }
+      ],
+      "skills": {
+        "reading": {
+          "active": false,
+          "reason": "No reading text for this part in the scanned material."
+        },
+        "listening": {
+          "active": false,
+          "reason": "No listening material for this part in the scanned material."
+        },
+        "speaking": {
+          "active": false,
+          "reason": "Only one speaking prompt was found; no Speaking page was in the scanned material.",
+          "task": {
+            "type": "about-you",
+            "source": {
+              "book": "students",
+              "page": 29,
+              "exercise": 3
+            },
+            "prompts": [
+              "What things do you like to take pictures of?"
+            ]
+          }
+        }
+      },
+      "phonics": null,
+      "notes": "No grammar section for this part appeared in the scanned material."
+    },
+    {
+      "id": "part-4",
+      "number": 4,
+      "label": "Part 4 · Made in Japan",
+      "title": "Made in Japan",
+      "icon": "🏯",
+      "color": "gold",
+      "sources": {
+        "studentsBook": [
+          34,
+          38,
+          39
+        ],
+        "workbook": [
+          28,
+          30,
+          31
+        ]
+      },
+      "vocabulary": [
+        {
+          "en": "against",
+          "he": "נגד",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "all the time",
+          "he": "כל הזמן",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "collect",
+          "he": "לאסוף",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "competition",
+          "he": "תחרות",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "could",
+          "he": "יכול (היה)",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "instead",
+          "he": "במקום",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "mean",
+          "he": "פירושו",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "message",
+          "he": "הודעה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "only",
+          "he": "רק",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "perfect",
+          "he": "מושלם",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "pocket",
+          "he": "כיס",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "so",
+          "he": "כך",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "tasty",
+          "he": "טעים",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 28
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "id": "present-simple-positive",
+          "topic": "Present Simple — positive",
+          "lane": "learn",
+          "source": {
+            "book": "workbook",
+            "page": 30
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 39,
+            "exercise": 1
+          },
+          "points": [
+            "I / You / We / They drink water",
+            "He / She / It drinks water"
+          ]
+        },
+        {
+          "id": "present-simple-spelling",
+          "topic": "Spelling rules — he / she / it",
+          "lane": "learn",
+          "source": {
+            "book": "workbook",
+            "page": 30
+          },
+          "points": [
+            "-s",
+            "-es after o, x, ch, sh, ss",
+            "consonant + y → -ies"
+          ]
+        },
+        {
+          "id": "time-expressions",
+          "topic": "Time expressions",
+          "lane": "learn",
+          "source": {
+            "book": "workbook",
+            "page": 30
+          },
+          "points": [
+            "always, usually, often, sometimes, never",
+            "every day / week / month / year",
+            "once a day / week / month / year",
+            "in the morning / afternoon / evening",
+            "on Friday / Saturday",
+            "at five o'clock",
+            "at night"
+          ]
+        }
+      ],
+      "activities": [
+        {
+          "id": "learn-words",
+          "type": "flashcards",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "status": "planned"
+        },
+        {
+          "id": "think-about-quiz",
+          "type": "where-things-are-from-quiz",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "status": "planned"
+        },
+        {
+          "id": "write-the-words",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 28
+          },
+          "status": "planned"
+        },
+        {
+          "id": "circle-pictures",
+          "type": "circle-the-correct-words",
+          "skill": "vocabulary",
+          "level": 1,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 28,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 38,
+            "exercise": 3
+          },
+          "status": "planned"
+        },
+        {
+          "id": "true-false",
+          "type": "circle-true-or-false",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 28,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "highlight-present-simple",
+          "type": "highlight-and-translate",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 31
+          },
+          "status": "planned"
+        },
+        {
+          "id": "spelling-table",
+          "type": "sort-into-columns",
+          "skill": "grammar",
+          "level": 1,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 31,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 39,
+            "exercise": 3
+          },
+          "status": "planned"
+        },
+        {
+          "id": "circle-present-simple",
+          "type": "circle-the-correct-words",
+          "skill": "grammar",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 31,
+            "exercise": 2
+          },
+          "status": "planned"
+        }
+      ],
+      "skills": {
+        "reading": {
+          "active": false,
+          "reason": "No reading text for this part in the scanned material."
+        },
+        "listening": {
+          "active": false,
+          "reason": "No listening material for this part in the scanned material."
+        },
+        "speaking": {
+          "active": false,
+          "reason": "No speaking page for this part in the scanned material."
+        }
+      },
+      "phonics": {
+        "id": "long-i-long-u",
+        "topic": "Read Better: long i and long u",
+        "lane": "learn",
+        "source": {
+          "book": "students",
+          "page": 34
+        },
+        "practiceOn": {
+          "book": "workbook",
+          "page": 234
+        },
+        "patterns": [
+          {
+            "spelling": "i_e",
+            "examples": [
+              "time",
+              "prize",
+              "like"
+            ]
+          },
+          {
+            "spelling": "u_e, ue, ui",
+            "examples": [
+              "use",
+              "blue",
+              "fruit"
+            ]
+          }
+        ],
+        "active": false,
+        "reason": "The phonics practice pages (Workbook p.234) were not in the scanned material."
+      }
+    },
+    {
+      "id": "part-5",
+      "number": 5,
+      "label": "Part 5 · Story",
+      "title": "Story",
+      "icon": "⭐",
+      "color": "pink",
+      "sources": {
+        "studentsBook": [
+          42,
+          45,
+          47
+        ],
+        "workbook": [
+          36,
+          38,
+          40
+        ]
+      },
+      "vocabulary": [
+        {
+          "en": "come home",
+          "he": "לחזור הביתה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "date",
+          "he": "תאריך",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "excellent",
+          "he": "מצוין",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "feel well",
+          "he": "להרגיש טוב",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "get the flu",
+          "he": "לחלות בשפעת",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "if",
+          "he": "אם",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "invite",
+          "he": "להזמין",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "keep",
+          "he": "להמשיך",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "make a mistake",
+          "he": "לטעות",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "really",
+          "he": "מאוד",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "should",
+          "he": "צריך, כדאי",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "tell a story",
+          "he": "לספר סיפור",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-1",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 36
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "a while",
+          "he": "זמן מה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "almost",
+          "he": "כמעט",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "believe",
+          "he": "להאמין",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "both",
+          "he": "שניהם, שתיהן",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "full",
+          "he": "מלא",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "get better",
+          "he": "להחלים",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "kiss",
+          "he": "נשיקה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "medical",
+          "he": "רפואי",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "miss",
+          "he": "להתגעגע",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "much",
+          "he": "הרבה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "nurse",
+          "he": "אחות",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "see",
+          "he": "לפגוש",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "sorry",
+          "he": "מצטער",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "new-words-2",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "workbook",
+              "page": 38
+            }
+          ],
+          "heSource": "book-scan",
+          "needsReview": true,
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        }
+      ],
+      "grammar": [],
+      "activities": [
+        {
+          "id": "learn-words-1",
+          "type": "flashcards",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "status": "planned",
+          "title": "Learn the Words 1"
+        },
+        {
+          "id": "learn-words-2",
+          "type": "flashcards",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "status": "planned",
+          "title": "Learn the Words 2"
+        },
+        {
+          "id": "choose-phrases",
+          "type": "choose-the-correct-phrases",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "students",
+            "page": 42,
+            "exercise": 1
+          },
+          "status": "planned"
+        },
+        {
+          "id": "match-a-b",
+          "type": "match-a-to-b",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "students",
+            "page": 47,
+            "exercise": 1
+          },
+          "status": "planned"
+        },
+        {
+          "id": "choose-two",
+          "type": "choose-two-answers",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "students",
+            "page": 47,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "write-the-words-1",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 36
+          },
+          "status": "planned",
+          "title": "Write the Words 1"
+        },
+        {
+          "id": "write-the-words-2",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 38
+          },
+          "status": "planned",
+          "title": "Write the Words 2"
+        },
+        {
+          "id": "text-messages",
+          "type": "write-text-messages",
+          "skill": "writing",
+          "level": 3,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 38,
+            "exercise": 4
+          },
+          "status": "planned"
+        },
+        {
+          "id": "hospital-complete",
+          "type": "complete-the-sentences",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 40,
+            "exercise": 4
+          },
+          "status": "planned"
+        },
+        {
+          "id": "answer-questions",
+          "type": "answer-the-questions",
+          "skill": "writing",
+          "level": 3,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 40,
+            "exercise": 5
+          },
+          "status": "planned"
+        }
+      ],
+      "skills": {
+        "reading": {
+          "active": false,
+          "reason": "The comprehension task exists (Workbook p.36) but the reading text itself (Student's Book p.45) was not in the scanned material.",
+          "task": {
+            "type": "tick-two-columns",
+            "source": {
+              "book": "workbook",
+              "page": 36
+            },
+            "linkedTo": {
+              "book": "students",
+              "page": 45,
+              "exercise": 3
+            },
+            "columns": [
+              "Yuko",
+              "Emika"
+            ],
+            "statements": [
+              "She likes to dance.",
+              "She gets sick.",
+              "She helps her friend with a problem.",
+              "She's preparing for a dance show.",
+              "She dances for Yuko's family.",
+              "She doesn't want people to watch her dance."
+            ]
+          }
+        },
+        "listening": {
+          "active": false,
+          "reason": "No listening material for this part in the scanned material."
+        },
+        "speaking": {
+          "active": false,
+          "reason": "No speaking page for this part in the scanned material."
+        }
+      },
+      "phonics": null,
+      "notes": "No grammar section for this part appeared in the scanned material."
+    },
+    {
+      "id": "unit-check",
+      "number": null,
+      "label": "Unit Check",
+      "title": "Unit Check",
+      "icon": "✅",
+      "color": "gold",
+      "sources": {
+        "studentsBook": [
+          51,
+          52
+        ],
+        "workbook": [
+          41,
+          42
+        ]
+      },
+      "vocabulary": [],
+      "reviewsParts": [
+        "part-1",
+        "part-2",
+        "part-3",
+        "part-4",
+        "part-5"
+      ],
+      "grammar": [
+        {
+          "id": "review-to-be",
+          "topic": "to be — positive / negative",
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 42,
+            "exercise": 1
+          }
+        },
+        {
+          "id": "review-have-has",
+          "topic": "have / has",
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 42,
+            "exercise": 2
+          }
+        }
+      ],
+      "activities": [
+        {
+          "id": "word-list",
+          "type": "word-list-reference",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "source": {
+            "book": "students",
+            "page": 51
+          },
+          "status": "planned"
+        },
+        {
+          "id": "find-two-words",
+          "type": "find-words-for-category",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "students",
+            "page": 51,
+            "exercise": 1
+          },
+          "status": "planned"
+        },
+        {
+          "id": "build-phrases",
+          "type": "match-a-to-b",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "students",
+            "page": 51,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "sort-parts-of-speech",
+          "type": "sort-into-columns",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 41,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 52
+          },
+          "status": "planned"
+        },
+        {
+          "id": "write-the-words",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 41,
+            "exercise": 2
+          },
+          "status": "planned"
+        },
+        {
+          "id": "circle-two",
+          "type": "circle-two-correct-answers",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 41,
+            "exercise": 3
+          },
+          "status": "planned"
+        },
+        {
+          "id": "complete-sentences",
+          "type": "complete-the-sentences",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 42,
+            "exercise": 4
+          },
+          "status": "planned"
+        },
+        {
+          "id": "translate",
+          "type": "translate-the-sentences",
+          "skill": "writing",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 42,
+            "exercise": 5
+          },
+          "status": "planned"
+        }
+      ],
+      "skills": {
+        "reading": {
+          "active": false,
+          "reason": "No reading text for this part in the scanned material."
+        },
+        "listening": {
+          "active": false,
+          "reason": "No listening material for this part in the scanned material."
+        },
+        "speaking": {
+          "active": false,
+          "reason": "No speaking page for this part in the scanned material."
+        }
+      },
+      "phonics": null
+    }
+  ],
+  "vocabulary": [],
+  "grammar": [],
+  "activities": [],
+  "skills": {
+    "reading": {
+      "active": false,
+      "reason": "No reading text for this part in the scanned material."
+    },
+    "listening": {
+      "active": false,
+      "reason": "No listening material for this part in the scanned material."
+    },
+    "speaking": {
+      "active": false,
+      "reason": "No speaking page for this part in the scanned material."
+    }
+  },
+  "phonics": null
+}

@@ -1,0 +1,648 @@
+{
+  "id": "getting-started",
+  "label": "Getting Started",
+  "title": "Getting Started",
+  "subtitle": "Classroom English & Basic Vocabulary",
+  "icon": "🚀",
+  "color": "blue",
+  "sources": {
+    "studentsBook": [
+      7,
+      9,
+      10
+    ],
+    "workbook": [
+      4,
+      5
+    ]
+  },
+  "parts": [],
+  "vocabulary": [
+    {
+      "en": "below",
+      "he": "למטה",
+      "ar": null,
+      "definition": "in a lower position",
+      "example": "Write your answer below the question.",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "complete",
+      "he": "להשלים",
+      "ar": null,
+      "definition": "finish something",
+      "example": "Please complete the task.",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "dictionary",
+      "he": "מילון",
+      "ar": null,
+      "definition": "a book with word meanings",
+      "example": "Look up the word in a dictionary.",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "find out",
+      "he": "לגלות",
+      "ar": null,
+      "definition": "discover information",
+      "example": "Read the sign to find out what it says.",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "instructions",
+      "he": "הוראות",
+      "ar": null,
+      "definition": "directions on how to do something",
+      "example": "Read the instructions carefully.",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "opposite",
+      "he": "הפך",
+      "ar": null,
+      "definition": "completely different",
+      "example": "The opposite of hot is cold.",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "raise",
+      "he": "להרים",
+      "ar": null,
+      "definition": "move something up",
+      "example": "Raise your hand, please.",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "repeat",
+      "he": "לחזור",
+      "ar": null,
+      "definition": "say or do again",
+      "example": "Please repeat the sentence.",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "spell",
+      "he": "לאיית",
+      "ar": null,
+      "definition": "say or write the letters of a word",
+      "example": "Can you spell your name?",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "vocabulary",
+      "he": "אוצר מילים",
+      "ar": null,
+      "definition": "words you know in a language",
+      "example": "We learn new vocabulary every lesson.",
+      "group": "word-power-1",
+      "source": {
+        "book": "students",
+        "page": 7
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "conversation",
+      "he": "שיחה",
+      "ar": null,
+      "definition": "a talk between people",
+      "example": "Listen to the conversation.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "correct",
+      "he": "נכון",
+      "ar": null,
+      "definition": "right, with no mistakes",
+      "example": "Choose the correct answer.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "describe",
+      "he": "לתאר",
+      "ar": null,
+      "definition": "say what something is like",
+      "example": "Describe the picture.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "document",
+      "he": "מסמך",
+      "ar": null,
+      "definition": "a written or printed paper",
+      "example": "Put the document in the folder.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "example",
+      "he": "דוגמה",
+      "ar": null,
+      "definition": "something that shows a rule",
+      "example": "Give an example of a color.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "first name",
+      "he": "שם פרטי",
+      "ar": null,
+      "definition": "your personal name",
+      "example": "Write your first name here.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "folder",
+      "he": "תיקייה",
+      "ar": null,
+      "definition": "a cover for keeping papers",
+      "example": "Open your folder.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "guess",
+      "he": "לנחש",
+      "ar": null,
+      "definition": "give an answer without being sure",
+      "example": "Guess the answer.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "keyboard",
+      "he": "מקלדת",
+      "ar": null,
+      "definition": "the keys used to type",
+      "example": "Type your name on the keyboard.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "quiz",
+      "he": "בוחן",
+      "ar": null,
+      "definition": "a short test",
+      "example": "We have a quiz today.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "surname",
+      "he": "שם משפחה",
+      "ar": null,
+      "definition": "your family name",
+      "example": "Write your surname here.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    },
+    {
+      "en": "task",
+      "he": "משימה",
+      "ar": null,
+      "definition": "a piece of work to do",
+      "example": "Complete the task.",
+      "group": "word-power-2",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "alsoOn": [
+        {
+          "book": "workbook",
+          "page": 4
+        }
+      ],
+      "heSource": "site",
+      "needsReview": false,
+      "missing": [
+        "ar"
+      ]
+    }
+  ],
+  "grammar": [],
+  "activities": [
+    {
+      "id": "learn-words",
+      "type": "flashcards",
+      "skill": "vocabulary",
+      "level": null,
+      "lane": "learn",
+      "source": {
+        "book": "students",
+        "page": 9
+      },
+      "note": "Word Power 1 presentation (Student's Book p.7) was not in the scanned material.",
+      "status": "planned"
+    },
+    {
+      "id": "write-the-words-1",
+      "type": "write-the-words",
+      "skill": "vocabulary",
+      "level": null,
+      "lane": "practice",
+      "source": {
+        "book": "workbook",
+        "page": 4
+      },
+      "linkedTo": {
+        "book": "students",
+        "page": 7
+      },
+      "status": "planned"
+    },
+    {
+      "id": "write-the-words-2",
+      "type": "write-the-words",
+      "skill": "vocabulary",
+      "level": null,
+      "lane": "practice",
+      "source": {
+        "book": "workbook",
+        "page": 4
+      },
+      "linkedTo": {
+        "book": "students",
+        "page": 9
+      },
+      "status": "planned"
+    },
+    {
+      "id": "match-to-pictures",
+      "type": "match-sentences-to-pictures",
+      "skill": "vocabulary",
+      "level": null,
+      "lane": "practice",
+      "source": {
+        "book": "students",
+        "page": 9,
+        "exercise": 6
+      },
+      "status": "planned"
+    },
+    {
+      "id": "crossword",
+      "type": "complete-the-puzzles",
+      "skill": "vocabulary",
+      "level": 1,
+      "lane": "practice",
+      "source": {
+        "book": "workbook",
+        "page": 5,
+        "exercise": 1
+      },
+      "linkedTo": {
+        "book": "students",
+        "page": 10,
+        "exercise": 9
+      },
+      "status": "planned"
+    },
+    {
+      "id": "circle-correct",
+      "type": "circle-the-correct-words",
+      "skill": "vocabulary",
+      "level": 2,
+      "lane": "practice",
+      "source": {
+        "book": "workbook",
+        "page": 5,
+        "exercise": 2
+      },
+      "status": "planned"
+    },
+    {
+      "id": "complete-sentences",
+      "type": "complete-the-sentences",
+      "skill": "vocabulary",
+      "level": 2,
+      "lane": "practice",
+      "source": {
+        "book": "workbook",
+        "page": 5,
+        "exercise": 3
+      },
+      "status": "planned"
+    }
+  ],
+  "skills": {
+    "reading": {
+      "active": false,
+      "reason": "No reading text for Getting Started in the scanned material."
+    },
+    "listening": {
+      "active": false,
+      "reason": "No listening material for Getting Started in the scanned material."
+    },
+    "speaking": {
+      "active": false,
+      "reason": "No speaking page for Getting Started in the scanned material."
+    }
+  },
+  "phonics": null
+}
