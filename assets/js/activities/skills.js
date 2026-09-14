@@ -119,7 +119,7 @@ function renderChallenge(unit){
     ${c.vocabPower.map((w,i)=>`
       <div style="margin-bottom:14px;">
         <div style="font-weight:700;margin-bottom:6px;">${w}</div>
-        <input type="text" class="freeText" style="min-height:auto;padding:10px 12px;" data-action="vpInput" data-idx="${i}" value="${escapeAttr(A.vpValues[i])}" placeholder="Write a sentence with '${w}'..."/>
+        <input type="text" class="freeText" style="min-height:auto;padding:10px 12px;" data-action="vpInput" data-idx="${i}" value="${escapeAttr(A.vpValues[i] || '')}" placeholder="Write a sentence with '${w}'..."/>
       </div>`).join('')}
     <div class="navRowR"><button class="pill" style="background:var(--gold)" data-action="vpSave">Save Sentences</button></div>
     ${A.vpSaved?'<div class="savedMsg">✓ Sentences saved.</div>':''}`;

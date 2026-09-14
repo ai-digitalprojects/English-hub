@@ -12,10 +12,11 @@
      #/<section>/<activity>              activity, part-less section
      #/<section>/<part>/<activity>       activity inside a part (Phase 4)  */
 
-import { S, resetA } from './state.js';
+import { S, A, resetA } from './state.js';
 import { UNITS } from './data/units.js';
 import { sectionById, partById } from './data/manifest.js';
 import { activityDefs, slugFor, keyForSlug } from './activity-defs.js';
+import { applyDraft } from './drafts.js';
 
 /* ---- route -> hash ---- */
 function hashFor(route){
@@ -67,7 +68,15 @@ function resolveActivity(unit, unitKey, slug){
 function applyRoute(route){
   const section = route.sectionId ? sectionById(route.sectionId) : null;
   const nextActivity = route.activityKey || null;
-  if(nextActivity !== S.activityId) resetA();
+  /* Identity is the whole location, not just the activity name: Getting
+     Started's "Write It" and Unit 1's "Write It" share a key but are two
+     different activities, and their in-progress state must not bleed across. */
+  const sameActivity = !!nextActivity
+    && nextActivity === S.activityId
+    && route.sectionId === S.sectionId
+    && (route.partId || null) === (S.partId || null);
+  const changed = !sameActivity;
+  if(changed) resetA();
 
   S.view       = route.view === 'section' ? 'unit' : route.view;
   S.sectionId  = route.sectionId || null;
@@ -75,6 +84,8 @@ function applyRoute(route){
   S.unitId     = section ? section.unitKey : null;
   S.activityId = nextActivity;
   S.route      = route;
+  /* Restore any saved text for this activity before it renders. */
+  if(changed && nextActivity) applyDraft(route, A);
 }
 
 function currentRoute(){

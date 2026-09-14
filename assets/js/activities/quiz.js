@@ -3,7 +3,7 @@ import { escapeAttr } from '../helpers.js';
 
 /* ---- Final Quiz ---- */
 function renderQuiz(unit){
-  if(A.qzIdx===undefined){ A.qzIdx=0; A.qzScore=0; A.qzSelected=null; A.qzAnswered=false; A.qzOpenText=''; A.qzScoreCount=0; }
+  if(A.qzIdx===undefined){ A.qzIdx=0; A.qzScore=0; A.qzSelected=null; A.qzAnswered=false; A.qzScoreCount=0; }
   if(A.qzIdx>=unit.finalQuiz.length){
     const scoreable = unit.finalQuiz.filter(q=>q.type==='mc').length;
     const pct = Math.round(A.qzScore/scoreable*10); // scale to /10 overall
@@ -38,7 +38,7 @@ function renderQuiz(unit){
     </div>`;
   } else {
     body = `<div class="prompt">${q.p}</div>
-    <textarea class="freeText" data-action="qzOpenInput" placeholder="Type your answer...">${A.qzOpenText}</textarea>
+    <textarea class="freeText" data-action="qzOpenInput" placeholder="Type your answer...">${(A.qzOpen && A.qzOpen[A.qzIdx]) || ''}</textarea>
     <div class="noteBox">This question isn't scored — your answer is simply recorded.</div>`;
   }
   const canNext = q.type==='mc' ? A.qzSelected!==null : true;

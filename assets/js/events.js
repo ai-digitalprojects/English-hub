@@ -1,5 +1,7 @@
 import { S, A, resetA, freshUnits, persist } from './state.js';
 import { clearProgress } from './storage.js';
+import { scheduleDraftSave, clearDraft, clearAllDrafts } from './drafts.js';
+import { currentRoute } from './router.js';
 import { UNITS } from './data/units.js';
 import { shuffle } from './helpers.js';
 import { speak } from './speech.js';
@@ -165,11 +167,11 @@ document.getElementById('app').addEventListener('click', function(e){
     render(); return;
   }
   if(act==='qzNext'){
-    A.qzIdx++; A.qzSelected=null; A.qzOpenText='';
+    A.qzIdx++; A.qzSelected=null;
     render(); return;
   }
   if(act==='quizRestart'){
-    A.qzIdx=0; A.qzScore=0; A.qzSelected=null; A.qzOpenText='';
+    A.qzIdx=0; A.qzScore=0; A.qzSelected=null;
     render(); return;
   }
   if(act==='quizFinish'){
@@ -178,10 +180,13 @@ document.getElementById('app').addEventListener('click', function(e){
     backToUnit(); return;
   }
 
+  if(act==='clearDraft'){ clearDraft(currentRoute(), A); render(); return; }
+
   if(act==='resetAsk'){ S.confirmReset = true; render(); return; }
   if(act==='resetConfirmYes'){
     S.units = freshUnits();
     clearProgress();
+    clearAllDrafts();
     S.confirmReset = false; render(); return;
   }
   if(act==='resetConfirmNo'){ S.confirmReset = false; render(); return; }
@@ -204,7 +209,12 @@ document.getElementById('app').addEventListener('input', function(e){
     A.vpValues[parseInt(t.dataset.idx)] = t.value; A.vpSaved=false;
   }
   else if(act==='crInput'){ A.crText = t.value; A.crSaved=false; }
-  else if(act==='qzOpenInput'){ A.qzOpenText = t.value; }
+  else if(act==='qzOpenInput'){
+    if(A.qzOpen===undefined) A.qzOpen={};
+    A.qzOpen[A.qzIdx] = t.value;
+  }
+  else { return; }   // not a draftable field
+  scheduleDraftSave(currentRoute(), A);
 });
 document.getElementById('app').addEventListener('change', function(e){
   const t = e.target;

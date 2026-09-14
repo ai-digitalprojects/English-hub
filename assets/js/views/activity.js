@@ -3,7 +3,8 @@ import { UNITS } from '../data/units.js';
 import { heLine } from '../helpers.js';
 import { activityNeighbours, slugFor } from '../activity-defs.js';
 import { sectionById } from '../data/manifest.js';
-import { hashFor } from '../router.js';
+import { hashFor, currentRoute } from '../router.js';
+import { hasDraft } from '../drafts.js';
 import { renderFlashcards, renderVocabPractice, renderClassroomEnglish } from '../activities/vocabulary.js';
 import { renderSentenceBuilder, renderGrammarLab } from '../activities/grammar.js';
 import { renderSpeak, renderReading, renderWrite, renderChallenge } from '../activities/skills.js';
@@ -25,6 +26,15 @@ function activityFooter(){
   return `<div class="stepNav">${link(prev,'prev')}${link(next,'next')}</div>`;
 }
 
+/* Offered only when this activity actually has saved text to throw away. */
+function draftNotice(){
+  if(!hasDraft(currentRoute())) return '';
+  return `<div class="draftRow">
+    <span class="draftFlag">✓ Your writing is saved on this device</span>
+    <button class="draftClear" data-action="clearDraft">Clear my draft</button>
+  </div>`;
+}
+
 function renderActivity(){
   const u = S.unitId, act = S.activityId, unit = UNITS[u];
   let title='', sub='', heSub='', body='';
@@ -41,7 +51,7 @@ function renderActivity(){
     case 'challenge': title='Challenge'; sub='A few trickier tasks to test yourself.'; heSub='כמה משימות מאתגרות לבחינה עצמית.'; body = renderChallenge(unit); break;
     case 'checkYourself': title = u==='gs' ? 'Check Yourself' : 'Final Check'; sub='10 questions covering everything in this unit.'; heSub='10 שאלות שמכסות את כל היחידה.'; body = renderQuiz(unit); break;
   }
-  return `<div class="card"><h2>${title}</h2><div class="actSub">${sub}</div>${heLine(heSub)}${body}</div>${activityFooter()}`;
+  return `<div class="card"><h2>${title}</h2><div class="actSub">${sub}</div>${heLine(heSub)}${body}${draftNotice()}</div>${activityFooter()}`;
 }
 
 export { renderActivity };
