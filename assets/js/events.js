@@ -18,6 +18,7 @@ function initEvents(){
     const part = getPart(S.sectionId, S.partId);
 
     if(act === 'speak'){ speak(t.dataset.text); return; }
+    if(act === 'printWorksheet'){ window.print(); return; }
 
     /* Exercise drills own their own actions. */
     if(act === 'ex'){
@@ -71,10 +72,22 @@ function initEvents(){
     scheduleDraftSave(currentRoute(), A);
   });
 
+  /* Enter checks the answer, then moves on — so a whole drill can be done
+     from the keyboard without reaching for the mouse. */
   app.addEventListener('keydown', function(e){
-    if(e.key === 'Enter' && e.target.dataset.action === 'wInput'){
+    if(e.key !== 'Enter') return;
+    const act = e.target.dataset.action;
+    if(act === 'wInput'){
       e.preventDefault();
-      if(!A.wChecked){ A.wChecked = true; } else { A.wIdx++; A.wChecked = false; A.wValue = ''; }
+      if(!A.wChecked) A.wChecked = true;
+      else { A.wIdx++; A.wChecked = false; A.wValue = ''; }
+      render();
+    } else if(act === 'pInput'){
+      e.preventDefault();
+      if(!A.pChecked){
+        A.pChecked = true;
+        if(A.pValue.trim().toLowerCase() === A.pItems[A.pIdx].en.toLowerCase()) A.pScore++;
+      } else { A.pIdx++; A.pValue = ''; A.pChecked = false; }
       render();
     }
   });

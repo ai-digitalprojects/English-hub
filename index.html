@@ -4,18 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THINK ABOUT IT! — Grade 6 English Learning Hub</title>
+<meta name="description" content="An English learning hub for Grade 6 following the THINK ABOUT IT! Student's Book and Workbook: vocabulary, grammar and practice, part by part.">
+<meta name="theme-color" content="#20303F">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
 </head>
 <body>
-<div class="topbar">
+<a class="skipLink" href="#app">Skip to content</a>
+
+<header class="topbar">
   <div class="brand">THINK ABOUT IT! <small>Grade 6 &middot; Gevim School</small></div>
-  <div class="navbtns" id="navBtns"></div>
-</div>
-<div class="app" id="app"></div>
+  <nav class="navbtns" id="navBtns" aria-label="Main"></nav>
+</header>
+
+<main class="app" id="app" tabindex="-1"></main>
+
+<noscript>
+  <div class="app">
+    <div class="card">
+      <h2>JavaScript is switched off</h2>
+      <p>This learning hub needs JavaScript to show the lessons. Please turn it on and reload the page.</p>
+    </div>
+  </div>
+</noscript>
 
 <script type="module" src="assets/js/app.js"></script>
 </body>

@@ -48,11 +48,11 @@ export default {
         <button class="chip pool${A.gSel === i ? ' selected' : ''}${A.gWrong === i ? ' wrong' : ''}"
           data-action="ex" data-do="gPick" data-idx="${i}">${w.en}</button>`).join('')}</div>
       <div class="binRow">${A.gGroups.map(g => `
-        <div class="bin" data-action="ex" data-do="gDrop" data-group="${escapeAttr(g)}">
+        <button type="button" class="bin" data-action="ex" data-do="gDrop" data-group="${escapeAttr(g)}">
           <div class="binHead">${GROUP_NAMES[g] || g}</div>
           <div class="binItems">${A.gBins[g].map(en => `<span class="chip done">${en}</span>`).join('')
             || '<span class="stripHint">empty</span>'}</div>
-        </div>`).join('')}</div>
+        </button>`).join('')}</div>
       <div class="pctLabel">${left} word${left === 1 ? '' : 's'} left</div>`;
   },
 

@@ -33,8 +33,9 @@ export default {
       const sel = (side === 'L' ? A.mSelLeft : A.mSelRight) === v;
       const cls = 'matchItem' + (matched ? ' matched' : '') + (sel ? ' selected' : '')
                 + (A.mWrong === side + ':' + v ? ' wrong' : '');
+      const rtl = side === 'R' ? ' dir="rtl"' : '';
       return `<button class="${cls}" data-action="ex" data-do="matchPick" data-side="${side}"
-        data-val="${escapeAttr(v)}" ${matched ? 'disabled' : ''}>${v}</button>`;
+        data-val="${escapeAttr(v)}"${rtl} ${matched ? 'disabled' : ''}>${v}</button>`;
     }).join('');
     return `<p class="exHint">Tap an English word, then its meaning.</p>
       <div class="matchGrid">

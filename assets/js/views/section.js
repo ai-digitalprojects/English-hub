@@ -6,7 +6,7 @@ import { colorBg, colorVar } from '../state.js';
 import { partProgress } from '../progress.js';
 import { S } from '../state.js';
 import { hashFor } from '../router.js';
-import { renderLanes } from './part.js';
+import { renderLanes, worksheet } from './part.js';
 
 function partCard(sectionId, part){
   const pr = partProgress(sectionId, part);
@@ -21,7 +21,7 @@ function partCard(sectionId, part){
       <span class="partStatus">${pr.total && pr.done === pr.total ? '✓' : pr.done ? pr.done + '/' + pr.total : '○'}</span>
     </div>
     <div class="icon">${part.icon}</div>
-    <h4>${part.title}</h4>
+    <h3>${part.title}</h3>
     <p class="partMeta">${meta || '&nbsp;'}</p>
     <div class="pbarOuter thin"><div class="pbarInner" style="width:${pr.pct}%;background:${colorVar(part.color)}"></div></div>
   </a>`;
@@ -46,7 +46,7 @@ function renderSection(){
 
   /* No parts: show this section's own lanes. */
   const part = getPart(section.id, null);
-  return head + renderLanes(section.id, part);
+  return head + renderLanes(section.id, part) + worksheet(section, part);
 }
 
 export { renderSection };

@@ -1,0 +1,30 @@
+/* Print worksheet mode.
+   Printing a Part gives the teacher a clean vocabulary worksheet: the word
+   list with a blank column to write in. Everything interactive is hidden. */
+
+*{ background:#fff !important; color:#000 !important; box-shadow:none !important; }
+
+.topbar, .skipLink, .crumbs, .navbtns, .stepNav, .partProgress,
+.lane, .partGrid, .homeGrid, .hero, .missingGrid, .resetBtn,
+button, .pill, .startBtn, .draftRow, .printHide{ display:none !important; }
+
+.app{ max-width:none; margin:0; padding:0; }
+
+.printOnly{ display:block !important; }
+
+.printHead{ border-bottom:2px solid #000; padding-bottom:8px; margin-bottom:16px; }
+.printHead h1{ font-size:18pt; margin:0 0 4px; }
+.printHead .printMeta{ font-size:10pt; }
+.printHead .printName{ margin-top:10px; font-size:11pt; }
+
+.wsTable{ width:100%; border-collapse:collapse; font-size:11pt; }
+.wsTable th, .wsTable td{ border:1px solid #000; padding:7px 9px; text-align:left; }
+.wsTable th{ font-weight:700; background:#eee !important; }
+.wsTable .wsNum{ width:34px; text-align:center; }
+.wsTable .wsHe{ width:28%; direction:rtl; text-align:right; }
+.wsTable .wsBlank{ width:34%; }
+.wsTable tr{ page-break-inside:avoid; }
+
+.printFoot{ margin-top:14px; font-size:9pt; border-top:1px solid #000; padding-top:6px; }
+
+@page{ margin:14mm; }

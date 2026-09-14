@@ -19,7 +19,7 @@ function card(section){
   return `
   <a class="uCard" href="${hashFor({ view:'section', sectionId:section.id })}">
     <div class="icon">${section.icon}</div>
-    <h3>${section.label}</h3>
+    <h2>${section.label}</h2>
     <p class="desc">${section.subtitle || ''}</p>
     <div class="cardMeta">${meta}</div>
     <div class="pbarOuter"><div class="pbarInner" style="width:${pr.pct}%;background:${colorVar(section.color)}"></div></div>

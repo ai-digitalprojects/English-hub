@@ -22,3 +22,35 @@ button{ font-family:inherit; }
 }
 .navbtn:hover{ background:rgba(255,255,255,0.18); }
 
+
+/* ===== PHASE 6 — accessibility & keyboard ===== */
+
+/* Skip link: visible only once it takes focus. */
+.skipLink{
+  position:absolute; left:-9999px; top:0; z-index:100;
+  background:var(--navy); color:#fff; padding:10px 16px; border-radius:0 0 8px 0;
+  font-weight:700; font-size:0.9rem; text-decoration:none;
+}
+.skipLink:focus{ left:0; }
+
+/* One clear focus ring everywhere, only for keyboard users. */
+:focus-visible{ outline:3px solid var(--blue); outline-offset:2px; border-radius:6px; }
+.topbar :focus-visible{ outline-color:var(--gold); }
+#app:focus{ outline:none; }
+
+/* Respect a reduced-motion preference. */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration:0.01ms !important; animation-iteration-count:1 !important;
+    transition-duration:0.01ms !important; scroll-behavior:auto !important;
+  }
+}
+
+/* Hebrew is always isolated from the surrounding English so punctuation and
+   digits sit on the correct side. */
+[dir="rtl"]{ unicode-bidi:isolate; }
+
+/* Never let a long word or a wide block push the page sideways. */
+html, body{ overflow-x:hidden; }
+.app{ max-width:1000px; }
+img, svg, table{ max-width:100%; }

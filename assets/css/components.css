@@ -318,3 +318,59 @@ a.statRow.link:hover{ background:rgba(0,0,0,0.03); }
   border:1px solid var(--gold); color:var(--ink); font-weight:800; font-size:1.1rem;
   text-transform:uppercase;
 }
+
+/* ===== PHASE 6 — polish ===== */
+.printOnly{ display:none; }
+.printRow{ margin:18px 0 4px; }
+
+/* Bins are buttons now; keep them looking like drop zones. */
+button.bin{ width:100%; text-align:left; font:inherit; display:block; }
+
+/* Consistent rhythm between the blocks on every Part screen. */
+.unitHead{ margin-bottom:6px; }
+.lane:first-of-type{ margin-top:20px; }
+.laneGrid{ align-items:stretch; }
+.actItem{ display:flex; flex-direction:column; height:100%; }
+.actItem h4{ line-height:1.3; }
+.actTop{ min-height:22px; }
+
+/* Long English and Hebrew alike must wrap rather than overflow. */
+.actItem h4, .partCard h4, .prompt, .word, .hePrompt, .matchItem, .opt{
+  overflow-wrap:anywhere;
+}
+.matchItem, .opt{ white-space:normal; height:auto; }
+
+/* Tablet */
+@media(max-width:900px){
+  .app{ padding:0 14px 60px; }
+  .partGrid{ grid-template-columns:1fr 1fr; }
+}
+
+/* Phone */
+@media(max-width:620px){
+  .topbar{ padding:10px 14px; flex-wrap:wrap; gap:8px; }
+  .topbar .brand{ font-size:0.88rem; }
+  .navbtn{ padding:6px 11px; font-size:0.78rem; }
+  .hero h1{ font-size:1.5rem; }
+  .homeGrid, .partGrid, .laneGrid, .missingGrid, .binRow{ grid-template-columns:1fr; }
+  .crumbs{ font-size:0.76rem; }
+  .unitHead .icon{ font-size:1.7rem; }
+  .unitHead h2{ font-size:1.35rem; }
+  .bookRef{ font-size:0.72rem !important; }
+  .stepNav{ flex-direction:column; align-items:stretch; }
+  .stepLink{ max-width:none; text-align:center; }
+  .stepNav .next{ margin-left:0; }
+  .flashNav{ flex-wrap:wrap; gap:8px; justify-content:center; }
+  .scrambled .letter{ width:28px; height:34px; font-size:0.95rem; }
+  .hePrompt{ font-size:1.25rem; }
+  .prompt.bigWord{ font-size:1.3rem; }
+  .card{ padding:16px 14px; }
+}
+
+/* Heading levels changed for correct document outline; keep the old sizes. */
+.uCard h2{ margin:0; font-size:1.15rem; }
+.partCard h3{ margin:4px 0; font-size:1.02rem; }
+
+/* The right-hand match column is always the Hebrew one. Setting direction here
+   as well as on the element keeps it correct even if markup changes. */
+.matchGrid .matchCol:last-child .matchItem{ direction:rtl; unicode-bidi:isolate; }

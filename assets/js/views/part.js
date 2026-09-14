@@ -69,6 +69,35 @@ function inactiveSkills(part){
   </section>`;
 }
 
+/* A printable vocabulary worksheet: the word list with a blank column.
+   Hidden on screen, laid out by print.css when the page is printed. */
+function worksheet(section, part){
+  const words = part.vocabulary || [];
+  if(!words.length) return '';
+  const sb = ((part.sources || {}).studentsBook || []).join(', ');
+  const wb = ((part.sources || {}).workbook || []).join(', ');
+  return `
+  <section class="printOnly" aria-hidden="true">
+    <div class="printHead">
+      <h1>${part.title}</h1>
+      <div class="printMeta">THINK ABOUT IT! &middot; Grade 6 &middot; ${section.label}${part.number ? ' &middot; Part ' + part.number : ''}
+        &middot; Student's Book p.${sb} &middot; Workbook p.${wb}</div>
+      <div class="printName">Name: ______________________________　　Class: ____________　　Date: ____________</div>
+    </div>
+    <table class="wsTable">
+      <thead><tr><th class="wsNum">#</th><th>English</th><th class="wsHe" dir="rtl">עברית</th><th class="wsBlank">Write it</th></tr></thead>
+      <tbody>${words.map((w, i) => `
+        <tr>
+          <td class="wsNum">${i + 1}</td>
+          <td>${w.en}</td>
+          <td class="wsHe" dir="rtl">${w.he || ''}</td>
+          <td class="wsBlank"></td>
+        </tr>`).join('')}</tbody>
+    </table>
+    <div class="printFoot">${words.length} words &middot; ${words.filter(w => w.he).length} with Hebrew</div>
+  </section>`;
+}
+
 /* Shared by the Part screen and by part-less sections such as Getting Started. */
 function renderLanes(sectionId, part){
   const acts = activitiesOf(part);
@@ -80,6 +109,9 @@ function renderLanes(sectionId, part){
     <div class="pbarOuter"><div class="pbarInner" style="width:${pr.pct}%;background:${colorVar(part.color || 'blue')}"></div></div>
     <div class="pctLabel">${pr.done} of ${pr.total} available activities done</div>
   </div>
+  ${(part.vocabulary || []).length ? `<div class="printRow printHide">
+    <button class="pill outline" data-action="printWorksheet">🖨 Print a word worksheet</button>
+  </div>` : ''}
   ${lane(sectionId, part, 'learn', '📘 Learn', "Student's Book", learn)}
   ${grammarBox(part)}
   ${lane(sectionId, part, 'practice', '📝 Practice', 'Workbook', practice)}
@@ -102,7 +134,8 @@ function renderPart(){
     </div>
   </div>
   ${part.notes ? `<p class="sectionNote">${part.notes}</p>` : ''}
-  ${renderLanes(section.id, part)}`;
+  ${renderLanes(section.id, part)}
+  ${worksheet(section, part)}`;
 }
 
-export { renderPart, renderLanes };
+export { renderPart, renderLanes, worksheet };

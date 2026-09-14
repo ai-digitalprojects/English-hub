@@ -96,8 +96,18 @@ function isPlayable(part, activity){
   return !!(test && test(part, activity));
 }
 
+/* Say exactly what is missing. A catalogued book exercise is locked because
+   its questions were never transcribed, not because the site lacks a screen. */
 function whyNotPlayable(part, activity){
-  if(!PLAYABLE[activity.type]) return 'This exercise type is not built yet.';
+  if(!PLAYABLE[activity.type]){
+    const s = activity.source;
+    if(s){
+      const book = s.book === 'students' ? "Student's Book" : 'Workbook';
+      const where = book + ' p.' + s.page + (s.exercise ? ', exercise ' + s.exercise : '');
+      return 'The questions from ' + where + ' have not been added to the site yet.';
+    }
+    return 'This exercise has not been added to the site yet.';
+  }
   if(activity.type === 'write-the-words')
     return 'Needs Hebrew for at least four of these words — not recorded yet.';
   return 'Not available yet.';
