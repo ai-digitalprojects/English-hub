@@ -1,13 +1,14 @@
 import { S } from './state.js';
 import { UNITS } from './data/units.js';
+import { hasGrammar, hasReading, hasClassroom } from './availability.js';
 
 function unitOverallPct(u){
   const st = S.units[u];
   const unit = UNITS[u];
   let keys = ['learnWords','vocabPractice','sentenceBuilder','speak','write','challenge'];
-  if(u==='gs') keys.push('classroomEnglish');
-  if(unit.hasGrammar) keys.push('grammarLab');
-  if(unit.hasReading) keys.push('read');
+  if(hasClassroom(unit)) keys.push('classroomEnglish');
+  if(hasGrammar(unit)) keys.push('grammarLab');
+  if(hasReading(unit)) keys.push('read');
   let done=0;
   keys.forEach(k=>{ if(st[k]) done++; });
   if(st.checkYourself.done) done++;

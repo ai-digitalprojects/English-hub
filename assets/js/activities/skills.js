@@ -2,6 +2,7 @@ import { A } from '../state.js';
 import { escapeAttr } from '../helpers.js';
 import { renderMCSequence } from './vocabulary.js';
 import { renderDetective } from './grammar.js';
+import { challengeTabs } from '../availability.js';
 
 /* ---- Speak ---- */
 function renderSpeak(unit){
@@ -83,7 +84,7 @@ function renderReading(unit){
 /* ---- Write ---- */
 function renderWrite(unit){
   if(A.wrText===undefined) A.wrText = '';
-  const wordCount = A.wrText.trim().length ? A.wrText.trim().split(/\\s+/).length : 0;
+  const wordCount = A.wrText.trim().length ? A.wrText.trim().split(/\s+/).length : 0;
   return `
   <p style="font-size:0.85rem;color:var(--ink-soft);">Tap a starter to add it, then keep writing.</p>
   <div class="poolRow">
@@ -102,15 +103,12 @@ function renderWrite(unit){
 
 /* ---- Challenge ---- */
 function renderChallenge(unit){
-  if(A.chTab===undefined) A.chTab = unit.hasGrammar ? 'detective' : 'situations';
   const c = unit.challenge;
-  const tabBtns = unit.hasGrammar
-    ? `<button class="subtab ${A.chTab==='detective'?'active':''}" data-action="setChTab" data-tab="detective">Grammar Detective</button>`
-    : `<button class="subtab ${A.chTab==='situations'?'active':''}" data-action="setChTab" data-tab="situations">Situations</button>`;
+  const tabDefs = challengeTabs(unit);
+  if(!tabDefs.length) return '<div class="noteBox">No challenge tasks for this unit yet.</div>';
+  if(A.chTab===undefined || !tabDefs.some(t=>t.key===A.chTab)) A.chTab = tabDefs[0].key;
   const tabs = `<div class="tabRow">
-    ${tabBtns}
-    <button class="subtab ${A.chTab==='vocabPower'?'active':''}" data-action="setChTab" data-tab="vocabPower">Vocabulary Power</button>
-    <button class="subtab ${A.chTab==='create'?'active':''}" data-action="setChTab" data-tab="create">Create</button>
+    ${tabDefs.map(t=>`<button class="subtab ${A.chTab===t.key?'active':''}" data-action="setChTab" data-tab="${t.key}">${t.label}</button>`).join('')}
   </div>`;
   let body='';
   if(A.chTab==='situations') body = renderMCSequence(c.situations, {completeKey:'challenge', finishLabel:'Mark Challenge Complete'});

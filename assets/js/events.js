@@ -147,7 +147,7 @@ document.getElementById('app').addEventListener('click', function(e){
 
   if(act==='wrStarter'){
     const s = unit.writing.starters[parseInt(t.dataset.idx)];
-    A.wrText = (A.wrText? A.wrText+'\\n' : '') + s;
+    A.wrText = (A.wrText? A.wrText+'\n' : '') + s;
     render(); return;
   }
   if(act==='wrSave'){ A.wrSaved = true; render(); return; }
@@ -193,7 +193,7 @@ document.getElementById('app').addEventListener('input', function(e){
   else if(act==='wrInput'){
     A.wrText = t.value; A.wrSaved=false;
     const counter = t.parentElement.querySelector('.wordCounter');
-    if(counter){ const wc = t.value.trim().length? t.value.trim().split(/\\s+/).length:0; counter.textContent = wc+' words'; }
+    if(counter){ const wc = t.value.trim().length? t.value.trim().split(/\s+/).length:0; counter.textContent = wc+' words'; }
   }
   else if(act==='vpInput'){
     if(A.vpValues===undefined) A.vpValues=[];

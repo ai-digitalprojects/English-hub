@@ -1,6 +1,7 @@
 import { S } from '../state.js';
 import { UNITS, BADGE_DEFS } from '../data/units.js';
 import { unitOverallPct, earnedBadges } from '../progress.js';
+import { hasGrammar, hasReading } from '../availability.js';
 
 /* ============ RENDER: PROGRESS PAGE ============ */
 function renderProgress(){
@@ -46,8 +47,8 @@ function progressUnitBlock(u){
     const sbPct = st.sentenceBuilder?100:0;
     rows += `<div class="statRow"><span>Sentence Building</span><b>${sbPct}%</b></div>`;
   }
-  if(unit.hasGrammar) rows += `<div class="statRow"><span>Grammar</span><b>${st.grammarLab?100:0}%</b></div>`;
-  if(unit.hasReading) rows += `<div class="statRow"><span>Reading</span><b>${st.read?100:0}%</b></div>`;
+  if(hasGrammar(unit)) rows += `<div class="statRow"><span>Grammar</span><b>${st.grammarLab?100:0}%</b></div>`;
+  if(hasReading(unit)) rows += `<div class="statRow"><span>Reading</span><b>${st.read?100:0}%</b></div>`;
   rows += `<div class="statRow"><span>Speaking</span><b>${st.speak?'Completed':'Not completed'}</b></div>`;
   rows += `<div class="statRow"><span>Writing</span><b>${st.write?'Completed':'Not completed'}</b></div>`;
   rows += `<div class="statRow"><span>Final Check</span><b>${st.checkYourself.done ? st.checkYourself.score+'/10' : '—'}</b></div>`;
