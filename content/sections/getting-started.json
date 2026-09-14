@@ -583,7 +583,39 @@
         "page": 9,
         "exercise": 6
       },
-      "status": "planned"
+      "status": "planned",
+      "render": "pairs",
+      "origin": "adapted",
+      "items": [
+        {
+          "a": "Find the letter A on the ______.",
+          "b": "keyboard"
+        },
+        {
+          "a": "Open a new ______.",
+          "b": "document"
+        },
+        {
+          "a": "Please put your work in your ______.",
+          "b": "folder"
+        },
+        {
+          "a": "Don't listen to my ______!",
+          "b": "conversations"
+        },
+        {
+          "a": "Look at this ______.",
+          "b": "example"
+        },
+        {
+          "a": "______ what I have?",
+          "b": "Guess"
+        },
+        {
+          "a": "You need to study for the ______.",
+          "b": "quiz"
+        }
+      ]
     },
     {
       "id": "crossword",
@@ -601,7 +633,47 @@
         "page": 10,
         "exercise": 9
       },
-      "status": "planned"
+      "status": "planned",
+      "render": "unscramble",
+      "origin": "book",
+      "items": [
+        {
+          "answer": "below",
+          "clue": "למטה"
+        },
+        {
+          "answer": "spell",
+          "clue": "לאיית"
+        },
+        {
+          "answer": "instructions",
+          "clue": "הוראות"
+        },
+        {
+          "answer": "complete",
+          "clue": "להשלים"
+        },
+        {
+          "answer": "raise",
+          "clue": "להרים"
+        },
+        {
+          "answer": "vocabulary",
+          "clue": "אוצר מילים"
+        },
+        {
+          "answer": "opposite",
+          "clue": "היפך"
+        },
+        {
+          "answer": "repeat",
+          "clue": "לחזור"
+        },
+        {
+          "answer": "dictionary",
+          "clue": "מילון"
+        }
+      ]
     },
     {
       "id": "circle-correct",
@@ -614,7 +686,59 @@
         "page": 5,
         "exercise": 2
       },
-      "status": "planned"
+      "status": "planned",
+      "render": "mc",
+      "origin": "book",
+      "items": [
+        {
+          "p": "I can't hear you. Can you ______ the question, please?",
+          "o": [
+            "repeat",
+            "spell"
+          ],
+          "a": "repeat"
+        },
+        {
+          "p": "There are Hebrew-English ______ on the desk.",
+          "o": [
+            "instructions",
+            "dictionaries"
+          ],
+          "a": "dictionaries"
+        },
+        {
+          "p": "Some English words are hard to ______.",
+          "o": [
+            "raise",
+            "spell"
+          ],
+          "a": "spell"
+        },
+        {
+          "p": "The ______ of white is black.",
+          "o": [
+            "opposite",
+            "vocabulary"
+          ],
+          "a": "opposite"
+        },
+        {
+          "p": "Where are the ______ for my new cellphone?",
+          "o": [
+            "opposites",
+            "instructions"
+          ],
+          "a": "instructions"
+        },
+        {
+          "p": "We sometimes start our homework in class and ______ it at home.",
+          "o": [
+            "complete",
+            "raise"
+          ],
+          "a": "complete"
+        }
+      ]
     },
     {
       "id": "complete-sentences",
@@ -627,7 +751,83 @@
         "page": 5,
         "exercise": 3
       },
-      "status": "planned"
+      "status": "planned",
+      "render": "mc",
+      "origin": "book",
+      "items": [
+        {
+          "p": "Read the sign to ______ what it says.",
+          "o": [
+            "find out",
+            "below",
+            "raise"
+          ],
+          "a": "find out"
+        },
+        {
+          "p": "Our mouths are ______ our eyes.",
+          "o": [
+            "below",
+            "complete",
+            "spell"
+          ],
+          "a": "below"
+        },
+        {
+          "p": "I always ______ my hand before I speak in class.",
+          "o": [
+            "raise",
+            "repeat",
+            "find out"
+          ],
+          "a": "raise"
+        },
+        {
+          "p": "We learn new ______ in our English lessons.",
+          "o": [
+            "vocabulary",
+            "dictionary",
+            "instructions"
+          ],
+          "a": "vocabulary"
+        },
+        {
+          "p": "Can you please ______ your name for me?",
+          "o": [
+            "spell",
+            "complete",
+            "raise"
+          ],
+          "a": "spell"
+        },
+        {
+          "p": "Do you know how many words are in the ______?",
+          "o": [
+            "dictionary",
+            "vocabulary",
+            "example"
+          ],
+          "a": "dictionary"
+        },
+        {
+          "p": "My baby sister ______ everything I say.",
+          "o": [
+            "repeats",
+            "spells",
+            "completes"
+          ],
+          "a": "repeats"
+        },
+        {
+          "p": "The teacher wants us to ______ five sentences in English.",
+          "o": [
+            "complete",
+            "raise",
+            "repeat"
+          ],
+          "a": "complete"
+        }
+      ]
     }
   ],
   "skills": {

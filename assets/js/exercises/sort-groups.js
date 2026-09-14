@@ -1,5 +1,6 @@
 import { A } from '../state.js';
 import { shuffle, escapeAttr } from '../helpers.js';
+import { bi, ui } from '../views/bilingual.js';
 
 /* Sort the words back into the groups the book prints them in — Word Power 1
    and 2, or New Words 1 and 2. The groups come from the model, not from us. */
@@ -36,14 +37,14 @@ export default {
     }
     const left = A.gPool.length;
     if(left === 0){
-      return `<div class="matchDone">🎉 Every word is in the right group.</div>
+      return `<div class="matchDone">🎉 ${bi('Everything is in the right group!', 'הכול בקבוצה הנכונה!')}</div>
         <div class="navRowR">
-          <button class="pill outline" data-action="ex" data-do="gRestart">Try again</button>
-          <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
+          <button class="pill outline biBtn" data-action="ex" data-do="gRestart">${ui('again')}</button>
+          <button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui('complete')}</button>
         </div>`;
     }
     return `
-      <p class="exHint">Tap a word, then tap the group it belongs to.</p>
+      <p class="exHint">${bi('Tap a word, then tap its group.', 'הקישו על מילה, ואז על הקבוצה שלה.')}</p>
       <div class="poolRow">${A.gPool.map((w, i) => `
         <button class="chip pool${A.gSel === i ? ' selected' : ''}${A.gWrong === i ? ' wrong' : ''}"
           data-action="ex" data-do="gPick" data-idx="${i}">${w.en}</button>`).join('')}</div>

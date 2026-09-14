@@ -1,0 +1,285 @@
+/* Generic exercise renderers.
+
+   Each one is driven entirely by the `items` an activity carries in the
+   content model, so one renderer serves many workbook exercise types. An
+   activity names the renderer it wants in its `render` field. */
+
+import { A } from '../state.js';
+import { shuffle, escapeAttr } from '../helpers.js';
+import { bi, ins, ui } from '../views/bilingual.js';
+
+const finish = key =>
+  `<button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui(key || 'complete')}</button>`;
+const again = doWhat =>
+  `<button class="pill outline biBtn" data-action="ex" data-do="${doWhat}">${ui('again')}</button>`;
+
+/* ---------------------------------------------------------------- mc
+   One prompt, a few options. `multi: true` asks for two correct answers. */
+const mc = {
+  render(items, part, act){
+    if(A.qs === undefined){
+      A.qs = (act.shuffle === false) ? items.slice() : shuffle(items.slice());
+      A.i = 0; A.picked = []; A.score = 0; A.checked = false;
+    }
+    if(A.i >= A.qs.length){
+      return `<div class="matchDone">🎉 ${bi('Well done!', 'כל הכבוד!')} <b>${A.score} / ${A.qs.length}</b></div>
+        <div class="navRowR">${again('restart')}${finish()}</div>`;
+    }
+    const q = A.qs[A.i];
+    const answers = Array.isArray(q.a) ? q.a : [q.a];
+    const want = answers.length;
+    const done = A.checked;
+    const opts = q.o.map(o => {
+      let cls = 'opt';
+      const he = /[֐-׿]/.test(o);
+      if(done){
+        if(answers.includes(o)) cls += ' correct';
+        else if(A.picked.includes(o)) cls += ' incorrect';
+        else cls += ' dim';
+      } else if(A.picked.includes(o)) cls += ' selected';
+      return `<button class="${cls}${he ? ' he' : ''}"${he ? ' dir="rtl"' : ''} data-action="ex" data-do="pick"
+        data-val="${escapeAttr(o)}" ${done ? 'data-locked="1"' : ''}>${o}</button>`;
+    }).join('');
+    const got = A.picked.filter(p => answers.includes(p)).length;
+    return `
+      <p class="exHint">${ins(want > 1 ? 'mcTwo' : 'mc')}</p>
+      ${q.intro ? `<p class="exHint sub">${q.intro}</p>` : ''}
+      <div class="qWrap">
+        <div class="qCounter">Question ${A.i + 1} of ${A.qs.length}${want > 1 ? ' · choose ' + want : ''}</div>
+        <div class="prompt">${q.p}</div>
+        <div class="opts">${opts}</div>
+        ${done ? (got === want && A.picked.length === want
+          ? `<div class="feedbackMsg good">✓ ${bi('Correct!', 'נכון!')}</div>`
+          : `<div class="feedbackMsg bad">${bi('The answer is:', 'התשובה הנכונה:')} <b>${answers.join(' + ')}</b></div>`) : ''}
+      </div>
+      <div class="navRowR">
+        ${done
+          ? `<button class="pill biBtn" style="background:var(--ink)" data-action="ex" data-do="next">${ui(A.i === A.qs.length - 1 ? 'finish' : 'next')}</button>`
+          : `<button class="pill biBtn" style="background:var(--blue)" data-action="ex" data-do="check" ${A.picked.length === want ? '' : 'disabled'}>${ui('check')}</button>`}
+      </div>`;
+  },
+  handle(doWhat, t){
+    if(doWhat === 'restart'){ delete A.qs; return true; }
+    if(doWhat === 'pick'){
+      if(A.checked) return true;
+      const q = A.qs[A.i], want = Array.isArray(q.a) ? q.a.length : 1;
+      const v = t.dataset.val;
+      if(A.picked.includes(v)) A.picked = A.picked.filter(x => x !== v);
+      else if(A.picked.length < want) A.picked.push(v);
+      else if(want === 1) A.picked = [v];
+      return true;
+    }
+    if(doWhat === 'check'){
+      A.checked = true;
+      const q = A.qs[A.i], answers = Array.isArray(q.a) ? q.a : [q.a];
+      if(A.picked.length === answers.length && A.picked.every(p => answers.includes(p))) A.score++;
+      return true;
+    }
+    if(doWhat === 'next'){ A.i++; A.picked = []; A.checked = false; return true; }
+    return false;
+  }
+};
+
+/* ------------------------------------------------------------- pairs
+   Two columns to match. Items are [left, right]. */
+const pairs = {
+  render(items){
+    if(A.pairs === undefined){
+      A.pairs = items.map(it => [it.a, it.b]);
+      A.left = shuffle(A.pairs.map(p => p[0]));
+      A.right = shuffle(A.pairs.map(p => p[1]));
+      A.matched = []; A.selL = null; A.selR = null; A.wrong = null;
+    }
+    if(A.matched.length === A.pairs.length){
+      return `<div class="matchDone">🎉 ${bi('You matched them all!', 'התאמתם את כולם!')}</div>
+        <div class="navRowR">${again('restart')}${finish()}</div>`;
+    }
+    const col = (list, side) => list.map(v => {
+      const isMatched = side === 'L'
+        ? A.matched.includes(v)
+        : A.matched.some(l => A.pairs.find(p => p[0] === l)[1] === v);
+      const sel = (side === 'L' ? A.selL : A.selR) === v;
+      const he = /[֐-׿]/.test(v);
+      const cls = 'matchItem' + (isMatched ? ' matched' : '') + (sel ? ' selected' : '')
+                + (A.wrong === side + ':' + v ? ' wrong' : '');
+      return `<button class="${cls}"${he ? ' dir="rtl"' : ''} data-action="ex" data-do="pick"
+        data-side="${side}" data-val="${escapeAttr(v)}" ${isMatched ? 'disabled' : ''}>${v}</button>`;
+    }).join('');
+    return `<p class="exHint">${ins('pairs')}</p>
+      <p class="exHint sub">${bi('Tap one on the left, then its partner on the right.', 'הקישו על אחד משמאל, ואז על בן הזוג שלו מימין.')}</p>
+      <div class="matchGrid">
+        <div class="matchCol">${col(A.left, 'L')}</div>
+        <div class="matchCol">${col(A.right, 'R')}</div>
+      </div>
+      <div class="pctLabel">${A.matched.length} of ${A.pairs.length} matched</div>`;
+  },
+  handle(doWhat, t, items, rerender){
+    if(doWhat === 'restart'){ delete A.pairs; return true; }
+    if(doWhat !== 'pick') return false;
+    const side = t.dataset.side, val = t.dataset.val;
+    if(side === 'L') A.selL = (A.selL === val ? null : val);
+    else A.selR = (A.selR === val ? null : val);
+    if(A.selL && A.selR){
+      const pair = A.pairs.find(p => p[0] === A.selL);
+      if(pair && pair[1] === A.selR){ A.matched.push(A.selL); A.wrong = null; }
+      else { A.wrong = 'L:' + A.selL; setTimeout(() => { A.wrong = null; rerender(); }, 500); }
+      A.selL = null; A.selR = null;
+    }
+    return true;
+  }
+};
+
+/* --------------------------------------------------------------- bins
+   Sort words or phrases into named groups. Items are {v, bin}. */
+const bins = {
+  render(items, part, act){
+    if(A.pool === undefined){
+      A.binNames = act.bins || [...new Set(items.map(i => i.bin))];
+      A.pool = shuffle(items.slice());
+      A.placed = {}; A.binNames.forEach(b => { A.placed[b] = []; });
+      A.sel = null; A.wrong = null;
+    }
+    if(!A.pool.length){
+      return `<div class="matchDone">🎉 ${bi('Everything is in the right group!', 'הכול בקבוצה הנכונה!')}</div>
+        <div class="navRowR">${again('restart')}${finish()}</div>`;
+    }
+    return `
+      <p class="exHint">${ins('bins')}</p>
+      <div class="poolRow">${A.pool.map((it, i) => `
+        <button class="chip pool${A.sel === i ? ' selected' : ''}${A.wrong === i ? ' wrong' : ''}"
+          data-action="ex" data-do="pick" data-idx="${i}">${it.v}</button>`).join('')}</div>
+      <div class="binRow">${A.binNames.map(b => `
+        <button type="button" class="bin" data-action="ex" data-do="drop" data-bin="${escapeAttr(b)}">
+          <div class="binHead">${b}</div>
+          <div class="binItems">${A.placed[b].map(v => `<span class="chip done">${v}</span>`).join('')
+            || '<span class="stripHint">empty</span>'}</div>
+        </button>`).join('')}</div>
+      <div class="pctLabel">${A.pool.length} left</div>`;
+  },
+  handle(doWhat, t, items, rerender){
+    if(doWhat === 'restart'){ delete A.pool; return true; }
+    if(doWhat === 'pick'){ const i = Number(t.dataset.idx); A.sel = (A.sel === i ? null : i); A.wrong = null; return true; }
+    if(doWhat === 'drop'){
+      if(A.sel === null) return true;
+      const it = A.pool[A.sel], b = t.dataset.bin;
+      if(it.bin === b){ A.placed[b].push(it.v); A.pool.splice(A.sel, 1); A.sel = null; A.wrong = null; }
+      else { A.wrong = A.sel; setTimeout(() => { A.wrong = null; rerender(); }, 500); }
+      return true;
+    }
+    return false;
+  }
+};
+
+/* ------------------------------------------------------------ writing
+   Prompts with a box under each. Nothing is auto-marked; the text is kept
+   as a draft and the student decides when it is done. */
+const writing = {
+  render(items, part, act){
+    if(A.answers === undefined) A.answers = items.map(() => '');
+    const wordBank = act.wordBank
+      ? `<div class="poolRow">${act.wordBank.map((w, i) =>
+          `<button class="chip pool" data-action="ex" data-do="bank" data-idx="${i}">${w}</button>`).join('')}</div>`
+      : '';
+    return `
+      <p class="exHint">${ins('writing')}</p>
+      ${wordBank}
+      ${items.map((it, i) => `
+        <div class="writeItem">
+          <div class="writePrompt">${i + 1}. ${it.p}</div>
+          <textarea class="freeText" data-action="wrItem" data-idx="${i}"
+            placeholder="Write your answer...">${escapeAttr(A.answers[i] || '')}</textarea>
+        </div>`).join('')}
+      <div class="navRowR">${finish('done')}</div>`;
+  },
+  handle(doWhat, t, items){
+    if(doWhat !== 'bank') return false;
+    const w = t.dataset.idx;
+    A.bankPick = w;
+    return true;
+  },
+  input(act, t){
+    if(act !== 'wrItem') return false;
+    if(A.answers === undefined) A.answers = [];
+    A.answers[Number(t.dataset.idx)] = t.value;
+    return true;
+  }
+};
+
+/* --------------------------------------------------------- unscramble
+   Scrambled letters with a clue. Items are {answer, clue}. */
+const unscramble = {
+  render(items){
+    if(A.items === undefined){
+      A.items = shuffle(items.filter(it => it.answer.replace(/[^A-Za-z]/g, '').length >= 3))
+        .map(it => ({ ...it, mix: mixLetters(it.answer) }));
+      A.i = 0; A.val = ''; A.checked = false; A.score = 0;
+    }
+    if(A.i >= A.items.length){
+      return `<div class="matchDone">🎉 ${bi('Well done!', 'כל הכבוד!')} <b>${A.score} / ${A.items.length}</b></div>
+        <div class="navRowR">${again('restart')}${finish()}</div>`;
+    }
+    const it = A.items[A.i];
+    const right = A.checked && A.val.trim().toLowerCase() === it.answer.toLowerCase();
+    const he = /[֐-׿]/.test(it.clue || '');
+    return `
+      <p class="exHint">${ins('unscramble')}</p>
+      <div class="qWrap">
+        <div class="qCounter">Word ${A.i + 1} of ${A.items.length}</div>
+        <div class="scrambled">${it.mix.split('').map(c => `<span class="letter">${c}</span>`).join('')}</div>
+        ${it.clue ? `<div class="${he ? 'hePrompt' : 'prompt'}"${he ? ' dir="rtl"' : ''}>${it.clue}</div>` : ''}
+        <input type="text" class="freeText wordInput" data-action="exInput" dir="ltr"
+               value="${escapeAttr(A.val)}" placeholder="Write the word..." />
+        ${A.checked ? (right
+          ? `<div class="feedbackMsg good">✓ ${bi('Correct!', 'נכון!')}</div>`
+          : `<div class="feedbackMsg bad">${bi('The word is:', 'המילה היא:')} <b>${it.answer}</b></div>`) : ''}
+      </div>
+      <div class="navRowR">
+        ${A.checked
+          ? `<button class="pill biBtn" style="background:var(--ink)" data-action="ex" data-do="next">${ui(A.i === A.items.length - 1 ? 'finish' : 'next')}</button>`
+          : `<button class="pill biBtn" style="background:var(--blue)" data-action="ex" data-do="check">${ui('check')}</button>`}
+      </div>`;
+  },
+  handle(doWhat){
+    if(doWhat === 'restart'){ delete A.items; return true; }
+    if(doWhat === 'check'){
+      A.checked = true;
+      if(A.val.trim().toLowerCase() === A.items[A.i].answer.toLowerCase()) A.score++;
+      return true;
+    }
+    if(doWhat === 'next'){ A.i++; A.val = ''; A.checked = false; return true; }
+    return false;
+  },
+  input(act, t){
+    if(act !== 'exInput') return false;
+    A.val = t.value; return true;
+  }
+};
+
+function mixLetters(word){
+  const letters = word.replace(/[^A-Za-z]/g, '').split('');
+  const straight = letters.join('');
+  let out = shuffle(letters).join('');
+  for(let i = 0; i < 6 && out.toLowerCase() === straight.toLowerCase(); i++) out = shuffle(letters).join('');
+  return out;
+}
+
+/* ----------------------------------------------------------- wordlist
+   A readable reference list with audio, for the Unit Check word page. */
+const wordlist = {
+  render(items){
+    return `<p class="exHint">${ins('wordlist')}</p>
+      <p class="exHint sub">${bi('Every word from this unit.', 'כל המילים של היחידה.')}</p>
+      <div class="wordListGrid">${items.map(it => `
+        <div class="wordListRow">
+          <span class="wlEn">${it.en}</span>
+          <button class="speaker" data-action="speak" data-text="${escapeAttr(it.en)}">🔊</button>
+          <span class="wlHe" dir="rtl">${it.he || ''}</span>
+        </div>`).join('')}</div>
+      <div class="navRowR">${finish('done')}</div>`;
+  },
+  handle(){ return false; }
+};
+
+const RENDERERS = { mc, pairs, bins, writing, unscramble, wordlist };
+
+export { RENDERERS };

@@ -1,5 +1,6 @@
 import { A } from '../state.js';
 import { shuffle, escapeAttr } from '../helpers.js';
+import { bi, ui } from '../views/bilingual.js';
 
 /* Choose the correct meaning. The wrong options are other words from this same
    part, so every option on screen is a real word from the book. */
@@ -21,15 +22,16 @@ export default {
       A.cIdx = 0; A.cPicked = null; A.cScore = 0;
     }
     if(A.cIdx >= A.cQs.length){
-      return `<div class="matchDone">🎉 ${A.cScore} of ${A.cQs.length} correct.</div>
+      return `<div class="matchDone">🎉 ${bi('Well done!', 'כל הכבוד!')} <b>${A.cScore} / ${A.cQs.length}</b></div>
         <div class="navRowR">
-          <button class="pill outline" data-action="ex" data-do="cRestart">Try again</button>
-          <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
+          <button class="pill outline biBtn" data-action="ex" data-do="cRestart">${ui('again')}</button>
+          <button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui('complete')}</button>
         </div>`;
     }
     const q = A.cQs[A.cIdx];
     const answered = A.cPicked !== null;
     return `
+      <p class="exHint">${bi('Choose the correct meaning.', 'בחרו את המשמעות הנכונה.')}</p>
       <div class="qWrap">
         <div class="qCounter">Word ${A.cIdx + 1} of ${A.cQs.length}</div>
         <div class="prompt bigWord">${q.en}</div>
@@ -44,12 +46,12 @@ export default {
             data-val="${escapeAttr(o)}" ${answered ? 'data-locked="1"' : ''}>${o}</button>`;
         }).join('')}</div>
         ${answered ? (A.cPicked === q.a
-          ? '<div class="feedbackMsg good">✓ Correct!</div>'
-          : `<div class="feedbackMsg bad">The meaning is: ${q.a}</div>`) : ''}
+          ? `<div class="feedbackMsg good">✓ ${bi('Correct!', 'נכון!')}</div>`
+          : `<div class="feedbackMsg bad">${bi('The meaning is:', 'המשמעות היא:')} <b>${q.a}</b></div>`) : ''}
       </div>
       <div class="navRowR">
-        <button class="pill" style="background:var(--ink)" data-action="ex" data-do="cNext"
-          ${answered ? '' : 'disabled'}>${A.cIdx === A.cQs.length - 1 ? 'Finish' : 'Next →'}</button>
+        <button class="pill biBtn" style="background:var(--ink)" data-action="ex" data-do="cNext"
+          ${answered ? '' : 'disabled'}>${ui(A.cIdx === A.cQs.length - 1 ? 'finish' : 'next')}</button>
       </div>`;
   },
 

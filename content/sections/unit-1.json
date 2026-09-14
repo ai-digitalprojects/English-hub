@@ -453,7 +453,43 @@
             "page": 17,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "unscramble",
+          "origin": "adapted",
+          "items": [
+            {
+              "answer": "hit",
+              "clue": "להכות"
+            },
+            {
+              "answer": "team",
+              "clue": "קבוצה"
+            },
+            {
+              "answer": "order",
+              "clue": "להזמין"
+            },
+            {
+              "answer": "afraid",
+              "clue": "פוחד"
+            },
+            {
+              "answer": "popular",
+              "clue": "פופולרי"
+            },
+            {
+              "answer": "love",
+              "clue": "לאהוב"
+            },
+            {
+              "answer": "glad",
+              "clue": "שמח"
+            },
+            {
+              "answer": "island",
+              "clue": "אי"
+            }
+          ]
         },
         {
           "id": "highlight-to-be",
@@ -471,7 +507,35 @@
             "page": 17,
             "exercise": 1
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "He <b>is</b> a tall boy."
+            },
+            {
+              "p": "I <b>am</b> a good student."
+            },
+            {
+              "p": "It <b>isn't</b> my notebook."
+            },
+            {
+              "p": "We <b>aren't</b> in the same class."
+            },
+            {
+              "p": "<b>You're</b> my best friend."
+            },
+            {
+              "p": "Lisa <b>is</b> a popular girl."
+            },
+            {
+              "p": "The boys <b>are</b> at school."
+            },
+            {
+              "p": "<b>I'm not</b> afraid of dogs."
+            }
+          ]
         },
         {
           "id": "highlight-to-have",
@@ -484,7 +548,26 @@
             "page": 11,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "I <b>have</b> a nice teacher."
+            },
+            {
+              "p": "Ofek <b>has</b> a new computer."
+            },
+            {
+              "p": "They <b>have</b> brown hair."
+            },
+            {
+              "p": "She <b>has</b> a red bike."
+            },
+            {
+              "p": "My friend and I <b>have</b> homework."
+            }
+          ]
         },
         {
           "id": "sort-am-is-are",
@@ -502,7 +585,52 @@
             "page": 18,
             "exercise": 3
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "bins",
+          "origin": "book",
+          "items": [
+            {
+              "v": "I",
+              "bin": "am"
+            },
+            {
+              "v": "she",
+              "bin": "is"
+            },
+            {
+              "v": "the team",
+              "bin": "is"
+            },
+            {
+              "v": "they",
+              "bin": "are"
+            },
+            {
+              "v": "your sister",
+              "bin": "is"
+            },
+            {
+              "v": "the girls",
+              "bin": "are"
+            },
+            {
+              "v": "Jake and I",
+              "bin": "are"
+            },
+            {
+              "v": "David",
+              "bin": "is"
+            },
+            {
+              "v": "you",
+              "bin": "are"
+            }
+          ],
+          "bins": [
+            "am",
+            "is",
+            "are"
+          ]
         },
         {
           "id": "circle-be-have",
@@ -515,7 +643,80 @@
             "page": 12,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "I ______ at school.",
+              "o": [
+                "am",
+                "is",
+                "are"
+              ],
+              "a": "am"
+            },
+            {
+              "p": "Sally ______ a tall girl.",
+              "o": [
+                "am not",
+                "isn't",
+                "aren't"
+              ],
+              "a": "isn't"
+            },
+            {
+              "p": "The children ______ in the park.",
+              "o": [
+                "am",
+                "is",
+                "are"
+              ],
+              "a": "are"
+            },
+            {
+              "p": "The dog ______ hungry.",
+              "o": [
+                "am",
+                "is",
+                "are"
+              ],
+              "a": "is"
+            },
+            {
+              "p": "The flowers ______ red.",
+              "o": [
+                "am not",
+                "isn't",
+                "aren't"
+              ],
+              "a": "aren't"
+            },
+            {
+              "p": "We ______ a new car.",
+              "o": [
+                "have",
+                "has"
+              ],
+              "a": "have"
+            },
+            {
+              "p": "Max ______ a green apple.",
+              "o": [
+                "have",
+                "has"
+              ],
+              "a": "has"
+            },
+            {
+              "p": "My brother ______ a test today.",
+              "o": [
+                "have",
+                "has"
+              ],
+              "a": "has"
+            }
+          ]
         },
         {
           "id": "picture-be-have",
@@ -528,7 +729,43 @@
             "page": 12,
             "exercise": 3
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "adapted",
+          "items": [
+            {
+              "p": "Charlie ______ a mouse.",
+              "o": [
+                "is",
+                "has"
+              ],
+              "a": "is"
+            },
+            {
+              "p": "Adam ______ a dog.",
+              "o": [
+                "is",
+                "has"
+              ],
+              "a": "has"
+            },
+            {
+              "p": "Duke and Luke ______ beautiful birds.",
+              "o": [
+                "have",
+                "are"
+              ],
+              "a": "are"
+            },
+            {
+              "p": "Karen and Jeff ______ horses.",
+              "o": [
+                "have",
+                "are"
+              ],
+              "a": "have"
+            }
+          ]
         },
         {
           "id": "complete-be-have",
@@ -541,7 +778,83 @@
             "page": 12,
             "exercise": 4
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "She ______ a blue jacket.",
+              "o": [
+                "has",
+                "is",
+                "am"
+              ],
+              "a": "has"
+            },
+            {
+              "p": "It's Ben's birthday. He ______ 12 years old.",
+              "o": [
+                "is",
+                "has",
+                "are"
+              ],
+              "a": "is"
+            },
+            {
+              "p": "I ______ from England.",
+              "o": [
+                "am",
+                "is",
+                "have"
+              ],
+              "a": "am"
+            },
+            {
+              "p": "The girls ______ at school. They are at home.",
+              "o": [
+                "aren't",
+                "isn't",
+                "am not"
+              ],
+              "a": "aren't"
+            },
+            {
+              "p": "It's cold outside. It ______ hot.",
+              "o": [
+                "isn't",
+                "aren't",
+                "am not"
+              ],
+              "a": "isn't"
+            },
+            {
+              "p": "The garden ______ big trees.",
+              "o": [
+                "has",
+                "have",
+                "is"
+              ],
+              "a": "has"
+            },
+            {
+              "p": "My sister and I ______ tall. We aren't short.",
+              "o": [
+                "are",
+                "is",
+                "am"
+              ],
+              "a": "are"
+            },
+            {
+              "p": "The children ______ a big bedroom.",
+              "o": [
+                "have",
+                "has",
+                "are"
+              ],
+              "a": "have"
+            }
+          ]
         },
         {
           "id": "write-sentences",
@@ -554,7 +867,29 @@
             "page": 13,
             "exercise": 5
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "Write a sentence about Maya. Use <b>is</b> or <b>isn't</b>."
+            },
+            {
+              "p": "Write a sentence about Will and Jake. Use <b>are</b> or <b>aren't</b>."
+            },
+            {
+              "p": "Write a sentence about the dog. Use <b>is</b> or <b>has</b>."
+            },
+            {
+              "p": "Write a sentence about Mom. Use <b>has</b>."
+            },
+            {
+              "p": "Write a sentence about the babies. Use <b>have</b>."
+            },
+            {
+              "p": "Write a sentence about a ball. Use <b>isn't</b>."
+            }
+          ]
         }
       ],
       "skills": {
@@ -999,7 +1334,35 @@
             "page": 24,
             "exercise": 3
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "pairs",
+          "origin": "adapted",
+          "items": [
+            {
+              "a": "The girl is ______.",
+              "b": "clever"
+            },
+            {
+              "a": "There's snow on the ______.",
+              "b": "mountain"
+            },
+            {
+              "a": "This animal enjoys ______.",
+              "b": "the cold"
+            },
+            {
+              "a": "She has one ______ shekels.",
+              "b": "thousand"
+            },
+            {
+              "a": "There are ______ cookies.",
+              "b": "several"
+            },
+            {
+              "a": "The man is ______.",
+              "b": "famous"
+            }
+          ]
         },
         {
           "id": "complete-sentences",
@@ -1012,7 +1375,56 @@
             "page": 17,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "Shira wakes up at 7:30. At 7:35, she is ______ in bed.",
+              "o": [
+                "still",
+                "several",
+                "reason"
+              ],
+              "a": "still"
+            },
+            {
+              "p": "Emma drinks ______ cups of water because she is thirsty.",
+              "o": [
+                "several",
+                "still",
+                "returns"
+              ],
+              "a": "several"
+            },
+            {
+              "p": "Mike ______ home from school at 13:30.",
+              "o": [
+                "returns",
+                "decides",
+                "still"
+              ],
+              "a": "returns"
+            },
+            {
+              "p": "Alan likes the blue hat. He ______ to buy it.",
+              "o": [
+                "decides",
+                "returns",
+                "reason"
+              ],
+              "a": "decides"
+            },
+            {
+              "p": "Kim asks \"Why?\" because she wants to know the ______.",
+              "o": [
+                "reason",
+                "several",
+                "still"
+              ],
+              "a": "reason"
+            }
+          ]
         },
         {
           "id": "circle-correct",
@@ -1025,7 +1437,75 @@
             "page": 17,
             "exercise": 3
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "______ is in the mountains.",
+              "o": [
+                "Tel Aviv",
+                "Jerusalem"
+              ],
+              "a": "Jerusalem"
+            },
+            {
+              "p": "Always wear a ______ in the cold.",
+              "o": [
+                "coat",
+                "T-shirt"
+              ],
+              "a": "coat"
+            },
+            {
+              "p": "Shimi is very clever. He always gets ______ on tests.",
+              "o": [
+                "50%",
+                "100%"
+              ],
+              "a": "100%"
+            },
+            {
+              "p": "There are a thousand pupils in my ______.",
+              "o": [
+                "class",
+                "school"
+              ],
+              "a": "school"
+            },
+            {
+              "p": "The children saw ______ yesterday.",
+              "o": [
+                "a movie",
+                "some music"
+              ],
+              "a": "a movie"
+            },
+            {
+              "p": "______ are about the same size.",
+              "o": [
+                "Apples and oranges",
+                "Bicycles and cars"
+              ],
+              "a": "Apples and oranges"
+            },
+            {
+              "p": "That man is famous. ______ knows his name.",
+              "o": [
+                "Nobody",
+                "Everybody"
+              ],
+              "a": "Everybody"
+            },
+            {
+              "p": "______ is a movie about nature.",
+              "o": [
+                "Animals and Plants",
+                "The Cool Computer"
+              ],
+              "a": "Animals and Plants"
+            }
+          ]
         },
         {
           "id": "complete-about-you",
@@ -1038,7 +1518,26 @@
             "page": 17,
             "exercise": 4
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "I usually wake up at <b>about</b> ..."
+            },
+            {
+              "p": "I <b>saw</b> ... yesterday."
+            },
+            {
+              "p": "I think ... is very <b>clever</b>."
+            },
+            {
+              "p": "I have <b>several</b> ... in my room."
+            },
+            {
+              "p": "I <b>decided</b> to ... today."
+            }
+          ]
         },
         {
           "id": "highlight-questions",
@@ -1056,7 +1555,26 @@
             "page": 25,
             "exercise": 1
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "<b>Are you</b> from England?"
+            },
+            {
+              "p": "<b>Is it</b> cold outside?"
+            },
+            {
+              "p": "<b>Am I</b> late?"
+            },
+            {
+              "p": "<b>Is</b> the woman famous?"
+            },
+            {
+              "p": "<b>Are</b> the children at home?"
+            }
+          ]
         },
         {
           "id": "complete-questions",
@@ -1074,7 +1592,56 @@
             "page": 25,
             "exercise": 4
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "______ you at school today?",
+              "o": [
+                "Are",
+                "Am",
+                "Is"
+              ],
+              "a": "Are"
+            },
+            {
+              "p": "______ I early for dinner?",
+              "o": [
+                "Am",
+                "Is",
+                "Are"
+              ],
+              "a": "Am"
+            },
+            {
+              "p": "______ your mom at home?",
+              "o": [
+                "Is",
+                "Am",
+                "Are"
+              ],
+              "a": "Is"
+            },
+            {
+              "p": "______ the movie interesting?",
+              "o": [
+                "Is",
+                "Am",
+                "Are"
+              ],
+              "a": "Is"
+            },
+            {
+              "p": "______ the students clever?",
+              "o": [
+                "Are",
+                "Am",
+                "Is"
+              ],
+              "a": "Are"
+            }
+          ]
         },
         {
           "id": "circle-wh",
@@ -1087,7 +1654,51 @@
             "page": 19,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "______ is the game?",
+              "o": [
+                "When",
+                "Why"
+              ],
+              "a": "When"
+            },
+            {
+              "p": "______ is her doctor?",
+              "o": [
+                "When",
+                "Who"
+              ],
+              "a": "Who"
+            },
+            {
+              "p": "______ is your phone number?",
+              "o": [
+                "What",
+                "When"
+              ],
+              "a": "What"
+            },
+            {
+              "p": "______ is a banana on the floor?",
+              "o": [
+                "Why",
+                "What"
+              ],
+              "a": "Why"
+            },
+            {
+              "p": "______ is the mountain?",
+              "o": [
+                "Who",
+                "Where"
+              ],
+              "a": "Where"
+            }
+          ]
         },
         {
           "id": "match-q-a",
@@ -1100,7 +1711,35 @@
             "page": 19,
             "exercise": 3
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "pairs",
+          "origin": "book",
+          "items": [
+            {
+              "a": "Is Luke in the garden?",
+              "b": "No, he isn't."
+            },
+            {
+              "a": "When is your birthday?",
+              "b": "It is June 23."
+            },
+            {
+              "a": "Why are you angry?",
+              "b": "Because I can't find my money."
+            },
+            {
+              "a": "What is your favorite sport?",
+              "b": "It is football."
+            },
+            {
+              "a": "Are you ready for school?",
+              "b": "Yes, I am."
+            },
+            {
+              "a": "Where is Henry?",
+              "b": "He is at the store."
+            }
+          ]
         },
         {
           "id": "writing-complete",
@@ -1117,7 +1756,23 @@
             "book": "students",
             "page": 27
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "adapted",
+          "items": [
+            {
+              "p": "The dog is ... (small / big / white / black / green)"
+            },
+            {
+              "p": "The cat isn't ... (happy / sad / scared)"
+            },
+            {
+              "p": "The bird is ... (on the desk / under the chair / on the man's head)"
+            },
+            {
+              "p": "The animals are ... (at the animal hospital)"
+            }
+          ]
         },
         {
           "id": "writing-another",
@@ -1130,7 +1785,17 @@
             "page": 21,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "The dog is under the chair. Write another sentence about the picture."
+            },
+            {
+              "p": "Write one more sentence. Use <b>isn't</b> or <b>aren't</b>."
+            }
+          ]
         },
         {
           "id": "writing-read-write",
@@ -1143,7 +1808,14 @@
             "page": 21,
             "exercise": 3
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "Read: <i>Rex is a beautiful dog. He is black and white and he has brown eyes. Rex isn't a big dog. He is small, but he has big ears.</i><br>Now write about an animal you know. Use <b>is</b>, <b>isn't</b> and <b>has</b>."
+            }
+          ]
         }
       ],
       "skills": {
@@ -1627,7 +2299,31 @@
             "page": 28,
             "exercise": 1
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "pairs",
+          "origin": "adapted",
+          "items": [
+            {
+              "a": "She is taking a picture of the birds.",
+              "b": "take a picture"
+            },
+            {
+              "a": "Bye, Shira. Take care!",
+              "b": "Take care!"
+            },
+            {
+              "a": "Rita is taking her shoes off outside.",
+              "b": "take (something) off"
+            },
+            {
+              "a": "Dad is taking the plates away.",
+              "b": "take (something) away"
+            },
+            {
+              "a": "Mom likes to take the train because it is fast.",
+              "b": "take a train"
+            }
+          ]
         },
         {
           "id": "match-a-b",
@@ -1640,7 +2336,31 @@
             "page": 29,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "pairs",
+          "origin": "book",
+          "items": [
+            {
+              "a": "Please take the ball away from",
+              "b": "the dog"
+            },
+            {
+              "a": "Take care Ben, and",
+              "b": "see you soon."
+            },
+            {
+              "a": "Linda is taking the train",
+              "b": "from Tel Aviv to Ashdod."
+            },
+            {
+              "a": "Jan loves to take pictures",
+              "b": "of her friends."
+            },
+            {
+              "a": "Tom is taking his coat off",
+              "b": "because he is hot."
+            }
+          ]
         },
         {
           "id": "choose-pictures",
@@ -1653,7 +2373,43 @@
             "page": 29,
             "exercise": 4
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "adapted",
+          "items": [
+            {
+              "p": "You are standing on the platform and the train doors open. What do you do?",
+              "o": [
+                "get on the train",
+                "get off the train"
+              ],
+              "a": "get on the train"
+            },
+            {
+              "p": "The bus has arrived at your stop. What do you do?",
+              "o": [
+                "get on the bus",
+                "get off the bus"
+              ],
+              "a": "get off the bus"
+            },
+            {
+              "p": "Someone arrives at your house and you are happy to see them. What do you say?",
+              "o": [
+                "Welcome home!",
+                "Take care!"
+              ],
+              "a": "Welcome home!"
+            },
+            {
+              "p": "The road goes straight there with no turns. How do you go?",
+              "o": [
+                "directly",
+                "comfortable"
+              ],
+              "a": "directly"
+            }
+          ]
         }
       ],
       "skills": {
@@ -2105,7 +2861,47 @@
             "book": "students",
             "page": 34
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "Where is pizza from?",
+              "o": [
+                "Italy",
+                "Japan",
+                "Israel"
+              ],
+              "a": "Italy"
+            },
+            {
+              "p": "Where is Waze from?",
+              "o": [
+                "England",
+                "Japan",
+                "Israel"
+              ],
+              "a": "Israel"
+            },
+            {
+              "p": "Where is Spiderman from?",
+              "o": [
+                "Brazil",
+                "the USA",
+                "Australia"
+              ],
+              "a": "the USA"
+            },
+            {
+              "p": "Where are kangaroos from?",
+              "o": [
+                "Italy",
+                "Canada",
+                "Australia"
+              ],
+              "a": "Australia"
+            }
+          ]
         },
         {
           "id": "write-the-words",
@@ -2135,7 +2931,43 @@
             "page": 38,
             "exercise": 3
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "adapted",
+          "items": [
+            {
+              "p": "Which word means a small bag in your clothes?",
+              "o": [
+                "pocket",
+                "message"
+              ],
+              "a": "pocket"
+            },
+            {
+              "p": "Which word means one team playing another?",
+              "o": [
+                "only",
+                "against"
+              ],
+              "a": "against"
+            },
+            {
+              "p": "Which word means to gather things and keep them?",
+              "o": [
+                "collect",
+                "mean"
+              ],
+              "a": "collect"
+            },
+            {
+              "p": "Which word describes food that is very good to eat?",
+              "o": [
+                "tasty",
+                "perfect"
+              ],
+              "a": "tasty"
+            }
+          ]
         },
         {
           "id": "true-false",
@@ -2148,7 +2980,59 @@
             "page": 28,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "It's good to eat candy instead of vegetables.",
+              "o": [
+                "true",
+                "false"
+              ],
+              "a": "false"
+            },
+            {
+              "p": "Shoes have pockets.",
+              "o": [
+                "true",
+                "false"
+              ],
+              "a": "false"
+            },
+            {
+              "p": "It's important to sleep so you aren't tired.",
+              "o": [
+                "true",
+                "false"
+              ],
+              "a": "true"
+            },
+            {
+              "p": "In football, one team plays against another team.",
+              "o": [
+                "true",
+                "false"
+              ],
+              "a": "true"
+            },
+            {
+              "p": "Everyone thinks fish is tasty.",
+              "o": [
+                "true",
+                "false"
+              ],
+              "a": "false"
+            },
+            {
+              "p": "Green means go.",
+              "o": [
+                "true",
+                "false"
+              ],
+              "a": "true"
+            }
+          ]
         },
         {
           "id": "highlight-present-simple",
@@ -2160,7 +3044,32 @@
             "book": "workbook",
             "page": 31
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "She <b>catches</b> the train every morning."
+            },
+            {
+              "p": "I <b>play</b> basketball on Wednesdays."
+            },
+            {
+              "p": "He <b>goes</b> to work every day."
+            },
+            {
+              "p": "We <b>eat</b> dinner at six o'clock."
+            },
+            {
+              "p": "It <b>rains</b> in the winter."
+            },
+            {
+              "p": "John <b>tries</b> to get to school early."
+            },
+            {
+              "p": "Molly <b>visits</b> her grandma once a week."
+            }
+          ]
         },
         {
           "id": "spelling-table",
@@ -2178,7 +3087,64 @@
             "page": 39,
             "exercise": 3
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "bins",
+          "origin": "book",
+          "items": [
+            {
+              "v": "bake",
+              "bin": "s"
+            },
+            {
+              "v": "give",
+              "bin": "s"
+            },
+            {
+              "v": "play",
+              "bin": "s"
+            },
+            {
+              "v": "bring",
+              "bin": "s"
+            },
+            {
+              "v": "wash",
+              "bin": "es"
+            },
+            {
+              "v": "finish",
+              "bin": "es"
+            },
+            {
+              "v": "go",
+              "bin": "es"
+            },
+            {
+              "v": "push",
+              "bin": "es"
+            },
+            {
+              "v": "study",
+              "bin": "ies"
+            },
+            {
+              "v": "carry",
+              "bin": "ies"
+            },
+            {
+              "v": "fly",
+              "bin": "ies"
+            },
+            {
+              "v": "copy",
+              "bin": "ies"
+            }
+          ],
+          "bins": [
+            "s",
+            "es",
+            "ies"
+          ]
         },
         {
           "id": "circle-present-simple",
@@ -2191,7 +3157,59 @@
             "page": 31,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "I ______ to music in the car.",
+              "o": [
+                "listen",
+                "listens"
+              ],
+              "a": "listen"
+            },
+            {
+              "p": "My friend and I ______ to read books about animals.",
+              "o": [
+                "like",
+                "likes"
+              ],
+              "a": "like"
+            },
+            {
+              "p": "My teacher always ______ me.",
+              "o": [
+                "help",
+                "helps"
+              ],
+              "a": "helps"
+            },
+            {
+              "p": "We ______ to school at eight o'clock.",
+              "o": [
+                "go",
+                "goes"
+              ],
+              "a": "go"
+            },
+            {
+              "p": "Emily and Lucy ______ TV at night.",
+              "o": [
+                "watch",
+                "watches"
+              ],
+              "a": "watch"
+            },
+            {
+              "p": "The baby ______ when he's hungry.",
+              "o": [
+                "cry",
+                "cries"
+              ],
+              "a": "cries"
+            }
+          ]
         }
       ],
       "skills": {
@@ -2927,7 +3945,43 @@
             "page": 42,
             "exercise": 1
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "adapted",
+          "items": [
+            {
+              "p": "Your calendar says: Meet Karen at 5:00. What is that?",
+              "o": [
+                "It's a date.",
+                "What's the date today?"
+              ],
+              "a": "It's a date."
+            },
+            {
+              "p": "The weather outside is beautiful.",
+              "o": [
+                "bad weather",
+                "excellent weather"
+              ],
+              "a": "excellent weather"
+            },
+            {
+              "p": "Someone is running happily in the sunshine.",
+              "o": [
+                "feel well",
+                "feel sick"
+              ],
+              "a": "feel well"
+            },
+            {
+              "p": "A father is reading to his child at bedtime.",
+              "o": [
+                "tell a story",
+                "write a story"
+              ],
+              "a": "tell a story"
+            }
+          ]
         },
         {
           "id": "match-a-b",
@@ -2940,7 +3994,39 @@
             "page": 47,
             "exercise": 1
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "pairs",
+          "origin": "book",
+          "items": [
+            {
+              "a": "I'm sorry to hear",
+              "b": "that you hurt your foot."
+            },
+            {
+              "a": "I am almost finished",
+              "b": "my homework."
+            },
+            {
+              "a": "Be careful. The cup is",
+              "b": "full of water."
+            },
+            {
+              "a": "How much",
+              "b": "does this ticket cost?"
+            },
+            {
+              "a": "Both of my parents",
+              "b": "like pizza."
+            },
+            {
+              "a": "My sister is sick. I want her to",
+              "b": "get better soon."
+            },
+            {
+              "a": "You shouldn't believe",
+              "b": "everything that you read."
+            }
+          ]
         },
         {
           "id": "choose-two",
@@ -2953,7 +4039,83 @@
             "page": 47,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "<b>see</b> ...",
+              "o": [
+                "a doctor",
+                "a friend",
+                "a story"
+              ],
+              "a": [
+                "a doctor",
+                "a friend"
+              ]
+            },
+            {
+              "p": "<b>miss</b> ...",
+              "o": [
+                "a bus",
+                "a pocket",
+                "a party"
+              ],
+              "a": [
+                "a bus",
+                "a party"
+              ]
+            },
+            {
+              "p": "<b>call</b> ...",
+              "o": [
+                "a nurse",
+                "a neighbor",
+                "a reason"
+              ],
+              "a": [
+                "a nurse",
+                "a neighbor"
+              ]
+            },
+            {
+              "p": "<b>send</b> ...",
+              "o": [
+                "a year",
+                "a message",
+                "a kiss"
+              ],
+              "a": [
+                "a message",
+                "a kiss"
+              ]
+            },
+            {
+              "p": "<b>work at</b> ...",
+              "o": [
+                "a medical center",
+                "a school",
+                "a pocket"
+              ],
+              "a": [
+                "a medical center",
+                "a school"
+              ]
+            },
+            {
+              "p": "<b>wait for</b> ...",
+              "o": [
+                "a while",
+                "an island",
+                "an hour"
+              ],
+              "a": [
+                "a while",
+                "an hour"
+              ]
+            }
+          ]
         },
         {
           "id": "write-the-words-1",
@@ -2992,7 +4154,20 @@
             "page": 38,
             "exercise": 4
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "<b>Dad:</b> Your birthday is next week. Do you want to have a party?<br>Write your answer."
+            },
+            {
+              "p": "<b>Nina:</b> Do you want to come over tomorrow at 13:00?<br>Write your answer."
+            },
+            {
+              "p": "<b>Tom:</b> Let's play basketball.<br>Write your answer."
+            }
+          ]
         },
         {
           "id": "hospital-complete",
@@ -3005,7 +4180,26 @@
             "page": 40,
             "exercise": 4
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "adapted",
+          "items": [
+            {
+              "p": "______ is going home because he is getting <b>better</b>. (Jim)"
+            },
+            {
+              "p": "______, ______ and ______ still have <b>medical</b> problems."
+            },
+            {
+              "p": "______ hurt <b>both</b> her arm and her leg."
+            },
+            {
+              "p": "______, ______ and ______ are <b>nurses</b>."
+            },
+            {
+              "p": "______'s room is <b>full</b> of flowers."
+            }
+          ]
         },
         {
           "id": "answer-questions",
@@ -3018,7 +4212,23 @@
             "page": 40,
             "exercise": 5
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "When do you <b>miss</b> school?"
+            },
+            {
+              "p": "Who do you like to <b>see</b> on the weekends?"
+            },
+            {
+              "p": "Do you <b>believe</b> people will live on the moon one day?"
+            },
+            {
+              "p": "What do you do <b>almost</b> every day?"
+            }
+          ]
         }
       ],
       "skills": {
@@ -3120,7 +4330,323 @@
             "book": "students",
             "page": 51
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "wordlist",
+          "origin": "book",
+          "items": [
+            {
+              "en": "afraid",
+              "he": "פוחד"
+            },
+            {
+              "en": "anything",
+              "he": "כל דבר"
+            },
+            {
+              "en": "Dear ...",
+              "he": null
+            },
+            {
+              "en": "glad",
+              "he": "שמח"
+            },
+            {
+              "en": "hit",
+              "he": "להכות"
+            },
+            {
+              "en": "island",
+              "he": "אי"
+            },
+            {
+              "en": "leave",
+              "he": "להשאיר"
+            },
+            {
+              "en": "love",
+              "he": "לאהוב"
+            },
+            {
+              "en": "million",
+              "he": "מיליון"
+            },
+            {
+              "en": "order",
+              "he": "להזמין"
+            },
+            {
+              "en": "pick",
+              "he": "לבחור"
+            },
+            {
+              "en": "popular",
+              "he": "פופולרי"
+            },
+            {
+              "en": "team",
+              "he": "קבוצה"
+            },
+            {
+              "en": "about",
+              "he": "בערך"
+            },
+            {
+              "en": "clever",
+              "he": "חכם"
+            },
+            {
+              "en": "decide",
+              "he": "להחליט"
+            },
+            {
+              "en": "famous",
+              "he": "מפורסם"
+            },
+            {
+              "en": "mountain",
+              "he": "הר"
+            },
+            {
+              "en": "nature",
+              "he": "טבע"
+            },
+            {
+              "en": "reason",
+              "he": "סיבה"
+            },
+            {
+              "en": "return",
+              "he": "לחזור"
+            },
+            {
+              "en": "saw",
+              "he": "ראה"
+            },
+            {
+              "en": "several",
+              "he": "כמה"
+            },
+            {
+              "en": "still",
+              "he": "עדיין"
+            },
+            {
+              "en": "the cold",
+              "he": "הקור"
+            },
+            {
+              "en": "thousand",
+              "he": "אלף"
+            },
+            {
+              "en": "take a picture",
+              "he": null
+            },
+            {
+              "en": "take a train",
+              "he": null
+            },
+            {
+              "en": "take (something) away",
+              "he": null
+            },
+            {
+              "en": "Take care!",
+              "he": null
+            },
+            {
+              "en": "take (something) off",
+              "he": null
+            },
+            {
+              "en": "arrive",
+              "he": null
+            },
+            {
+              "en": "catch (a train)",
+              "he": null
+            },
+            {
+              "en": "comfortable",
+              "he": null
+            },
+            {
+              "en": "cost",
+              "he": null
+            },
+            {
+              "en": "directly",
+              "he": null
+            },
+            {
+              "en": "get off",
+              "he": null
+            },
+            {
+              "en": "get on",
+              "he": null
+            },
+            {
+              "en": "visitor",
+              "he": null
+            },
+            {
+              "en": "welcome",
+              "he": null
+            },
+            {
+              "en": "against",
+              "he": "נגד"
+            },
+            {
+              "en": "all the time",
+              "he": "כל הזמן"
+            },
+            {
+              "en": "collect",
+              "he": "לאסוף"
+            },
+            {
+              "en": "competition",
+              "he": "תחרות"
+            },
+            {
+              "en": "could",
+              "he": "יכול (היה)"
+            },
+            {
+              "en": "instead",
+              "he": "במקום"
+            },
+            {
+              "en": "mean",
+              "he": "פירושו"
+            },
+            {
+              "en": "message",
+              "he": "הודעה"
+            },
+            {
+              "en": "only",
+              "he": "רק"
+            },
+            {
+              "en": "perfect",
+              "he": "מושלם"
+            },
+            {
+              "en": "pocket",
+              "he": "כיס"
+            },
+            {
+              "en": "so",
+              "he": "כך"
+            },
+            {
+              "en": "tasty",
+              "he": "טעים"
+            },
+            {
+              "en": "come home",
+              "he": "לחזור הביתה"
+            },
+            {
+              "en": "date",
+              "he": "תאריך"
+            },
+            {
+              "en": "excellent",
+              "he": "מצוין"
+            },
+            {
+              "en": "feel well",
+              "he": "להרגיש טוב"
+            },
+            {
+              "en": "get the flu",
+              "he": "לחלות בשפעת"
+            },
+            {
+              "en": "if",
+              "he": "אם"
+            },
+            {
+              "en": "invite",
+              "he": "להזמין"
+            },
+            {
+              "en": "keep",
+              "he": "להמשיך"
+            },
+            {
+              "en": "make a mistake",
+              "he": "לטעות"
+            },
+            {
+              "en": "really",
+              "he": "מאוד"
+            },
+            {
+              "en": "should",
+              "he": "צריך, כדאי"
+            },
+            {
+              "en": "tell a story",
+              "he": "לספר סיפור"
+            },
+            {
+              "en": "a while",
+              "he": "זמן מה"
+            },
+            {
+              "en": "almost",
+              "he": "כמעט"
+            },
+            {
+              "en": "believe",
+              "he": "להאמין"
+            },
+            {
+              "en": "both",
+              "he": "שניהם, שתיהן"
+            },
+            {
+              "en": "full",
+              "he": "מלא"
+            },
+            {
+              "en": "get better",
+              "he": "להחלים"
+            },
+            {
+              "en": "kiss",
+              "he": "נשיקה"
+            },
+            {
+              "en": "medical",
+              "he": "רפואי"
+            },
+            {
+              "en": "miss",
+              "he": "להתגעגע"
+            },
+            {
+              "en": "much",
+              "he": "הרבה"
+            },
+            {
+              "en": "nurse",
+              "he": "אחות"
+            },
+            {
+              "en": "see",
+              "he": "לפגוש"
+            },
+            {
+              "en": "sorry",
+              "he": "מצטער"
+            }
+          ]
         },
         {
           "id": "find-two-words",
@@ -3133,7 +4659,60 @@
             "page": 51,
             "exercise": 1
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "bins",
+          "origin": "book",
+          "items": [
+            {
+              "v": "catch a train",
+              "bin": "At a train station"
+            },
+            {
+              "v": "get on",
+              "bin": "At a train station"
+            },
+            {
+              "v": "get off",
+              "bin": "At a train station"
+            },
+            {
+              "v": "arrive",
+              "bin": "At a train station"
+            },
+            {
+              "v": "invite",
+              "bin": "On your birthday"
+            },
+            {
+              "v": "a date",
+              "bin": "On your birthday"
+            },
+            {
+              "v": "a competition",
+              "bin": "On your birthday"
+            },
+            {
+              "v": "get better",
+              "bin": "When you are sick"
+            },
+            {
+              "v": "a nurse",
+              "bin": "When you are sick"
+            },
+            {
+              "v": "medical",
+              "bin": "When you are sick"
+            },
+            {
+              "v": "feel well",
+              "bin": "When you are sick"
+            }
+          ],
+          "bins": [
+            "At a train station",
+            "On your birthday",
+            "When you are sick"
+          ]
         },
         {
           "id": "build-phrases",
@@ -3146,7 +4725,39 @@
             "page": 51,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "pairs",
+          "origin": "book",
+          "items": [
+            {
+              "a": "get off",
+              "b": "a bus"
+            },
+            {
+              "a": "get on",
+              "b": "a train"
+            },
+            {
+              "a": "catch",
+              "b": "a train"
+            },
+            {
+              "a": "make",
+              "b": "a mistake"
+            },
+            {
+              "a": "tell",
+              "b": "a story"
+            },
+            {
+              "a": "invite",
+              "b": "a friend"
+            },
+            {
+              "a": "get",
+              "b": "better"
+            }
+          ]
         },
         {
           "id": "sort-parts-of-speech",
@@ -3163,7 +4774,88 @@
             "book": "students",
             "page": 52
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "bins",
+          "origin": "book",
+          "items": [
+            {
+              "v": "competition",
+              "bin": "Nouns"
+            },
+            {
+              "v": "message",
+              "bin": "Nouns"
+            },
+            {
+              "v": "date",
+              "bin": "Nouns"
+            },
+            {
+              "v": "island",
+              "bin": "Nouns"
+            },
+            {
+              "v": "reason",
+              "bin": "Nouns"
+            },
+            {
+              "v": "nature",
+              "bin": "Nouns"
+            },
+            {
+              "v": "collect",
+              "bin": "Verbs"
+            },
+            {
+              "v": "hit",
+              "bin": "Verbs"
+            },
+            {
+              "v": "miss",
+              "bin": "Verbs"
+            },
+            {
+              "v": "invite",
+              "bin": "Verbs"
+            },
+            {
+              "v": "believe",
+              "bin": "Verbs"
+            },
+            {
+              "v": "leave",
+              "bin": "Verbs"
+            },
+            {
+              "v": "afraid",
+              "bin": "Adjectives"
+            },
+            {
+              "v": "clever",
+              "bin": "Adjectives"
+            },
+            {
+              "v": "excellent",
+              "bin": "Adjectives"
+            },
+            {
+              "v": "perfect",
+              "bin": "Adjectives"
+            },
+            {
+              "v": "tasty",
+              "bin": "Adjectives"
+            },
+            {
+              "v": "glad",
+              "bin": "Adjectives"
+            }
+          ],
+          "bins": [
+            "Nouns",
+            "Verbs",
+            "Adjectives"
+          ]
         },
         {
           "id": "write-the-words",
@@ -3179,19 +4871,6 @@
           "status": "planned"
         },
         {
-          "id": "circle-two",
-          "type": "circle-two-correct-answers",
-          "skill": "vocabulary",
-          "level": null,
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 41,
-            "exercise": 3
-          },
-          "status": "planned"
-        },
-        {
           "id": "complete-sentences",
           "type": "complete-the-sentences",
           "skill": "vocabulary",
@@ -3202,7 +4881,83 @@
             "page": 42,
             "exercise": 4
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "mc",
+          "origin": "book",
+          "items": [
+            {
+              "p": "Our football ______ always wins.",
+              "o": [
+                "team",
+                "pockets",
+                "a while"
+              ],
+              "a": "team"
+            },
+            {
+              "p": "I like to watch TV for ______ when I wake up in the morning.",
+              "o": [
+                "a while",
+                "directly",
+                "team"
+              ],
+              "a": "a while"
+            },
+            {
+              "p": "It is very sunny, so you ______ wear a hat.",
+              "o": [
+                "should",
+                "loves",
+                "arrives"
+              ],
+              "a": "should"
+            },
+            {
+              "p": "My pants have two ______.",
+              "o": [
+                "pockets",
+                "team",
+                "a while"
+              ],
+              "a": "pockets"
+            },
+            {
+              "p": "Please come home ______ after school today.",
+              "o": [
+                "directly",
+                "should",
+                "loves"
+              ],
+              "a": "directly"
+            },
+            {
+              "p": "The bus ______ at 15:00.",
+              "o": [
+                "arrives",
+                "loves",
+                "takes a train"
+              ],
+              "a": "arrives"
+            },
+            {
+              "p": "Ben ______ to work every day at eight o'clock.",
+              "o": [
+                "takes a train",
+                "arrives",
+                "pockets"
+              ],
+              "a": "takes a train"
+            },
+            {
+              "p": "Jill ______ to read books about animals.",
+              "o": [
+                "loves",
+                "should",
+                "directly"
+              ],
+              "a": "loves"
+            }
+          ]
         },
         {
           "id": "translate",
@@ -3215,7 +4970,23 @@
             "page": 42,
             "exercise": 5
           },
-          "status": "planned"
+          "status": "planned",
+          "render": "writing",
+          "origin": "book",
+          "items": [
+            {
+              "p": "My friends play basketball <b>all the time</b>."
+            },
+            {
+              "p": "The computer <b>costs</b> a lot of money."
+            },
+            {
+              "p": "The store is <b>full</b> of books."
+            },
+            {
+              "p": "You can <b>get off</b> the bus soon."
+            }
+          ]
         }
       ],
       "skills": {

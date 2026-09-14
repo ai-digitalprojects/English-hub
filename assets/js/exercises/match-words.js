@@ -1,5 +1,6 @@
 import { A } from '../state.js';
 import { shuffle, escapeAttr } from '../helpers.js';
+import { bi, ui } from '../views/bilingual.js';
 
 /* Match each English word to its Hebrew. Pairs come straight from the book's
    own word list — nothing is generated but the order. */
@@ -20,10 +21,10 @@ export default {
       A.mMatched = []; A.mSelLeft = null; A.mSelRight = null; A.mWrong = null;
     }
     if(A.mMatched.length === A.mPairs.length){
-      return `<div class="matchDone">🎉 You matched all ${A.mPairs.length} words.</div>
+      return `<div class="matchDone">🎉 ${bi('You matched them all!', 'התאמתם את כולם!')}</div>
         <div class="navRowR">
-          <button class="pill outline" data-action="ex" data-do="matchRestart">Shuffle again</button>
-          <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
+          <button class="pill outline biBtn" data-action="ex" data-do="matchRestart">${ui('shuffle')}</button>
+          <button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui('complete')}</button>
         </div>`;
     }
     const col = (list, side) => list.map(v => {
@@ -37,7 +38,8 @@ export default {
       return `<button class="${cls}" data-action="ex" data-do="matchPick" data-side="${side}"
         data-val="${escapeAttr(v)}"${rtl} ${matched ? 'disabled' : ''}>${v}</button>`;
     }).join('');
-    return `<p class="exHint">Tap an English word, then its meaning.</p>
+    return `<p class="exHint">${bi('Match the words.', 'התאימו בין המילים.')}</p>
+      <p class="exHint sub">${bi('Tap an English word, then its meaning.', 'הקישו על מילה באנגלית, ואז על המשמעות שלה.')}</p>
       <div class="matchGrid">
         <div class="matchCol">${col(A.mLeft, 'L')}</div>
         <div class="matchCol">${col(A.mRight, 'R')}</div>

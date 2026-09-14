@@ -1,5 +1,6 @@
 import { A } from '../state.js';
 import { shuffle, escapeAttr } from '../helpers.js';
+import { bi, ui } from '../views/bilingual.js';
 
 /* Word puzzle: the Hebrew is the clue, the letters are scrambled, and the
    student writes the English word. Both come from the book's word list. */
@@ -29,15 +30,16 @@ export default {
       A.pIdx = 0; A.pValue = ''; A.pChecked = false; A.pScore = 0;
     }
     if(A.pIdx >= A.pItems.length){
-      return `<div class="matchDone">🎉 ${A.pScore} of ${A.pItems.length} solved.</div>
+      return `<div class="matchDone">🎉 ${bi('Well done!', 'כל הכבוד!')} <b>${A.pScore} / ${A.pItems.length}</b></div>
         <div class="navRowR">
-          <button class="pill outline" data-action="ex" data-do="pRestart">Try again</button>
-          <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
+          <button class="pill outline biBtn" data-action="ex" data-do="pRestart">${ui('again')}</button>
+          <button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui('complete')}</button>
         </div>`;
     }
     const it = A.pItems[A.pIdx];
     const right = A.pChecked && A.pValue.trim().toLowerCase() === it.en.toLowerCase();
     return `
+      <p class="exHint">${bi('Unscramble the word.', 'סדרו את האותיות למילה.')}</p>
       <div class="qWrap">
         <div class="qCounter">Puzzle ${A.pIdx + 1} of ${A.pItems.length}</div>
         <div class="scrambled">${it.mix.split('').map(c => `<span class="letter">${c}</span>`).join('')}</div>
@@ -45,13 +47,13 @@ export default {
         <input type="text" class="freeText wordInput" data-action="pInput" dir="ltr"
                value="${escapeAttr(A.pValue)}" placeholder="Unscramble the word..." />
         ${A.pChecked ? (right
-          ? '<div class="feedbackMsg good">✓ Correct!</div>'
-          : `<div class="feedbackMsg bad">The word is: <b>${it.en}</b></div>`) : ''}
+          ? `<div class="feedbackMsg good">✓ ${bi('Correct!', 'נכון!')}</div>`
+          : `<div class="feedbackMsg bad">${bi('The word is:', 'המילה היא:')} <b>${it.en}</b></div>`) : ''}
       </div>
       <div class="navRowR">
         ${A.pChecked
-          ? `<button class="pill" style="background:var(--ink)" data-action="ex" data-do="pNext">${A.pIdx === A.pItems.length - 1 ? 'Finish' : 'Next →'}</button>`
-          : `<button class="pill" style="background:var(--blue)" data-action="ex" data-do="pCheck">Check</button>`}
+          ? `<button class="pill biBtn" style="background:var(--ink)" data-action="ex" data-do="pNext">${ui(A.pIdx === A.pItems.length - 1 ? 'finish' : 'next')}</button>`
+          : `<button class="pill biBtn" style="background:var(--blue)" data-action="ex" data-do="pCheck">${ui('check')}</button>`}
       </div>`;
   },
 

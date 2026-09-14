@@ -7,6 +7,8 @@ import { escapeAttr } from '../helpers.js';
 import { hashFor } from '../router.js';
 import { activityTitle, levelBadge, sourceRef } from './labels.js';
 import { exerciseFor } from '../exercises/index.js';
+import { RENDERERS } from '../exercises/engine.js';
+import { ins, ui, bi } from './bilingual.js';
 
 /* ---------- Learn the Words ---------- */
 function renderFlashcards(part, act){
@@ -14,6 +16,7 @@ function renderFlashcards(part, act){
   if(A.fIdx === undefined) A.fIdx = 0;
   const w = words[A.fIdx];
   return `
+  <p class="exHint">${ins('flashcards')}</p>
   <div class="flash">
     <div class="word">${w.en} <button class="speaker" data-action="speak" data-text="${escapeAttr(w.en)}">🔊</button></div>
     ${w.he ? `<div class="he">${w.he}</div>` : '<div class="he missingHe">— Hebrew not recorded yet —</div>'}
@@ -27,7 +30,7 @@ function renderFlashcards(part, act){
     <button class="pill outline" data-action="flashNext" ${A.fIdx === words.length - 1 ? 'disabled' : ''}>Next →</button>
   </div>
   <div class="navRowR">
-    <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
+    <button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui('complete')}</button>
   </div>`;
 }
 
@@ -36,32 +39,33 @@ function renderWriteTheWords(part, act){
   const words = wordsForActivity(part, act).filter(w => w.he);
   if(A.wIdx === undefined){ A.wIdx = 0; A.wChecked = false; A.wValue = ''; }
   if(A.wIdx >= words.length){
-    return `<div class="matchDone">🎉 You wrote all ${words.length} words.</div>
+    return `<div class="matchDone">🎉 ${bi('Well done!', 'כל הכבוד!')}</div>
       <div class="navRowR">
-        <button class="pill outline" data-action="wRestart">Try again</button>
-        <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
+        <button class="pill outline biBtn" data-action="wRestart">${ui('again')}</button>
+        <button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui('complete')}</button>
       </div>`;
   }
   const w = words[A.wIdx];
   const correct = A.wChecked && A.wValue.trim().toLowerCase() === w.en.toLowerCase();
   return `
+  <p class="exHint">${ins('writeWords')}</p>
   <div class="qWrap">
     <div class="qCounter">Word ${A.wIdx + 1} of ${words.length}</div>
     <div class="hePrompt" dir="rtl">${w.he}</div>
     <input type="text" class="freeText wordInput" data-action="wInput" dir="ltr"
            value="${escapeAttr(A.wValue)}" placeholder="Write the word in English..." />
     ${A.wChecked ? (correct
-      ? '<div class="feedbackMsg good">✓ Correct!</div>'
-      : `<div class="feedbackMsg bad">The word is: <b>${w.en}</b></div>`) : ''}
+      ? `<div class="feedbackMsg good">✓ ${bi('Correct!', 'נכון!')}</div>`
+      : `<div class="feedbackMsg bad">${bi('The word is:', 'המילה היא:')} <b>${w.en}</b></div>`) : ''}
   </div>
   <div class="navRowR">
     ${A.wChecked
-      ? `<button class="pill" style="background:var(--ink)" data-action="wNext">${A.wIdx === words.length - 1 ? 'Finish' : 'Next →'}</button>`
-      : `<button class="pill" style="background:var(--blue)" data-action="wCheck">Check</button>`}
+      ? `<button class="pill biBtn" style="background:var(--ink)" data-action="wNext">${ui(A.wIdx === words.length - 1 ? 'finish' : 'next')}</button>`
+      : `<button class="pill biBtn" style="background:var(--blue)" data-action="wCheck">${ui('check')}</button>`}
   </div>`;
 }
 
-const RENDERERS = {
+const LOCAL = {
   'flashcards': renderFlashcards,
   'write-the-words': renderWriteTheWords
 };
@@ -72,11 +76,13 @@ function renderActivity(){
   const act = getActivity(S.sectionId, S.partId, S.activityId);
   if(!section || !part || !act) return '';
   const ex = exerciseFor(act);
-  const fn = RENDERERS[act.type];
+  const engine = act.render ? RENDERERS[act.render] : null;
+  const fn = LOCAL[act.type];
   let body;
-  if(ex) body = ex.render(wordsForActivity(part, act), part);
+  if(engine && (act.items || []).length) body = engine.render(act.items, part, act);
+  else if(ex) body = ex.render(wordsForActivity(part, act), part);
   else if(fn) body = fn(part, act);
-  else body = '<p class="soon">This exercise is not built yet.</p>';
+  else body = '';
   const done = isDone(section.id, part.id, act.id);
   const upHref = part.id
     ? hashFor({ view:'part', sectionId:section.id, partId:part.id })

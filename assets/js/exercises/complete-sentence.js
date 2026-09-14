@@ -1,5 +1,6 @@
 import { A } from '../state.js';
 import { shuffle, escapeAttr } from '../helpers.js';
+import { bi, ui } from '../views/bilingual.js';
 
 /* Complete the sentence. Every sentence is the book's own example sentence for
    that word, with the word itself blanked out. */
@@ -34,15 +35,16 @@ export default {
       A.sIdx = 0; A.sPicked = null; A.sScore = 0;
     }
     if(A.sIdx >= A.sQs.length){
-      return `<div class="matchDone">🎉 ${A.sScore} of ${A.sQs.length} correct.</div>
+      return `<div class="matchDone">🎉 ${bi('Well done!', 'כל הכבוד!')} <b>${A.sScore} / ${A.sQs.length}</b></div>
         <div class="navRowR">
-          <button class="pill outline" data-action="ex" data-do="sRestart">Try again</button>
-          <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
+          <button class="pill outline biBtn" data-action="ex" data-do="sRestart">${ui('again')}</button>
+          <button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui('complete')}</button>
         </div>`;
     }
     const q = A.sQs[A.sIdx];
     const answered = A.sPicked !== null;
     return `
+      <p class="exHint">${bi('Complete the sentence.', 'השלימו את המשפט.')}</p>
       <div class="qWrap">
         <div class="qCounter">Sentence ${A.sIdx + 1} of ${A.sQs.length}</div>
         <div class="prompt">${q.text}</div>
@@ -57,12 +59,12 @@ export default {
             data-val="${escapeAttr(o)}" ${answered ? 'data-locked="1"' : ''}>${o}</button>`;
         }).join('')}</div>
         ${answered ? (A.sPicked === q.a
-          ? '<div class="feedbackMsg good">✓ Correct!</div>'
-          : `<div class="feedbackMsg bad">The word is: ${q.a}</div>`) : ''}
+          ? `<div class="feedbackMsg good">✓ ${bi('Correct!', 'נכון!')}</div>`
+          : `<div class="feedbackMsg bad">${bi('The word is:', 'המילה היא:')} <b>${q.a}</b></div>`) : ''}
       </div>
       <div class="navRowR">
-        <button class="pill" style="background:var(--ink)" data-action="ex" data-do="sNext"
-          ${answered ? '' : 'disabled'}>${A.sIdx === A.sQs.length - 1 ? 'Finish' : 'Next →'}</button>
+        <button class="pill biBtn" style="background:var(--ink)" data-action="ex" data-do="sNext"
+          ${answered ? '' : 'disabled'}>${ui(A.sIdx === A.sQs.length - 1 ? 'finish' : 'next')}</button>
       </div>`;
   },
 

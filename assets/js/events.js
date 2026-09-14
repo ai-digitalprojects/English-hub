@@ -2,6 +2,7 @@
 import { S, A, markDone, clearAllProgress } from './state.js';
 import { getPart, getActivity, wordsForActivity } from './content/model.js';
 import { exerciseFor } from './exercises/index.js';
+import { RENDERERS } from './exercises/engine.js';
 import { speak } from './speech.js';
 import { render } from './render.js';
 import { goUp } from './nav.js';
@@ -23,6 +24,11 @@ function initEvents(){
     /* Exercise drills own their own actions. */
     if(act === 'ex'){
       const current = getActivity(S.sectionId, S.partId, S.activityId);
+      const engine = current && current.render ? RENDERERS[current.render] : null;
+      if(engine){
+        if(engine.handle(t.dataset.do, t, current.items, render)) render();
+        return;
+      }
       const ex = exerciseFor(current);
       if(ex && ex.handle(t.dataset.do, t, wordsForActivity(part, current), render)) render();
       return;
@@ -57,6 +63,8 @@ function initEvents(){
     const t = e.target;
     const act = t.dataset.action;
     const current = getActivity(S.sectionId, S.partId, S.activityId);
+    const engine = current && current.render ? RENDERERS[current.render] : null;
+    if(engine && engine.input && engine.input(act, t)){ scheduleDraftSave(currentRoute(), A); return; }
     const ex = exerciseFor(current);
     if(ex && ex.input && ex.input(act, t)){
       if(act === 'frInput'){

@@ -435,3 +435,55 @@ button.bin{ width:100%; text-align:left; font:inherit; display:block; }
   .unitHead h2{ font-size:1.5rem; }
   .lane{ margin-top:26px; }
 }
+
+/* ===== Bilingual instructions =====
+   English leads, Hebrew sits beside it and wraps underneath on a phone. */
+.bi{ display:inline-flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+.biEn{ }
+.biHe{
+  direction:rtl; unicode-bidi:isolate; color:var(--ink-soft);
+  font-size:0.94em; padding-inline-start:10px; border-inline-start:2px solid var(--line);
+}
+.exHint{ font-size:0.95rem; color:var(--ink); margin:0 0 16px; line-height:1.6; }
+.exHint.sub{ font-size:0.86rem; color:var(--ink-soft); margin-top:-8px; }
+.exHint .biHe{ color:var(--ink-soft); }
+
+/* Bilingual buttons keep both languages on one pill. */
+.biBtn .bi{ gap:8px; }
+.biBtn .biHe{ color:inherit; opacity:0.82; border-inline-start-color:currentColor; }
+.pill.outline .biHe{ color:var(--ink-soft); }
+
+.feedbackMsg .bi{ gap:8px; }
+.feedbackMsg .biHe{ color:inherit; opacity:0.85; border-inline-start-color:currentColor; }
+.matchDone .bi{ justify-content:center; }
+
+/* Where an exercise came from. */
+.originTag{
+  display:inline-block; font-size:0.74rem; font-weight:700;
+  padding:3px 10px; border-radius:999px; margin-top:10px;
+}
+.originTag .bi{ gap:6px; }
+.originTag .biHe{ border:0; padding:0; font-size:0.95em; opacity:0.75; color:inherit; }
+.originTag.extra{ background:var(--purple-bg); color:var(--purple); }
+.originTag.adapted{ background:var(--orange-bg); color:var(--orange); }
+
+/* Writing exercises: one prompt, one box. */
+.writeItem{ margin-bottom:18px; }
+.writePrompt{ font-size:1rem; margin-bottom:8px; line-height:1.5; }
+.writeItem .freeText{ min-height:70px; }
+
+/* Unit Check word list. */
+.wordListGrid{ display:grid; grid-template-columns:1fr 1fr; gap:6px 18px; }
+@media(max-width:640px){ .wordListGrid{ grid-template-columns:1fr; } }
+.wordListRow{
+  display:flex; align-items:center; gap:10px;
+  padding:7px 2px; border-bottom:1px dotted var(--line);
+}
+.wlEn{ font-weight:700; }
+.wlHe{ margin-inline-start:auto; color:var(--ink-soft); }
+
+@media(max-width:620px){
+  .bi{ gap:4px; }
+  .biHe{ border-inline-start:0; padding-inline-start:0; width:100%; }
+  .biBtn .bi{ flex-direction:column; gap:2px; align-items:center; }
+}

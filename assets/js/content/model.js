@@ -4,6 +4,7 @@
 
 import { loadContent, partsOf } from './load.js';
 import { EXERCISES, drillType, isDrill } from '../exercises/index.js';
+import { RENDERERS } from '../exercises/engine.js';
 
 let MODEL = null;          // { manifest, sections }
 const SECTIONS = new Map();
@@ -92,33 +93,28 @@ const PLAYABLE = {
 
 function isPlayable(part, activity){
   if(isDrill(activity)) return true;      // a drill only exists when its data does
+  if(activity.render && RENDERERS[activity.render] && (activity.items || []).length) return true;
   const test = PLAYABLE[activity.type];
   return !!(test && test(part, activity));
 }
 
-/* Say exactly what is missing. A catalogued book exercise is locked because
-   its questions were never transcribed, not because the site lacks a screen. */
-function whyNotPlayable(part, activity){
-  if(!PLAYABLE[activity.type]){
-    const s = activity.source;
-    if(s){
-      const book = s.book === 'students' ? 'Book' : 'Workbook';
-      const where = book + ' p.' + s.page + (s.exercise ? ', exercise ' + s.exercise : '');
-      return 'The questions from ' + where + ' have not been added to the site yet.';
-    }
-    return 'This exercise has not been added to the site yet.';
-  }
-  if(activity.type === 'write-the-words')
-    return 'Needs Hebrew for at least four of these words — not recorded yet.';
-  return 'Not available yet.';
-}
+/* Nothing a student can see is unplayable any more, so this is only a guard
+   for content added later without a renderer. Such an activity is hidden
+   rather than shown greyed out. */
+function whyNotPlayable(){ return 'Not available yet.'; }
 
 function playableActivities(part){
   return activitiesOf(part).filter(a => isPlayable(part, a));
 }
 
+/* What the student sees. Anything without a working renderer is left out
+   entirely rather than displayed as a dead card. */
+function visibleActivities(part){
+  return playableActivities(part);
+}
+
 export {
   initModel, manifest, sections, getSection, getPart, getActivity,
   hasParts, partKey, isPlayable, whyNotPlayable, playableActivities, wordsForActivity,
-  derivedActivities, activitiesOf
+  derivedActivities, activitiesOf, visibleActivities
 };

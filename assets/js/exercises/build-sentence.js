@@ -1,5 +1,6 @@
 import { A } from '../state.js';
 import { shuffle } from '../helpers.js';
+import { bi, ui } from '../views/bilingual.js';
 
 /* Put the words in order. Each sentence is the book's own example sentence for
    one of this part's words, scrambled. */
@@ -21,13 +22,14 @@ export default {
       A.bIdx = 0; A.bChosen = []; A.bPool = shuffle(A.bItems[0].words.slice()); A.bResult = null;
     }
     if(A.bIdx >= A.bItems.length){
-      return `<div class="matchDone">🎉 All ${A.bItems.length} sentences built.</div>
+      return `<div class="matchDone">🎉 ${bi('Well done!', 'כל הכבוד!')}</div>
         <div class="navRowR">
-          <button class="pill outline" data-action="ex" data-do="bRestart">Try again</button>
-          <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
+          <button class="pill outline biBtn" data-action="ex" data-do="bRestart">${ui('again')}</button>
+          <button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui('complete')}</button>
         </div>`;
     }
     return `
+      <p class="exHint">${bi('Build the sentence.', 'בנו את המשפט.')}</p>
       <div class="qCounter">Sentence ${A.bIdx + 1} of ${A.bItems.length}</div>
       <div class="answerStrip">
         ${A.bChosen.length === 0 ? '<span class="stripHint">Tap the words below in the right order</span>' : ''}
@@ -36,14 +38,14 @@ export default {
       <div class="poolRow">
         ${A.bPool.map((w, i) => `<button class="chip pool" data-action="ex" data-do="bAdd" data-idx="${i}">${w}</button>`).join('')}
       </div>
-      ${A.bResult === 'correct' ? '<div class="feedbackMsg good">✓ That is the sentence!</div>' : ''}
-      ${A.bResult === 'incorrect' ? '<div class="feedbackMsg bad">Check the word order and try again.</div>' : ''}
+      ${A.bResult === 'correct' ? `<div class="feedbackMsg good">✓ ${bi('That is the sentence!', 'זה המשפט!')}</div>` : ''}
+      ${A.bResult === 'incorrect' ? `<div class="feedbackMsg bad">${bi('Check the word order and try again.', 'בדקו את סדר המילים ונסו שוב.')}</div>` : ''}
       <div class="navRowR">
-        <button class="pill outline" data-action="ex" data-do="bClear">Clear</button>
-        <button class="pill" style="background:var(--purple)" data-action="ex" data-do="bCheck"
-          ${A.bPool.length ? 'disabled' : ''}>Check</button>
+        <button class="pill outline biBtn" data-action="ex" data-do="bClear">${ui('clear')}</button>
+        <button class="pill biBtn" style="background:var(--purple)" data-action="ex" data-do="bCheck"
+          ${A.bPool.length ? 'disabled' : ''}>${ui('check')}</button>
         ${A.bResult === 'correct'
-          ? `<button class="pill" style="background:var(--ink)" data-action="ex" data-do="bNext">${A.bIdx === A.bItems.length - 1 ? 'Finish' : 'Next →'}</button>`
+          ? `<button class="pill biBtn" style="background:var(--ink)" data-action="ex" data-do="bNext">${ui(A.bIdx === A.bItems.length - 1 ? 'finish' : 'next')}</button>`
           : ''}
       </div>`;
   },

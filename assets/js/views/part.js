@@ -2,14 +2,24 @@
    (Workbook), then whatever skills the model has but cannot yet activate. */
 import { S, isDone, colorVar } from '../state.js';
 import { partProgress } from '../progress.js';
-import { getSection, getPart, isPlayable, whyNotPlayable, activitiesOf } from '../content/model.js';
+import { getSection, getPart, visibleActivities } from '../content/model.js';
+import { bi } from './bilingual.js';
 import { hashFor } from '../router.js';
 import { activityTitle, skillLabel, skillIcon, levelBadge, sourceRef } from './labels.js';
 
+/* Where the exercise came from, said plainly. */
+function originBadge(a){
+  if(a.generated || a.origin === 'extra')
+    return `<span class="originTag extra">${bi('Extra Practice', 'תרגול נוסף')}</span>`;
+  if(a.origin === 'adapted')
+    return `<span class="originTag adapted">${bi('Adapted', 'מותאם')}</span>`;
+  return '';
+}
+
 function activityCard(sectionId, part, a){
-  const playable = isPlayable(part, a);
   const done = isDone(sectionId, part.id, a.id);
-  const inner = `
+  return `<a class="actItem${done ? ' done' : ''}"
+     href="${hashFor({ view:'activity', sectionId, partId:part.id, activityId:a.id })}">
     <div class="actTop">
       <span class="actSkill">${skillIcon(a.skill)} ${skillLabel(a.skill)}</span>
       ${levelBadge(a.level)}
@@ -17,11 +27,8 @@ function activityCard(sectionId, part, a){
     </div>
     <h4>${activityTitle(a)}</h4>
     ${sourceRef(a)}
-    ${a.generated ? '<p class="drillNote">Built from this part’s word list</p>' : ''}
-    ${playable ? '' : `<p class="soon">${whyNotPlayable(part, a)}</p>`}`;
-  return playable
-    ? `<a class="actItem${done ? ' done' : ''}" href="${hashFor({ view:'activity', sectionId, partId:part.id, activityId:a.id })}">${inner}</a>`
-    : `<div class="actItem locked" aria-disabled="true">${inner}</div>`;
+    ${originBadge(a)}
+  </a>`;
 }
 
 function lane(sectionId, part, name, title, subtitle, items){
@@ -100,7 +107,7 @@ function worksheet(section, part){
 
 /* Shared by the Part screen and by part-less sections such as Getting Started. */
 function renderLanes(sectionId, part){
-  const acts = activitiesOf(part);
+  const acts = visibleActivities(part);
   const learn = acts.filter(a => a.lane === 'learn');
   const practice = acts.filter(a => a.lane === 'practice');
   const pr = partProgress(sectionId, part);
@@ -114,8 +121,7 @@ function renderLanes(sectionId, part){
   </div>` : ''}
   ${lane(sectionId, part, 'learn', '📘 Learn', 'Book', learn)}
   ${grammarBox(part)}
-  ${lane(sectionId, part, 'practice', '📝 Practice', 'Workbook', practice)}
-  ${inactiveSkills(part)}`;
+  ${lane(sectionId, part, 'practice', '📝 Practice', 'Workbook', practice)}`;
 }
 
 function renderPart(){
