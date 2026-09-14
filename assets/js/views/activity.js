@@ -1,10 +1,29 @@
 import { S } from '../state.js';
 import { UNITS } from '../data/units.js';
 import { heLine } from '../helpers.js';
+import { activityNeighbours, slugFor } from '../activity-defs.js';
+import { sectionById } from '../data/manifest.js';
+import { hashFor } from '../router.js';
 import { renderFlashcards, renderVocabPractice, renderClassroomEnglish } from '../activities/vocabulary.js';
 import { renderSentenceBuilder, renderGrammarLab } from '../activities/grammar.js';
 import { renderSpeak, renderReading, renderWrite, renderChallenge } from '../activities/skills.js';
 import { renderQuiz } from '../activities/quiz.js';
+
+/* Previous / Next move through the unit's activity order. They are links, so
+   each one pushes a real history entry that Back can step through. */
+function activityFooter(){
+  const section = sectionById(S.sectionId);
+  if(!section) return '';
+  const { prev, next } = activityNeighbours(UNITS[S.unitId], S.unitId, S.activityId);
+  const link = (def, dir) => {
+    if(!def) return '<span></span>';
+    const href = hashFor({ view:'activity', sectionId:section.id, partId:S.partId, activityKey:def.key });
+    const arrow = dir === 'prev' ? '←' : '→';
+    const label = dir === 'prev' ? `${arrow} ${def.title}` : `${def.title} ${arrow}`;
+    return `<a class="stepLink ${dir}" href="${href}">${label}</a>`;
+  };
+  return `<div class="stepNav">${link(prev,'prev')}${link(next,'next')}</div>`;
+}
 
 function renderActivity(){
   const u = S.unitId, act = S.activityId, unit = UNITS[u];
@@ -22,7 +41,7 @@ function renderActivity(){
     case 'challenge': title='Challenge'; sub='A few trickier tasks to test yourself.'; heSub='כמה משימות מאתגרות לבחינה עצמית.'; body = renderChallenge(unit); break;
     case 'checkYourself': title = u==='gs' ? 'Check Yourself' : 'Final Check'; sub='10 questions covering everything in this unit.'; heSub='10 שאלות שמכסות את כל היחידה.'; body = renderQuiz(unit); break;
   }
-  return `<div class="card"><h2>${title}</h2><div class="actSub">${sub}</div>${heLine(heSub)}${body}</div>`;
+  return `<div class="card"><h2>${title}</h2><div class="actSub">${sub}</div>${heLine(heSub)}${body}</div>${activityFooter()}`;
 }
 
 export { renderActivity };

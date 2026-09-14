@@ -169,3 +169,27 @@
 .noteBox{ background:var(--orange-bg); border:1px solid var(--orange); border-radius:10px; padding:10px 14px; font-size:0.82rem; color:#8a5a1e; margin-top:14px; }
 .wordCounter{ font-size:0.78rem; color:var(--ink-soft); text-align:left; margin-top:4px; }
 .savedMsg{ color:var(--green); font-weight:700; font-size:0.88rem; margin-top:10px; }
+
+/* BREADCRUMBS */
+.crumbs{ display:flex; flex-wrap:wrap; align-items:center; gap:2px; margin:16px 0 12px; font-size:0.82rem; }
+.crumb{ color:var(--ink-soft); text-decoration:none; padding:3px 6px; border-radius:6px; }
+a.crumb:hover{ background:rgba(0,0,0,0.05); color:var(--ink); }
+.crumb.current{ color:var(--ink); font-weight:700; }
+.crumbSep{ color:var(--ink-soft); opacity:0.5; padding:0 2px; }
+
+/* STEP NAV — previous / next activity */
+.stepNav{ display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:16px; }
+.stepLink{
+  display:inline-block; padding:10px 15px; border-radius:999px;
+  background:var(--panel); border:1px solid var(--line); color:var(--ink);
+  text-decoration:none; font-size:0.85rem; font-weight:600;
+  max-width:46%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.stepLink:hover{ border-color:var(--ink-soft); }
+.stepNav .next{ margin-left:auto; }
+
+/* Storage-unavailable notice */
+.storageWarn{
+  background:var(--gold-bg); border:1px solid var(--gold); color:var(--ink);
+  border-radius:var(--radius); padding:10px 14px; font-size:0.82rem; margin:12px 0;
+}

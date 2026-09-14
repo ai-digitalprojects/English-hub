@@ -1,4 +1,5 @@
-import { S, A, resetA, freshUnitState } from './state.js';
+import { S, A, resetA, freshUnits, persist } from './state.js';
+import { clearProgress } from './storage.js';
 import { UNITS } from './data/units.js';
 import { shuffle } from './helpers.js';
 import { speak } from './speech.js';
@@ -24,6 +25,7 @@ document.getElementById('app').addEventListener('click', function(e){
 
   if(act==='finishActivity'){
     S.units[S.unitId][t.dataset.key] = true;
+    persist();
     if(t.dataset.goto){ resetA(); S.activityId = t.dataset.goto; render(); }
     else backToUnit();
     return;
@@ -172,12 +174,14 @@ document.getElementById('app').addEventListener('click', function(e){
   }
   if(act==='quizFinish'){
     S.units[S.unitId].checkYourself = { done:true, score: parseInt(t.dataset.score) };
+    persist();
     backToUnit(); return;
   }
 
   if(act==='resetAsk'){ S.confirmReset = true; render(); return; }
   if(act==='resetConfirmYes'){
-    S.units = { gs: freshUnitState(), japan: freshUnitState() };
+    S.units = freshUnits();
+    clearProgress();
     S.confirmReset = false; render(); return;
   }
   if(act==='resetConfirmNo'){ S.confirmReset = false; render(); return; }

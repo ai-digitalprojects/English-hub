@@ -1,9 +1,7 @@
-/* Top-bar navigation buttons.
-   Note: render.js -> navbar.js -> nav.js -> render.js is a module cycle.
-   It is safe: `render` is a hoisted function declaration, so the binding is
-   initialised before any of these click handlers can run. */
+/* Top-bar buttons. "Back" walks one level up the hierarchy, which is
+   predictable; the browser's own Back button walks the history instead. */
 import { S } from '../state.js';
-import { goHome, backToUnit, openProgress } from '../nav.js';
+import { goHome, backToUnit, openSection, openProgress } from '../nav.js';
 
 function renderNavBtns(){
   const el = document.getElementById('navBtns');
@@ -11,7 +9,11 @@ function renderNavBtns(){
   if(S.view!=='home'){
     const back = document.createElement('button');
     back.className='navbtn'; back.textContent='← Back';
-    back.onclick = ()=>{ if(S.view==='activity') backToUnit(); else goHome(); };
+    back.onclick = ()=>{
+      if(S.view==='activity'){ S.partId ? openSection(S.sectionId) : backToUnit(); }
+      else if(S.view==='part'){ openSection(S.sectionId); }
+      else goHome();
+    };
     el.appendChild(back);
   }
   const home = document.createElement('button');
