@@ -1,46 +1,67 @@
 /* Application state.
-   NOTE: `A` is mutated in place and cleared via resetA() — never reassigned,
-   because ES module bindings are read-only for importers. */
+   `A` is mutated in place and cleared via resetA(), never reassigned, because
+   ES module bindings are read-only for importers. */
 
-import { loadProgress, saveProgress, mergeUnitState } from './storage.js';
+import { loadProgress, saveProgress } from './storage.js';
+import { getPart, playableActivities } from './content/model.js';
 
-function freshUnitState(){
-  return { learnWords:false, vocabPractice:false, classroomEnglish:false, sentenceBuilder:false,
-           grammarLab:false, speak:false, read:false, write:false, challenge:false,
-           checkYourself:{done:false, score:0} };
-}
-
-function freshUnits(){ return { gs: freshUnitState(), japan: freshUnitState() }; }
-
-let S = {
-  view:'home', unitId:null, activityId:null,
-  sectionId:null, partId:null, route:null,
-  units: freshUnits(),
-  confirmReset:false,
-  storageAvailable:true
+const S = {
+  view: 'home',
+  sectionId: null, partId: null, activityId: null,
+  route: null,
+  progress: {},          // sectionId -> partId('-') -> activityId -> true
+  confirmReset: false,
+  storageAvailable: true
 };
 
-let A = {}; // ephemeral per-activity state, reset on activity open
+const A = {};            // ephemeral per-activity state
 
 function resetA(){ Object.keys(A).forEach(k => delete A[k]); }
 
-/* Rehydrate from localStorage at boot, merging onto a fresh shape so an older
-   or partial saved file can never remove keys the app relies on. */
-function hydrate(){
-  const saved = loadProgress();
-  if(!saved) return;
-  const units = freshUnits();
-  Object.keys(units).forEach(k => { units[k] = mergeUnitState(units[k], saved[k]); });
-  S.units = units;
+function hydrate(){ S.progress = loadProgress(); }
+function persist(){ S.storageAvailable = saveProgress(S.progress); return S.storageAvailable; }
+
+/* ---- progress read / write ---- */
+function pKey(partId){ return partId || '-'; }
+
+function isDone(sectionId, partId, activityId){
+  const sec = S.progress[sectionId];
+  const part = sec && sec[pKey(partId)];
+  return !!(part && part[activityId]);
 }
 
-/* Called after anything that changes progress. */
-function persist(){
-  S.storageAvailable = saveProgress(S.units);
-  return S.storageAvailable;
+function markDone(sectionId, partId, activityId){
+  if(!S.progress[sectionId]) S.progress[sectionId] = {};
+  if(!S.progress[sectionId][pKey(partId)]) S.progress[sectionId][pKey(partId)] = {};
+  S.progress[sectionId][pKey(partId)][activityId] = true;
+  persist();
 }
 
-function colorVar(c){ return 'var(--'+c+')'; }
-function colorBg(c){ return 'var(--'+c+'-bg)'; }
+function clearAllProgress(){ S.progress = {}; persist(); }
 
-export { S, A, freshUnitState, freshUnits, resetA, hydrate, persist, colorVar, colorBg };
+/* Percentages count only what a student can actually do right now, so the bar
+   never stalls below 100% because of an exercise that is not built yet. */
+function partProgress(sectionId, part){
+  const playable = playableActivities(part);
+  if(!playable.length) return { done: 0, total: 0, pct: 0 };
+  const done = playable.filter(a => isDone(sectionId, part.id, a.id)).length;
+  return { done, total: playable.length, pct: Math.round(done / playable.length * 100) };
+}
+
+function sectionProgress(section){
+  const parts = (section.parts && section.parts.length)
+    ? section.parts
+    : [getPart(section.id, null)].filter(Boolean);
+  let done = 0, total = 0;
+  parts.forEach(p => { const r = partProgress(section.id, p); done += r.done; total += r.total; });
+  return { done, total, pct: total ? Math.round(done / total * 100) : 0 };
+}
+
+function colorVar(c){ return 'var(--' + c + ')'; }
+function colorBg(c){ return 'var(--' + c + '-bg)'; }
+
+export {
+  S, A, resetA, hydrate, persist,
+  isDone, markDone, clearAllProgress, partProgress, sectionProgress,
+  colorVar, colorBg
+};

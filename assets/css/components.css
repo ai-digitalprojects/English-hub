@@ -205,3 +205,84 @@ a.crumb:hover{ background:rgba(0,0,0,0.05); color:var(--ink); }
   padding:6px 12px; border-radius:999px; font-size:0.78rem; font-weight:600; cursor:pointer;
 }
 .draftClear:hover{ border-color:var(--pink); color:var(--pink); }
+
+/* ===== PHASE 4 — new hierarchy ===== */
+
+/* HOME — exactly two cards */
+.homeGrid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:20px; }
+@media(max-width:700px){ .homeGrid{ grid-template-columns:1fr; } }
+a.uCard{ text-decoration:none; color:inherit; display:flex; }
+.uCard .startBtn{ display:inline-block; align-self:flex-start; margin-top:auto; text-align:center; }
+.uCard .pbarOuter{ margin-top:2px; }
+.cardMeta{ font-size:0.8rem; color:var(--ink-soft); margin:6px 0 12px; }
+
+/* UNIT 1 — parts dashboard */
+.partGrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:8px; }
+@media(max-width:860px){ .partGrid{ grid-template-columns:1fr 1fr; } }
+@media(max-width:560px){ .partGrid{ grid-template-columns:1fr; } }
+.partCard{
+  display:block; text-decoration:none; color:inherit; border:1px solid var(--line);
+  border-radius:var(--radius); padding:14px 16px 16px; transition:transform .12s ease, box-shadow .12s ease;
+}
+.partCard:hover{ transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.07); }
+.partTop{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+.partNum{ font-size:0.72rem; font-weight:800; letter-spacing:0.5px; text-transform:uppercase; color:var(--ink-soft); }
+.partStatus{ font-size:0.8rem; font-weight:700; color:var(--ink-soft); }
+.partCard .icon{ font-size:1.6rem; }
+.partCard h4{ margin:4px 0 4px; font-size:1.02rem; }
+.partMeta{ font-size:0.78rem; color:var(--ink-soft); margin:0 0 10px; line-height:1.4; min-height:2.2em; }
+.pbarOuter.thin{ height:6px; }
+.sectionNote{ font-size:0.8rem; color:var(--ink-soft); margin:0 0 14px; font-style:italic; }
+.bookRef{ font-size:0.78rem; color:var(--ink-soft); margin-top:4px !important; }
+
+/* LANES */
+.lane{ margin-top:26px; }
+.laneHead{ display:flex; align-items:baseline; gap:10px; border-bottom:2px solid var(--line); padding-bottom:6px; margin-bottom:12px; }
+.laneHead h3{ margin:0; font-size:1.05rem; }
+.laneSub{ font-size:0.78rem; color:var(--ink-soft); }
+.laneGrid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+@media(max-width:640px){ .laneGrid{ grid-template-columns:1fr; } }
+.actItem{
+  display:block; text-decoration:none; color:inherit; background:var(--panel);
+  border:1px solid var(--line); border-radius:var(--radius); padding:12px 14px;
+}
+a.actItem:hover{ border-color:var(--ink-soft); }
+.actItem.done{ background:var(--green-bg); border-color:var(--green); }
+.actItem.locked{ opacity:0.62; background:transparent; border-style:dashed; }
+.actTop{ display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+.actSkill{ font-size:0.72rem; font-weight:700; color:var(--ink-soft); }
+.actTick{ margin-left:auto; color:var(--green); font-weight:800; }
+.actItem h4{ margin:0 0 6px; font-size:0.95rem; }
+.soon{ font-size:0.75rem; color:var(--ink-soft); margin:6px 0 0; font-style:italic; }
+
+/* STAR LEVELS */
+.lvl{ font-size:0.72rem; font-weight:700; padding:2px 8px; border-radius:999px; white-space:nowrap; }
+.lvl1{ background:var(--green-bg); color:var(--green); }
+.lvl2{ background:var(--blue-bg); color:var(--blue); }
+.lvl3{ background:var(--gold-bg); color:var(--gold); }
+.lvlName{ margin-left:5px; font-weight:600; }
+
+/* SB / WB REFERENCES */
+.refs{ display:inline-flex; gap:6px; flex-wrap:wrap; }
+.ref{ font-size:0.7rem; font-weight:700; padding:2px 7px; border-radius:5px; }
+.ref.students{ background:var(--orange-bg); color:var(--orange); }
+.ref.workbook{ background:var(--purple-bg); color:var(--purple); }
+
+/* NOT AVAILABLE YET */
+.missingGrid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media(max-width:640px){ .missingGrid{ grid-template-columns:1fr; } }
+.missingItem{ border:1px dashed var(--line); border-radius:var(--radius); padding:12px 14px; }
+.missingHead{ font-weight:700; font-size:0.88rem; margin-bottom:4px; }
+.missingItem p{ margin:0; font-size:0.76rem; color:var(--ink-soft); line-height:1.5; }
+
+/* ACTIVITY SCREEN */
+.partProgress{ margin:18px 0 4px; }
+.actHeadRow{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.actHeadRow h2{ margin:0; }
+.doneFlag{ font-size:0.75rem; font-weight:700; color:var(--green); }
+.wordSrc{ font-size:0.72rem; color:var(--ink-soft); margin-top:10px; }
+.missingHe{ color:var(--ink-soft); font-style:italic; }
+.hePrompt{ font-size:1.5rem; font-weight:700; text-align:center; margin:16px 0; }
+.wordInput{ min-height:auto !important; padding:12px 14px !important; font-size:1.05rem; text-align:center; }
+a.statRow{ text-decoration:none; color:inherit; }
+a.statRow.link:hover{ background:rgba(0,0,0,0.03); }

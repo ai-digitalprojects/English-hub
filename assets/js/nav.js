@@ -1,19 +1,19 @@
-/* Navigation intents. Each one just asks the router for a route; the router
-   writes the hash and the hashchange handler re-renders. */
 import { S } from './state.js';
 import { navigate } from './router.js';
-import { sectionByUnitKey } from './data/manifest.js';
 
 function goHome(){ navigate({ view:'home' }); }
 function openSection(sectionId){ navigate({ view:'section', sectionId }); }
-function openUnit(unitKey){
-  const section = sectionByUnitKey(unitKey);
-  if(section) openSection(section.id);
+function openPart(sectionId, partId){ navigate({ view:'part', sectionId, partId }); }
+function openActivity(activityId){
+  navigate({ view:'activity', sectionId:S.sectionId, partId:S.partId, activityId });
 }
-function openActivity(actKey){
-  navigate({ view:'activity', sectionId:S.sectionId, partId:S.partId, activityKey:actKey });
-}
-function backToUnit(){ navigate({ view:'section', sectionId:S.sectionId }); }
 function openProgress(){ navigate({ view:'progress' }); }
 
-export { goHome, openUnit, openSection, openActivity, backToUnit, openProgress };
+/* One step up the hierarchy. */
+function goUp(){
+  if(S.view === 'activity') S.partId ? openPart(S.sectionId, S.partId) : openSection(S.sectionId);
+  else if(S.view === 'part') openSection(S.sectionId);
+  else goHome();
+}
+
+export { goHome, openSection, openPart, openActivity, openProgress, goUp };

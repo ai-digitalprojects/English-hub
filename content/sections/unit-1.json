@@ -1588,7 +1588,8 @@
             "book": "students",
             "page": 28
           },
-          "status": "planned"
+          "status": "planned",
+          "title": "Learn the Words — take"
         },
         {
           "id": "learn-words-train",
@@ -1600,7 +1601,8 @@
             "book": "students",
             "page": 29
           },
-          "status": "planned"
+          "status": "planned",
+          "title": "Learn the Words — Riding the Train"
         },
         {
           "id": "write-the-words",
@@ -2898,7 +2900,8 @@
             "book": "students",
             "page": 42
           },
-          "status": "planned"
+          "status": "planned",
+          "title": "Learn the Words 1"
         },
         {
           "id": "learn-words-2",
@@ -2910,7 +2913,8 @@
             "book": "students",
             "page": 47
           },
-          "status": "planned"
+          "status": "planned",
+          "title": "Learn the Words 2"
         },
         {
           "id": "choose-phrases",
@@ -2961,7 +2965,8 @@
             "book": "workbook",
             "page": 36
           },
-          "status": "planned"
+          "status": "planned",
+          "title": "Write the Words 1"
         },
         {
           "id": "write-the-words-2",
@@ -2973,7 +2978,8 @@
             "book": "workbook",
             "page": 38
           },
-          "status": "planned"
+          "status": "planned",
+          "title": "Write the Words 2"
         },
         {
           "id": "text-messages",

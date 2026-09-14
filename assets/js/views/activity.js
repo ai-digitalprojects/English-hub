@@ -1,57 +1,91 @@
-import { S } from '../state.js';
-import { UNITS } from '../data/units.js';
-import { heLine } from '../helpers.js';
-import { activityNeighbours, slugFor } from '../activity-defs.js';
-import { sectionById } from '../data/manifest.js';
-import { hashFor, currentRoute } from '../router.js';
-import { hasDraft } from '../drafts.js';
-import { renderFlashcards, renderVocabPractice, renderClassroomEnglish } from '../activities/vocabulary.js';
-import { renderSentenceBuilder, renderGrammarLab } from '../activities/grammar.js';
-import { renderSpeak, renderReading, renderWrite, renderChallenge } from '../activities/skills.js';
-import { renderQuiz } from '../activities/quiz.js';
+/* Activity screens.
+   Only the types listed in content/model.js PLAYABLE reach here; every other
+   activity is listed on the Part screen but never opened. */
+import { S, A, isDone } from '../state.js';
+import { getSection, getPart, getActivity, wordsForActivity } from '../content/model.js';
+import { escapeAttr } from '../helpers.js';
+import { hashFor } from '../router.js';
+import { activityTitle, levelBadge, sourceRef } from './labels.js';
 
-/* Previous / Next move through the unit's activity order. They are links, so
-   each one pushes a real history entry that Back can step through. */
-function activityFooter(){
-  const section = sectionById(S.sectionId);
-  if(!section) return '';
-  const { prev, next } = activityNeighbours(UNITS[S.unitId], S.unitId, S.activityId);
-  const link = (def, dir) => {
-    if(!def) return '<span></span>';
-    const href = hashFor({ view:'activity', sectionId:section.id, partId:S.partId, activityKey:def.key });
-    const arrow = dir === 'prev' ? '←' : '→';
-    const label = dir === 'prev' ? `${arrow} ${def.title}` : `${def.title} ${arrow}`;
-    return `<a class="stepLink ${dir}" href="${href}">${label}</a>`;
-  };
-  return `<div class="stepNav">${link(prev,'prev')}${link(next,'next')}</div>`;
-}
-
-/* Offered only when this activity actually has saved text to throw away. */
-function draftNotice(){
-  if(!hasDraft(currentRoute())) return '';
-  return `<div class="draftRow">
-    <span class="draftFlag">✓ Your writing is saved on this device</span>
-    <button class="draftClear" data-action="clearDraft">Clear my draft</button>
+/* ---------- Learn the Words ---------- */
+function renderFlashcards(part, act){
+  const words = wordsForActivity(part, act);
+  if(A.fIdx === undefined) A.fIdx = 0;
+  const w = words[A.fIdx];
+  return `
+  <div class="flash">
+    <div class="word">${w.en} <button class="speaker" data-action="speak" data-text="${escapeAttr(w.en)}">🔊</button></div>
+    ${w.he ? `<div class="he">${w.he}</div>` : '<div class="he missingHe">— Hebrew not recorded yet —</div>'}
+    ${w.definition ? `<div class="explain">${w.definition}</div>` : ''}
+    ${w.example ? `<div class="example">"${w.example}"</div>` : ''}
+    <div class="wordSrc">📘 Student's Book p.${w.source.page}</div>
+  </div>
+  <div class="flashNav">
+    <button class="pill outline" data-action="flashPrev" ${A.fIdx === 0 ? 'disabled' : ''}>← Previous</button>
+    <div class="count">Word ${A.fIdx + 1} of ${words.length}</div>
+    <button class="pill outline" data-action="flashNext" ${A.fIdx === words.length - 1 ? 'disabled' : ''}>Next →</button>
+  </div>
+  <div class="navRowR">
+    <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
   </div>`;
 }
 
-function renderActivity(){
-  const u = S.unitId, act = S.activityId, unit = UNITS[u];
-  let title='', sub='', heSub='', body='';
-  const writeHe = u==='gs' ? 'כתבו 4 משפטים על עצמכם.' : 'כתבו 4-5 משפטים על חבר/ה.';
-  switch(act){
-    case 'learnWords': title='Learn the Words'; sub='Flip through the vocabulary cards below.'; heSub='עברו על כרטיסיות אוצר המילים למטה.'; body = renderFlashcards(unit); break;
-    case 'vocabPractice': title='Vocabulary Practice'; sub='Match the words, then try the practice questions.'; heSub='התאימו את המילים, ולאחר מכן נסו את שאלות התרגול.'; body = renderVocabPractice(unit); break;
-    case 'classroomEnglish': title='Classroom English'; sub='Instructions you\'ll hear every lesson.'; heSub='הוראות שתשמעו בכל שיעור.'; body = renderClassroomEnglish(unit); break;
-    case 'sentenceBuilder': title='Build a Sentence'; sub='Put the scrambled words in the right order.'; heSub='סדרו את המילים המעורבבות בסדר הנכון.'; body = renderSentenceBuilder(unit); break;
-    case 'grammarLab': title='Grammar Lab'; sub='Learn the rule. Try it. Use it.'; heSub='למדו את הכלל. נסו אותו. השתמשו בו.'; body = renderGrammarLab(unit); break;
-    case 'speak': title='Speak English'; sub='Answer each question out loud, in full sentences.'; heSub='ענו על כל שאלה בקול, במשפטים מלאים.'; body = renderSpeak(unit); break;
-    case 'read': title='Read & Understand'; sub='Read the text, then answer the questions.'; heSub='קראו את הטקסט וענו על השאלות.'; body = renderReading(unit); break;
-    case 'write': title='Write It'; sub=unit.writing.prompt; heSub=writeHe; body = renderWrite(unit); break;
-    case 'challenge': title='Challenge'; sub='A few trickier tasks to test yourself.'; heSub='כמה משימות מאתגרות לבחינה עצמית.'; body = renderChallenge(unit); break;
-    case 'checkYourself': title = u==='gs' ? 'Check Yourself' : 'Final Check'; sub='10 questions covering everything in this unit.'; heSub='10 שאלות שמכסות את כל היחידה.'; body = renderQuiz(unit); break;
+/* ---------- Write the Words ---------- */
+function renderWriteTheWords(part, act){
+  const words = wordsForActivity(part, act).filter(w => w.he);
+  if(A.wIdx === undefined){ A.wIdx = 0; A.wChecked = false; A.wValue = ''; }
+  if(A.wIdx >= words.length){
+    return `<div class="matchDone">🎉 You wrote all ${words.length} words.</div>
+      <div class="navRowR">
+        <button class="pill outline" data-action="wRestart">Try again</button>
+        <button class="pill" style="background:var(--blue)" data-action="finishActivity">Mark Complete</button>
+      </div>`;
   }
-  return `<div class="card"><h2>${title}</h2><div class="actSub">${sub}</div>${heLine(heSub)}${body}${draftNotice()}</div>${activityFooter()}`;
+  const w = words[A.wIdx];
+  const correct = A.wChecked && A.wValue.trim().toLowerCase() === w.en.toLowerCase();
+  return `
+  <div class="qWrap">
+    <div class="qCounter">Word ${A.wIdx + 1} of ${words.length}</div>
+    <div class="hePrompt" dir="rtl">${w.he}</div>
+    <input type="text" class="freeText wordInput" data-action="wInput" dir="ltr"
+           value="${escapeAttr(A.wValue)}" placeholder="Write the word in English..." />
+    ${A.wChecked ? (correct
+      ? '<div class="feedbackMsg good">✓ Correct!</div>'
+      : `<div class="feedbackMsg bad">The word is: <b>${w.en}</b></div>`) : ''}
+  </div>
+  <div class="navRowR">
+    ${A.wChecked
+      ? `<button class="pill" style="background:var(--ink)" data-action="wNext">${A.wIdx === words.length - 1 ? 'Finish' : 'Next →'}</button>`
+      : `<button class="pill" style="background:var(--blue)" data-action="wCheck">Check</button>`}
+  </div>`;
+}
+
+const RENDERERS = {
+  'flashcards': renderFlashcards,
+  'write-the-words': renderWriteTheWords
+};
+
+function renderActivity(){
+  const section = getSection(S.sectionId);
+  const part = getPart(S.sectionId, S.partId);
+  const act = getActivity(S.sectionId, S.partId, S.activityId);
+  if(!section || !part || !act) return '';
+  const fn = RENDERERS[act.type];
+  const body = fn ? fn(part, act) : '<p class="soon">This exercise is not built yet.</p>';
+  const done = isDone(section.id, part.id, act.id);
+  const upHref = part.id
+    ? hashFor({ view:'part', sectionId:section.id, partId:part.id })
+    : hashFor({ view:'section', sectionId:section.id });
+  return `
+  <div class="card">
+    <div class="actHeadRow">
+      <h2>${activityTitle(act)}</h2>
+      ${levelBadge(act.level)}${done ? '<span class="doneFlag">✓ Done</span>' : ''}
+    </div>
+    ${sourceRef(act)}
+    ${body}
+  </div>
+  <div class="stepNav"><a class="stepLink prev" href="${upHref}">← Back to ${part.title}</a></div>`;
 }
 
 export { renderActivity };

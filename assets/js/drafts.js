@@ -9,13 +9,13 @@
 const KEY = 'english-hub:drafts:v1';
 
 /* The ephemeral (A) fields that hold student-authored text. */
-const FIELDS = ['sbFreeText', 'rdFindText', 'rdThinkText', 'wrText', 'vpValues', 'crText', 'qzOpen'];
+const FIELDS = ['wValue', 'sbFreeText', 'rdFindText', 'rdThinkText', 'wrText', 'vpValues', 'crText', 'qzOpen'];
 
 /* One slot per Unit / Part / Activity. '-' stands in for "no part yet"; once
    Phase 4 introduces parts the same key shape keeps them apart. */
 function draftKey(route){
-  if(!route || !route.sectionId || !route.activityKey) return null;
-  return [route.sectionId, route.partId || '-', route.activityKey].join('/');
+  if(!route || !route.sectionId || !route.activityId) return null;
+  return [route.sectionId, route.partId || '-', route.activityId].join('/');
 }
 
 function loadAll(){

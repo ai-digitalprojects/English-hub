@@ -1,10 +1,33 @@
-import { UNITS } from '../data/units.js';
-import { colorVar } from '../state.js';
-import { unitOverallPct } from '../progress.js';
+/* Home: exactly two cards. Nothing else lives at this level. */
+import { sections } from '../content/model.js';
+import { sectionProgress, colorVar } from '../state.js';
+import { hashFor } from '../router.js';
+
+function wordCount(section){
+  const parts = (section.parts && section.parts.length) ? section.parts : [section];
+  return parts.reduce((n, p) => n + ((p.vocabulary || []).length), 0);
+}
+
+function card(section){
+  const pr = sectionProgress(section);
+  const parts = (section.parts || []).length;
+  const meta = [
+    parts ? parts + ' parts' : null,
+    wordCount(section) + ' words'
+  ].filter(Boolean).join(' · ');
+  return `
+  <a class="uCard" href="${hashFor({ view:'section', sectionId:section.id })}">
+    <div class="icon">${section.icon}</div>
+    <h3>${section.label}</h3>
+    <p class="desc">${section.subtitle || ''}</p>
+    <div class="cardMeta">${meta}</div>
+    <div class="pbarOuter"><div class="pbarInner" style="width:${pr.pct}%;background:${colorVar(section.color)}"></div></div>
+    <div class="pctLabel">${pr.pct}% &middot; ${pr.done}/${pr.total} done</div>
+    <span class="startBtn" style="background:${colorVar(section.color)}">${pr.done ? 'Continue →' : 'Start →'}</span>
+  </a>`;
+}
 
 function renderHome(){
-  const gsPct = unitOverallPct('gs');
-  const jpPct = unitOverallPct('japan');
   return `
   <div class="hero">
     <div class="eyebrow">English Learning Hub</div>
@@ -12,37 +35,7 @@ function renderHome(){
     <div class="sub">Grade 6 &middot; Gevim School</div>
     <div class="tagline">Learn &bull; Practice &bull; Speak &bull; Create</div>
   </div>
-  <div class="grid">
-    ${unitCard('gs', gsPct)}
-    ${unitCard('japan', jpPct)}
-    ${progressCard()}
-  </div>
-  `;
-}
-
-function unitCard(u, pct){
-  const unit = UNITS[u];
-  const started = pct>0;
-  return `
-  <div class="uCard">
-    <div class="icon">${unit.icon}</div>
-    <h3>${unit.title}</h3>
-    <p class="desc">${unit.subtitle}</p>
-    <div class="pbarOuter"><div class="pbarInner" style="width:${pct}%;background:${colorVar(unit.color)}"></div></div>
-    <div class="pctLabel">Progress: ${pct}%</div>
-    <button class="startBtn" style="background:${colorVar(unit.color)}" data-action="openUnit" data-unit="${u}">${started?'Continue →':'Start →'}</button>
-  </div>`;
-}
-function progressCard(){
-  return `
-  <div class="uCard">
-    <div class="icon">⭐</div>
-    <h3>My Progress</h3>
-    <p class="desc">See your learning progress and achievements</p>
-    <div class="pbarOuter"><div class="pbarInner" style="width:100%;background:var(--gold)"></div></div>
-    <div class="pctLabel">Track everything in one place</div>
-    <button class="startBtn" style="background:var(--gold)" data-action="openProgress">View →</button>
-  </div>`;
+  <div class="homeGrid">${sections().map(card).join('')}</div>`;
 }
 
 export { renderHome };
