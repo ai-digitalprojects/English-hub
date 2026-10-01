@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "book": {
     "title": "THINK ABOUT IT!",
     "grade": 6,
@@ -36,14 +36,16 @@
       "label": "Getting Started",
       "icon": "🚀",
       "color": "blue",
-      "file": "sections/getting-started.json"
+      "file": "sections/getting-started.json",
+      "hero": "getting-started"
     },
     {
       "id": "unit-1",
       "label": "Unit 1",
       "icon": "🗾",
       "color": "orange",
-      "file": "sections/unit-1.json"
+      "file": "sections/unit-1.json",
+      "hero": "unit-1"
     }
   ]
 }

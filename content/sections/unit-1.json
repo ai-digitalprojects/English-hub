@@ -423,7 +423,9 @@
             "book": "students",
             "page": 12
           },
-          "status": "planned"
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 1
         },
         {
           "id": "write-the-words",
@@ -435,7 +437,9 @@
             "book": "workbook",
             "page": 8
           },
-          "status": "planned"
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 6
         },
         {
           "id": "word-snake",
@@ -489,7 +493,9 @@
               "answer": "island",
               "clue": "אי"
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 4
         },
         {
           "id": "highlight-to-be",
@@ -535,7 +541,9 @@
             {
               "p": "<b>I'm not</b> afraid of dogs."
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 2
         },
         {
           "id": "highlight-to-have",
@@ -567,7 +575,9 @@
             {
               "p": "My friend and I <b>have</b> homework."
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 2
         },
         {
           "id": "sort-am-is-are",
@@ -630,7 +640,9 @@
             "am",
             "is",
             "are"
-          ]
+          ],
+          "category": "grammar",
+          "step": 3
         },
         {
           "id": "circle-be-have",
@@ -716,7 +728,9 @@
               ],
               "a": "has"
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 4
         },
         {
           "id": "picture-be-have",
@@ -765,7 +779,9 @@
               ],
               "a": "have"
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 5
         },
         {
           "id": "complete-be-have",
@@ -854,7 +870,9 @@
               ],
               "a": "have"
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 5
         },
         {
           "id": "write-sentences",
@@ -889,7 +907,9 @@
             {
               "p": "Write a sentence about a ball. Use <b>isn't</b>."
             }
-          ]
+          ],
+          "category": "writing",
+          "step": 1
         }
       ],
       "skills": {
@@ -929,7 +949,8 @@
           "reason": "No speaking page for this part in the scanned material."
         }
       },
-      "phonics": null
+      "phonics": null,
+      "hero": "part-1"
     },
     {
       "id": "part-2",
@@ -1304,7 +1325,9 @@
             "book": "students",
             "page": 20
           },
-          "status": "planned"
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 1
         },
         {
           "id": "write-the-words",
@@ -1316,7 +1339,9 @@
             "book": "workbook",
             "page": 16
           },
-          "status": "planned"
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 6
         },
         {
           "id": "match-to-pictures",
@@ -1362,7 +1387,9 @@
               "a": "The man is ______.",
               "b": "famous"
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 2
         },
         {
           "id": "complete-sentences",
@@ -1424,7 +1451,9 @@
               ],
               "a": "reason"
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 3
         },
         {
           "id": "circle-correct",
@@ -1505,7 +1534,9 @@
               ],
               "a": "Animals and Plants"
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 3
         },
         {
           "id": "complete-about-you",
@@ -1537,7 +1568,9 @@
             {
               "p": "I <b>decided</b> to ... today."
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 7
         },
         {
           "id": "highlight-questions",
@@ -1574,7 +1607,9 @@
             {
               "p": "<b>Are</b> the children at home?"
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 2
         },
         {
           "id": "complete-questions",
@@ -1641,7 +1676,9 @@
               ],
               "a": "Are"
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 4
         },
         {
           "id": "circle-wh",
@@ -1698,7 +1735,9 @@
               ],
               "a": "Where"
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 4
         },
         {
           "id": "match-q-a",
@@ -1739,7 +1778,9 @@
               "a": "Where is Henry?",
               "b": "He is at the store."
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 3
         },
         {
           "id": "writing-complete",
@@ -1772,7 +1813,9 @@
             {
               "p": "The animals are ... (at the animal hospital)"
             }
-          ]
+          ],
+          "category": "writing",
+          "step": 1
         },
         {
           "id": "writing-another",
@@ -1795,25 +1838,297 @@
             {
               "p": "Write one more sentence. Use <b>isn't</b> or <b>aren't</b>."
             }
+          ],
+          "category": "writing",
+          "step": 1
+        },
+        {
+          "id": "warm-up",
+          "type": "think-about",
+          "title": "Think About… clever animals",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "category": "warmup",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "items": [
+            {
+              "p": "Which animal do you think is clever?",
+              "o": [
+                "A monkey",
+                "A snow monkey",
+                "Both of them"
+              ],
+              "a": "Both of them",
+              "praise": [
+                "Snow monkeys are famous for being clever.",
+                "קופי השלג מפורסמים בחוכמה שלהם."
+              ]
+            },
+            {
+              "p": "Japan has snow monkeys. Where do you think they sit to keep warm?",
+              "o": [
+                "In hot water",
+                "Under the snow",
+                "In a tree"
+              ],
+              "a": "In hot water",
+              "hint": [
+                "Think about a place that is warm even when it snows.",
+                "חשבו על מקום שחם גם כשיורד שלג."
+              ]
+            },
+            {
+              "p": "This part is about animals. Which word will you probably meet?",
+              "o": [
+                "clever",
+                "directly",
+                "pocket"
+              ],
+              "a": "clever"
+            }
           ]
         },
         {
-          "id": "writing-read-write",
-          "type": "read-and-write",
-          "skill": "writing",
-          "level": 3,
+          "id": "recall-words",
+          "type": "quick-recall",
+          "title": "Quick Recall",
+          "skill": "vocabulary",
+          "level": 2,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 4,
+          "origin": "word-list",
+          "generated": true,
+          "render": "recall",
+          "items": [
+            {
+              "en": "about",
+              "he": "בערך"
+            },
+            {
+              "en": "clever",
+              "he": "חכם"
+            },
+            {
+              "en": "decide",
+              "he": "להחליט"
+            },
+            {
+              "en": "famous",
+              "he": "מפורסם"
+            },
+            {
+              "en": "mountain",
+              "he": "הר"
+            },
+            {
+              "en": "nature",
+              "he": "טבע"
+            },
+            {
+              "en": "reason",
+              "he": "סיבה"
+            },
+            {
+              "en": "return",
+              "he": "לחזור"
+            },
+            {
+              "en": "saw",
+              "he": "ראה"
+            },
+            {
+              "en": "several",
+              "he": "כמה"
+            },
+            {
+              "en": "still",
+              "he": "עדיין"
+            },
+            {
+              "en": "the cold",
+              "he": "הקור"
+            },
+            {
+              "en": "thousand",
+              "he": "אלף"
+            }
+          ]
+        },
+        {
+          "id": "reading-rex",
+          "type": "reading-sequence",
+          "title": "Read about Rex",
+          "skill": "reading",
+          "level": 2,
+          "lane": "practice",
+          "category": "reading",
+          "step": 1,
           "source": {
             "book": "workbook",
             "page": 21,
             "exercise": 3
           },
-          "status": "planned",
-          "render": "writing",
           "origin": "book",
+          "render": "reading",
+          "chunks": [
+            "Rex is a beautiful dog. He is black and white and he has brown eyes.",
+            "Rex isn't a big dog. He is small, but he has big ears."
+          ],
+          "keepText": true,
           "items": [
             {
-              "p": "Read: <i>Rex is a beautiful dog. He is black and white and he has brown eyes. Rex isn't a big dog. He is small, but he has big ears.</i><br>Now write about an animal you know. Use <b>is</b>, <b>isn't</b> and <b>has</b>."
+              "p": "placeholder"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "words",
+              "words": [
+                {
+                  "en": "beautiful",
+                  "he": "יפה"
+                },
+                {
+                  "en": "brown",
+                  "he": "חום"
+                },
+                {
+                  "en": "ears",
+                  "he": "אוזניים"
+                },
+                {
+                  "en": "small",
+                  "he": "קטן"
+                }
+              ]
+            },
+            {
+              "kind": "predict",
+              "p": "The text is called <b>Rex</b>. What do you think Rex is?",
+              "o": [
+                "A dog",
+                "A boy",
+                "A mountain"
+              ],
+              "a": "A dog",
+              "praise": [
+                "Good thinking. Now read and check.",
+                "חשיבה טובה. עכשיו קראו ובדקו."
+              ]
+            },
+            {
+              "kind": "text",
+              "upto": 0
+            },
+            {
+              "kind": "check",
+              "p": "What colour are Rex's eyes?",
+              "o": [
+                "Brown",
+                "Black",
+                "White"
+              ],
+              "a": "Brown",
+              "hint": [
+                "Look at the end of the first sentence about his eyes.",
+                "הסתכלו בסוף המשפט שמדבר על העיניים."
+              ]
+            },
+            {
+              "kind": "text",
+              "upto": 1
+            },
+            {
+              "kind": "truefalse",
+              "p": "<b>Rex is a big dog.</b>",
+              "o": [
+                "True",
+                "False"
+              ],
+              "a": "False",
+              "hint": [
+                "The text says: <i>Rex isn't a big dog.</i>",
+                "בטקסט כתוב: <i>Rex isn't a big dog.</i>"
+              ]
+            },
+            {
+              "kind": "truefalse",
+              "p": "<b>Rex has big ears.</b>",
+              "o": [
+                "True",
+                "False"
+              ],
+              "a": "True"
+            },
+            {
+              "kind": "wh",
+              "p": "<b>What</b> colour is Rex?",
+              "o": [
+                "Black and white",
+                "Brown and white",
+                "Black and brown"
+              ],
+              "a": "Black and white"
+            },
+            {
+              "kind": "evidence",
+              "p": "Which words in the text tell you Rex is <b>not</b> big?",
+              "o": [
+                "isn't a big dog",
+                "has brown eyes",
+                "is beautiful"
+              ],
+              "a": "isn't a big dog",
+              "hint": [
+                "Find the sentence with <i>isn't</i>.",
+                "מצאו את המשפט עם <i>isn't</i>."
+              ]
+            },
+            {
+              "kind": "write",
+              "p": "Now write two sentences about an animal you know. Use <b>is</b>, <b>isn't</b> and <b>has</b>."
+            }
+          ]
+        },
+        {
+          "id": "ask-your-own",
+          "type": "write-questions",
+          "title": "Ask Your Own Questions",
+          "skill": "grammar",
+          "level": 3,
+          "lane": "practice",
+          "category": "grammar",
+          "step": 6,
+          "source": {
+            "book": "students",
+            "page": 25
+          },
+          "origin": "book",
+          "render": "writing",
+          "items": [
+            {
+              "p": "Write a <b>Yes/No</b> question with <b>Are</b>. (Are you …?)"
+            },
+            {
+              "p": "Write a <b>Yes/No</b> question with <b>Is</b>. (Is the …?)"
+            },
+            {
+              "p": "Write a <b>Wh-</b> question with <b>Where</b>."
+            },
+            {
+              "p": "Write a <b>Wh-</b> question with <b>Why</b>."
+            },
+            {
+              "p": "Ask a friend one question about the snow monkeys."
             }
           ]
         }
@@ -1864,7 +2179,8 @@
         ],
         "active": false,
         "reason": "The phonics practice pages (Workbook p.233) were not in the scanned material."
-      }
+      },
+      "hero": "part-2"
     },
     {
       "id": "part-3",
@@ -1885,7 +2201,7 @@
       "vocabulary": [
         {
           "en": "take a picture",
-          "he": null,
+          "he": "לצלם",
           "ar": null,
           "definition": null,
           "example": null,
@@ -1900,10 +2216,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -1911,7 +2226,7 @@
         },
         {
           "en": "take a train",
-          "he": null,
+          "he": "לנסוע ברכבת",
           "ar": null,
           "definition": null,
           "example": null,
@@ -1926,10 +2241,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -1937,7 +2251,7 @@
         },
         {
           "en": "take (something) away",
-          "he": null,
+          "he": "לקחת (משהו) משם",
           "ar": null,
           "definition": null,
           "example": null,
@@ -1952,10 +2266,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -1963,7 +2276,7 @@
         },
         {
           "en": "Take care!",
-          "he": null,
+          "he": "שמרו על עצמכם!",
           "ar": null,
           "definition": null,
           "example": null,
@@ -1978,10 +2291,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -1989,7 +2301,7 @@
         },
         {
           "en": "take (something) off",
-          "he": null,
+          "he": "להוריד (בגד)",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2004,10 +2316,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2015,7 +2326,7 @@
         },
         {
           "en": "arrive",
-          "he": null,
+          "he": "להגיע",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2030,10 +2341,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2041,7 +2351,7 @@
         },
         {
           "en": "catch (a train)",
-          "he": null,
+          "he": "לתפוס (רכבת)",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2056,10 +2366,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2067,7 +2376,7 @@
         },
         {
           "en": "comfortable",
-          "he": null,
+          "he": "נוח",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2082,10 +2391,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2093,7 +2401,7 @@
         },
         {
           "en": "cost",
-          "he": null,
+          "he": "לעלות (כסף)",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2108,10 +2416,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2119,7 +2426,7 @@
         },
         {
           "en": "directly",
-          "he": null,
+          "he": "ישירות",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2134,10 +2441,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2145,7 +2451,7 @@
         },
         {
           "en": "get off",
-          "he": null,
+          "he": "לרדת (מכלי תחבורה)",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2160,10 +2466,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2171,7 +2476,7 @@
         },
         {
           "en": "get on",
-          "he": null,
+          "he": "לעלות (על כלי תחבורה)",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2186,10 +2491,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2197,7 +2501,7 @@
         },
         {
           "en": "visitor",
-          "he": null,
+          "he": "מבקר, אורח",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2212,10 +2516,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2223,7 +2526,7 @@
         },
         {
           "en": "welcome",
-          "he": null,
+          "he": "ברוכים הבאים",
           "ar": null,
           "definition": null,
           "example": null,
@@ -2238,10 +2541,9 @@
               "page": 24
             }
           ],
-          "heSource": null,
-          "needsReview": false,
+          "heSource": "added-for-teaching",
+          "needsReview": true,
           "missing": [
-            "he",
             "ar",
             "definition",
             "example"
@@ -2261,7 +2563,9 @@
             "page": 28
           },
           "status": "planned",
-          "title": "Learn the Words — take"
+          "title": "Learn the Words — take",
+          "category": "vocabulary",
+          "step": 1
         },
         {
           "id": "learn-words-train",
@@ -2274,7 +2578,9 @@
             "page": 29
           },
           "status": "planned",
-          "title": "Learn the Words — Riding the Train"
+          "title": "Learn the Words — Riding the Train",
+          "category": "vocabulary",
+          "step": 1
         },
         {
           "id": "write-the-words",
@@ -2286,7 +2592,9 @@
             "book": "workbook",
             "page": 24
           },
-          "status": "planned"
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 6
         },
         {
           "id": "match-to-pictures",
@@ -2323,7 +2631,9 @@
               "a": "Mom likes to take the train because it is fast.",
               "b": "take a train"
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 2
         },
         {
           "id": "match-a-b",
@@ -2360,7 +2670,9 @@
               "a": "Tom is taking his coat off",
               "b": "because he is hot."
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 2
         },
         {
           "id": "choose-pictures",
@@ -2409,7 +2721,9 @@
               ],
               "a": "directly"
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 3
         }
       ],
       "skills": {
@@ -2438,7 +2752,8 @@
         }
       },
       "phonics": null,
-      "notes": "No grammar section for this part appeared in the scanned material."
+      "notes": "No grammar section for this part appeared in the scanned material.",
+      "hero": "part-3"
     },
     {
       "id": "part-4",
@@ -2849,7 +3164,9 @@
             "book": "students",
             "page": 34
           },
-          "status": "planned"
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 1
         },
         {
           "id": "think-about-quiz",
@@ -2901,7 +3218,9 @@
               ],
               "a": "Australia"
             }
-          ]
+          ],
+          "category": "warmup",
+          "step": 1
         },
         {
           "id": "write-the-words",
@@ -2913,7 +3232,9 @@
             "book": "workbook",
             "page": 28
           },
-          "status": "planned"
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 6
         },
         {
           "id": "circle-pictures",
@@ -2967,7 +3288,9 @@
               ],
               "a": "tasty"
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 3
         },
         {
           "id": "true-false",
@@ -3032,7 +3355,9 @@
               ],
               "a": "true"
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 3
         },
         {
           "id": "highlight-present-simple",
@@ -3069,7 +3394,9 @@
             {
               "p": "Molly <b>visits</b> her grandma once a week."
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 2
         },
         {
           "id": "spelling-table",
@@ -3144,7 +3471,9 @@
             "s",
             "es",
             "ies"
-          ]
+          ],
+          "category": "grammar",
+          "step": 3
         },
         {
           "id": "circle-present-simple",
@@ -3209,7 +3538,9 @@
               ],
               "a": "cries"
             }
-          ]
+          ],
+          "category": "grammar",
+          "step": 4
         }
       ],
       "skills": {
@@ -3258,7 +3589,8 @@
         ],
         "active": false,
         "reason": "The phonics practice pages (Workbook p.234) were not in the scanned material."
-      }
+      },
+      "hero": "part-4"
     },
     {
       "id": "part-5",
@@ -3919,7 +4251,9 @@
             "page": 42
           },
           "status": "planned",
-          "title": "Learn the Words 1"
+          "title": "Learn the Words 1",
+          "category": "vocabulary",
+          "step": 1
         },
         {
           "id": "learn-words-2",
@@ -3932,7 +4266,9 @@
             "page": 47
           },
           "status": "planned",
-          "title": "Learn the Words 2"
+          "title": "Learn the Words 2",
+          "category": "vocabulary",
+          "step": 1
         },
         {
           "id": "choose-phrases",
@@ -3981,7 +4317,9 @@
               ],
               "a": "tell a story"
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 3
         },
         {
           "id": "match-a-b",
@@ -4026,7 +4364,9 @@
               "a": "You shouldn't believe",
               "b": "everything that you read."
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 2
         },
         {
           "id": "choose-two",
@@ -4115,7 +4455,9 @@
                 "an hour"
               ]
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 3
         },
         {
           "id": "write-the-words-1",
@@ -4128,7 +4470,9 @@
             "page": 36
           },
           "status": "planned",
-          "title": "Write the Words 1"
+          "title": "Write the Words 1",
+          "category": "vocabulary",
+          "step": 6
         },
         {
           "id": "write-the-words-2",
@@ -4141,7 +4485,9 @@
             "page": 38
           },
           "status": "planned",
-          "title": "Write the Words 2"
+          "title": "Write the Words 2",
+          "category": "vocabulary",
+          "step": 6
         },
         {
           "id": "text-messages",
@@ -4167,7 +4513,9 @@
             {
               "p": "<b>Tom:</b> Let's play basketball.<br>Write your answer."
             }
-          ]
+          ],
+          "category": "writing",
+          "step": 1
         },
         {
           "id": "hospital-complete",
@@ -4199,7 +4547,9 @@
             {
               "p": "______'s room is <b>full</b> of flowers."
             }
-          ]
+          ],
+          "category": "vocabulary",
+          "step": 7
         },
         {
           "id": "answer-questions",
@@ -4228,7 +4578,9 @@
             {
               "p": "What do you do <b>almost</b> every day?"
             }
-          ]
+          ],
+          "category": "writing",
+          "step": 1
         }
       ],
       "skills": {
@@ -4270,7 +4622,8 @@
         }
       },
       "phonics": null,
-      "notes": "No grammar section for this part appeared in the scanned material."
+      "notes": "No grammar section for this part appeared in the scanned material.",
+      "hero": "part-5"
     },
     {
       "id": "unit-check",
@@ -4646,7 +4999,9 @@
               "en": "sorry",
               "he": "מצטער"
             }
-          ]
+          ],
+          "category": "review",
+          "step": 1
         },
         {
           "id": "find-two-words",
@@ -4712,7 +5067,9 @@
             "At a train station",
             "On your birthday",
             "When you are sick"
-          ]
+          ],
+          "category": "review",
+          "step": 5
         },
         {
           "id": "build-phrases",
@@ -4757,7 +5114,9 @@
               "a": "get",
               "b": "better"
             }
-          ]
+          ],
+          "category": "review",
+          "step": 2
         },
         {
           "id": "sort-parts-of-speech",
@@ -4855,7 +5214,9 @@
             "Nouns",
             "Verbs",
             "Adjectives"
-          ]
+          ],
+          "category": "review",
+          "step": 5
         },
         {
           "id": "write-the-words",
@@ -4868,7 +5229,9 @@
             "page": 41,
             "exercise": 2
           },
-          "status": "planned"
+          "status": "planned",
+          "category": "review",
+          "step": 6
         },
         {
           "id": "complete-sentences",
@@ -4957,7 +5320,9 @@
               ],
               "a": "loves"
             }
-          ]
+          ],
+          "category": "review",
+          "step": 3
         },
         {
           "id": "translate",
@@ -4986,7 +5351,9 @@
             {
               "p": "You can <b>get off</b> the bus soon."
             }
-          ]
+          ],
+          "category": "review",
+          "step": 7
         }
       ],
       "skills": {
@@ -5003,7 +5370,8 @@
           "reason": "No speaking page for this part in the scanned material."
         }
       },
-      "phonics": null
+      "phonics": null,
+      "hero": "unit-check"
     }
   ],
   "vocabulary": [],
@@ -5023,5 +5391,6 @@
       "reason": "No speaking page for this part in the scanned material."
     }
   },
-  "phonics": null
+  "phonics": null,
+  "hero": "unit-1"
 }

@@ -538,7 +538,9 @@
         "page": 9
       },
       "note": "Word Power 1 presentation (Book p.7) was not in the scanned material.",
-      "status": "planned"
+      "status": "planned",
+      "category": "vocabulary",
+      "step": 1
     },
     {
       "id": "write-the-words-1",
@@ -554,7 +556,9 @@
         "book": "students",
         "page": 7
       },
-      "status": "planned"
+      "status": "planned",
+      "category": "vocabulary",
+      "step": 6
     },
     {
       "id": "write-the-words-2",
@@ -570,7 +574,9 @@
         "book": "students",
         "page": 9
       },
-      "status": "planned"
+      "status": "planned",
+      "category": "vocabulary",
+      "step": 6
     },
     {
       "id": "match-to-pictures",
@@ -615,7 +621,9 @@
           "a": "You need to study for the ______.",
           "b": "quiz"
         }
-      ]
+      ],
+      "category": "vocabulary",
+      "step": 2
     },
     {
       "id": "crossword",
@@ -673,7 +681,9 @@
           "answer": "dictionary",
           "clue": "מילון"
         }
-      ]
+      ],
+      "category": "vocabulary",
+      "step": 4
     },
     {
       "id": "circle-correct",
@@ -738,7 +748,9 @@
           ],
           "a": "complete"
         }
-      ]
+      ],
+      "category": "vocabulary",
+      "step": 3
     },
     {
       "id": "complete-sentences",
@@ -827,7 +839,9 @@
           ],
           "a": "complete"
         }
-      ]
+      ],
+      "category": "vocabulary",
+      "step": 3
     }
   ],
   "skills": {
@@ -844,5 +858,6 @@
       "reason": "No speaking page for Getting Started in the scanned material."
     }
   },
-  "phonics": null
+  "phonics": null,
+  "hero": "getting-started"
 }

@@ -490,3 +490,216 @@ button.bin{ width:100%; text-align:left; font:inherit; display:block; }
   .biHe{ border-left:0; padding-left:0; width:100%; }
   .biBtn .bi{ flex-direction:column; gap:2px; align-items:center; }
 }
+
+/* ===== HERO BAND =====
+   The image is painted over a palette gradient. A slot with no file yet falls
+   through to the gradient, so nothing is ever broken or temporary-looking. */
+.hero{
+  position:relative; overflow:hidden;
+  border-radius:var(--radius);
+  margin:18px 0 26px;
+  min-height:188px;
+  display:flex; align-items:flex-end;
+  background-image:var(--heroImg, none), var(--heroTone);
+  background-size:cover, cover;
+  background-position:center, center;
+  color:#fff;
+}
+.hero::after{
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(100deg, rgba(24,50,74,0.88) 0%, rgba(24,50,74,0.62) 46%, rgba(24,50,74,0.28) 100%);
+}
+.heroInner{ position:relative; z-index:1; padding:26px 30px; max-width:62%; }
+.heroEyebrow{
+  margin:0 0 6px; font-size:0.72rem; font-weight:800;
+  letter-spacing:1.4px; text-transform:uppercase; color:rgba(255,255,255,0.78);
+}
+.heroTitle{ margin:0; font-size:2.05rem; line-height:1.14; color:#fff; }
+.heroSub{ margin:8px 0 0; font-size:0.98rem; color:rgba(255,255,255,0.9); }
+.heroMeta{ margin:10px 0 0; font-size:0.82rem; color:rgba(255,255,255,0.72); }
+
+.tone-navy  { --heroTone:linear-gradient(118deg, #18324A 0%, #294A68 55%, #496A8A 100%); }
+.tone-indigo{ --heroTone:linear-gradient(118deg, #22405C 0%, #496A8A 60%, #6E8CA8 100%); }
+.tone-teal  { --heroTone:linear-gradient(118deg, #1B3A48 0%, #3D6E70 55%, #6FA3A0 100%); }
+.tone-sage  { --heroTone:linear-gradient(118deg, #233A33 0%, #5B7A5D 55%, #91A78F 100%); }
+.tone-gold  { --heroTone:linear-gradient(118deg, #3A2E1E 0%, #8A6B33 55%, #D6AA5D 100%); }
+.tone-blush { --heroTone:linear-gradient(118deg, #43242A 0%, #9B6670 55%, #DFA6AE 100%); }
+
+@media(max-width:620px){
+  .hero{ min-height:146px; margin:12px 0 20px; }
+  .heroInner{ padding:18px 20px; max-width:100%; }
+  .heroTitle{ font-size:1.45rem; }
+  .heroSub{ font-size:0.88rem; }
+  .hero::after{ background:linear-gradient(170deg, rgba(24,50,74,0.72) 0%, rgba(24,50,74,0.88) 100%); }
+}
+
+/* ===================================================================
+   v2 LAYOUT — home, stages, learning sequence
+   =================================================================== */
+
+/* ---- Home ---- */
+.homeGrid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+@media(max-width:700px){ .homeGrid{ grid-template-columns:1fr; } }
+.homeCard{
+  display:flex; flex-direction:column; text-decoration:none; color:inherit;
+  background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--radius); padding:26px 26px 22px;
+  box-shadow:var(--shadow); transition:transform .14s ease, box-shadow .14s ease;
+}
+.homeCard:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lift); }
+.homeIcon{ font-size:2.1rem; line-height:1; }
+.homeCard h2{ margin:12px 0 4px; font-size:1.35rem; color:var(--navy); }
+.homeDesc{ margin:0; color:var(--ink-soft); font-size:0.92rem; line-height:1.5; }
+.homeMeta{ margin:10px 0 14px; font-size:0.82rem; color:var(--ink-soft); font-weight:600; }
+.homeCard .pbarInner{ background:var(--indigo); }
+.homePct{ margin:8px 0 0; font-size:0.8rem; color:var(--ink-soft); font-weight:700; }
+.homeGo{
+  margin-top:auto; padding-top:16px;
+  font-weight:800; color:var(--indigo); font-size:0.95rem;
+}
+
+/* ---- Stage grid (Unit 1) ---- */
+.stageGrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+@media(max-width:900px){ .stageGrid{ grid-template-columns:1fr 1fr; } }
+@media(max-width:600px){ .stageGrid{ grid-template-columns:1fr; } }
+.stageCard{
+  display:flex; flex-direction:column; text-decoration:none; color:inherit;
+  background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--radius); padding:18px 20px 20px;
+  box-shadow:var(--shadow); transition:transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+.stageCard:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lift); border-color:var(--indigo); }
+.stageCard.done{ border-color:var(--correct); }
+.stageTop{ display:flex; justify-content:space-between; align-items:center; min-height:30px; }
+.stageNum{
+  font-size:0.72rem; font-weight:800; letter-spacing:1px;
+  text-transform:uppercase; color:var(--indigo);
+}
+.stageTick{ font-size:0.84rem; font-weight:700; color:var(--ink-soft); }
+.stageIcon{ font-size:1.9rem; line-height:1; margin-top:6px; }
+.stageCard h3{ margin:8px 0 10px; font-size:1.2rem; color:var(--navy); }
+.stageCats{ display:flex; flex-wrap:wrap; gap:6px; margin:0 0 14px; }
+.stageCat{
+  font-size:0.7rem; font-weight:700; padding:3px 9px; border-radius:999px;
+  background:var(--line-soft); color:var(--ink-soft); white-space:nowrap;
+}
+.stageCat.cat-vocabulary{ background:var(--c-vocabulary-bg); color:#9B5C66; }
+.stageCat.cat-grammar   { background:var(--c-grammar-bg);    color:#3F6F6C; }
+.stageCat.cat-reading   { background:var(--c-reading-bg);    color:#5A7158; }
+.stageCat.cat-writing   { background:var(--c-writing-bg);    color:var(--indigo); }
+.stageCat.cat-review    { background:var(--c-review-bg);     color:#8A6B33; }
+.stageCat.cat-warmup    { background:var(--c-warmup-bg);     color:var(--indigo); }
+.stageCard .pbarOuter{ margin-top:auto; }
+.stageCard .pbarInner{ background:var(--teal); }
+
+/* ---- Learning sequence blocks ---- */
+.catBlock{ margin-top:38px; }
+.catBlock:first-of-type{ margin-top:26px; }
+.catHead{
+  display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+  padding-bottom:10px; margin-bottom:18px;
+  border-bottom:2px solid var(--line);
+}
+.catIcon{ font-size:1.2rem; }
+.catTitle{ margin:0; font-size:1.2rem; color:var(--navy); }
+.catTitle .biHe{ font-size:0.86em; }
+.catLead{ font-size:0.82rem; color:var(--ink-soft); margin-left:auto; }
+.catLead .biHe{ font-size:0.95em; }
+@media(max-width:620px){ .catLead{ margin-left:0; width:100%; } }
+
+.cat-vocabulary .catHead{ border-bottom-color:var(--c-vocabulary); }
+.cat-grammar    .catHead{ border-bottom-color:var(--c-grammar); }
+.cat-reading    .catHead{ border-bottom-color:var(--c-reading); }
+.cat-writing    .catHead{ border-bottom-color:var(--c-writing); }
+.cat-review     .catHead{ border-bottom-color:var(--c-review); }
+.cat-warmup     .catHead{ border-bottom-color:var(--c-warmup); }
+
+.catGrid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+@media(max-width:640px){ .catGrid{ grid-template-columns:1fr; } }
+
+/* ---- Activity card ---- */
+.actItem{
+  display:flex; flex-direction:column; height:100%;
+  background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--radius); padding:18px 20px 20px;
+  text-decoration:none; color:inherit;
+  box-shadow:var(--shadow);
+  transition:transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+a.actItem:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lift); }
+.actItem.done{ border-color:var(--correct); background:var(--correct-bg); }
+.actTop{ display:flex; align-items:center; gap:10px; margin-bottom:10px; min-height:30px; }
+.actStep{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:26px; height:26px; border-radius:50%;
+  background:var(--line-soft); color:var(--ink-soft);
+  font-size:0.78rem; font-weight:800; flex:0 0 auto;
+}
+.actItem h4{ margin:2px 0 12px; font-size:1.18rem; line-height:1.3; font-weight:800; color:var(--navy); }
+.actTick{ margin-left:auto; }
+
+.cat-vocabulary a.actItem:hover{ border-color:var(--c-vocabulary); }
+.cat-grammar    a.actItem:hover{ border-color:var(--c-grammar); }
+.cat-reading    a.actItem:hover{ border-color:var(--c-reading); }
+.cat-writing    a.actItem:hover{ border-color:var(--c-writing); }
+.cat-review     a.actItem:hover{ border-color:var(--c-review); }
+.cat-vocabulary .actStep{ background:var(--c-vocabulary-bg); color:#9B5C66; }
+.cat-grammar    .actStep{ background:var(--c-grammar-bg);    color:#3F6F6C; }
+.cat-reading    .actStep{ background:var(--c-reading-bg);    color:#5A7158; }
+.cat-writing    .actStep{ background:var(--c-writing-bg);    color:var(--indigo); }
+.cat-review     .actStep{ background:var(--c-review-bg);     color:#8A6B33; }
+.cat-warmup     .actStep{ background:var(--c-warmup-bg);     color:var(--indigo); }
+
+/* ---- Grammar rules, shown before the practice ---- */
+.ruleStack{ display:grid; gap:14px; margin-bottom:20px; }
+.teachBox{
+  background:var(--c-grammar-bg); border:1px solid var(--c-grammar);
+  border-radius:var(--radius); padding:18px 20px;
+}
+.teachBox h4{ margin:0 0 10px; color:#3F6F6C; font-size:1.05rem; }
+.ruleRow{
+  padding:7px 0; border-bottom:1px dotted rgba(63,111,108,0.3);
+  font-size:0.98rem;
+}
+.ruleRow:last-of-type{ border-bottom:0; }
+
+/* ---- misc ---- */
+.partProgress{ margin:4px 0 10px; }
+.partProgress .pctLabel{ margin-top:8px; }
+.printRow{ margin:0 0 6px; }
+.sectionNote{ font-size:0.85rem; color:var(--ink-soft); font-style:italic; margin:0 0 18px; }
+.pbarOuter{ height:7px; background:var(--line-soft); }
+
+/* Keep short bilingual labels on one line inside links and buttons. */
+.homeGo .bi, .stageCat .bi{ flex-wrap:nowrap; align-items:center; }
+.homeGo .biHe{ font-weight:600; }
+
+/* ===== Reading sequence ===== */
+.stepDots{ display:flex; gap:6px; margin:0 0 14px; }
+.stepDot{
+  width:26px; height:5px; border-radius:99px; background:var(--line);
+  transition:background .2s ease;
+}
+.stepDot.past{ background:var(--c-reading); }
+.stepDot.now{ background:var(--sage); box-shadow:0 0 0 3px var(--c-reading-bg); }
+.readKind{
+  margin:0 0 16px; font-size:0.78rem; font-weight:800;
+  letter-spacing:1px; text-transform:uppercase; color:var(--sage);
+}
+.readKind .biHe{ border-left-color:var(--sage); }
+
+.passage{
+  background:var(--c-reading-bg); border-left:4px solid var(--c-reading);
+  border-radius:var(--radius-sm); padding:16px 20px; margin:0 0 20px;
+}
+.passage p{ margin:0 0 10px; font-size:1.08rem; line-height:1.75; }
+.passage p:last-child{ margin-bottom:0; }
+
+.preteach{ display:grid; gap:2px; margin-bottom:20px; }
+.preteachRow{
+  display:flex; align-items:center; gap:12px;
+  padding:11px 14px; border-radius:var(--radius-sm);
+  background:var(--c-reading-bg);
+}
+.ptEn{ font-weight:800; font-size:1.05rem; color:var(--navy); }
+.ptHe{ margin-left:auto; color:var(--ink-soft); }

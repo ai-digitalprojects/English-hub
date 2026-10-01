@@ -41,20 +41,48 @@ function hasParts(section){ return !!(section && section.parts && section.parts.
 
 /* Drills the site can build over this part's word list. They carry no
    workbook page because they are not workbook exercises. */
+/* The shape of practice a drill offers, so a part is not handed the same
+   shape twice. */
+const DRILL_FORMAT = {
+  'match-words': 'pairs',
+  'choose-meaning': 'mc',
+  'complete-sentence': 'mc',
+  'sort-groups': 'bins',
+  'word-puzzle': 'unscramble',
+  'build-sentence': 'build',
+  'free-writing': 'writing'
+};
+const DRILL_STEP = { pairs:2, mc:3, unscramble:4, bins:5, build:6, writing:7 };
+
 function derivedActivities(part){
   const words = part.vocabulary || [];
   if(!words.length) return [];
-  return EXERCISES.filter(ex => ex.needs(words)).map(ex => ({
-    id: 'drill-' + ex.id,
-    type: drillType(ex),
-    title: ex.title,
-    skill: ex.skill,
-    level: ex.level,
-    lane: 'practice',
-    origin: 'word-list',
-    generated: true,
-    status: 'ready'
-  }));
+
+  /* Whatever the book already gives this part counts as covered — a drill is
+     only worth adding when it practises in a shape the part does not have. */
+  const covered = new Set((part.activities || []).map(a => a.render).filter(Boolean));
+
+  const out = [];
+  EXERCISES.forEach(ex => {
+    if(!ex.needs(words)) return;
+    const format = DRILL_FORMAT[ex.id] || ex.id;
+    if(covered.has(format)) return;
+    covered.add(format);
+    out.push({
+      id: 'drill-' + ex.id,
+      type: drillType(ex),
+      title: ex.title,
+      skill: ex.skill,
+      level: ex.level,
+      lane: 'practice',
+      category: ex.skill === 'writing' ? 'writing' : 'vocabulary',
+      step: DRILL_STEP[format] || 5,
+      origin: 'word-list',
+      generated: true,
+      status: 'ready'
+    });
+  });
+  return out;
 }
 
 /* Everything on a part: the book's catalogued exercises plus the drills. */

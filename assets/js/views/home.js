@@ -1,8 +1,9 @@
-/* Home: exactly two cards. Nothing else lives at this level. */
+/* Home: a hero band and exactly two cards. Nothing else lives at this level. */
 import { sections } from '../content/model.js';
-import { colorVar } from '../state.js';
 import { sectionProgress } from '../progress.js';
 import { hashFor } from '../router.js';
+import { renderHero } from './hero.js';
+import { bi } from './bilingual.js';
 
 function wordCount(section){
   const parts = (section.parts && section.parts.length) ? section.parts : [section];
@@ -12,30 +13,29 @@ function wordCount(section){
 function card(section){
   const pr = sectionProgress(section);
   const parts = (section.parts || []).length;
-  const meta = [
-    parts ? parts + ' parts' : null,
-    wordCount(section) + ' words'
-  ].filter(Boolean).join(' · ');
+  const meta = [parts ? parts + ' stages' : null, wordCount(section) + ' words']
+    .filter(Boolean).join(' · ');
   return `
-  <a class="uCard" href="${hashFor({ view:'section', sectionId:section.id })}">
-    <div class="icon">${section.icon}</div>
+  <a class="homeCard" href="${hashFor({ view:'section', sectionId:section.id })}">
+    <span class="homeIcon" aria-hidden="true">${section.icon}</span>
     <h2>${section.label}</h2>
-    <p class="desc">${section.subtitle || ''}</p>
-    <div class="cardMeta">${meta}</div>
-    <div class="pbarOuter"><div class="pbarInner" style="width:${pr.pct}%;background:${colorVar(section.color)}"></div></div>
-    <div class="pctLabel">${pr.pct}% &middot; ${pr.done}/${pr.total} done</div>
-    <span class="startBtn" style="background:${colorVar(section.color)}">${pr.done ? 'Continue →' : 'Start →'}</span>
+    <p class="homeDesc">${section.subtitle || ''}</p>
+    <p class="homeMeta">${meta}</p>
+    <div class="pbarOuter"><div class="pbarInner" style="width:${pr.pct}%"></div></div>
+    <p class="homePct">${pr.done} / ${pr.total}</p>
+    <span class="homeGo">${pr.done ? bi('Continue &rarr;', 'המשיכו') : bi('Start &rarr;', 'התחילו')}</span>
   </a>`;
 }
 
 function renderHome(){
   return `
-  <div class="hero">
-    <div class="eyebrow">English Learning Hub</div>
-    <h1 class="serif">BOOK: "THINK ABOUT IT!"</h1>
-    <div class="sub">Grade 6 &middot; Gevim School</div>
-    <div class="tagline">Learn &bull; Practice &bull; Speak &bull; Create</div>
-  </div>
+  ${renderHero({
+    key: 'home',
+    eyebrow: 'English Learning Hub',
+    title: 'THINK ABOUT IT!',
+    subtitle: 'Grade 6 · Gevim School',
+    meta: 'Learn • Practice • Read • Write'
+  })}
   <div class="homeGrid">${sections().map(card).join('')}</div>`;
 }
 

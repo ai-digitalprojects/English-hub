@@ -7,6 +7,7 @@
 import { A } from '../state.js';
 import { shuffle, escapeAttr } from '../helpers.js';
 import { bi, ins, ui } from '../views/bilingual.js';
+import { correctRow, retryRow, hintRow, revealRow, finishBlock, REVEAL_AT, HINT_AT } from './feedback.js';
 
 const finish = key =>
   `<button class="pill biBtn" style="background:var(--blue)" data-action="finishActivity">${ui(key || 'complete')}</button>`;
@@ -20,10 +21,11 @@ const mc = {
     if(A.qs === undefined){
       A.qs = (act.shuffle === false) ? items.slice() : shuffle(items.slice());
       A.i = 0; A.picked = []; A.score = 0; A.checked = false;
+      A.tries = 0; A.firstTry = 0; A.solved = false;
     }
     if(A.i >= A.qs.length){
-      return `<div class="matchDone">🎉 ${bi('Well done!', 'כל הכבוד!')} <b>${A.score} / ${A.qs.length}</b></div>
-        <div class="navRowR">${again('restart')}${finish()}</div>`;
+      return finishBlock(A.firstTry, A.qs.length) +
+        `<div class="navRowR">${again('restart')}${finish()}</div>`;
     }
     const q = A.qs[A.i];
     const answers = Array.isArray(q.a) ? q.a : [q.a];
@@ -32,11 +34,18 @@ const mc = {
     const opts = q.o.map(o => {
       let cls = 'opt';
       const he = /[֐-׿]/.test(o);
-      if(done){
+      /* While the student is still trying, only their own choice is marked —
+         the correct option is never given away. */
+      if(A.solved){
+        if(answers.includes(o)) cls += ' correct'; else cls += ' dim';
+      } else if(A.revealed){
         if(answers.includes(o)) cls += ' correct';
         else if(A.picked.includes(o)) cls += ' incorrect';
         else cls += ' dim';
+      } else if(A.missed && A.missed.includes(o)){
+        cls += ' incorrect';
       } else if(A.picked.includes(o)) cls += ' selected';
+      if(A.hinted && A.hinted.includes(o)) cls += ' dim';
       return `<button class="${cls}${he ? ' he' : ''}"${he ? ' dir="rtl"' : ''} data-action="ex" data-do="pick"
         data-val="${escapeAttr(o)}" ${done ? 'data-locked="1"' : ''}>${o}</button>`;
     }).join('');
@@ -48,34 +57,57 @@ const mc = {
         <div class="qCounter">Question ${A.i + 1} of ${A.qs.length}${want > 1 ? ' · choose ' + want : ''}</div>
         <div class="prompt">${q.p}</div>
         <div class="opts">${opts}</div>
-        ${done ? (got === want && A.picked.length === want
-          ? `<div class="feedbackMsg good">✓ ${bi('Correct!', 'נכון!')}</div>`
-          : `<div class="feedbackMsg bad">${bi('The answer is:', 'התשובה הנכונה:')} <b>${answers.join(' + ')}</b></div>`) : ''}
+        ${A.solved ? correctRow()
+          : A.revealed ? revealRow(answers.join(' + '))
+          : A.wrong ? retryRow() : ''}
+        ${(!A.solved && !A.revealed && A.tries >= HINT_AT) ? hintRow() : ''}
       </div>
       <div class="navRowR">
-        ${done
-          ? `<button class="pill biBtn" style="background:var(--ink)" data-action="ex" data-do="next">${ui(A.i === A.qs.length - 1 ? 'finish' : 'next')}</button>`
-          : `<button class="pill biBtn" style="background:var(--blue)" data-action="ex" data-do="check" ${A.picked.length === want ? '' : 'disabled'}>${ui('check')}</button>`}
+        ${(A.solved || A.revealed)
+          ? `<button class="pill biBtn" style="background:var(--navy)" data-action="ex" data-do="next">${ui(A.i === A.qs.length - 1 ? 'finish' : 'next')}</button>`
+          : `<button class="pill biBtn" style="background:var(--indigo)" data-action="ex" data-do="check" ${A.picked.length === want ? '' : 'disabled'}>${ui('check')}</button>`}
       </div>`;
   },
   handle(doWhat, t){
     if(doWhat === 'restart'){ delete A.qs; return true; }
     if(doWhat === 'pick'){
-      if(A.checked) return true;
+      if(A.solved || A.revealed) return true;
       const q = A.qs[A.i], want = Array.isArray(q.a) ? q.a.length : 1;
       const v = t.dataset.val;
       if(A.picked.includes(v)) A.picked = A.picked.filter(x => x !== v);
       else if(A.picked.length < want) A.picked.push(v);
       else if(want === 1) A.picked = [v];
+      A.wrong = false;
       return true;
     }
     if(doWhat === 'check'){
-      A.checked = true;
       const q = A.qs[A.i], answers = Array.isArray(q.a) ? q.a : [q.a];
-      if(A.picked.length === answers.length && A.picked.every(p => answers.includes(p))) A.score++;
+      const right = A.picked.length === answers.length && A.picked.every(p => answers.includes(p));
+      A.tries++;
+      if(right){
+        A.solved = true; A.wrong = false; A.score++;
+        if(A.tries === 1) A.firstTry++;
+        return true;
+      }
+      /* Remember what was tried so it reads as used up, but keep the answer
+         hidden and let them go again. */
+      A.missed = (A.missed || []).concat(A.picked);
+      A.picked = [];
+      A.wrong = true;
+      if(A.tries >= HINT_AT && !A.hinted){
+        /* The hint takes away one option that is definitely wrong. */
+        const wrongOnes = q.o.filter(o => !answers.includes(o) && !(A.missed || []).includes(o));
+        A.hinted = wrongOnes.slice(0, 1);
+      }
+      if(A.tries >= REVEAL_AT) A.revealed = true;
       return true;
     }
-    if(doWhat === 'next'){ A.i++; A.picked = []; A.checked = false; return true; }
+    if(doWhat === 'next'){
+      A.i++; A.picked = []; A.tries = 0;
+      A.solved = false; A.revealed = false; A.wrong = false;
+      A.missed = []; A.hinted = null;
+      return true;
+    }
     return false;
   }
 };
@@ -91,8 +123,8 @@ const pairs = {
       A.matched = []; A.selL = null; A.selR = null; A.wrong = null;
     }
     if(A.matched.length === A.pairs.length){
-      return `<div class="matchDone">🎉 ${bi('You matched them all!', 'התאמתם את כולם!')}</div>
-        <div class="navRowR">${again('restart')}${finish()}</div>`;
+      return finishBlock(A.pairs.length, A.pairs.length, bi('You matched them all!', 'התאמתם את כולם!')) +
+        `<div class="navRowR">${again('restart')}${finish()}</div>`;
     }
     const col = (list, side) => list.map(v => {
       const isMatched = side === 'L'
@@ -140,8 +172,8 @@ const bins = {
       A.sel = null; A.wrong = null;
     }
     if(!A.pool.length){
-      return `<div class="matchDone">🎉 ${bi('Everything is in the right group!', 'הכול בקבוצה הנכונה!')}</div>
-        <div class="navRowR">${again('restart')}${finish()}</div>`;
+      return finishBlock(A.binNames.length, A.binNames.length, bi('Everything is in the right group!', 'הכול בקבוצה הנכונה!')) +
+        `<div class="navRowR">${again('restart')}${finish()}</div>`;
     }
     return `
       <p class="exHint">${ins('bins')}</p>
@@ -213,10 +245,11 @@ const unscramble = {
       A.items = shuffle(items.filter(it => it.answer.replace(/[^A-Za-z]/g, '').length >= 3))
         .map(it => ({ ...it, mix: mixLetters(it.answer) }));
       A.i = 0; A.val = ''; A.checked = false; A.score = 0;
+      A.tries = 0; A.firstTry = 0; A.solved = false; A.revealed = false; A.wrong = false;
     }
     if(A.i >= A.items.length){
-      return `<div class="matchDone">🎉 ${bi('Well done!', 'כל הכבוד!')} <b>${A.score} / ${A.items.length}</b></div>
-        <div class="navRowR">${again('restart')}${finish()}</div>`;
+      return finishBlock(A.firstTry, A.items.length) +
+        `<div class="navRowR">${again('restart')}${finish()}</div>`;
     }
     const it = A.items[A.i];
     const right = A.checked && A.val.trim().toLowerCase() === it.answer.toLowerCase();
@@ -229,29 +262,42 @@ const unscramble = {
         ${it.clue ? `<div class="${he ? 'hePrompt' : 'prompt'}"${he ? ' dir="rtl"' : ''}>${it.clue}</div>` : ''}
         <input type="text" class="freeText wordInput" data-action="exInput" dir="ltr"
                value="${escapeAttr(A.val)}" placeholder="Write the word..." />
-        ${A.checked ? (right
-          ? `<div class="feedbackMsg good">✓ ${bi('Correct!', 'נכון!')}</div>`
-          : `<div class="feedbackMsg bad">${bi('The word is:', 'המילה היא:')} <b>${it.answer}</b></div>`) : ''}
+        ${A.solved ? correctRow()
+          : A.revealed ? revealRow(it.answer)
+          : A.wrong ? retryRow() : ''}
+        ${(!A.solved && !A.revealed && A.tries >= HINT_AT)
+          ? hintRow(bi('It starts with <b>' + it.answer[0].toUpperCase() + '</b> and has ' + it.answer.replace(/[^A-Za-z]/g, '').length + ' letters.',
+                       'המילה מתחילה ב-<b>' + it.answer[0].toUpperCase() + '</b> ויש בה ' + it.answer.replace(/[^A-Za-z]/g, '').length + ' אותיות.')) : ''}
       </div>
       <div class="navRowR">
-        ${A.checked
-          ? `<button class="pill biBtn" style="background:var(--ink)" data-action="ex" data-do="next">${ui(A.i === A.items.length - 1 ? 'finish' : 'next')}</button>`
-          : `<button class="pill biBtn" style="background:var(--blue)" data-action="ex" data-do="check">${ui('check')}</button>`}
+        ${(A.solved || A.revealed)
+          ? `<button class="pill biBtn" style="background:var(--navy)" data-action="ex" data-do="next">${ui(A.i === A.items.length - 1 ? 'finish' : 'next')}</button>`
+          : `<button class="pill biBtn" style="background:var(--indigo)" data-action="ex" data-do="check">${ui('check')}</button>`}
       </div>`;
   },
   handle(doWhat){
     if(doWhat === 'restart'){ delete A.items; return true; }
     if(doWhat === 'check'){
-      A.checked = true;
-      if(A.val.trim().toLowerCase() === A.items[A.i].answer.toLowerCase()) A.score++;
+      A.tries++;
+      if(A.val.trim().toLowerCase() === A.items[A.i].answer.toLowerCase()){
+        A.solved = true; A.wrong = false; A.score++;
+        if(A.tries === 1) A.firstTry++;
+      } else {
+        A.wrong = true;
+        if(A.tries >= REVEAL_AT) A.revealed = true;
+      }
       return true;
     }
-    if(doWhat === 'next'){ A.i++; A.val = ''; A.checked = false; return true; }
+    if(doWhat === 'next'){
+      A.i++; A.val = ''; A.tries = 0;
+      A.solved = false; A.revealed = false; A.wrong = false;
+      return true;
+    }
     return false;
   },
   input(act, t){
     if(act !== 'exInput') return false;
-    A.val = t.value; return true;
+    A.val = t.value; A.wrong = false; return true;
   }
 };
 
@@ -280,6 +326,8 @@ const wordlist = {
   handle(){ return false; }
 };
 
-const RENDERERS = { mc, pairs, bins, writing, unscramble, wordlist };
+import { reading, recall } from './reading.js';
+
+const RENDERERS = { mc, pairs, bins, writing, unscramble, wordlist, reading, recall };
 
 export { RENDERERS };

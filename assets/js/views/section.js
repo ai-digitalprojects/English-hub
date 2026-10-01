@@ -1,52 +1,62 @@
 /* A section screen.
-   Unit 1 shows its Parts. Getting Started has no parts, so it shows its own
-   Learn / Practice lanes directly — one level shallower, by design. */
+   Unit 1 shows its stages. Getting Started has no stages, so it shows its own
+   learning sequence directly — one level shallower, by design. */
 import { getSection, getPart, hasParts } from '../content/model.js';
-import { colorBg, colorVar } from '../state.js';
 import { partProgress } from '../progress.js';
 import { S } from '../state.js';
 import { hashFor } from '../router.js';
-import { renderLanes, worksheet } from './part.js';
+import { renderLanes } from './part.js';
+import { renderHero } from './hero.js';
+import { bi } from './bilingual.js';
+import { CATEGORIES, groupByCategory } from './categories.js';
+import { visibleActivities } from '../content/model.js';
 
-function partCard(sectionId, part){
+/* The strip of category icons tells a student what a stage holds before they
+   open it — words, grammar, a text, writing. */
+function categoryStrip(part){
+  const groups = groupByCategory(visibleActivities(part));
+  if(!groups.length) return '';
+  return `<p class="stageCats">${groups.map(g =>
+    `<span class="stageCat cat-${g.key}" title="${g.def.en}">${g.def.icon} ${g.def.en}</span>`).join('')}</p>`;
+}
+
+function stageCard(sectionId, part){
   const pr = partProgress(sectionId, part);
-  const grammar = (part.grammar || []).map(g => g.topic).join(' · ');
-  const words = (part.vocabulary || []).length;
-  const meta = [words ? words + ' words' : null, grammar || null].filter(Boolean).join(' — ');
+  const done = pr.total && pr.done === pr.total;
   return `
-  <a class="partCard" style="background:${colorBg(part.color)}"
-     href="${hashFor({ view:'part', sectionId, partId:part.id })}">
-    <div class="partTop">
-      <span class="partNum">${part.number ? 'Part ' + part.number : 'Review'}</span>
-      <span class="partStatus">${pr.total && pr.done === pr.total ? '✓' : pr.done ? pr.done + '/' + pr.total : '○'}</span>
+  <a class="stageCard${done ? ' done' : ''}" href="${hashFor({ view:'part', sectionId, partId:part.id })}">
+    <div class="stageTop">
+      <span class="stageNum">${part.number ? 'Part ' + part.number : 'Review'}</span>
+      <span class="stageTick">${done ? '<span class="fxTick">✓</span>' : pr.done ? pr.done + '/' + pr.total : ''}</span>
     </div>
-    <div class="icon">${part.icon}</div>
+    <span class="stageIcon" aria-hidden="true">${part.icon}</span>
     <h3>${part.title}</h3>
-    <p class="partMeta">${meta || '&nbsp;'}</p>
-    <div class="pbarOuter thin"><div class="pbarInner" style="width:${pr.pct}%;background:${colorVar(part.color)}"></div></div>
+    ${categoryStrip(part)}
+    <div class="pbarOuter thin"><div class="pbarInner" style="width:${pr.pct}%"></div></div>
   </a>`;
 }
 
 function renderSection(){
   const section = getSection(S.sectionId);
   if(!section) return '';
+  const words = ((section.parts && section.parts.length) ? section.parts : [section])
+    .reduce((n, p) => n + ((p.vocabulary || []).length), 0);
 
-  const head = `
-  <div class="unitHead">
-    <div class="icon">${section.icon}</div>
-    <div><h2>${section.title}</h2><p>${section.subtitle || ''}</p></div>
-  </div>`;
+  const hero = renderHero({
+    key: section.hero || section.id,
+    eyebrow: 'THINK ABOUT IT! · Grade 6',
+    title: section.title,
+    subtitle: section.subtitle || '',
+    meta: `${(section.parts || []).length ? (section.parts.length + ' stages · ') : ''}${words} words`
+  });
 
   if(hasParts(section)){
     const note = section.titleNote ? `<p class="sectionNote">${section.titleNote}</p>` : '';
-    return head + note + `<div class="partGrid">${
-      section.parts.map(p => partCard(section.id, p)).join('')
+    return hero + note + `<div class="stageGrid">${
+      section.parts.map(p => stageCard(section.id, p)).join('')
     }</div>`;
   }
-
-  /* No parts: show this section's own lanes. */
-  const part = getPart(section.id, null);
-  return head + renderLanes(section.id, part) + worksheet(section, part);
+  return hero + renderLanes(section.id, getPart(section.id, null));
 }
 
 export { renderSection };

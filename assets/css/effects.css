@@ -1,0 +1,101 @@
+/* Success effects.
+
+   Small and quick — a tick that settles, a few sparks that fade. Enough to feel
+   earned, nothing a twelve-year-old would call babyish. Every animation is
+   switched off when the viewer asks for reduced motion. */
+
+/* ---- the tick ---- */
+.fxTick{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:30px; height:30px; border-radius:50%;
+  background:var(--correct); color:#fff; font-size:0.95rem; font-weight:800;
+  flex:0 0 auto;
+  animation:fxPop .34s cubic-bezier(.2,1.5,.4,1) both;
+}
+@keyframes fxPop{
+  0%   { transform:scale(.3); opacity:0; }
+  60%  { transform:scale(1.12); opacity:1; }
+  100% { transform:scale(1); opacity:1; }
+}
+
+/* ---- sparks ----
+   Six small dots thrown out from the tick, each on its own angle. */
+.fxBurst{ position:relative; display:inline-block; }
+.fxBurst i{
+  position:absolute; left:50%; top:50%;
+  width:5px; height:5px; border-radius:50%; background:var(--gold);
+  opacity:0; pointer-events:none;
+  animation:fxSpark .62s ease-out forwards;
+}
+.fxBurst i:nth-child(1){ --fxA:  -70deg; background:var(--gold);  animation-delay:.04s; }
+.fxBurst i:nth-child(2){ --fxA:  -25deg; background:var(--blush); animation-delay:.08s; }
+.fxBurst i:nth-child(3){ --fxA:   20deg; background:var(--teal);  animation-delay:.02s; }
+.fxBurst i:nth-child(4){ --fxA:  115deg; background:var(--gold);  animation-delay:.10s; }
+.fxBurst i:nth-child(5){ --fxA:  160deg; background:var(--sage);  animation-delay:.06s; }
+.fxBurst i:nth-child(6){ --fxA: -140deg; background:var(--blush); animation-delay:.12s; }
+@keyframes fxSpark{
+  0%   { opacity:0; transform:rotate(var(--fxA)) translateX(4px)  scale(.6); }
+  25%  { opacity:1; }
+  100% { opacity:0; transform:rotate(var(--fxA)) translateX(30px) scale(.3); }
+}
+
+/* ---- the feedback rows ---- */
+.fxRow{
+  display:flex; align-items:center; gap:12px;
+  padding:12px 16px; border-radius:var(--radius-sm);
+  font-weight:700; line-height:1.45;
+  animation:fxRise .28s ease-out both;
+}
+.fxRow.good{ background:var(--correct-bg); color:var(--correct); }
+.fxRow.retry{ background:var(--retry-bg);  color:var(--retry); }
+.fxRow .bi{ gap:10px; }
+.fxRow .biHe{ color:inherit; opacity:0.88; border-left-color:currentColor; }
+@keyframes fxRise{
+  from{ opacity:0; transform:translateY(5px); }
+  to  { opacity:1; transform:translateY(0); }
+}
+
+/* The retry icon turns rather than pops, so it reads as "go round again". */
+.fxRetryIcon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:30px; height:30px; border-radius:50%;
+  background:var(--retry); color:#fff; font-size:0.95rem; flex:0 0 auto;
+  animation:fxTurn .45s ease-out both;
+}
+@keyframes fxTurn{
+  from{ transform:rotate(-150deg) scale(.6); opacity:0; }
+  to  { transform:rotate(0) scale(1); opacity:1; }
+}
+
+/* ---- a hint, offered only after a few tries ---- */
+.fxHint{
+  margin-top:10px; padding:10px 14px;
+  background:var(--c-review-bg); border-left:3px solid var(--gold);
+  border-radius:var(--radius-sm);
+  font-size:0.9rem; color:var(--ink);
+  animation:fxRise .3s ease-out both;
+}
+.fxHint .biHe{ border-left-color:var(--gold); }
+
+/* ---- finishing a whole exercise ---- */
+.fxFinish{
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  padding:26px 20px; text-align:center;
+}
+.fxFinish .fxStar{
+  font-size:2.4rem; line-height:1;
+  animation:fxPop .4s cubic-bezier(.2,1.5,.4,1) both;
+}
+.fxFinish .fxScore{
+  font-size:1.5rem; font-weight:800; color:var(--navy);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .fxTick, .fxBurst i, .fxRow, .fxRetryIcon, .fxHint, .fxFinish .fxStar{
+    animation:none !important;
+  }
+  .fxBurst i{ display:none; }
+}
+
+.fxNote{ margin:2px 0 0; font-size:0.8rem; color:var(--ink-soft); }
+.fxFinish .bi{ justify-content:center; }
