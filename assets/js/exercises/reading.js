@@ -69,6 +69,9 @@ const reading = {
 
     /* ---- the text itself ---- */
     if(st.kind === 'text'){
+      /* Remember how far the student has read, so the questions that follow
+         never show a paragraph they have not reached yet. */
+      A.readUpto = st.upto;
       return head + passage(act.chunks || [], st.upto) + nextBtn(steps);
     }
 
@@ -97,9 +100,13 @@ const reading = {
         data-val="${escapeAttr(o)}" ${(A.solved || A.revealed) ? 'data-locked="1"' : ''}>${o}</button>`;
     }).join('');
 
-    const showText = st.kind !== 'predict';
+    /* A question shows the text as far as it has been read — never further.
+       A prediction step shows none of it. */
+    const showText = st.kind !== 'predict' && st.showText !== false;
+    const upto = st.upto !== undefined ? st.upto
+      : (A.readUpto !== undefined ? A.readUpto : 99);
     return head +
-      (showText ? passage(act.chunks || [], 99) : '') + `
+      (showText ? passage(act.chunks || [], upto) : '') + `
       <div class="qWrap">
         <div class="prompt">${st.p}</div>
         <div class="opts">${opts}</div>

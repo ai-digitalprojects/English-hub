@@ -60,7 +60,8 @@ const mc = {
         ${A.solved ? correctRow()
           : A.revealed ? revealRow(answers.join(' + '))
           : A.wrong ? retryRow() : ''}
-        ${(!A.solved && !A.revealed && A.tries >= HINT_AT) ? hintRow() : ''}
+        ${(!A.solved && !A.revealed && A.tries >= HINT_AT && A.hinted && A.hinted.length)
+          ? hintRow() : ''}
       </div>
       <div class="navRowR">
         ${(A.solved || A.revealed)
@@ -208,9 +209,11 @@ const bins = {
 const writing = {
   render(items, part, act){
     if(A.answers === undefined) A.answers = items.map(() => '');
+    /* The words the book prints above the exercise. They are there to be read
+       and copied, so they are not controls — nothing happens if you tap one. */
     const wordBank = act.wordBank
-      ? `<div class="poolRow">${act.wordBank.map((w, i) =>
-          `<button class="chip pool" data-action="ex" data-do="bank" data-idx="${i}">${w}</button>`).join('')}</div>`
+      ? `<div class="poolRow bank">${act.wordBank
+          .map(w => `<span class="chip bank">${w}</span>`).join('')}</div>`
       : '';
     return `
       <p class="exHint">${ins('writing')}</p>
@@ -223,12 +226,7 @@ const writing = {
         </div>`).join('')}
       <div class="navRowR">${finish('done')}</div>`;
   },
-  handle(doWhat, t, items){
-    if(doWhat !== 'bank') return false;
-    const w = t.dataset.idx;
-    A.bankPick = w;
-    return true;
-  },
+  handle(){ return false; },
   input(act, t){
     if(act !== 'wrItem') return false;
     if(A.answers === undefined) A.answers = [];

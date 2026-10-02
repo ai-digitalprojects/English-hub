@@ -70,6 +70,29 @@ const LOCAL = {
   'write-the-words': renderWriteTheWords
 };
 
+/* The book's own instruction for this exercise, when the content model carries
+   one. It sits above the renderer's mechanical hint, which says how to work the
+   controls rather than what the task is. */
+function taskLine(act){
+  const t = act.instruction;
+  return t ? `<p class="exHint actTask">${bi(t[0], t[1])}</p>` : '';
+}
+
+/* Some printed exercises depend on a picture we do not have. Where the task
+   still works from a description, the description says so plainly rather than
+   pretending the picture is there. */
+function scene(act){
+  const s = act.scene;
+  return s ? `<p class="exHint sub scene">🖼️ ${bi(s[0], s[1])}</p>` : '';
+}
+
+/* A text the student reads before writing — the book's model paragraph. */
+function passage(act){
+  const p = act.passage;
+  if(!p || !p.length) return '';
+  return `<div class="passage">${p.map(line => `<p>${line}</p>`).join('')}</div>`;
+}
+
 function renderActivity(){
   const section = getSection(S.sectionId);
   const part = getPart(S.sectionId, S.partId);
@@ -94,6 +117,7 @@ function renderActivity(){
       ${levelBadge(act.level)}${done ? '<span class="doneFlag">✓ Done</span>' : ''}
     </div>
     ${sourceRef(act)}
+    ${taskLine(act)}${scene(act)}${passage(act)}
     ${body}
   </div>
   <div class="stepNav"><a class="stepLink prev" href="${upHref}">← Back to ${part.title}</a></div>`;

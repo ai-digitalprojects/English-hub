@@ -694,6 +694,35 @@ a.actItem:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lift); }
 }
 .passage p{ margin:0 0 10px; font-size:1.08rem; line-height:1.75; }
 .passage p:last-child{ margin-bottom:0; }
+/* The section heading the magazine prints above each half of the text. */
+.passage .rHead{
+  display:inline-block; margin-bottom:4px;
+  color:var(--c-reading); font-size:0.95rem; letter-spacing:0.02em;
+}
+
+/* The book's own instruction for an exercise — what to do, as printed. */
+.exHint.actTask{ font-weight:600; color:var(--ink); }
+
+/* Said out loud when a printed exercise leans on a picture we do not have. */
+.exHint.sub.scene{
+  background:var(--c-review-bg); border-left:3px solid var(--gold);
+  border-radius:var(--radius-sm); padding:10px 14px; margin-bottom:16px;
+}
+.exHint.sub.scene .biHe{ border-left-color:var(--gold); }
+
+/* A word bank is a list to read from, not a set of buttons. */
+.poolRow.bank{ margin-bottom:18px; }
+.chip.bank{
+  background:var(--panel); border:1px solid var(--line);
+  color:var(--ink); cursor:default;
+}
+
+/* The short answers printed beside a question, there to be read, not chosen. */
+.shortAns{
+  display:inline-block; margin-left:8px;
+  color:var(--ink-soft); font-weight:600; font-size:0.86rem;
+  white-space:nowrap;
+}
 
 .preteach{ display:grid; gap:2px; margin-bottom:20px; }
 .preteachRow{

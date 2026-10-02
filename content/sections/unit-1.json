@@ -962,6 +962,8 @@
       "sources": {
         "studentsBook": [
           20,
+          22,
+          23,
           24,
           25,
           27
@@ -971,6 +973,7 @@
           17,
           18,
           19,
+          20,
           21
         ]
       },
@@ -1186,7 +1189,7 @@
         },
         {
           "en": "several",
-          "he": "כמה",
+          "he": "כמה, אחדים",
           "ar": null,
           "definition": "more than two, but not many",
           "example": "I have several books.",
@@ -1292,8 +1295,9 @@
             "exercise": 1
           },
           "points": [
-            "Am I ...? / Is he ...? / Are you ...?",
-            "Yes, he is. / No, he isn't."
+            "Am I hungry? / Is he hungry? / Are you hungry?",
+            "Yes, he is. / No, he isn't.",
+            "Yes, they are. / No, they aren't."
           ]
         },
         {
@@ -1310,11 +1314,41 @@
             "exercise": 1
           },
           "points": [
-            "What / When / Where / Who / Why + am / is / are"
+            "What is it? / When is the test? / Where is my pencil?",
+            "Who are your friends? / Why am I hungry?",
+            "Wh- word + am / is / are"
           ]
         }
       ],
       "activities": [
+        {
+          "id": "warm-up",
+          "type": "think-about",
+          "title": "Think About… animals that are clever",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "category": "warmup",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Think about animals that are clever. Write what you think.",
+            "חשבו על חיות חכמות. כתבו מה אתם חושבים."
+          ],
+          "items": [
+            {
+              "p": "Which animals do you think are clever?"
+            },
+            {
+              "p": "Why do you think they are clever?"
+            }
+          ]
+        },
         {
           "id": "learn-words",
           "type": "flashcards",
@@ -1330,18 +1364,58 @@
           "step": 1
         },
         {
-          "id": "write-the-words",
-          "type": "write-the-words",
-          "skill": "vocabulary",
+          "id": "read-better-long-e",
+          "type": "read-better",
+          "title": "Read Better: long e",
+          "skill": "phonics",
           "level": null,
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 16
-          },
-          "status": "planned",
+          "lane": "learn",
           "category": "vocabulary",
-          "step": 6
+          "step": 2,
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "linkedTo": {
+            "book": "workbook",
+            "page": 233
+          },
+          "origin": "book",
+          "render": "bins",
+          "bins": [
+            "ea",
+            "ee"
+          ],
+          "instruction": [
+            "We write ea or ee. We say the long e sound. Put each word in its group.",
+            "כותבים ea או ee. אומרים את צליל ה-e הארוך. שימו כל מילה בקבוצה שלה."
+          ],
+          "items": [
+            {
+              "v": "reason",
+              "bin": "ea"
+            },
+            {
+              "v": "eat",
+              "bin": "ea"
+            },
+            {
+              "v": "year",
+              "bin": "ea"
+            },
+            {
+              "v": "sleep",
+              "bin": "ee"
+            },
+            {
+              "v": "keep",
+              "bin": "ee"
+            },
+            {
+              "v": "tree",
+              "bin": "ee"
+            }
+          ]
         },
         {
           "id": "match-to-pictures",
@@ -1389,7 +1463,7 @@
             }
           ],
           "category": "vocabulary",
-          "step": 2
+          "step": 3
         },
         {
           "id": "complete-sentences",
@@ -1453,7 +1527,75 @@
             }
           ],
           "category": "vocabulary",
-          "step": 3
+          "step": 4,
+          "title": "Complete the Sentences"
+        },
+        {
+          "id": "recall-words",
+          "type": "quick-recall",
+          "title": "Quick Recall",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 5,
+          "origin": "word-list",
+          "generated": true,
+          "render": "recall",
+          "items": [
+            {
+              "en": "about",
+              "he": "בערך"
+            },
+            {
+              "en": "clever",
+              "he": "חכם"
+            },
+            {
+              "en": "decide",
+              "he": "להחליט"
+            },
+            {
+              "en": "famous",
+              "he": "מפורסם"
+            },
+            {
+              "en": "mountain",
+              "he": "הר"
+            },
+            {
+              "en": "nature",
+              "he": "טבע"
+            },
+            {
+              "en": "reason",
+              "he": "סיבה"
+            },
+            {
+              "en": "return",
+              "he": "לחזור"
+            },
+            {
+              "en": "saw",
+              "he": "ראה"
+            },
+            {
+              "en": "several",
+              "he": "כמה, אחדים"
+            },
+            {
+              "en": "still",
+              "he": "עדיין"
+            },
+            {
+              "en": "the cold",
+              "he": "הקור"
+            },
+            {
+              "en": "thousand",
+              "he": "אלף"
+            }
+          ]
         },
         {
           "id": "circle-correct",
@@ -1536,7 +1678,7 @@
             }
           ],
           "category": "vocabulary",
-          "step": 3
+          "step": 6
         },
         {
           "id": "complete-about-you",
@@ -1570,7 +1712,22 @@
             }
           ],
           "category": "vocabulary",
-          "step": 7
+          "step": 7,
+          "title": "Complete the Sentences: About You"
+        },
+        {
+          "id": "write-the-words",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 16
+          },
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 8
         },
         {
           "id": "highlight-questions",
@@ -1609,7 +1766,7 @@
             }
           ],
           "category": "grammar",
-          "step": 2
+          "step": 1
         },
         {
           "id": "complete-questions",
@@ -1620,7 +1777,8 @@
           "source": {
             "book": "workbook",
             "page": 19,
-            "exercise": 1
+            "exercise": 1,
+            "note": "Grammar Practice"
           },
           "linkedTo": {
             "book": "students",
@@ -1678,7 +1836,119 @@
             }
           ],
           "category": "grammar",
-          "step": 4
+          "step": 2,
+          "title": "Complete the Questions: Am / Is / Are"
+        },
+        {
+          "id": "complete-is-are",
+          "type": "complete-the-questions",
+          "title": "Is or Are?",
+          "skill": "grammar",
+          "level": null,
+          "category": "grammar",
+          "step": 3,
+          "source": {
+            "book": "students",
+            "page": 25,
+            "exercise": 2
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Complete the questions with Is or Are. Then say the short answer that is true for you.",
+            "השלימו את השאלות עם Is או Are. אחר כך אמרו את התשובה הקצרה הנכונה לגביכם."
+          ],
+          "items": [
+            {
+              "p": "______ you busy now? <span class=\"shortAns\">Yes, I am. / No, I'm not.</span>",
+              "o": [
+                "Are",
+                "Is"
+              ],
+              "a": "Are"
+            },
+            {
+              "p": "______ you hungry? <span class=\"shortAns\">Yes, I am. / No, I'm not.</span>",
+              "o": [
+                "Are",
+                "Is"
+              ],
+              "a": "Are"
+            },
+            {
+              "p": "______ your bag heavy? <span class=\"shortAns\">Yes, it is. / No, it isn't.</span>",
+              "o": [
+                "Is",
+                "Are"
+              ],
+              "a": "Is"
+            },
+            {
+              "p": "______ your friends at the beach? <span class=\"shortAns\">Yes, they are. / No, they aren't.</span>",
+              "o": [
+                "Are",
+                "Is"
+              ],
+              "a": "Are"
+            },
+            {
+              "p": "______ your pet in the class? <span class=\"shortAns\">Yes, it is. / No, it isn't.</span>",
+              "o": [
+                "Is",
+                "Are"
+              ],
+              "a": "Is"
+            },
+            {
+              "p": "______ your parents at home? <span class=\"shortAns\">Yes, they are. / No, they aren't.</span>",
+              "o": [
+                "Are",
+                "Is"
+              ],
+              "a": "Are"
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "highlight-wh",
+          "type": "highlight-and-translate",
+          "title": "Highlight and Translate: Wh- Questions",
+          "skill": "grammar",
+          "level": null,
+          "lane": "learn",
+          "category": "grammar",
+          "step": 4,
+          "source": {
+            "book": "workbook",
+            "page": 19,
+            "exercise": 2,
+            "note": "Highlight"
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Highlight the Wh- word and Am / Is / Are in each question. Then translate the questions.",
+            "הדגישו את מילת ה-Wh ואת Am / Is / Are בכל שאלה. לאחר מכן, תרגמו את השאלות."
+          ],
+          "items": [
+            {
+              "p": "<b>Where are</b> your shoes? &nbsp; <i><span dir=\"rtl\">איפה הנעליים שלך?</span></i>"
+            },
+            {
+              "p": "Who is the best swimmer?"
+            },
+            {
+              "p": "Why are you tired?"
+            },
+            {
+              "p": "What is the answer?"
+            },
+            {
+              "p": "When is your birthday?"
+            }
+          ]
         },
         {
           "id": "circle-wh",
@@ -1689,7 +1959,8 @@
           "source": {
             "book": "workbook",
             "page": 19,
-            "exercise": 2
+            "exercise": 2,
+            "note": "Grammar Practice"
           },
           "status": "planned",
           "render": "mc",
@@ -1737,7 +2008,7 @@
             }
           ],
           "category": "grammar",
-          "step": 4
+          "step": 5
         },
         {
           "id": "match-q-a",
@@ -1748,7 +2019,8 @@
           "source": {
             "book": "workbook",
             "page": 19,
-            "exercise": 3
+            "exercise": 3,
+            "note": "Grammar Practice"
           },
           "status": "planned",
           "render": "pairs",
@@ -1780,210 +2052,200 @@
             }
           ],
           "category": "grammar",
-          "step": 3
+          "step": 6
         },
         {
-          "id": "writing-complete",
-          "type": "complete-the-sentences",
-          "skill": "writing",
-          "level": 1,
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 21,
-            "exercise": 1
-          },
-          "linkedTo": {
-            "book": "students",
-            "page": 27
-          },
-          "status": "planned",
-          "render": "writing",
-          "origin": "adapted",
-          "items": [
-            {
-              "p": "The dog is ... (small / big / white / black / green)"
-            },
-            {
-              "p": "The cat isn't ... (happy / sad / scared)"
-            },
-            {
-              "p": "The bird is ... (on the desk / under the chair / on the man's head)"
-            },
-            {
-              "p": "The animals are ... (at the animal hospital)"
-            }
-          ],
-          "category": "writing",
-          "step": 1
-        },
-        {
-          "id": "writing-another",
-          "type": "write-another-sentence",
-          "skill": "writing",
+          "id": "complete-all-questions",
+          "type": "complete-the-questions",
+          "title": "Complete the Questions: All Question Words",
+          "skill": "grammar",
           "level": 2,
-          "lane": "practice",
+          "category": "grammar",
+          "step": 7,
           "source": {
             "book": "workbook",
-            "page": 21,
-            "exercise": 2
-          },
-          "status": "planned",
-          "render": "writing",
-          "origin": "book",
-          "items": [
-            {
-              "p": "The dog is under the chair. Write another sentence about the picture."
-            },
-            {
-              "p": "Write one more sentence. Use <b>isn't</b> or <b>aren't</b>."
-            }
-          ],
-          "category": "writing",
-          "step": 1
-        },
-        {
-          "id": "warm-up",
-          "type": "think-about",
-          "title": "Think About… clever animals",
-          "skill": "vocabulary",
-          "level": null,
-          "lane": "learn",
-          "category": "warmup",
-          "step": 1,
-          "source": {
-            "book": "students",
-            "page": 20
+            "page": 20,
+            "exercise": "4a"
           },
           "origin": "book",
           "render": "mc",
           "shuffle": false,
+          "instruction": [
+            "Complete the questions. Two words are not used.",
+            "השלימו את השאלות. שתי מילים אינן בשימוש."
+          ],
           "items": [
             {
-              "p": "Which animal do you think is clever?",
+              "p": "______ is your name?",
               "o": [
-                "A monkey",
-                "A snow monkey",
-                "Both of them"
+                "What",
+                "When",
+                "Am"
               ],
-              "a": "Both of them",
-              "praise": [
-                "Snow monkeys are famous for being clever.",
-                "קופי השלג מפורסמים בחוכמה שלהם."
-              ]
+              "a": "What"
             },
             {
-              "p": "Japan has snow monkeys. Where do you think they sit to keep warm?",
+              "p": "______ you happy today?",
               "o": [
-                "In hot water",
-                "Under the snow",
-                "In a tree"
+                "Are",
+                "Is",
+                "Am"
               ],
-              "a": "In hot water",
-              "hint": [
-                "Think about a place that is warm even when it snows.",
-                "חשבו על מקום שחם גם כשיורד שלג."
-              ]
+              "a": "Are"
             },
             {
-              "p": "This part is about animals. Which word will you probably meet?",
+              "p": "______ is your school?",
               "o": [
-                "clever",
-                "directly",
-                "pocket"
+                "Where",
+                "Who",
+                "Why"
               ],
-              "a": "clever"
+              "a": "Where"
+            },
+            {
+              "p": "______ your neighbor a teacher?",
+              "o": [
+                "Is",
+                "Are",
+                "Am"
+              ],
+              "a": "Is"
+            },
+            {
+              "p": "______ is your birthday?",
+              "o": [
+                "When",
+                "Where",
+                "What"
+              ],
+              "a": "When"
+            },
+            {
+              "p": "______ is your best friend?",
+              "o": [
+                "Who",
+                "Why",
+                "When"
+              ],
+              "a": "Who"
             }
-          ]
+          ],
+          "lane": "practice"
         },
         {
-          "id": "recall-words",
-          "type": "quick-recall",
-          "title": "Quick Recall",
-          "skill": "vocabulary",
-          "level": 2,
-          "lane": "practice",
-          "category": "vocabulary",
-          "step": 4,
-          "origin": "word-list",
-          "generated": true,
-          "render": "recall",
+          "id": "complete-dialogues",
+          "type": "complete-the-dialogues",
+          "title": "Complete the Dialogues",
+          "skill": "grammar",
+          "level": 3,
+          "category": "grammar",
+          "step": 8,
+          "source": {
+            "book": "workbook",
+            "page": 20,
+            "exercise": 5
+          },
+          "origin": "adapted",
+          "render": "pairs",
+          "scene": [
+            "The workbook shows four pictures. They are described here in words.",
+            "בחוברת מופיעות ארבע תמונות. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Match each question to the situation where someone asks it.",
+            "התאימו כל שאלה למצב שבו מישהו שואל אותה."
+          ],
           "items": [
             {
-              "en": "about",
-              "he": "בערך"
+              "a": "Are you hungry?",
+              "b": "Mom puts a plate of food on the table for Kim."
             },
             {
-              "en": "clever",
-              "he": "חכם"
+              "a": "Where are my books?",
+              "b": "Zack looks around the living room. Dad is reading on the sofa."
             },
             {
-              "en": "decide",
-              "he": "להחליט"
+              "a": "Is the book funny?",
+              "b": "Brad is holding a green book. Mom is in the kitchen."
             },
             {
-              "en": "famous",
-              "he": "מפורסם"
-            },
-            {
-              "en": "mountain",
-              "he": "הר"
-            },
-            {
-              "en": "nature",
-              "he": "טבע"
-            },
-            {
-              "en": "reason",
-              "he": "סיבה"
-            },
-            {
-              "en": "return",
-              "he": "לחזור"
-            },
-            {
-              "en": "saw",
-              "he": "ראה"
-            },
-            {
-              "en": "several",
-              "he": "כמה"
-            },
-            {
-              "en": "still",
-              "he": "עדיין"
-            },
-            {
-              "en": "the cold",
-              "he": "הקור"
-            },
-            {
-              "en": "thousand",
-              "he": "אלף"
+              "a": "When is the movie?",
+              "b": "Sarit and Bella are at the cinema. The sign says Spider-Man 15:00."
             }
-          ]
+          ],
+          "lane": "practice"
         },
         {
-          "id": "reading-rex",
+          "id": "ask-own-questions",
+          "type": "write-questions",
+          "title": "Write Your Own Questions",
+          "skill": "grammar",
+          "level": null,
+          "category": "grammar",
+          "step": 9,
+          "source": {
+            "book": "students",
+            "page": 25,
+            "exercise": 4
+          },
+          "linkedTo": {
+            "book": "workbook",
+            "page": 20,
+            "exercise": "4b"
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Imagine there is a new pupil in your class. Write at least three questions you want to ask him / her.",
+            "דמיינו שיש תלמיד/ה חדש/ה בכיתה. כתבו לפחות שלוש שאלות שתרצו לשאול אותו/אותה."
+          ],
+          "items": [
+            {
+              "p": "Question 1 &nbsp; <i>(the book's example: What is your name?)</i>"
+            },
+            {
+              "p": "Question 2"
+            },
+            {
+              "p": "Question 3"
+            },
+            {
+              "p": "Now choose three of your questions and answer them for yourself."
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "reading-snow-monkeys",
           "type": "reading-sequence",
-          "title": "Read about Rex",
+          "title": "Snow Monkeys",
           "skill": "reading",
-          "level": 2,
-          "lane": "practice",
+          "level": null,
           "category": "reading",
           "step": 1,
           "source": {
-            "book": "workbook",
-            "page": 21,
-            "exercise": 3
+            "book": "students",
+            "page": "22–23"
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 23,
+            "exercise": "3–5"
           },
           "origin": "book",
           "render": "reading",
           "chunks": [
-            "Rex is a beautiful dog. He is black and white and he has brown eyes.",
-            "Rex isn't a big dog. He is small, but he has big ears."
+            "<b class=\"rHead\">A · What are snow monkeys?</b><br>Snow monkeys are special monkeys in Japan. They are brown and gray, and they have pink faces. They have lots of fur <span dir=\"rtl\">(פרווה)</span> to keep them warm. They are the only monkeys in the world that can live in the cold. That's the reason they are called snow monkeys.",
+            "There are about one hundred thousand (100,000) snow monkeys in Japan. Many snow monkeys live in the snowy mountains. But not all of them. Some snow monkeys live in warm forests.",
+            "Snow monkeys eat plants and fruit. In the snowy mountains, it's hard to find food in the winter. Sometimes the monkeys come into towns and take food from people.",
+            "Snow monkeys usually sleep in trees, but they also sleep on the ground. They don't lie down when they sleep. They sit. In the winter, several snow monkeys sleep together to keep warm.",
+            "<b class=\"rHead\">B · Why are snow monkeys famous?</b><br>Many years ago, some snow monkeys saw people sitting in hot pools in the snowy mountains. The monkeys decided to copy <span dir=\"rtl\">(להעתיק)</span> the people. They climbed into the hot pools and enjoyed the warm water. The snow monkeys liked the pools. They returned again and again. Today, the snow monkeys still go to the hot pools to keep warm in the winter. In the spring, summer and autumn, they go in the hot pools to swim, play and rest. They are famous because people like to watch them in the pools."
           ],
           "keepText": true,
+          "instruction": [
+            "Read the text one part at a time, then answer.",
+            "קראו את הטקסט חלק אחר חלק, ואז ענו."
+          ],
           "items": [
             {
               "p": "placeholder"
@@ -1994,35 +2256,25 @@
               "kind": "words",
               "words": [
                 {
-                  "en": "beautiful",
-                  "he": "יפה"
+                  "en": "fur",
+                  "he": "פרווה"
                 },
                 {
-                  "en": "brown",
-                  "he": "חום"
+                  "en": "the cold",
+                  "he": "הקור"
                 },
                 {
-                  "en": "ears",
-                  "he": "אוזניים"
+                  "en": "reason",
+                  "he": "סיבה"
                 },
                 {
-                  "en": "small",
-                  "he": "קטן"
+                  "en": "thousand",
+                  "he": "אלף"
+                },
+                {
+                  "en": "several",
+                  "he": "כמה, אחדים"
                 }
-              ]
-            },
-            {
-              "kind": "predict",
-              "p": "The text is called <b>Rex</b>. What do you think Rex is?",
-              "o": [
-                "A dog",
-                "A boy",
-                "A mountain"
-              ],
-              "a": "A dog",
-              "praise": [
-                "Good thinking. Now read and check.",
-                "חשיבה טובה. עכשיו קראו ובדקו."
               ]
             },
             {
@@ -2030,107 +2282,350 @@
               "upto": 0
             },
             {
-              "kind": "check",
-              "p": "What colour are Rex's eyes?",
+              "kind": "evidence",
+              "p": "What colors are snow monkeys?",
               "o": [
-                "Brown",
-                "Black",
-                "White"
+                "They are brown and gray, and they have pink faces.",
+                "They have lots of fur to keep them warm.",
+                "Snow monkeys are special monkeys in Japan."
               ],
-              "a": "Brown",
-              "hint": [
-                "Look at the end of the first sentence about his eyes.",
-                "הסתכלו בסוף המשפט שמדבר על העיניים."
-              ]
+              "a": "They are brown and gray, and they have pink faces."
+            },
+            {
+              "kind": "evidence",
+              "p": "Why are they called snow monkeys?",
+              "o": [
+                "They are the only monkeys in the world that can live in the cold.",
+                "Snow monkeys are special monkeys in Japan.",
+                "They have lots of fur to keep them warm."
+              ],
+              "a": "They are the only monkeys in the world that can live in the cold."
             },
             {
               "kind": "text",
               "upto": 1
             },
             {
-              "kind": "truefalse",
-              "p": "<b>Rex is a big dog.</b>",
+              "kind": "evidence",
+              "p": "How many snow monkeys live in Japan?",
               "o": [
-                "True",
-                "False"
+                "There are about one hundred thousand (100,000) snow monkeys in Japan.",
+                "Many snow monkeys live in the snowy mountains.",
+                "Some snow monkeys live in warm forests."
               ],
-              "a": "False",
-              "hint": [
-                "The text says: <i>Rex isn't a big dog.</i>",
-                "בטקסט כתוב: <i>Rex isn't a big dog.</i>"
-              ]
+              "a": "There are about one hundred thousand (100,000) snow monkeys in Japan."
             },
             {
-              "kind": "truefalse",
-              "p": "<b>Rex has big ears.</b>",
-              "o": [
-                "True",
-                "False"
-              ],
-              "a": "True"
-            },
-            {
-              "kind": "wh",
-              "p": "<b>What</b> colour is Rex?",
-              "o": [
-                "Black and white",
-                "Brown and white",
-                "Black and brown"
-              ],
-              "a": "Black and white"
+              "kind": "text",
+              "upto": 2
             },
             {
               "kind": "evidence",
-              "p": "Which words in the text tell you Rex is <b>not</b> big?",
+              "p": "How do snow monkeys get food in the winter?",
               "o": [
-                "isn't a big dog",
-                "has brown eyes",
-                "is beautiful"
+                "Sometimes the monkeys come into towns and take food from people.",
+                "Snow monkeys eat plants and fruit.",
+                "In the snowy mountains, it's hard to find food in the winter."
               ],
-              "a": "isn't a big dog",
+              "a": "Sometimes the monkeys come into towns and take food from people."
+            },
+            {
+              "kind": "text",
+              "upto": 3
+            },
+            {
+              "kind": "check",
+              "p": "How do snow monkeys sleep in the winter?",
+              "o": [
+                "Several monkeys sitting close together on a branch.",
+                "Monkeys lying down on a branch.",
+                "Monkeys sitting apart from each other on a branch."
+              ],
+              "a": "Several monkeys sitting close together on a branch.",
               "hint": [
-                "Find the sentence with <i>isn't</i>.",
-                "מצאו את המשפט עם <i>isn't</i>."
+                "The text says they do not lie down — and that several sleep together.",
+                "בטקסט כתוב שהם לא נשכבים — ושכמה מהם ישנים יחד."
               ]
             },
             {
+              "kind": "text",
+              "upto": 4
+            },
+            {
+              "kind": "evidence",
+              "p": "Why did the monkeys begin to go into the hot pools?",
+              "o": [
+                "The monkeys decided to copy the people.",
+                "The snow monkeys liked the pools.",
+                "They are famous because people like to watch them in the pools."
+              ],
+              "a": "The monkeys decided to copy the people."
+            },
+            {
+              "kind": "evidence",
+              "p": "Why do the monkeys like to go to the hot pools in the winter?",
+              "o": [
+                "Today, the snow monkeys still go to the hot pools to keep warm in the winter.",
+                "In the spring, summer and autumn, they go in the hot pools to swim, play and rest.",
+                "They climbed into the hot pools and enjoyed the warm water."
+              ],
+              "a": "Today, the snow monkeys still go to the hot pools to keep warm in the winter."
+            },
+            {
               "kind": "write",
-              "p": "Now write two sentences about an animal you know. Use <b>is</b>, <b>isn't</b> and <b>has</b>."
+              "p": "Find examples from the text. Do as many as you can.<br>1. two places snow monkeys live in Japan<br>2. two things snow monkeys eat<br>3. three things the snow monkeys do in the hot pools"
             }
-          ]
+          ],
+          "lane": "practice"
         },
         {
-          "id": "ask-your-own",
-          "type": "write-questions",
-          "title": "Ask Your Own Questions",
-          "skill": "grammar",
-          "level": 3,
-          "lane": "practice",
-          "category": "grammar",
-          "step": 6,
+          "id": "after-you-read",
+          "type": "answer-the-questions",
+          "title": "After You Read",
+          "skill": "reading",
+          "level": null,
+          "category": "reading",
+          "step": 2,
           "source": {
             "book": "students",
-            "page": 25
+            "page": 24,
+            "exercise": 6
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 24,
+            "exercise": 7
           },
           "origin": "book",
           "render": "writing",
+          "instruction": [
+            "Answer the questions.",
+            "ענו על השאלות."
+          ],
           "items": [
             {
-              "p": "Write a <b>Yes/No</b> question with <b>Are</b>. (Are you …?)"
+              "p": "What is the name of the magazine? What other subjects do you think you can read about in this magazine?"
             },
             {
-              "p": "Write a <b>Yes/No</b> question with <b>Is</b>. (Is the …?)"
+              "p": "Do you think snow monkeys are clever? Give examples from the text to support <span dir=\"rtl\">(לתמוך)</span> your answer."
             },
             {
-              "p": "Write a <b>Wh-</b> question with <b>Where</b>."
-            },
-            {
-              "p": "Write a <b>Wh-</b> question with <b>Why</b>."
-            },
-            {
-              "p": "Ask a friend one question about the snow monkeys."
+              "p": "<b>About you:</b> What is the most interesting thing you learned about snow monkeys?<br><i>I think the most interesting thing is that snow monkeys sit when they sleep.</i>"
             }
-          ]
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "writing-picture",
+          "type": "complete-the-sentences",
+          "title": "Write About the Picture",
+          "skill": "writing",
+          "level": null,
+          "category": "writing",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 27,
+            "exercise": 1
+          },
+          "origin": "adapted",
+          "render": "writing",
+          "wordBank": [
+            "happy",
+            "wet",
+            "in the pool",
+            "funny",
+            "dry",
+            "near the pool",
+            "clean",
+            "hot",
+            "in the tree",
+            "dirty",
+            "a water bottle",
+            "a phone",
+            "a bag"
+          ],
+          "scene": [
+            "Book p.27 shows a snowy mountain. Several snow monkeys sit in a big tree. Amir sits on a branch with a green backpack, holding up his phone. Gali stands below in a pink jacket, also holding a phone. Dad stands on the snow in a yellow shirt, pointing, with a grey bag in his other hand. Mom is swimming in a pool, wearing a hat.",
+            "בעמוד 27 בספר מופיע הר מושלג. כמה קופי שלג יושבים על עץ גדול. אמיר יושב על ענף עם תיק ירוק ומחזיק טלפון. גלי עומדת למטה במעיל ורוד, גם היא עם טלפון. אבא עומד על השלג בחולצה צהובה, מצביע, ובידו השנייה תיק אפור. אמא שוחה בבריכה וחובשת כובע."
+          ],
+          "instruction": [
+            "Complete the sentences about the picture. Use the words below or your own words.",
+            "השלימו את המשפטים לפי התמונה. השתמשו במילים שלמטה או במילים משלכם."
+          ],
+          "items": [
+            {
+              "p": "Mom is … &nbsp; <i>(example: Mom is happy.)</i>"
+            },
+            {
+              "p": "Amir isn't …"
+            },
+            {
+              "p": "The monkey has …"
+            },
+            {
+              "p": "Amir and the monkey are …"
+            },
+            {
+              "p": "Dad and Gali aren't …"
+            },
+            {
+              "p": "Amir and Gali have …"
+            },
+            {
+              "p": "Now write more sentences about the picture. Use <b>is / isn't / are / aren't / have / has</b>. Do as many as you can. &nbsp; <i>(example: Mom isn't dry.)</i>"
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "writing-about-family",
+          "type": "about-you",
+          "title": "About You: Your Family",
+          "skill": "writing",
+          "level": null,
+          "category": "writing",
+          "step": 2,
+          "source": {
+            "book": "students",
+            "page": 27,
+            "exercise": 2
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Write at least three sentences about your family. Use is / isn't / are / aren't / have / has.",
+            "כתבו לפחות שלושה משפטים על המשפחה שלכם. השתמשו ב-is / isn't / are / aren't / have / has."
+          ],
+          "items": [
+            {
+              "p": "Sentence 1 &nbsp; <i>(example: My sister is nice.)</i>"
+            },
+            {
+              "p": "Sentence 2 &nbsp; <i>(example: My parents aren't at the beach.)</i>"
+            },
+            {
+              "p": "Sentence 3 &nbsp; <i>(example: My brother and I have a big bedroom.)</i>"
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "writing-complete",
+          "type": "complete-the-sentences",
+          "title": "Complete the Sentences: The Animals",
+          "skill": "writing",
+          "level": 1,
+          "category": "writing",
+          "step": 3,
+          "source": {
+            "book": "workbook",
+            "page": 21,
+            "exercise": 1
+          },
+          "origin": "adapted",
+          "render": "writing",
+          "wordBank": [
+            "small",
+            "big",
+            "white",
+            "black",
+            "green",
+            "happy",
+            "sad",
+            "scared",
+            "under the chair",
+            "on the desk",
+            "on the man's head",
+            "at the animal hospital",
+            "a toy",
+            "an old shoe",
+            "a hat"
+          ],
+          "scene": [
+            "Workbook p.21 shows a waiting room at an animal hospital. A man sits on a bench with a green bird on his head and an empty bird cage beside him. A boy sits next to him, looking down at a small black dog under his chair with an old shoe. Behind the desk, a woman holds out a red toy to a white cat sitting on the desk.",
+            "בעמוד 21 בחוברת מופיע חדר המתנה בבית חולים לבעלי חיים. גבר יושב על ספסל, ציפור ירוקה על ראשו וכלוב ריק לידו. ילד יושב לידו ומביט בכלב שחור קטן מתחת לכיסא שלו, עם נעל ישנה. מאחורי הדלפק, אישה מושיטה צעצוע אדום לחתול לבן שיושב על הדלפק."
+          ],
+          "instruction": [
+            "Complete the sentences about the picture. Use the words below or your own words.",
+            "השלימו את המשפטים לפי התמונה. השתמשו במילים שלמטה או במילים משלכם."
+          ],
+          "items": [
+            {
+              "p": "The dog is … . It has … . &nbsp; <i>(example: The dog is black. It has an old shoe.)</i>"
+            },
+            {
+              "p": "The cat isn't … . It has … ."
+            },
+            {
+              "p": "The bird is … . It isn't … ."
+            },
+            {
+              "p": "The animals are … . They aren't … ."
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "writing-another",
+          "type": "write-another-sentence",
+          "title": "Write Another Sentence",
+          "skill": "writing",
+          "level": 2,
+          "category": "writing",
+          "step": 4,
+          "source": {
+            "book": "workbook",
+            "page": 21,
+            "exercise": 2
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Write another sentence about each animal in the picture above.",
+            "כתבו משפט נוסף על כל בעל חיים בתמונה שלמעלה."
+          ],
+          "items": [
+            {
+              "p": "<i>(example: The dog is under the chair.)</i>"
+            },
+            {
+              "p": "Another sentence"
+            },
+            {
+              "p": "Another sentence"
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "read-and-write-rex",
+          "type": "read-and-write",
+          "title": "Read and Write",
+          "skill": "writing",
+          "level": 3,
+          "category": "writing",
+          "step": 5,
+          "source": {
+            "book": "workbook",
+            "page": 21,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "writing",
+          "passage": [
+            "Rex is a beautiful dog. He is black and white and he has brown eyes. Rex isn't a big dog. He is small, but he has big ears."
+          ],
+          "instruction": [
+            "Read about Rex. Then write about a pet you know.",
+            "קראו על רקס. לאחר מכן, כתבו על חיית מחמד שאתם מכירים."
+          ],
+          "items": [
+            {
+              "p": "Write about a pet you know. Use <b>is / isn't / has</b>."
+            }
+          ],
+          "lane": "practice"
         }
       ],
       "skills": {

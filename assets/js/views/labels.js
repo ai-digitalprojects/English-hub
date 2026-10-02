@@ -26,7 +26,14 @@ const TYPE_TITLES = {
   'word-list-reference': 'All the Words',
   'find-words-for-category': 'Find Two Words',
   'circle-two-correct-answers': 'Circle TWO Correct Answers',
-  'translate-the-sentences': 'Translate the Sentences'
+  'translate-the-sentences': 'Translate the Sentences',
+  'think-about': 'Think About…',
+  'read-better': 'Read Better',
+  'reading-sequence': 'Read the Text',
+  'quick-recall': 'Quick Recall',
+  'complete-the-dialogues': 'Complete the Dialogues',
+  'write-questions': 'Write Your Own Questions',
+  'about-you': 'About You'
 };
 
 const SKILL_LABELS = {
@@ -62,7 +69,10 @@ function sourceRef(a){
   /* A drill built over the word list cites no page: it is not a printed exercise. */
   if(a.origin === 'word-list')
     return '<span class="refs"><span class="ref wordlist">📚 Word list</span></span>';
-  const one = s => 'p.' + s.page + (s.exercise ? '.' + s.exercise : '');
+  /* A page can carry two exercise 2s — one in the grammar box, one in the
+     practice block below it — so a source may name which block it came from. */
+  const one = s => 'p.' + s.page + (s.exercise ? '.' + s.exercise : '')
+    + (s.note ? ' · ' + s.note : '');
   const bits = [];
   const name = b => b === 'students' ? 'Book' : 'Workbook';
   if(a.source) bits.push(`<span class="ref ${a.source.book}">${name(a.source.book)} ${one(a.source)}</span>`);

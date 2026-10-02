@@ -75,7 +75,10 @@ function derivedActivities(part){
       skill: ex.skill,
       level: ex.level,
       lane: 'practice',
-      category: ex.skill === 'writing' ? 'writing' : 'vocabulary',
+      /* A drill is built over the part's word list, so it practises vocabulary
+         whatever shape it takes. The Writing block stays the book's own
+         sequence, which runs ★ → ★★ → ★★★ and should not be interrupted. */
+      category: 'vocabulary',
       step: DRILL_STEP[format] || 5,
       origin: 'word-list',
       generated: true,
