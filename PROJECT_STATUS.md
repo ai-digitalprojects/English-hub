@@ -1,8 +1,8 @@
 # Project Status — English Hub
 
-**Last updated:** 2026-10-01
+**Last updated:** 2026-10-02
 **Branch:** `english-hub-v2`
-**Commit:** `31a11b4` — *v2: new theme, learning sequence, retry feedback, Part 2 benchmark*
+**Commit:** `80068f0` — *Correct Part 2 against the source PDFs*
 **Working tree:** clean
 **`main`:** `865802c`, unchanged and identical to `origin/main`
 **Not deployed. Not merged. No PR.**
@@ -44,9 +44,8 @@
   `background-image: var(--heroImg), var(--heroTone)` so a missing file falls
   through to a palette gradient. No substitute artwork was created.
 
-### Verified in the browser
-77 activities open, all with working controls, zero failures. Console clean apart
-from one expected 404 per missing hero image.
+### Part 2 — Snow Monkeys, corrected against the source PDFs
+Completed 2026-10-02 in commit `80068f0`. See section 3.
 
 ---
 
@@ -63,82 +62,124 @@ and **Workbook** pages:
 04.pdf  SB 51,52 · WB 41,42,43                   Unit Check
 ```
 
-### The central finding
+### The central finding — now resolved
 
 > **The Part 2 reading text is SNOW MONKEYS (Student's Book 22–23), not Rex.**
 
 Rex is **Workbook 21, exercise 3 ★★★**, headed *Read and write*, on a page titled
 WRITING: Sentences. Its printed Hebrew instruction is
 *"קראו על רקס. לאחר מכן, כתבו על חיית מחמד שאתם מכירים."* — it is a **writing
-model paragraph**. The hub turned it into a ten-step Reading activity, which both
-misfiled it and left the unit's real text out of the site entirely.
+model paragraph**. The hub had turned it into a ten-step Reading activity, which
+both misfiled it and left the unit's real text out of the site entirely.
 
-### What is correct
+### What the audit confirmed as correct
 
-- **Every Book / Workbook reference and page number is accurate.** All 16 Part 2
+- **Every Book / Workbook reference and page number was accurate.** All 16 Part 2
   activities were checked individually; no page errors.
 - All 13 Part 2 vocabulary words (SB 20) present, in the original English, with
   the book's Hebrew.
 - Eight workbook exercises reproduce the source word for word, with correct
   answers: WB 16/1, WB 17/2, WB 17/3, WB 17/4, WB 18/1, WB 19/1, WB 19/2, WB 19/3.
-- ★ levels match the book everywhere except one activity.
+- ★ levels matched the book everywhere except one activity.
 - The Rex paragraph itself is quoted verbatim.
-- `origin: adapted` on `match-to-pictures` is an honest flag — the pictures are
-  unavailable, so the format was converted.
 
 ---
 
-## 3. Still to fix in Part 2
+## 3. Part 2 — corrected ✅
 
-### Missing
+All audit findings for Part 2 are resolved. **27 cards** — 25 from the books plus
+2 drills generated over the word list.
 
-| Source | What |
+### The real reading is in
+**Snow Monkeys, Student's Book 22–23**, the *Nature 4 Kids Magazine* article,
+built as 14 short screens:
+
+```
+1     Before you read   fur · the cold · reason · thousand · several
+2     Read              A · What are snow monkeys?   paragraph 1
+3–4   Find it           colours · why they are called snow monkeys
+5     Read              paragraph 2        6   how many live in Japan
+7     Read              paragraph 3        8   food in the winter
+9     Read              paragraph 4       10   how they sleep in winter
+11    Read              B · Why are snow monkeys famous?
+12–13 Find it           why they began · why in winter
+14    Now you write     Find examples from the text
+```
+
+Built from the book's own exercises: **SB 23.3** (six comprehension questions),
+**SB 23.4** (sleeping — pictures described in words), **SB 23.5** (find examples).
+**Every option offered is a real sentence from the text**, so the questions ask
+the student to locate rather than guess — nothing was invented. The text is
+revealed a paragraph at a time, and a question never shows a paragraph the
+student has not reached.
+
+### Rex is back in Writing
+At **★★★**, the level the workbook gives it, with the model paragraph shown above
+the task and the book's own instruction.
+
+### Restored content
+
+| Restored | Source |
 |---|---|
-| SB 22–23 | The Snow Monkeys text (sections A and B) |
-| SB 23/3 | Answer the questions — 6, in two groups |
-| SB 23/4 | How do snow monkeys sleep in the winter? — picture choice |
-| SB 23/5 | Find examples from the text — 3 tasks |
-| SB 24/6 | Answer the questions — 2 thinking questions |
-| SB 24/7 | ABOUT YOU |
-| WB 18/2 | Highlight — Wh-questions (5 items) |
-| **WB 20** | **Entire page unused:** 4a, 4b, 5 (Complete the dialogues ★★★) |
-| SB 25/2 | Complete with *Is* or *Are*, then choose the correct answers |
-| SB 25/3 | The What/When/Where/Who/Why × is/are chart |
-| SB 27 | 1a, 1b, 2 ABOUT YOU, TASK — the real Part 2 writing page |
-| SB 20 | Read Better: long *e* (ea / ee) |
-| WB 18 | Short answers (*Yes, he is. / No, he isn't.*) — taught nowhere on the site |
+| Read Better: long *e* (ea / ee sort) | SB 20 · WB 233 |
+| Is or Are? — **introduces short answers** | SB 25.2 |
+| Highlight and Translate: Wh- questions | WB 19.2 (Highlight block) |
+| Complete the Questions: All Question Words | WB 20.4a |
+| Complete the Dialogues ★★★ | WB 20.5 |
+| Write Your Own Questions — rebuilt from the book | SB 25.4 + WB 20.4b |
+| Write About the Picture — the real writing page | SB 27.1 |
+| About You: Your Family | SB 27.2 |
+| After You Read | SB 24.6 + SB 24.7 |
 
-Note: the SB 27 picture is **of the snow monkeys**, so the book's writing page is
-tied to the reading. That link is currently lost.
+**Workbook p.20 had been entirely unused; it is now in.**
 
-### Inaccurate
+### Also fixed
+- **Warm Up** — three fabricated multiple-choice items replaced by the book's two
+  open questions. Two of the discarded distractors (`directly`, `pocket`) came
+  from Parts 3 and 4, which the student has not met.
+- **`writing-complete`** — the paired `… It has …` structure and the shared word
+  bank restored as the workbook prints them.
+- **`several`** — now reads `כמה, אחדים` as printed on SB 20.
+- **Star levels** — removed from Student's Book activities; the SB prints none.
+- **`origin` flags** — picture-dependent exercises are described in words and
+  marked `adapted`, never presented as the original.
 
-1. **Warm-up is fabricated.** SB 20 asks two open discussion questions. The hub
-   invented three multiple-choice items with "correct" answers. One uses
-   `directly` (Part 3) and `pocket` (Part 4) as distractors — words the student
-   has not met. Another asks about text content the site does not contain.
-2. **Rex filed as Reading.** Also: level is 2, the book marks it ★★★; the
-   pre-teach words (`beautiful · brown · ears · small`, Hebrew `יפה · חום ·
-   אוזניים · קטן`) are not Part 2 vocabulary and the Hebrew was invented; all
-   seven comprehension questions around it were invented.
-3. **`writing-complete` lost its grammar point.** The book's paired structure
-   (`The dog is ___ . It has ___ .`) was flattened to one half, and the shared
-   word bank was split arbitrarily per item.
-4. **`ask-your-own`** is marked `origin: book` but its five prompts were written
-   by us. Should be `adapted`.
-5. **`writing-another`** — second prompt invented.
-6. **`several`** — book reads `כמה, אחדים`; the site has only `כמה`.
+### Three engine fixes made along the way
+- A two-option question no longer offers a hint that would give the answer away.
+- Word banks are a list to read from, not buttons that did nothing when tapped.
+- Word-list drills moved to Vocabulary, so the Writing block keeps the book's own
+  ★ → ★★ → ★★★ progression unbroken.
 
-### No source available — do not invent
-`SB 21` · `SB 26` (Speaking) · `WB 22` (READ MORE) · `WB 23`
+### Source pages used
+```
+Student's Book   20 · 22 · 23 · 24 · 25 · 27
+Workbook         16 · 17 · 18 · 19 · 20 · 21     (+ 233, Read Better reference)
+```
+
+### Deliberately left out of Part 2
+- **SB 25.3** — the question chart. A partner speaking task.
+- **SB 27 TASK** — animal fact file. Needs a picture, and the checklist on
+  WB 262 is not in the scans.
+- **SB 21 · SB 26 · WB 22–23** — not scanned. No source, nothing invented.
+
+### Test results — all passed
+```
+86 activities site-wide   all open · all have controls · all bilingual
+0 empty cards             0 console errors
+Reading sequence          14/14 steps · text reveal 1→2→3→4→5 paragraphs ✓
+Retry model               answer never shown on a wrong try ✓
+                          hint after two misses, grounded in the text ✓
+                          6 sparks on a correct answer ✓
+Horizontal overflow       0 px at 375 and at 1024
+```
 
 ---
 
 ## 4. Remaining Parts
 
-The learning-sequence system (categories, hero, retry feedback, varied formats)
-has **only been applied to Part 2**. Still to do, each needing the same
-PDF check before building:
+The learning-sequence system has been applied and validated on **Part 2 only**.
+Each remaining Part needs the same treatment *and* its own check against the PDFs
+before building:
 
 | | Source pages available |
 |---|---|
@@ -151,7 +192,7 @@ PDF check before building:
 
 ### Carried over from the audit
 
-**Part 3 Hebrew is already in the book.** 14 words were flagged
+**Part 3 Hebrew is already in the book.** 14 words are still flagged
 `heSource: added-for-teaching` / `needsReview`. The printed Hebrew exists on
 SB 28 (Word Power 1) and SB 29 (Word Power 2). Six of our 14 match the book
 exactly; eight differ:
@@ -169,19 +210,19 @@ exactly; eight differ:
 
 All 14 can move to `heSource: book` and the review flags can be dropped.
 
-**Open question:** the book's own order is
+**Open question, now informed by Part 2:** the book's own order is
 *Vocabulary → Reading → more Vocabulary → Grammar → Speaking → Writing*. Our
-approved order puts Reading after Grammar. That was a deliberate choice, not an
-error, but in Part 2 the reading is the heart of the unit and SB 24 leans on it.
-Worth re-deciding consciously.
+approved order puts Reading after Grammar. Part 2 reads well either way, but in a
+Part whose reading carries the vocabulary, it is worth re-deciding consciously.
 
 ---
 
 ## 5. Hero images
 
 Eight slots are wired and waiting. Until the files exist, each renders a palette
-gradient — which is why the console shows one 404 per slot. Place in
-`assets/img/` (see [README](assets/img/README.md)):
+gradient — which is why the console shows one 404 per slot. **These will be
+integrated later, during the final visual-polish stage**, not while content work
+is in progress. Place in `assets/img/` (see [README](assets/img/README.md)):
 
 ```
 hero-home.webp              hero-part-2.webp
@@ -200,7 +241,7 @@ hero-part-1.webp            hero-part-5.webp
 ```
 main             865802c   live site — untouched, equals origin/main
 rebuild          ba95e7d   3 commits never deployed
-english-hub-v2   31a11b4   ← current work
+english-hub-v2   80068f0   ← current work
 tag              v1-single-file
 ```
 
@@ -220,20 +261,23 @@ Apps Script.
 
 ## Next step when we resume
 
-**Resume by correcting Part 2 based on the PDF audit, then review it before
-expanding to the remaining Parts.**
+**Apply the validated learning model to Parts 1, 3, 4, 5 and Unit Check, checking
+each one against the PDFs.**
 
-Concretely, in order:
+Part 2 is the worked example of what "correct" means here, and it set the method:
 
-1. Build the **Snow Monkeys** reading from SB 22–23 with its real comprehension
-   exercises (SB 23/3, 4, 5 and SB 24/6, 7).
-2. Return **Rex** to Writing, as the model paragraph the book makes it, at ★★★.
-3. Replace the fabricated warm-up with the book's two open questions.
-4. Add the unused grammar: WB 18/2, WB 20 (4a, 4b, 5), SB 25/2 and 3, and short
-   answers.
-5. Build the real writing page from SB 27.
-6. Fix `writing-complete`, the two `origin` flags, and `several`.
-7. **Test locally and review before touching any other Part.**
+1. Read that Part's pages in the PDFs first, before touching content.
+2. List discrepancies against what is already built, and get them approved.
+3. Build from the book's own exercises. Where a printed exercise leans on a
+   picture, describe the picture in words and flag the activity `adapted`.
+4. Where an answer lives in a text, make the options real sentences from that
+   text rather than writing distractors.
+5. Carry the book's own ★ levels; Student's Book exercises carry none.
+6. Name anything deliberately left out, and why.
+7. Test, then stop for review before moving to the next Part.
+
+Suggested order: **Part 1** (its reading, *Things to do in Tokyo*, SB 15, is the
+closest parallel to Part 2), then Part 3, Part 4, Part 5, Unit Check.
 
 Local server: `python tools/devserver.py` → <http://localhost:8123>
 (ES modules need `http://`; opening `index.html` from disk will not work.)
