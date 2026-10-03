@@ -20,7 +20,8 @@ const SLOTS = {
 /* Slots whose file is actually in assets/img/. The others keep the gradient
    until their artwork arrives, so nothing requests a file that is not there. */
 const HAVE = new Set([
-  'getting-started', 'part-1', 'part-2', 'part-3', 'part-4', 'part-5', 'unit-check'
+  'home', 'getting-started', 'unit-1',
+  'part-1', 'part-2', 'part-3', 'part-4', 'part-5', 'unit-check'
 ]);
 
 /* Each slot gets its own gradient. It is what the slots without artwork show,
@@ -43,9 +44,11 @@ const TONES = {
    horizon on a wide screen, the horizontal one holds the subject on a narrow
    one. */
 const FOCUS = {
+  'home':            '58% 52%',   // the globe, the open notebook and London
   'getting-started': '50% 38%',   // the window light and the shelf
+  'unit-1':          '56% 48%',   // Mount Fuji, the pagoda and the map
   'part-1':          '50% 46%',   // Mount Fuji and the bay
-  'part-2':          '38% 52%',   // the snow monkeys in the hot pool
+  'part-2':          '72% 55%',   // the snow monkeys in the hot pool
   'part-3':          '62% 56%',   // the shinkansen pulling in
   'part-4':          '55% 44%',   // Fuji, Tokyo Tower and the bonsai
   'part-5':          '55% 50%',   // the fountain and the sunset

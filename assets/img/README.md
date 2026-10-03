@@ -5,8 +5,7 @@ Drop the hero images here using exactly these names, then add the slot key to
 is not in `HAVE` shows a palette gradient instead and requests nothing, so the
 console stays clean while artwork is still missing.
 
-**In place:** Getting Started, Parts 1–5, Unit Check.
-**Still a gradient:** Home, Unit 1 overview.
+**All nine slots are filled.** Nothing shows a gradient any more.
 
 | File | Screen |
 |---|---|
@@ -20,8 +19,10 @@ console stays clean while artwork is still missing.
 | `hero-part-5.webp` | Part 5 · Story |
 | `hero-unit-check.webp` | Unit Check |
 
-**Size** 1600 × 500 · **Format** WebP (JPG works too, rename the extension in
-`assets/js/views/hero.js`) · **Weight** under 200 KB each.
+**Size** 1600 × 500 or 2000 × 667 — both are in use and `background-size:cover`
+takes either without stretching anything. **Format** WebP (JPG works too, rename
+the extension in `assets/js/views/hero.js`). **Weight** keep it near 200 KB; the
+heaviest in the set is 208 KB.
 
 **Framing.** The band is much wider than the artwork on a desktop and narrower
 than it on a phone, so every image is cropped one way or the other. `FOCUS` in
