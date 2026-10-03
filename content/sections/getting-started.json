@@ -6,14 +6,12 @@
   "icon": "🚀",
   "color": "blue",
   "sources": {
-    "studentsBook": [
-      7,
-      9,
-      10
-    ],
+    "studentsBook": [],
     "workbook": [
       4,
-      5
+      5,
+      6,
+      7
     ]
   },
   "parts": [],
@@ -26,20 +24,16 @@
       "example": "Write your answer below the question.",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "complete",
@@ -49,20 +43,16 @@
       "example": "Please complete the task.",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "dictionary",
@@ -72,20 +62,16 @@
       "example": "Look up the word in a dictionary.",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "find out",
@@ -95,20 +81,16 @@
       "example": "Read the sign to find out what it says.",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "instructions",
@@ -118,43 +100,35 @@
       "example": "Read the instructions carefully.",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "opposite",
-      "he": "הפך",
+      "he": "היפך",
       "ar": null,
       "definition": "completely different",
       "example": "The opposite of hot is cold.",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "raise",
@@ -164,20 +138,16 @@
       "example": "Raise your hand, please.",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "repeat",
@@ -187,20 +157,16 @@
       "example": "Please repeat the sentence.",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "spell",
@@ -210,20 +176,16 @@
       "example": "Can you spell your name?",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "vocabulary",
@@ -233,20 +195,16 @@
       "example": "We learn new vocabulary every lesson.",
       "group": "word-power-1",
       "source": {
-        "book": "students",
-        "page": 7
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "conversation",
@@ -256,20 +214,16 @@
       "example": "Listen to the conversation.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "correct",
@@ -279,20 +233,16 @@
       "example": "Choose the correct answer.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "describe",
@@ -302,20 +252,16 @@
       "example": "Describe the picture.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "document",
@@ -325,20 +271,16 @@
       "example": "Put the document in the folder.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "example",
@@ -348,20 +290,16 @@
       "example": "Give an example of a color.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "first name",
@@ -371,20 +309,16 @@
       "example": "Write your first name here.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "folder",
@@ -394,20 +328,16 @@
       "example": "Open your folder.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "guess",
@@ -417,20 +347,16 @@
       "example": "Guess the answer.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "keyboard",
@@ -440,43 +366,35 @@
       "example": "Type your name on the keyboard.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "quiz",
-      "he": "בוחן",
+      "he": "שאלון, חידון",
       "ar": null,
       "definition": "a short test",
       "example": "We have a quiz today.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "surname",
@@ -486,20 +404,16 @@
       "example": "Write your surname here.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     },
     {
       "en": "task",
@@ -509,141 +423,74 @@
       "example": "Complete the task.",
       "group": "word-power-2",
       "source": {
-        "book": "students",
-        "page": 9
+        "book": "workbook",
+        "page": 4
       },
-      "alsoOn": [
-        {
-          "book": "workbook",
-          "page": 4
-        }
-      ],
-      "heSource": "site",
+      "alsoOn": [],
+      "heSource": "book",
       "needsReview": false,
       "missing": [
         "ar"
-      ]
+      ],
+      "glossSource": "added-for-teaching"
     }
   ],
   "grammar": [],
   "activities": [
     {
-      "id": "learn-words",
+      "id": "learn-words-1",
       "type": "flashcards",
+      "title": "Learn the Words 1",
       "skill": "vocabulary",
       "level": null,
       "lane": "learn",
-      "source": {
-        "book": "students",
-        "page": 9
-      },
-      "note": "Word Power 1 presentation (Book p.7) was not in the scanned material.",
-      "status": "planned",
       "category": "vocabulary",
-      "step": 1
+      "step": 1,
+      "source": {
+        "book": "workbook",
+        "page": 4,
+        "note": "Word Power 1"
+      },
+      "group": "word-power-1",
+      "status": "planned"
     },
     {
       "id": "write-the-words-1",
       "type": "write-the-words",
+      "title": "Write the Words 1 — Word Power 1",
       "skill": "vocabulary",
       "level": null,
       "lane": "practice",
+      "category": "vocabulary",
+      "step": 2,
       "source": {
         "book": "workbook",
-        "page": 4
+        "page": 4,
+        "note": "Word Power 1"
       },
-      "linkedTo": {
-        "book": "students",
-        "page": 7
-      },
-      "status": "planned",
-      "category": "vocabulary",
-      "step": 6
-    },
-    {
-      "id": "write-the-words-2",
-      "type": "write-the-words",
-      "skill": "vocabulary",
-      "level": null,
-      "lane": "practice",
-      "source": {
-        "book": "workbook",
-        "page": 4
-      },
-      "linkedTo": {
-        "book": "students",
-        "page": 9
-      },
-      "status": "planned",
-      "category": "vocabulary",
-      "step": 6
-    },
-    {
-      "id": "match-to-pictures",
-      "type": "match-sentences-to-pictures",
-      "skill": "vocabulary",
-      "level": null,
-      "lane": "practice",
-      "source": {
-        "book": "students",
-        "page": 9,
-        "exercise": 6
-      },
-      "status": "planned",
-      "render": "pairs",
-      "origin": "adapted",
-      "items": [
-        {
-          "a": "Find the letter A on the ______.",
-          "b": "keyboard"
-        },
-        {
-          "a": "Open a new ______.",
-          "b": "document"
-        },
-        {
-          "a": "Please put your work in your ______.",
-          "b": "folder"
-        },
-        {
-          "a": "Don't listen to my ______!",
-          "b": "conversations"
-        },
-        {
-          "a": "Look at this ______.",
-          "b": "example"
-        },
-        {
-          "a": "______ what I have?",
-          "b": "Guess"
-        },
-        {
-          "a": "You need to study for the ______.",
-          "b": "quiz"
-        }
-      ],
-      "category": "vocabulary",
-      "step": 2
+      "group": "word-power-1",
+      "status": "planned"
     },
     {
       "id": "crossword",
       "type": "complete-the-puzzles",
+      "title": "Complete the Puzzles",
       "skill": "vocabulary",
       "level": 1,
       "lane": "practice",
+      "category": "vocabulary",
+      "step": 3,
       "source": {
         "book": "workbook",
         "page": 5,
         "exercise": 1
       },
-      "linkedTo": {
-        "book": "students",
-        "page": 10,
-        "exercise": 9
-      },
-      "status": "planned",
+      "origin": "adapted",
       "render": "unscramble",
-      "origin": "book",
+      "instruction": [
+        "In the workbook these words go into crossword grids. Here the letters are mixed up — write each word in English.",
+        "בחוברת המילים האלה נכנסות לתשבצים. כאן האותיות מעורבבות — כתבו כל מילה באנגלית."
+      ],
       "items": [
         {
           "answer": "below",
@@ -681,24 +528,29 @@
           "answer": "dictionary",
           "clue": "מילון"
         }
-      ],
-      "category": "vocabulary",
-      "step": 4
+      ]
     },
     {
       "id": "circle-correct",
       "type": "circle-the-correct-words",
+      "title": "Circle the Correct Words",
       "skill": "vocabulary",
       "level": 2,
       "lane": "practice",
+      "category": "vocabulary",
+      "step": 4,
       "source": {
         "book": "workbook",
         "page": 5,
         "exercise": 2
       },
-      "status": "planned",
-      "render": "mc",
       "origin": "book",
+      "render": "mc",
+      "shuffle": false,
+      "instruction": [
+        "Circle the correct words to complete the sentences.",
+        "הקיפו את המילים הנכונות כדי להשלים את המשפטים."
+      ],
       "items": [
         {
           "p": "I can't hear you. Can you ______ the question, please?",
@@ -717,7 +569,7 @@
           "a": "dictionaries"
         },
         {
-          "p": "Some English words are hard to ______.",
+          "p": "Some English words are hard to ______ .",
           "o": [
             "raise",
             "spell"
@@ -725,7 +577,7 @@
           "a": "spell"
         },
         {
-          "p": "The ______ of white is black.",
+          "p": "The ______ of <i>white</i> is <i>black</i>.",
           "o": [
             "opposite",
             "vocabulary"
@@ -748,34 +600,33 @@
           ],
           "a": "complete"
         }
-      ],
-      "category": "vocabulary",
-      "step": 3
+      ]
     },
     {
       "id": "complete-sentences",
       "type": "complete-the-sentences",
+      "title": "Complete the Sentences",
       "skill": "vocabulary",
       "level": 2,
       "lane": "practice",
+      "category": "vocabulary",
+      "step": 5,
       "source": {
         "book": "workbook",
         "page": 5,
         "exercise": 3
       },
-      "status": "planned",
-      "render": "mc",
       "origin": "book",
+      "render": "mc",
+      "shuffle": false,
+      "instruction": [
+        "Complete the sentences with the words below.",
+        "השלימו את המשפטים עם המילים שלמטה."
+      ],
+      "passage": [
+        "<i>1. Read the sign to <b>find out</b> what it says.</i>"
+      ],
       "items": [
-        {
-          "p": "Read the sign to ______ what it says.",
-          "o": [
-            "find out",
-            "below",
-            "raise"
-          ],
-          "a": "find out"
-        },
         {
           "p": "Our mouths are ______ our eyes.",
           "o": [
@@ -789,7 +640,7 @@
           "p": "I always ______ my hand before I speak in class.",
           "o": [
             "raise",
-            "repeat",
+            "repeats",
             "find out"
           ],
           "a": "raise"
@@ -799,7 +650,7 @@
           "o": [
             "vocabulary",
             "dictionary",
-            "instructions"
+            "below"
           ],
           "a": "vocabulary"
         },
@@ -813,11 +664,11 @@
           "a": "spell"
         },
         {
-          "p": "Do you know how many words are in the ______?",
+          "p": "Do you know how many words are in the ______ ?",
           "o": [
             "dictionary",
             "vocabulary",
-            "example"
+            "repeats"
           ],
           "a": "dictionary"
         },
@@ -825,8 +676,8 @@
           "p": "My baby sister ______ everything I say.",
           "o": [
             "repeats",
-            "spells",
-            "completes"
+            "spell",
+            "complete"
           ],
           "a": "repeats"
         },
@@ -835,27 +686,347 @@
           "o": [
             "complete",
             "raise",
-            "repeat"
+            "find out"
           ],
           "a": "complete"
         }
-      ],
+      ]
+    },
+    {
+      "id": "learn-words-2",
+      "type": "flashcards",
+      "title": "Learn the Words 2",
+      "skill": "vocabulary",
+      "level": null,
+      "lane": "learn",
       "category": "vocabulary",
-      "step": 3
+      "step": 6,
+      "source": {
+        "book": "workbook",
+        "page": 4,
+        "note": "Word Power 2"
+      },
+      "group": "word-power-2",
+      "status": "planned"
+    },
+    {
+      "id": "write-the-words-2",
+      "type": "write-the-words",
+      "title": "Write the Words 2 — Word Power 2",
+      "skill": "vocabulary",
+      "level": null,
+      "lane": "practice",
+      "category": "vocabulary",
+      "step": 7,
+      "source": {
+        "book": "workbook",
+        "page": 4,
+        "note": "Word Power 2"
+      },
+      "group": "word-power-2",
+      "status": "planned"
+    },
+    {
+      "id": "word-snake",
+      "type": "circle-write-translate",
+      "title": "Circle, Write and Translate",
+      "skill": "vocabulary",
+      "level": 1,
+      "lane": "practice",
+      "category": "vocabulary",
+      "step": 8,
+      "source": {
+        "book": "workbook",
+        "page": 6,
+        "exercise": 1,
+        "note": "Word Practice 2"
+      },
+      "origin": "adapted",
+      "render": "unscramble",
+      "instruction": [
+        "In the workbook the eight words are written in one long snake and you circle them. Here the letters are mixed up — write each word in English.",
+        "בחוברת שמונה המילים כתובות בנחש אחד ארוך ויש להקיף אותן. כאן האותיות מעורבבות — כתבו כל מילה באנגלית."
+      ],
+      "passage": [
+        "<b class=\"rHead\">The word snake</b>",
+        "documentfoldersurnamekeyboardquizguessdescribeconversation"
+      ],
+      "items": [
+        {
+          "answer": "document",
+          "clue": "מסמך"
+        },
+        {
+          "answer": "folder",
+          "clue": "תיקייה"
+        },
+        {
+          "answer": "surname",
+          "clue": "שם משפחה"
+        },
+        {
+          "answer": "keyboard",
+          "clue": "מקלדת"
+        },
+        {
+          "answer": "quiz",
+          "clue": "שאלון, חידון"
+        },
+        {
+          "answer": "guess",
+          "clue": "לנחש"
+        },
+        {
+          "answer": "describe",
+          "clue": "לתאר"
+        },
+        {
+          "answer": "conversation",
+          "clue": "שיחה"
+        }
+      ]
+    },
+    {
+      "id": "true-false",
+      "type": "circle-true-or-false",
+      "title": "True or False",
+      "skill": "vocabulary",
+      "level": 2,
+      "lane": "practice",
+      "category": "vocabulary",
+      "step": 9,
+      "source": {
+        "book": "workbook",
+        "page": 7,
+        "exercise": 2
+      },
+      "origin": "book",
+      "render": "mc",
+      "shuffle": false,
+      "instruction": [
+        "Circle true or false.",
+        "קבעו אם כל משפט נכון (true) או לא נכון (false)."
+      ],
+      "passage": [
+        "<i>1. People keep <b>documents</b> in <b>folders</b> on their computers. — true</i>"
+      ],
+      "items": [
+        {
+          "p": "Tali Levi's <b>surname</b> is Tali.",
+          "o": [
+            "true",
+            "false"
+          ],
+          "a": "false"
+        },
+        {
+          "p": "The opposite of <i>right</i> is <b>correct</b>.",
+          "o": [
+            "true",
+            "false"
+          ],
+          "a": "false"
+        },
+        {
+          "p": "Dan Hadad's <b>first name</b> is Dan.",
+          "o": [
+            "true",
+            "false"
+          ],
+          "a": "true"
+        },
+        {
+          "p": "You <b>guess</b> when you know the right answer.",
+          "o": [
+            "true",
+            "false"
+          ],
+          "a": "false"
+        },
+        {
+          "p": "<b>Keyboards</b> have letters and numbers.",
+          "o": [
+            "true",
+            "false"
+          ],
+          "a": "true"
+        }
+      ]
+    },
+    {
+      "id": "complete-and-tick",
+      "type": "complete-the-sentences",
+      "title": "Complete the Sentences. Then Tick.",
+      "skill": "vocabulary",
+      "level": 2,
+      "lane": "practice",
+      "category": "vocabulary",
+      "step": 10,
+      "source": {
+        "book": "workbook",
+        "page": 7,
+        "exercise": 3
+      },
+      "origin": "book",
+      "render": "mc",
+      "shuffle": false,
+      "instruction": [
+        "Complete the sentences with the words below. Then decide which ones are true for you.",
+        "השלימו את המשפטים עם המילים שלמטה. לאחר מכן, חשבו אילו מהם נכונים לגביכם."
+      ],
+      "passage": [
+        "<i>1. I have a math <b>quiz</b> tomorrow.</i>"
+      ],
+      "items": [
+        {
+          "p": "I like to listen to my parents' ______ .",
+          "o": [
+            "conversations",
+            "tasks",
+            "example"
+          ],
+          "a": "conversations"
+        },
+        {
+          "p": "I always complete classroom ______ quickly.",
+          "o": [
+            "tasks",
+            "conversations",
+            "surname"
+          ],
+          "a": "tasks"
+        },
+        {
+          "p": "I know how to spell my teacher's ______ in English.",
+          "o": [
+            "surname",
+            "describe",
+            "quiz"
+          ],
+          "a": "surname"
+        },
+        {
+          "p": "I remember people's faces and can ______ them.",
+          "o": [
+            "describe",
+            "surname",
+            "tasks"
+          ],
+          "a": "describe"
+        },
+        {
+          "p": "Before I do an exercise, I always look at the ______ .",
+          "o": [
+            "example",
+            "quiz",
+            "conversations"
+          ],
+          "a": "example"
+        }
+      ]
+    },
+    {
+      "id": "write-sentences",
+      "type": "write-sentences-from-table",
+      "title": "Write Sentences",
+      "skill": "writing",
+      "level": 3,
+      "lane": "practice",
+      "category": "writing",
+      "step": 1,
+      "source": {
+        "book": "workbook",
+        "page": 6,
+        "exercise": 4
+      },
+      "origin": "adapted",
+      "render": "writing",
+      "wordBank": [
+        "vocabulary",
+        "raise",
+        "dictionary",
+        "spell",
+        "find out",
+        "instructions",
+        "below"
+      ],
+      "scene": [
+        "Workbook p.6 shows four pictures. They are described here in words.",
+        "בעמוד 6 בחוברת מופיעות ארבע תמונות. כאן הן מתוארות במילים."
+      ],
+      "instruction": [
+        "Write a sentence for each picture. Use at least one of the words below in each sentence.",
+        "כתבו משפט עבור כל תמונה. השתמשו במילה אחת לפחות לכל תמונה."
+      ],
+      "passage": [
+        "<i>1. A classroom. The teacher is at the board, which says <b>New Words</b>. Several children have their hands up. — Raise your hand.</i>"
+      ],
+      "items": [
+        {
+          "p": "A boy is sitting at a desk, writing in his notebook. An open book is next to him."
+        },
+        {
+          "p": "Three children are sitting on the floor with board games. One of them is reading a card."
+        },
+        {
+          "p": "A boy is asleep in bed. A cat is lying on a mat below the bed."
+        }
+      ]
+    },
+    {
+      "id": "answer-questions",
+      "type": "answer-the-questions",
+      "title": "Answer the Questions",
+      "skill": "writing",
+      "level": 3,
+      "lane": "practice",
+      "category": "writing",
+      "step": 2,
+      "source": {
+        "book": "workbook",
+        "page": 7,
+        "exercise": 4
+      },
+      "origin": "book",
+      "render": "writing",
+      "instruction": [
+        "Answer the questions about yourself.",
+        "ענו על השאלות לגביכם."
+      ],
+      "items": [
+        {
+          "p": "What is your favorite <b>first name</b>?"
+        },
+        {
+          "p": "What is your best friend's <b>surname</b>?"
+        },
+        {
+          "p": "What languages does your computer <b>keyboard</b> have?"
+        },
+        {
+          "p": "Give an <b>example</b> of something you eat every day."
+        },
+        {
+          "p": "<b>Guess</b> how many students there are in your school."
+        },
+        {
+          "p": "<b>Describe</b> your friend. Is he / she tall or short? What color is his / her hair? What color are his / her eyes?"
+        }
+      ]
     }
   ],
   "skills": {
     "reading": {
       "active": false,
-      "reason": "No reading text for Getting Started in the scanned material."
+      "reason": "Getting Started has no reading text among the pages in scope for this project."
     },
     "listening": {
       "active": false,
-      "reason": "No listening material for Getting Started in the scanned material."
+      "reason": "No listening material for Getting Started in the pages in scope."
     },
     "speaking": {
       "active": false,
-      "reason": "No speaking page for Getting Started in the scanned material."
+      "reason": "No speaking page for Getting Started in the pages in scope."
     }
   },
   "phonics": null,

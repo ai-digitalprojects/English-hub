@@ -121,6 +121,9 @@ function drillWords(part, all){
 function wordsForActivity(part, activity){
   const all = part.vocabulary || [];
   if(activity && activity.origin === 'word-list') return drillWords(part, all);
+  /* Getting Started prints both word groups on the same workbook page, so the
+     page alone cannot tell them apart. An activity may name its group. */
+  if(activity && activity.group) return all.filter(w => w.group === activity.group);
   const src = activity && activity.source;
   if(!src) return all;
   const hit = src.book === 'students'

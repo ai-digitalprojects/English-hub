@@ -67,12 +67,14 @@ function worksheet(section, part){
   if(!words.length) return '';
   const sb = ((part.sources || {}).studentsBook || []).join(', ');
   const wb = ((part.sources || {}).workbook || []).join(', ');
+  /* Getting Started is workbook-only, so a book line would print "Book p." */
+  const pages = [sb && 'Book p.' + sb, wb && 'Workbook p.' + wb]
+    .filter(Boolean).map(s => ' &middot; ' + s).join('');
   return `
   <section class="printOnly" aria-hidden="true">
     <div class="printHead">
       <h1>${part.title}</h1>
-      <div class="printMeta">THINK ABOUT IT! &middot; Grade 6 &middot; ${section.label}${part.number ? ' &middot; Part ' + part.number : ''}
-        &middot; Book p.${sb} &middot; Workbook p.${wb}</div>
+      <div class="printMeta">THINK ABOUT IT! &middot; Grade 6 &middot; ${section.label}${part.number ? ' &middot; Part ' + part.number : ''}${pages}</div>
       <div class="printName">Name: ______________________________　　Class: ____________　　Date: ____________</div>
     </div>
     <table class="wsTable">

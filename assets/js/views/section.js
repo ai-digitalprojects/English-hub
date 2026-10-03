@@ -5,7 +5,7 @@ import { getSection, getPart, hasParts } from '../content/model.js';
 import { partProgress } from '../progress.js';
 import { S } from '../state.js';
 import { hashFor } from '../router.js';
-import { renderLanes } from './part.js';
+import { renderLanes, worksheet } from './part.js';
 import { renderHero } from './hero.js';
 import { bi } from './bilingual.js';
 import { CATEGORIES, groupByCategory } from './categories.js';
@@ -56,7 +56,10 @@ function renderSection(){
       section.parts.map(p => stageCard(section.id, p)).join('')
     }</div>`;
   }
-  return hero + renderLanes(section.id, getPart(section.id, null));
+  /* A section without parts still offers the printable word worksheet, which
+     only the Part screen used to draw. */
+  const only = getPart(section.id, null);
+  return hero + renderLanes(section.id, only) + worksheet(section, only);
 }
 
 export { renderSection };
