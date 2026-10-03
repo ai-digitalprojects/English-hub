@@ -52,13 +52,15 @@
     {
       "id": "part-1",
       "number": 1,
-      "label": "Part 1 · All About Japan",
-      "title": "All About Japan",
+      "label": "Part 1 · A Trip to Japan",
+      "title": "A Trip to Japan",
       "icon": "🗾",
       "color": "orange",
       "sources": {
         "studentsBook": [
           12,
+          13,
+          15,
           17,
           18
         ],
@@ -96,7 +98,7 @@
         },
         {
           "en": "anything",
-          "he": "כל דבר",
+          "he": "כל דבר, שום דבר",
           "ar": null,
           "definition": "any thing at all",
           "example": "I can't see anything in the dark.",
@@ -119,7 +121,7 @@
         },
         {
           "en": "Dear ...",
-          "he": null,
+          "he": "… היקר",
           "ar": null,
           "definition": null,
           "example": null,
@@ -414,6 +416,37 @@
       ],
       "activities": [
         {
+          "id": "warm-up",
+          "type": "think-about",
+          "title": "Think About… friends and family in different places",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "category": "warmup",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Think about friends and family in different places. Write what you think.",
+            "חשבו על חברים ומשפחה במקומות אחרים. כתבו מה אתם חושבים."
+          ],
+          "items": [
+            {
+              "p": "Do you have friends or family in different cities or countries?"
+            },
+            {
+              "p": "Do you write to them or talk to them on the phone?"
+            },
+            {
+              "p": "When do you see them?"
+            }
+          ]
+        },
+        {
           "id": "learn-words",
           "type": "flashcards",
           "skill": "vocabulary",
@@ -428,18 +461,197 @@
           "step": 1
         },
         {
-          "id": "write-the-words",
-          "type": "write-the-words",
+          "id": "read-better-long-a",
+          "type": "read-better",
+          "title": "Read Better: long a",
+          "skill": "phonics",
+          "level": null,
+          "lane": "learn",
+          "category": "vocabulary",
+          "step": 2,
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "linkedTo": {
+            "book": "workbook",
+            "page": 232
+          },
+          "origin": "book",
+          "render": "bins",
+          "bins": [
+            "ai, ay",
+            "a_e"
+          ],
+          "instruction": [
+            "We write ai or ay, or a_e. We say the long a sound. Put each word in its group.",
+            "כותבים ai או ay, או a_e. אומרים את צליל ה-a הארוך. שימו כל מילה בקבוצה שלה."
+          ],
+          "items": [
+            {
+              "v": "afraid",
+              "bin": "ai, ay"
+            },
+            {
+              "v": "wait",
+              "bin": "ai, ay"
+            },
+            {
+              "v": "always",
+              "bin": "ai, ay"
+            },
+            {
+              "v": "take",
+              "bin": "a_e"
+            },
+            {
+              "v": "game",
+              "bin": "a_e"
+            },
+            {
+              "v": "late",
+              "bin": "a_e"
+            }
+          ]
+        },
+        {
+          "id": "choose-pictures",
+          "type": "choose-the-correct-pictures",
+          "title": "Choose the Correct Picture",
           "skill": "vocabulary",
           "level": null,
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 8
-          },
-          "status": "planned",
           "category": "vocabulary",
-          "step": 6
+          "step": 3,
+          "source": {
+            "book": "students",
+            "page": 13,
+            "exercise": 1
+          },
+          "origin": "adapted",
+          "render": "mc",
+          "shuffle": false,
+          "scene": [
+            "The book shows two pictures for each phrase. They are described here in words.",
+            "בספר מופיעות שתי תמונות לכל צירוף. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Choose the picture that matches the phrase.",
+            "בחרו את התמונה שמתאימה לצירוף."
+          ],
+          "items": [
+            {
+              "p": "<b>love</b> horses",
+              "o": [
+                "A child hugging a horse's face and smiling.",
+                "A boy standing with his hands on his hips, looking cross."
+              ],
+              "a": "A child hugging a horse's face and smiling."
+            },
+            {
+              "p": "<b>hit</b> the ball",
+              "o": [
+                "A baseball player swinging a bat at the ball.",
+                "A girl catching a basketball with both hands."
+              ],
+              "a": "A baseball player swinging a bat at the ball."
+            },
+            {
+              "p": "<b>order</b> a pizza",
+              "o": [
+                "A customer at a counter pointing at the pizzas he wants.",
+                "A chef in a kitchen putting toppings on a pizza."
+              ],
+              "a": "A customer at a counter pointing at the pizzas he wants."
+            },
+            {
+              "p": "don't want <b>anything</b>",
+              "o": [
+                "A man at a table full of food, holding up his hands to say no.",
+                "A man pointing at the food on a waiter's tray."
+              ],
+              "a": "A man at a table full of food, holding up his hands to say no."
+            },
+            {
+              "p": "a small <b>island</b>",
+              "o": [
+                "A small green island with palm trees in the sea.",
+                "A town with houses and trees."
+              ],
+              "a": "A small green island with palm trees in the sea."
+            },
+            {
+              "p": "<b>Dear</b> Mom,",
+              "o": [
+                "A new email on a screen, beginning \"Dear Mom\".",
+                "Two women sitting in a waiting room."
+              ],
+              "a": "A new email on a screen, beginning \"Dear Mom\"."
+            },
+            {
+              "p": "<b>Leave</b> your umbrellas near the door.",
+              "o": [
+                "Closed umbrellas standing on the floor next to a door.",
+                "Three people indoors holding open umbrellas."
+              ],
+              "a": "Closed umbrellas standing on the floor next to a door."
+            },
+            {
+              "p": "<b>pick</b> a book",
+              "o": [
+                "A girl at a bookshelf reaching up to take a book.",
+                "A girl sitting under a lamp, reading a book."
+              ],
+              "a": "A girl at a bookshelf reaching up to take a book."
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "match-meanings",
+          "type": "match-a-to-b",
+          "title": "Match Words to Meanings",
+          "skill": "vocabulary",
+          "level": null,
+          "category": "vocabulary",
+          "step": 4,
+          "source": {
+            "book": "students",
+            "page": 13,
+            "exercise": 2
+          },
+          "origin": "book",
+          "render": "pairs",
+          "instruction": [
+            "Match the words in A to their meanings in B.",
+            "התאימו את המילים ב-A למשמעויות שלהן ב-B."
+          ],
+          "items": [
+            {
+              "a": "glad",
+              "b": "happy"
+            },
+            {
+              "a": "team",
+              "b": "a group of people who work or play together"
+            },
+            {
+              "a": "a million",
+              "b": "the number 1,000,000"
+            },
+            {
+              "a": "afraid",
+              "b": "scared"
+            },
+            {
+              "a": "popular",
+              "b": "something or someone many people like"
+            },
+            {
+              "a": "leave",
+              "b": "put something in a place"
+            }
+          ],
+          "lane": "practice"
         },
         {
           "id": "word-snake",
@@ -495,7 +707,21 @@
             }
           ],
           "category": "vocabulary",
-          "step": 4
+          "step": 5
+        },
+        {
+          "id": "write-the-words",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 8
+          },
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 7
         },
         {
           "id": "highlight-to-be",
@@ -543,7 +769,8 @@
             }
           ],
           "category": "grammar",
-          "step": 2
+          "step": 1,
+          "title": "Highlight and Translate: to be"
         },
         {
           "id": "highlight-to-have",
@@ -577,13 +804,14 @@
             }
           ],
           "category": "grammar",
-          "step": 2
+          "step": 2,
+          "title": "Highlight and Translate: to have"
         },
         {
           "id": "sort-am-is-are",
           "type": "sort-into-columns",
           "skill": "grammar",
-          "level": 1,
+          "level": null,
           "lane": "practice",
           "source": {
             "book": "workbook",
@@ -642,7 +870,72 @@
             "are"
           ],
           "category": "grammar",
-          "step": 3
+          "step": 3,
+          "title": "Write the Words: am / is / are"
+        },
+        {
+          "id": "sort-have-has",
+          "type": "sort-into-columns",
+          "title": "Write the Words: have / has",
+          "skill": "grammar",
+          "level": null,
+          "category": "grammar",
+          "step": 4,
+          "source": {
+            "book": "workbook",
+            "page": 11,
+            "exercise": 1
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 18,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "bins",
+          "bins": [
+            "have",
+            "has"
+          ],
+          "instruction": [
+            "Put each word in the right column.",
+            "שימו כל מילה בטור הנכון."
+          ],
+          "items": [
+            {
+              "v": "the dog",
+              "bin": "has"
+            },
+            {
+              "v": "I",
+              "bin": "have"
+            },
+            {
+              "v": "he",
+              "bin": "has"
+            },
+            {
+              "v": "Kate",
+              "bin": "has"
+            },
+            {
+              "v": "you",
+              "bin": "have"
+            },
+            {
+              "v": "a tree",
+              "bin": "has"
+            },
+            {
+              "v": "the children",
+              "bin": "have"
+            },
+            {
+              "v": "we",
+              "bin": "have"
+            }
+          ],
+          "lane": "practice"
         },
         {
           "id": "circle-be-have",
@@ -730,7 +1023,7 @@
             }
           ],
           "category": "grammar",
-          "step": 4
+          "step": 5
         },
         {
           "id": "picture-be-have",
@@ -781,7 +1074,11 @@
             }
           ],
           "category": "grammar",
-          "step": 5
+          "step": 6,
+          "scene": [
+            "Workbook p.12 shows four pictures. 1: a mouse called Charlie beside a hole. 2: a boy called Adam holding a dog. 3: two birds called Duke and Luke. 4: two children called Karen and Jeff riding horses.",
+            "בעמוד 12 בחוברת מופיעות ארבע תמונות. 1: עכבר בשם צ'ארלי ליד חור. 2: ילד בשם אדם מחזיק כלב. 3: שתי ציפורים בשם דיוק ולוק. 4: שני ילדים בשם קארן וג'ף רוכבים על סוסים."
+          ]
         },
         {
           "id": "complete-be-have",
@@ -872,44 +1169,216 @@
             }
           ],
           "category": "grammar",
-          "step": 5
+          "step": 7
+        },
+        {
+          "id": "reading-tokyo",
+          "type": "reading-sequence",
+          "title": "Things to do in Tokyo",
+          "skill": "reading",
+          "level": null,
+          "category": "reading",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 15,
+            "exercise": 4
+          },
+          "origin": "book",
+          "render": "reading",
+          "chunks": [
+            "<b class=\"rHead\">A · My favorite tea house</b><br>The tea house is in a beautiful garden. We don't wear shoes in the tea house. We leave our shoes outside. We sit on the floor. It's a custom <span dir=\"rtl\">(מנהג)</span> in Japan. We can see how they make the tea. Their green tea is the best.",
+            "<b class=\"rHead\">B · A cool ice cream store</b><br>I love this ice cream store. The ice cream looks like animals. They have rabbits, chickens, dogs and bears. I always order the rabbit ice cream. You can pick anything you want.",
+            "<b class=\"rHead\">C · A baseball <span dir=\"rtl\">(כדור בסיס)</span> game</b><br>Baseball is a popular sport in Japan. The games are fun. People sing songs when their team hits the ball. They wear shirts and hats from their favorite team. I have a hat from a team called the Lions. My sister has hats from every baseball team in Japan.",
+            "<b class=\"rHead\">D · A ninja village</b><br>The ninja village is great. You wear ninja clothes and climb walls like a ninja. There's also a ninja house. It's fun to walk in the house and find special rooms. I think ninjas are exciting <span dir=\"rtl\">(מלהיבים)</span>! They are strong. They aren't afraid of anything.<br>We need to ride a train to the ninja village. It isn't in Tokyo. But the train is fun too."
+          ],
+          "keepText": true,
+          "instruction": [
+            "Read the text one part at a time, then answer.",
+            "קראו את הטקסט חלק אחר חלק, ואז ענו."
+          ],
+          "items": [
+            {
+              "p": "placeholder"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "words",
+              "words": [
+                {
+                  "en": "custom",
+                  "he": "מנהג"
+                },
+                {
+                  "en": "baseball",
+                  "he": "כדור בסיס"
+                },
+                {
+                  "en": "exciting",
+                  "he": "מלהיבים"
+                },
+                {
+                  "en": "leave",
+                  "he": "להשאיר"
+                },
+                {
+                  "en": "popular",
+                  "he": "פופולרי"
+                }
+              ]
+            },
+            {
+              "kind": "text",
+              "upto": 0
+            },
+            {
+              "kind": "evidence",
+              "p": "What do they do with their shoes at the tea house?",
+              "o": [
+                "We leave our shoes outside.",
+                "We sit on the floor.",
+                "We can see how they make the tea."
+              ],
+              "a": "We leave our shoes outside."
+            },
+            {
+              "kind": "text",
+              "upto": 1
+            },
+            {
+              "kind": "evidence",
+              "p": "Which ice cream does Haruki always order?",
+              "o": [
+                "I always order the rabbit ice cream.",
+                "The ice cream looks like animals.",
+                "You can pick anything you want."
+              ],
+              "a": "I always order the rabbit ice cream."
+            },
+            {
+              "kind": "text",
+              "upto": 2
+            },
+            {
+              "kind": "evidence",
+              "p": "What do people do when their team hits the ball?",
+              "o": [
+                "People sing songs when their team hits the ball.",
+                "They wear shirts and hats from their favorite team.",
+                "Baseball is a popular sport in Japan."
+              ],
+              "a": "People sing songs when their team hits the ball."
+            },
+            {
+              "kind": "evidence",
+              "p": "Who has hats from every baseball team in Japan?",
+              "o": [
+                "My sister has hats from every baseball team in Japan.",
+                "I have a hat from a team called the Lions.",
+                "They wear shirts and hats from their favorite team."
+              ],
+              "a": "My sister has hats from every baseball team in Japan."
+            },
+            {
+              "kind": "text",
+              "upto": 3
+            },
+            {
+              "kind": "evidence",
+              "p": "How do you get to the ninja village?",
+              "o": [
+                "We need to ride a train to the ninja village.",
+                "It isn't in Tokyo.",
+                "The ninja village is great."
+              ],
+              "a": "We need to ride a train to the ninja village.",
+              "hint": [
+                "The village isn't in Tokyo — find the sentence that says how you travel there.",
+                "הכפר לא נמצא בטוקיו — מצאו את המשפט שמספר איך נוסעים לשם."
+              ]
+            },
+            {
+              "kind": "check",
+              "p": "Haruki writes about four places. Which of these can you do at the <b>ninja village</b>?",
+              "o": [
+                "Climb walls like a ninja.",
+                "Sit on the floor and drink green tea.",
+                "Order rabbit ice cream."
+              ],
+              "a": "Climb walls like a ninja."
+            },
+            {
+              "kind": "write",
+              "p": "Haruki wrote this for Lisa. Write at least two things Haruki plans to do with her."
+            }
+          ],
+          "lane": "practice"
         },
         {
           "id": "write-sentences",
           "type": "write-sentences-from-table",
+          "title": "Write Sentences",
           "skill": "writing",
           "level": 3,
-          "lane": "practice",
+          "category": "writing",
+          "step": 1,
           "source": {
             "book": "workbook",
             "page": 13,
             "exercise": 5
           },
-          "status": "planned",
+          "origin": "adapted",
           "render": "writing",
-          "origin": "book",
+          "wordBank": [
+            "Maya",
+            "A ball",
+            "Will and Jake",
+            "The dog",
+            "Mom",
+            "The babies",
+            "is",
+            "isn't",
+            "are",
+            "aren't",
+            "have",
+            "has",
+            "red hair",
+            "near the table",
+            "under a tree",
+            "a book",
+            "tired",
+            "hats"
+          ],
+          "scene": [
+            "Workbook p.13 shows a park. Will and Jake kneel on the grass under a big tree, playing a board game. Two babies sit in a stroller, yawning. Mom is at a picnic table with an open book and a plate of rolls. Maya sits at the table — she has red hair. A dog lies on the grass near the table, and a ball is on the grass.",
+            "בעמוד 13 בחוברת מופיע פארק. וויל וג'ייק כורעים על הדשא מתחת לעץ גדול ומשחקים משחק לוח. שני תינוקות יושבים בעגלה ומפהקים. אמא ליד שולחן פיקניק עם ספר פתוח וצלחת לחמניות. מאיה יושבת ליד השולחן — יש לה שיער אדום. כלב שוכב על הדשא ליד השולחן, וכדור מונח על הדשא."
+          ],
+          "instruction": [
+            "Write six sentences about the picture. Use the words in the table.",
+            "כתבו שישה משפטים על התמונה. השתמשו במילים שבטבלה."
+          ],
           "items": [
             {
-              "p": "Write a sentence about Maya. Use <b>is</b> or <b>isn't</b>."
+              "p": "Sentence 1 &nbsp; <i>(the book's example: Maya isn't under a tree.)</i>"
             },
             {
-              "p": "Write a sentence about Will and Jake. Use <b>are</b> or <b>aren't</b>."
+              "p": "Sentence 2 &nbsp; <i>(the book's example: Mom has a book.)</i>"
             },
             {
-              "p": "Write a sentence about the dog. Use <b>is</b> or <b>has</b>."
+              "p": "Sentence 3"
             },
             {
-              "p": "Write a sentence about Mom. Use <b>has</b>."
+              "p": "Sentence 4"
             },
             {
-              "p": "Write a sentence about the babies. Use <b>have</b>."
+              "p": "Sentence 5"
             },
             {
-              "p": "Write a sentence about a ball. Use <b>isn't</b>."
+              "p": "Sentence 6"
             }
           ],
-          "category": "writing",
-          "step": 1
+          "lane": "practice"
         }
       ],
       "skills": {

@@ -15,7 +15,7 @@ The site follows the book, not a structure of its own.
 Home
 ├── Getting Started
 └── Unit 1
-    ├── Part 1 · All About Japan
+    ├── Part 1 · A Trip to Japan
     ├── Part 2 · Snow Monkeys
     ├── Part 3 · Let's Go
     ├── Part 4 · Made in Japan

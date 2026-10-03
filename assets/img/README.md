@@ -9,7 +9,7 @@ shows a palette gradient instead.
 | `hero-home.webp` | Home |
 | `hero-getting-started.webp` | Getting Started |
 | `hero-unit-1.webp` | Unit 1 overview |
-| `hero-part-1.webp` | Part 1 · All About Japan |
+| `hero-part-1.webp` | Part 1 · A Trip to Japan |
 | `hero-part-2.webp` | Part 2 · Snow Monkeys |
 | `hero-part-3.webp` | Part 3 · Let's Go |
 | `hero-part-4.webp` | Part 4 · Made in Japan |
