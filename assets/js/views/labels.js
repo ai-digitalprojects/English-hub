@@ -33,7 +33,12 @@ const TYPE_TITLES = {
   'quick-recall': 'Quick Recall',
   'complete-the-dialogues': 'Complete the Dialogues',
   'write-questions': 'Write Your Own Questions',
-  'about-you': 'About You'
+  'about-you': 'About You',
+  'give-examples': 'Give Examples',
+  'write-examples': 'Write Examples',
+  'highlight-and-write': 'Highlight and Write',
+  'fact-file': 'My Fact File',
+  'write-a-blog': 'Write a Blog'
 };
 
 const SKILL_LABELS = {

@@ -4254,13 +4254,18 @@
       "sources": {
         "studentsBook": [
           34,
-          38,
-          39
+          35,
+          39,
+          40,
+          41
         ],
         "workbook": [
           28,
+          29,
           30,
-          31
+          31,
+          32,
+          33
         ]
       },
       "vocabulary": [
@@ -4281,8 +4286,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4306,8 +4310,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4331,8 +4334,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4356,8 +4358,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4366,7 +4367,7 @@
         },
         {
           "en": "could",
-          "he": "יכול (היה)",
+          "he": "(היה) יכול",
           "ar": null,
           "definition": null,
           "example": null,
@@ -4381,8 +4382,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4406,8 +4406,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4431,8 +4430,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4456,8 +4454,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4481,8 +4478,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4506,8 +4502,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4531,8 +4526,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4541,7 +4535,7 @@
         },
         {
           "en": "so",
-          "he": "כך",
+          "he": "כך ש-, לכן",
           "ar": null,
           "definition": null,
           "example": null,
@@ -4556,8 +4550,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4581,8 +4574,7 @@
               "page": 28
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -4593,7 +4585,7 @@
       "grammar": [
         {
           "id": "present-simple-positive",
-          "topic": "Present Simple — positive",
+          "topic": "Present Simple – positive",
           "lane": "learn",
           "source": {
             "book": "workbook",
@@ -4605,71 +4597,64 @@
             "exercise": 1
           },
           "points": [
-            "I / You / We / They drink water",
-            "He / She / It drinks water"
+            "I / You / We / They <b>drink</b> water.",
+            "He / She / It <b>drinks</b> water."
           ]
         },
         {
           "id": "present-simple-spelling",
-          "topic": "Spelling rules — he / she / it",
+          "topic": "Spelling Rules – He / She / It",
           "lane": "learn",
           "source": {
             "book": "workbook",
             "page": 30
           },
           "points": [
-            "-s",
-            "-es after o, x, ch, sh, ss",
-            "consonant + y → -ies"
+            "Most verbs: add <b>s</b>",
+            "After <b>ss, sh, ch, x, o</b>: add <b>es</b> — guess → guesses, wash → washes, watch → watches, mix → mixes, do → does",
+            "Consonant + <b>y</b>: drop the y and add <b>ies</b> — cry → cries"
           ]
         },
         {
           "id": "time-expressions",
-          "topic": "Time expressions",
+          "topic": "Time Expressions",
           "lane": "learn",
           "source": {
             "book": "workbook",
             "page": 30
           },
           "points": [
-            "always, usually, often, sometimes, never",
+            "Before or after the verb: always, usually, often, sometimes, never",
+            "At the start or the end of a sentence:",
             "every day / week / month / year",
             "once a day / week / month / year",
             "in the morning / afternoon / evening",
             "on Friday / Saturday",
-            "at five o'clock",
-            "at night"
+            "at five o'clock / at night"
           ]
         }
       ],
       "activities": [
         {
-          "id": "learn-words",
-          "type": "flashcards",
-          "skill": "vocabulary",
-          "level": null,
-          "lane": "learn",
-          "source": {
-            "book": "students",
-            "page": 34
-          },
-          "status": "planned",
-          "category": "vocabulary",
-          "step": 1
-        },
-        {
           "id": "think-about-quiz",
           "type": "where-things-are-from-quiz",
+          "title": "Think About… where things are from",
           "skill": "vocabulary",
           "level": null,
           "lane": "learn",
+          "category": "warmup",
+          "step": 1,
           "source": {
             "book": "students",
             "page": 34
           },
-          "status": "planned",
-          "render": "mc",
           "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Take the quiz about where things are from. Then compare your answers with a partner.",
+            "ענו על החידון על המקום שממנו הדברים באים. לאחר מכן השווו תשובות עם חבר/ה."
+          ],
           "items": [
             {
               "p": "Where is pizza from?",
@@ -4707,46 +4692,152 @@
               ],
               "a": "Australia"
             }
-          ],
-          "category": "warmup",
-          "step": 1
+          ]
         },
         {
-          "id": "write-the-words",
-          "type": "write-the-words",
+          "id": "learn-words",
+          "type": "flashcards",
+          "title": "Learn the Words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "category": "vocabulary",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "status": "planned"
+        },
+        {
+          "id": "read-better-long-i-u",
+          "type": "read-better",
+          "title": "Read Better: long i and long u",
+          "skill": "phonics",
+          "level": null,
+          "lane": "learn",
+          "category": "vocabulary",
+          "step": 2,
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "origin": "book",
+          "render": "bins",
+          "bins": [
+            "i_e",
+            "u_e / ue / ui"
+          ],
+          "instruction": [
+            "We write i_e and say the long i sound. We write u_e, ue or ui and say the long u sound. Put each word in its group.",
+            "כותבים i_e ואומרים את צליל i הארוך. כותבים u_e, ue או ui ואומרים את צליל u הארוך. שימו כל מילה בקבוצה שלה."
+          ],
+          "items": [
+            {
+              "v": "time",
+              "bin": "i_e"
+            },
+            {
+              "v": "prize",
+              "bin": "i_e"
+            },
+            {
+              "v": "like",
+              "bin": "i_e"
+            },
+            {
+              "v": "use",
+              "bin": "u_e / ue / ui"
+            },
+            {
+              "v": "blue",
+              "bin": "u_e / ue / ui"
+            },
+            {
+              "v": "fruit",
+              "bin": "u_e / ue / ui"
+            }
+          ]
+        },
+        {
+          "id": "match-to-pictures",
+          "type": "match-sentences-to-pictures",
+          "title": "Match Phrases to Pictures",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 28
-          },
-          "status": "planned",
           "category": "vocabulary",
-          "step": 6
+          "step": 3,
+          "source": {
+            "book": "students",
+            "page": 35,
+            "exercise": 1
+          },
+          "origin": "adapted",
+          "render": "pairs",
+          "scene": [
+            "The book shows six pictures. They are described here in words.",
+            "בספר מופיעות שש תמונות. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Match the phrases or sentences to the pictures.",
+            "התאימו את הצירופים או המשפטים לתמונות."
+          ],
+          "items": [
+            {
+              "a": "play against a friend",
+              "b": "Two boys sitting at a table, playing a board game."
+            },
+            {
+              "a": "Red means stop.",
+              "b": "A car waiting at a traffic light that is showing red."
+            },
+            {
+              "a": "It's only seven o'clock.",
+              "b": "A bedroom in the morning. Someone is pointing at the clock on the wall."
+            },
+            {
+              "a": "collect magnets",
+              "b": "A girl putting small coloured magnets on the fridge door."
+            },
+            {
+              "a": "a message on the table",
+              "b": "A note by a dog's leash: “Julie, Please take the dog for a walk. Thanks, Dad”"
+            },
+            {
+              "a": "a singing competition",
+              "b": "A girl on a stage with a microphone, under bright lights."
+            }
+          ]
         },
         {
           "id": "circle-pictures",
           "type": "circle-the-correct-words",
+          "title": "Circle the Correct Word for Each Picture",
           "skill": "vocabulary",
           "level": 1,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 4,
           "source": {
             "book": "workbook",
             "page": 28,
             "exercise": 1
           },
-          "linkedTo": {
-            "book": "students",
-            "page": 38,
-            "exercise": 3
-          },
-          "status": "planned",
-          "render": "mc",
           "origin": "adapted",
+          "render": "mc",
+          "shuffle": false,
+          "scene": [
+            "Workbook p.28 shows four photographs. They are described here in words.",
+            "בעמוד 28 בחוברת מופיעות ארבע תמונות. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Choose the correct word for each picture.",
+            "בחרו את המילה הנכונה לכל תמונה."
+          ],
           "items": [
             {
-              "p": "Which word means a small bag in your clothes?",
+              "p": "A close-up of the back pocket of a pair of jeans, with an arrow pointing at it.",
               "o": [
                 "pocket",
                 "message"
@@ -4754,7 +4845,7 @@
               "a": "pocket"
             },
             {
-              "p": "Which word means one team playing another?",
+              "p": "Two children in different coloured shirts, both running after the same football.",
               "o": [
                 "only",
                 "against"
@@ -4762,7 +4853,7 @@
               "a": "against"
             },
             {
-              "p": "Which word means to gather things and keep them?",
+              "p": "Two open hands holding a pile of seashells.",
               "o": [
                 "collect",
                 "mean"
@@ -4770,34 +4861,39 @@
               "a": "collect"
             },
             {
-              "p": "Which word describes food that is very good to eat?",
+              "p": "A girl holding up her test. The number 100 is circled in red at the top.",
               "o": [
                 "tasty",
                 "perfect"
               ],
-              "a": "tasty"
+              "a": "perfect"
             }
-          ],
-          "category": "vocabulary",
-          "step": 3
+          ]
         },
         {
           "id": "true-false",
           "type": "circle-true-or-false",
+          "title": "True or False",
           "skill": "vocabulary",
           "level": 2,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 5,
           "source": {
             "book": "workbook",
             "page": 28,
             "exercise": 2
           },
-          "status": "planned",
-          "render": "mc",
           "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Circle true or false.",
+            "קבעו אם כל משפט נכון (true) או לא נכון (false)."
+          ],
           "items": [
             {
-              "p": "It's good to eat candy instead of vegetables.",
+              "p": "It's good to eat candy <b>instead</b> of vegetables.",
               "o": [
                 "true",
                 "false"
@@ -4805,7 +4901,7 @@
               "a": "false"
             },
             {
-              "p": "Shoes have pockets.",
+              "p": "Shoes have <b>pockets</b>.",
               "o": [
                 "true",
                 "false"
@@ -4813,7 +4909,7 @@
               "a": "false"
             },
             {
-              "p": "It's important to sleep so you aren't tired.",
+              "p": "It's important to sleep <b>so</b> you aren't tired.",
               "o": [
                 "true",
                 "false"
@@ -4821,7 +4917,7 @@
               "a": "true"
             },
             {
-              "p": "In football, one team plays against another team.",
+              "p": "In football, one team plays <b>against</b> another team.",
               "o": [
                 "true",
                 "false"
@@ -4829,7 +4925,7 @@
               "a": "true"
             },
             {
-              "p": "Everyone thinks fish is tasty.",
+              "p": "Everyone thinks fish is <b>tasty</b>.",
               "o": [
                 "true",
                 "false"
@@ -4837,62 +4933,361 @@
               "a": "false"
             },
             {
-              "p": "Green means go.",
+              "p": "Green <b>means</b> go.",
               "o": [
                 "true",
                 "false"
               ],
               "a": "true"
             }
-          ],
+          ]
+        },
+        {
+          "id": "choose-two-answers",
+          "type": "circle-two-correct-answers",
+          "title": "Circle the TWO Correct Answers",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
           "category": "vocabulary",
-          "step": 3
+          "step": 6,
+          "source": {
+            "book": "workbook",
+            "page": 29,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Circle the TWO correct answers.",
+            "הקיפו את שתי התשובות הנכונות."
+          ],
+          "items": [
+            {
+              "p": "You can send <b>messages</b> to … .",
+              "o": [
+                "your mom",
+                "your friend",
+                "your dog"
+              ],
+              "a": [
+                "your mom",
+                "your friend"
+              ]
+            },
+            {
+              "p": "… usually have <b>pockets</b> in them.",
+              "o": [
+                "Pants",
+                "Socks",
+                "Jackets"
+              ],
+              "a": [
+                "Pants",
+                "Jackets"
+              ]
+            },
+            {
+              "p": "You can <b>collect</b> … .",
+              "o": [
+                "time",
+                "books",
+                "toys"
+              ],
+              "a": [
+                "books",
+                "toys"
+              ]
+            },
+            {
+              "p": "<b>Competitions</b> are usually … .",
+              "o": [
+                "fun",
+                "difficult",
+                "clean"
+              ],
+              "a": [
+                "fun",
+                "difficult"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "complete-sentences-wb29",
+          "type": "complete-the-sentences",
+          "title": "Complete the Sentences — Word Practice",
+          "skill": "vocabulary",
+          "level": 1,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 7,
+          "source": {
+            "book": "workbook",
+            "page": 29,
+            "exercise": 4
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Complete the sentences with the words below.",
+            "השלימו את המשפטים עם המילים שלמטה."
+          ],
+          "passage": [
+            "<i>1. I <b>could</b> ride a bike when I was only four years old.</i>"
+          ],
+          "items": [
+            {
+              "p": "Today is a ______ day to go to the beach.",
+              "o": [
+                "perfect",
+                "only",
+                "could"
+              ],
+              "a": "perfect"
+            },
+            {
+              "p": "My brother ______ pencils. He has a hundred!",
+              "o": [
+                "collects",
+                "means",
+                "competitions"
+              ],
+              "a": "collects"
+            },
+            {
+              "p": "My sister and I love to take pictures. We do it ______ .",
+              "o": [
+                "all the time",
+                "only",
+                "perfect"
+              ],
+              "a": "all the time"
+            },
+            {
+              "p": "Susan is hungry because she ______ ate a sandwich for lunch.",
+              "o": [
+                "only",
+                "all the time",
+                "could"
+              ],
+              "a": "only"
+            },
+            {
+              "p": "I like to watch tennis ______ on TV.",
+              "o": [
+                "competitions",
+                "collects",
+                "means"
+              ],
+              "a": "competitions"
+            },
+            {
+              "p": "The girl's name is Agam and it ______ lake in Hebrew.",
+              "o": [
+                "means",
+                "collects",
+                "could"
+              ],
+              "a": "means"
+            }
+          ]
+        },
+        {
+          "id": "give-examples",
+          "type": "give-examples",
+          "title": "Give Examples",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 8,
+          "source": {
+            "book": "students",
+            "page": 35,
+            "exercise": 2
+          },
+          "origin": "adapted",
+          "render": "writing",
+          "instruction": [
+            "Give examples of the following. Do as many as you can. In the book you say them to a partner; here you write them.",
+            "כתבו דוגמאות לדברים הבאים. עשו כמה שאתם יכולים. בספר אומרים אותן לבן/בת זוג; כאן כותבים אותן."
+          ],
+          "passage": [
+            "<i>Falafel is very tasty.</i>"
+          ],
+          "items": [
+            {
+              "p": "something <b>tasty</b>"
+            },
+            {
+              "p": "a <b>perfect</b> gift for a friend"
+            },
+            {
+              "p": "something you do <b>all the time</b>"
+            },
+            {
+              "p": "something you put in your <b>pocket</b>"
+            },
+            {
+              "p": "something you buy <b>so</b> you can make a cake"
+            },
+            {
+              "p": "something you can do <b>instead</b> of watching TV"
+            },
+            {
+              "p": "something you <b>could</b> do when you were five years old"
+            }
+          ]
+        },
+        {
+          "id": "answer-questions-wb29",
+          "type": "answer-the-questions",
+          "title": "Answer the Questions",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 9,
+          "source": {
+            "book": "workbook",
+            "page": 29,
+            "exercise": 5
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Answer the questions in full sentences.",
+            "ענו על השאלות במשפטים שלמים."
+          ],
+          "items": [
+            {
+              "p": "What does your family do <b>all the time</b>?"
+            },
+            {
+              "p": "What do you <b>collect</b>?"
+            },
+            {
+              "p": "Who sends <b>messages</b> to you?"
+            },
+            {
+              "p": "What do you think is a <b>tasty</b> lunch?"
+            },
+            {
+              "p": "Where is the <b>perfect</b> place for a picnic?"
+            }
+          ]
+        },
+        {
+          "id": "write-the-words",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 10,
+          "source": {
+            "book": "workbook",
+            "page": 28
+          },
+          "status": "planned"
+        },
+        {
+          "id": "read-about-asahi",
+          "type": "read-and-write",
+          "title": "Read About Asahi",
+          "skill": "grammar",
+          "level": null,
+          "lane": "learn",
+          "category": "grammar",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 39,
+            "exercise": 1
+          },
+          "origin": "adapted",
+          "render": "writing",
+          "instruction": [
+            "Read what Asahi says. Then write about yourself and a friend. Use the speech bubble as a model. In the book you tell a partner; here you write it.",
+            "קראו מה אסהי אומר. לאחר מכן כתבו על עצמכם ועל חבר/ה. השתמשו בבועת הדיבור כדוגמה. בספר מספרים לבן/בת זוג; כאן כותבים."
+          ],
+          "passage": [
+            "Hi. I'm Asahi.",
+            "I <b>live</b> in Tokyo.",
+            "I <b>go</b> to school five days a week.",
+            "I <b>eat</b> breakfast at school.",
+            "I <b>study</b> every afternoon.",
+            "Riku is my friend.",
+            "He <b>lives</b> in Tokyo, too.",
+            "He <b>goes</b> to school five days a week.",
+            "He <b>eats</b> breakfast at home.",
+            "He usually <b>studies</b> in the evening."
+          ],
+          "items": [
+            {
+              "p": "Write about yourself. Use <b>I …</b>"
+            },
+            {
+              "p": "Write about a friend. Use <b>He …</b> or <b>She …</b>"
+            }
+          ]
         },
         {
           "id": "highlight-present-simple",
           "type": "highlight-and-translate",
+          "title": "Highlight and Translate: Present Simple",
           "skill": "grammar",
           "level": null,
-          "lane": "practice",
+          "lane": "learn",
+          "category": "grammar",
+          "step": 2,
           "source": {
             "book": "workbook",
-            "page": 31
+            "page": 31,
+            "note": "Highlight"
           },
-          "status": "planned",
-          "render": "writing",
           "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Highlight the subject and the verb in each sentence. Then translate it.",
+            "הדגישו את הנושא והפועל בכל משפט. לאחר מכן, תרגמו אותו."
+          ],
           "items": [
             {
-              "p": "She <b>catches</b> the train every morning."
+              "p": "<b>She catches</b> the train every morning. &nbsp; <i><span dir=\"rtl\">היא תופסת את הרכבת כל בוקר.</span></i>"
             },
             {
-              "p": "I <b>play</b> basketball on Wednesdays."
+              "p": "<b>I play</b> basketball on Wednesdays."
             },
             {
-              "p": "He <b>goes</b> to work every day."
+              "p": "<b>He goes</b> to work every day."
             },
             {
-              "p": "We <b>eat</b> dinner at six o'clock."
+              "p": "<b>We eat</b> dinner at six o'clock."
             },
             {
-              "p": "It <b>rains</b> in the winter."
+              "p": "<b>It rains</b> in the winter."
             },
             {
-              "p": "John <b>tries</b> to get to school early."
+              "p": "<b>John tries</b> to get to school early."
             },
             {
-              "p": "Molly <b>visits</b> her grandma once a week."
+              "p": "<b>Molly visits</b> her grandma once a week."
             }
-          ],
-          "category": "grammar",
-          "step": 2
+          ]
         },
         {
           "id": "spelling-table",
           "type": "sort-into-columns",
+          "title": "Write the Words — s / es / ies",
           "skill": "grammar",
           "level": 1,
           "lane": "practice",
+          "category": "grammar",
+          "step": 3,
           "source": {
             "book": "workbook",
             "page": 31,
@@ -4903,9 +5298,17 @@
             "page": 39,
             "exercise": 3
           },
-          "status": "planned",
-          "render": "bins",
           "origin": "book",
+          "render": "bins",
+          "bins": [
+            "s",
+            "es",
+            "ies"
+          ],
+          "instruction": [
+            "Write the words in the correct column.",
+            "כתבו את המילים שלמטה בטור הנכון."
+          ],
           "items": [
             {
               "v": "bake",
@@ -4955,29 +5358,29 @@
               "v": "copy",
               "bin": "ies"
             }
-          ],
-          "bins": [
-            "s",
-            "es",
-            "ies"
-          ],
-          "category": "grammar",
-          "step": 3
+          ]
         },
         {
           "id": "circle-present-simple",
           "type": "circle-the-correct-words",
+          "title": "Circle the Correct Verb",
           "skill": "grammar",
-          "level": 2,
+          "level": 1,
           "lane": "practice",
+          "category": "grammar",
+          "step": 4,
           "source": {
             "book": "workbook",
             "page": 31,
             "exercise": 2
           },
-          "status": "planned",
-          "render": "mc",
           "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Circle the correct words to complete the sentences.",
+            "הקיפו את המילים הנכונות כדי להשלים את המשפטים."
+          ],
           "items": [
             {
               "p": "I ______ to music in the car.",
@@ -5027,23 +5430,519 @@
               ],
               "a": "cries"
             }
-          ],
+          ]
+        },
+        {
+          "id": "complete-sentences-wb32",
+          "type": "complete-the-sentences",
+          "title": "Complete the Sentences — Present Simple",
+          "skill": "grammar",
+          "level": 2,
+          "lane": "practice",
           "category": "grammar",
-          "step": 4
+          "step": 5,
+          "source": {
+            "book": "workbook",
+            "page": 32,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "writing",
+          "wordBank": [
+            "carry",
+            "drink",
+            "catch",
+            "wake up",
+            "live",
+            "write"
+          ],
+          "instruction": [
+            "Complete the sentences with the verbs below. Remember to add s, es or ies to the verb when you need to.",
+            "השלימו את המשפטים עם הפעלים שלמטה. ודאו שאתם מוסיפים s, es או ies לפעלים כשצריך."
+          ],
+          "passage": [
+            "<i>1. Dad <b>drinks</b> coffee once a day.</i>"
+          ],
+          "items": [
+            {
+              "p": "Billy ______ all the words in his notebook."
+            },
+            {
+              "p": "I always ______ early."
+            },
+            {
+              "p": "Adi ______ a heavy bag to school every day."
+            },
+            {
+              "p": "You ______ in a big house."
+            },
+            {
+              "p": "Noa usually ______ the train at 7:00."
+            }
+          ]
+        },
+        {
+          "id": "write-about-neta",
+          "type": "write-sentences-from-table",
+          "title": "Write About Neta",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "category": "grammar",
+          "step": 6,
+          "source": {
+            "book": "students",
+            "page": 39,
+            "exercise": 2
+          },
+          "origin": "adapted",
+          "render": "writing",
+          "wordBank": [
+            "go to bed",
+            "go to school",
+            "eat lunch",
+            "do homework",
+            "eat breakfast",
+            "play basketball",
+            "always",
+            "usually",
+            "in the morning / afternoon / evening",
+            "every morning / afternoon / evening"
+          ],
+          "scene": [
+            "The book shows six pictures of Neta's day, with the time under each one. They are described here in words.",
+            "בספר מופיעות שש תמונות מהיום של נטע, עם השעה מתחת לכל אחת. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Write sentences about the things Neta does every day and when she does them. Do as many as you can.",
+            "כתבו משפטים על הדברים שנטע עושה כל יום ומתי היא עושה אותם. עשו כמה שאתם יכולים."
+          ],
+          "passage": [
+            "<i>1. Neta always eats breakfast at seven thirty.</i>"
+          ],
+          "items": [
+            {
+              "p": "Neta is eating breakfast at the table. &nbsp; <b>7:30</b>"
+            },
+            {
+              "p": "Neta is walking up to the school building. &nbsp; <b>8:00</b>"
+            },
+            {
+              "p": "Neta is eating lunch at the table. &nbsp; <b>14:00</b>"
+            },
+            {
+              "p": "Neta is writing at her desk, with her books open. &nbsp; <b>16:30</b>"
+            },
+            {
+              "p": "Neta is playing basketball with a friend. &nbsp; <b>18:00</b>"
+            },
+            {
+              "p": "Neta is getting into bed and turning off the lamp. &nbsp; <b>21:30</b>"
+            }
+          ]
+        },
+        {
+          "id": "write-about-your-day",
+          "type": "about-you",
+          "title": "Write About Your Day",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "category": "grammar",
+          "step": 7,
+          "source": {
+            "book": "students",
+            "page": 39,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Now write sentences about things you do every day and when you do them. Use the words in the exercise above or your own words. Do as many as you can.",
+            "עכשיו כתבו משפטים על דברים שאתם עושים כל יום ומתי אתם עושים אותם. השתמשו במילים מהתרגיל שלמעלה או במילים שלכם. עשו כמה שאתם יכולים."
+          ],
+          "passage": [
+            "<i>1. I eat breakfast at seven o'clock every morning.</i>"
+          ],
+          "items": [
+            {
+              "p": "Write sentences about your own day."
+            }
+          ]
+        },
+        {
+          "id": "write-examples-wb32",
+          "type": "write-examples",
+          "title": "Write Examples",
+          "skill": "grammar",
+          "level": 3,
+          "lane": "practice",
+          "category": "grammar",
+          "step": 8,
+          "source": {
+            "book": "workbook",
+            "page": 32,
+            "exercise": 4
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Write examples of the following. Write full sentences.",
+            "כתבו דוגמאות לדברים הבאים. כתבו משפטים שלמים."
+          ],
+          "items": [
+            {
+              "p": "something you <b>sometimes</b> do"
+            },
+            {
+              "p": "something you <b>always</b> do"
+            },
+            {
+              "p": "something you <b>never</b> do"
+            },
+            {
+              "p": "something you do <b>every Friday</b>"
+            },
+            {
+              "p": "something you do <b>once a year</b>"
+            }
+          ]
+        },
+        {
+          "id": "read-alis-blog",
+          "type": "read-and-write",
+          "title": "Read Ali's Blog",
+          "skill": "writing",
+          "level": null,
+          "lane": "learn",
+          "category": "writing",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 40,
+            "exercise": 1
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Read Ali's blog and copy the words with capital letters.",
+            "קראו את הבלוג של עלי והעתיקו את המילים שנכתבות באותיות גדולות."
+          ],
+          "passage": [
+            "<b class=\"rHead\">Ali's Blog</b>",
+            "My name is Ali. I live in Jaffa. I'm 11 years old and my birthday is August 5th. I go to Green Park School.",
+            "I have two brothers. I also have a cat. His name is Felix.",
+            "I am busy in the afternoons. I go to a cooking class on Mondays. I have guitar lessons on Thursdays. I also swim three times a week. We have competitions once a month.",
+            "I'm looking for new friends! Do you want to be my friend? Please tell me about yourself <span dir=\"rtl\">(עצמך)</span>."
+          ],
+          "items": [
+            {
+              "p": "Copy the words with capital letters."
+            }
+          ]
+        },
+        {
+          "id": "capital-letters-sort",
+          "type": "sort-into-columns",
+          "title": "Correct and Write the Words",
+          "skill": "writing",
+          "level": 1,
+          "lane": "practice",
+          "category": "writing",
+          "step": 2,
+          "source": {
+            "book": "workbook",
+            "page": 32,
+            "exercise": 1,
+            "note": "Writing"
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 40
+          },
+          "origin": "adapted",
+          "render": "bins",
+          "bins": [
+            "People",
+            "Places",
+            "Days",
+            "Months"
+          ],
+          "instruction": [
+            "In the workbook you write these words again with capital letters. Here they are already corrected — put each one in the right column.",
+            "בחוברת כותבים את המילים האלה מחדש באותיות גדולות. כאן הן כבר מתוקנות — שימו כל אחת בטור הנכון."
+          ],
+          "passage": [
+            "<b class=\"rHead\">Writing Tip: Capital Letters</b>",
+            "In English we use capital letters at the beginning of every sentence, for the word <b>I</b>, and for the names of people, places, days of the week and months.",
+            "<span dir=\"rtl\">באנגלית, אנחנו משתמשים באותיות גדולות בתחילת כל משפט, למילה I, ולשמות של אנשים, מקומות, ימות השבוע וחודשים.</span>"
+          ],
+          "items": [
+            {
+              "v": "Katie Smith",
+              "bin": "People"
+            },
+            {
+              "v": "Doctor Cohen",
+              "bin": "People"
+            },
+            {
+              "v": "Sam",
+              "bin": "People"
+            },
+            {
+              "v": "New York",
+              "bin": "Places"
+            },
+            {
+              "v": "Forest School",
+              "bin": "Places"
+            },
+            {
+              "v": "Japan",
+              "bin": "Places"
+            },
+            {
+              "v": "Tuesday",
+              "bin": "Days"
+            },
+            {
+              "v": "Sunday",
+              "bin": "Days"
+            },
+            {
+              "v": "June",
+              "bin": "Months"
+            },
+            {
+              "v": "December",
+              "bin": "Months"
+            }
+          ]
+        },
+        {
+          "id": "complete-sentences-wb33",
+          "type": "complete-the-sentences",
+          "title": "Complete the Sentences — Capital Letters",
+          "skill": "writing",
+          "level": 2,
+          "lane": "practice",
+          "category": "writing",
+          "step": 3,
+          "source": {
+            "book": "workbook",
+            "page": 33,
+            "exercise": 2
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Complete the sentences with words from the exercise above.",
+            "השלימו את המשפטים עם מילים מהתרגיל שלמעלה."
+          ],
+          "passage": [
+            "<i>1. Wednesday comes after <b>Tuesday</b>.</i>"
+          ],
+          "items": [
+            {
+              "p": "______ helps me when I'm sick.",
+              "o": [
+                "Doctor Cohen",
+                "Katie Smith",
+                "Forest School"
+              ],
+              "a": "Doctor Cohen"
+            },
+            {
+              "p": "Tokyo is a city in ______ .",
+              "o": [
+                "Japan",
+                "New York",
+                "Forest School"
+              ],
+              "a": "Japan"
+            },
+            {
+              "p": "______ comes before July.",
+              "o": [
+                "June",
+                "December",
+                "Sunday"
+              ],
+              "a": "June"
+            },
+            {
+              "p": "______ is a famous city.",
+              "o": [
+                "New York",
+                "Forest School",
+                "Japan"
+              ],
+              "a": "New York"
+            },
+            {
+              "p": "It's usually cold in the month of ______ .",
+              "o": [
+                "December",
+                "June",
+                "Tuesday"
+              ],
+              "a": "December"
+            }
+          ]
+        },
+        {
+          "id": "highlight-and-write",
+          "type": "highlight-and-write",
+          "title": "Highlight and Write",
+          "skill": "writing",
+          "level": 3,
+          "lane": "practice",
+          "category": "writing",
+          "step": 4,
+          "source": {
+            "book": "workbook",
+            "page": 33,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Highlight the words in the text that need capital letters. Then write Kamali's blog correctly.",
+            "הדגישו את המילים בקטע שצריכות אותיות גדולות. לאחר מכן, כתבו את הבלוג של קמאלי בצורה הנכונה."
+          ],
+          "passage": [
+            "<b class=\"rHead\">Kamali's Blog</b>",
+            "my name is kamali and i live in holon, israel. i am 11 years old and i go to ben gurion school. i have guitar lessons every monday and wednesday. my music school has a big show in december. i am playing a song by taylor swift."
+          ],
+          "items": [
+            {
+              "p": "Write Kamali's blog correctly. Start with: <b>My</b> …"
+            }
+          ]
+        },
+        {
+          "id": "my-fact-file",
+          "type": "fact-file",
+          "title": "My Fact File",
+          "skill": "writing",
+          "level": null,
+          "lane": "practice",
+          "category": "writing",
+          "step": 5,
+          "source": {
+            "book": "students",
+            "page": 41,
+            "exercise": 2,
+            "note": "Step 1"
+          },
+          "linkedTo": {
+            "book": "workbook",
+            "page": 33
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Complete the fact file about yourself.",
+            "מלאו את דף הפרטים על עצמכם."
+          ],
+          "items": [
+            {
+              "p": "Name:"
+            },
+            {
+              "p": "City / Town:"
+            },
+            {
+              "p": "Age:"
+            },
+            {
+              "p": "School:"
+            },
+            {
+              "p": "Birthday:"
+            },
+            {
+              "p": "Brothers / Sisters:"
+            },
+            {
+              "p": "Pets:"
+            },
+            {
+              "p": "Hobbies:"
+            }
+          ]
+        },
+        {
+          "id": "write-your-blog",
+          "type": "write-a-blog",
+          "title": "Write Your Blog",
+          "skill": "writing",
+          "level": null,
+          "lane": "practice",
+          "category": "writing",
+          "step": 6,
+          "source": {
+            "book": "students",
+            "page": 41,
+            "exercise": 2,
+            "note": "Steps 2–3"
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 40,
+            "exercise": 1
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Complete the sentences so that they are true for you. Then write your blog. Use Ali's blog as a model, and remember to use periods at the end of every sentence.",
+            "השלימו את המשפטים כך שיהיו נכונים לגביכם. לאחר מכן כתבו את הבלוג שלכם. השתמשו בבלוג של עלי כדוגמה, וזכרו לשים נקודה בסוף כל משפט."
+          ],
+          "items": [
+            {
+              "p": "My name is …"
+            },
+            {
+              "p": "I live in …"
+            },
+            {
+              "p": "I'm …"
+            },
+            {
+              "p": "I go to …"
+            },
+            {
+              "p": "My birthday is …"
+            },
+            {
+              "p": "I have …"
+            },
+            {
+              "p": "I also have …"
+            },
+            {
+              "p": "After school, I …"
+            },
+            {
+              "p": "<b>Now write your blog.</b>"
+            }
+          ]
         }
       ],
       "skills": {
         "reading": {
           "active": false,
-          "reason": "No reading text for this part in the scanned material."
+          "reason": "Part 4's reading pages are not among the pages in scope for this project."
         },
         "listening": {
           "active": false,
-          "reason": "No listening material for this part in the scanned material."
+          "reason": "No listening material for this part in the pages in scope."
         },
         "speaking": {
           "active": false,
-          "reason": "No speaking page for this part in the scanned material."
+          "reason": "The book's partner tasks (Student's Book 35.2 and 39.1) are included here as writing tasks; no separate Speaking page is in scope."
         }
       },
       "phonics": {
@@ -5053,10 +5952,6 @@
         "source": {
           "book": "students",
           "page": 34
-        },
-        "practiceOn": {
-          "book": "workbook",
-          "page": 234
         },
         "patterns": [
           {
@@ -5076,8 +5971,7 @@
             ]
           }
         ],
-        "active": false,
-        "reason": "The phonics practice pages (Workbook p.234) were not in the scanned material."
+        "active": true
       },
       "hero": "part-4"
     },
