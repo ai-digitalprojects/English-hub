@@ -1,0 +1,235 @@
+/* Unit overview — scoped restyle.
+
+   Everything here hangs off body.screen-unit, which render.js sets only on a
+   section screen that has parts. Nothing else on the site is affected, so this
+   can be reviewed on its own and promoted later if it is approved.
+
+   Palette: deep navy and muted blue for structure, warm ivory and off-white for
+   surfaces, soft sage and muted gold as the only accents. */
+
+body.screen-unit{
+  --u-navy:  #152B40;
+  --u-blue:  #46658A;
+  --u-ivory: #F6F2EA;
+  --u-card:  #FFFDF9;
+  --u-sage:  #8FA68C;
+  --u-gold:  #C9A25A;
+  --u-ink:   #1C2733;
+  --u-mute:  #5A6773;   /* muted, but still AA on both the card and the page */
+  --u-hair:  #E8E1D5;
+  background:var(--u-ivory);
+}
+
+/* ---------------------------------------------------------------- top bar
+   Thinner and quieter: a hairline instead of the gold band, and buttons that
+   read as links until you reach for them. */
+body.screen-unit .topbar{
+  background:var(--u-navy);
+  padding:9px 22px;
+  border-bottom:1px solid rgba(201,162,90,0.38);
+  box-shadow:0 1px 14px rgba(21,43,64,0.10);
+}
+body.screen-unit .topbar .brand{ font-size:0.82rem; font-weight:700; letter-spacing:0.2px; }
+body.screen-unit .topbar .brand small{
+  font-size:0.66rem; color:#9FAEBC; letter-spacing:0.3px; margin-top:1px;
+}
+body.screen-unit .topbar .navbtns{ gap:4px; }
+body.screen-unit .navbtn{
+  background:transparent; border:1px solid transparent; color:#CBD6E0;
+  padding:5px 11px; font-size:0.76rem; font-weight:500; letter-spacing:0.2px;
+}
+body.screen-unit .navbtn:hover{
+  background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.14); color:#fff;
+}
+
+/* ------------------------------------------------------------ breadcrumb */
+body.screen-unit .crumbs{ margin:22px 0 14px; font-size:0.78rem; }
+body.screen-unit .crumb{ color:var(--u-mute); }
+body.screen-unit .crumb.current{ color:var(--u-ink); font-weight:600; }
+
+/* ----------------------------------------------------------------- hero
+   Shorter and image-led. The picture is allowed to be a picture; only the text
+   column sits under a gradient, and it fades out well before the right edge. */
+body.screen-unit .unitView .hero{
+  min-height:0; height:214px;
+  margin:0 0 26px;
+  border-radius:20px;
+  align-items:center;
+  box-shadow:0 2px 6px rgba(21,43,64,0.06), 0 18px 40px rgba(21,43,64,0.10);
+}
+/* An ellipse anchored off the left edge, not a panel with a seam down it: the
+   shade is densest behind the words and has gone by the middle of the picture.
+   A whisper of a linear wash underneath keeps the very edge from going pale. */
+body.screen-unit .unitView .hero.hasImg::after{
+  background:
+    radial-gradient(118% 150% at -8% 50%,
+      rgba(15,33,50,0.93) 0%,
+      rgba(15,33,50,0.86) 26%,
+      rgba(15,33,50,0.58) 44%,
+      rgba(15,33,50,0.22) 60%,
+      rgba(15,33,50,0.00) 74%),
+    linear-gradient(95deg,
+      rgba(15,33,50,0.34) 0%,
+      rgba(15,33,50,0.10) 40%,
+      rgba(15,33,50,0.00) 66%);
+}
+/* A legacy rule from the first design still centres hero text. An editorial
+   left edge reads better against a left-anchored shade. */
+body.screen-unit .unitView .heroInner{ padding:0 44px; max-width:56%; text-align:left; }
+
+body.screen-unit .unitView .heroEyebrow{
+  font-size:0.66rem; font-weight:700; letter-spacing:2.4px;
+  color:rgba(255,255,255,0.68); margin:0 0 12px;
+}
+body.screen-unit .unitView .heroTitle{
+  font-size:2.9rem; font-weight:500; line-height:1.02;
+  letter-spacing:-0.4px; margin:0;
+  text-shadow:0 2px 10px rgba(10,24,38,0.42);
+}
+body.screen-unit .unitView .heroSub{
+  margin:12px 0 0; font-size:1.02rem; font-weight:400;
+  color:rgba(255,255,255,0.90); letter-spacing:0.1px;
+}
+/* The counts are reference, not headline: a hairline sets them apart. */
+body.screen-unit .unitView .heroMeta{
+  margin:16px 0 0; padding-top:13px; font-size:0.76rem; font-weight:500;
+  letter-spacing:1.1px; text-transform:uppercase;
+  color:rgba(255,255,255,0.74);
+  border-top:1px solid rgba(255,255,255,0.22);
+  display:inline-block;
+}
+
+/* ------------------------------------------------------- note under hero
+   A source note, not a sentence the eye has to stop for. */
+body.screen-unit .unitView .sectionNote{
+  display:flex; align-items:baseline; gap:9px;
+  margin:0 0 30px; padding:0 2px;
+  font-size:0.78rem; font-style:normal; line-height:1.55;
+  color:var(--u-mute); letter-spacing:0.1px; max-width:62ch;
+}
+body.screen-unit .unitView .noteMark{
+  flex:none; width:16px; height:1px; margin-top:0.62em;
+  background:var(--u-gold); opacity:0.75;
+}
+
+/* ----------------------------------------------------------------- cards */
+body.screen-unit .unitView .stageGrid{
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+body.screen-unit .unitView .stageCard{
+  background:var(--u-card);
+  border:1px solid var(--u-hair);
+  border-radius:18px;
+  padding:24px 24px 22px;
+  box-shadow:0 1px 2px rgba(21,43,64,0.04), 0 10px 26px rgba(21,43,64,0.055);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+body.screen-unit .unitView .stageCard:hover{
+  transform:translateY(-2px);
+  border-color:#DCD3C3;
+  box-shadow:0 2px 4px rgba(21,43,64,0.05), 0 18px 40px rgba(21,43,64,0.10);
+}
+body.screen-unit .unitView .stageCard.done{ border-color:rgba(143,166,140,0.55); }
+
+body.screen-unit .unitView .stageHead{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  margin-bottom:14px;
+}
+body.screen-unit .unitView .stageNum{
+  background:none; padding:0; border-radius:0;
+  font-size:0.63rem; font-weight:700; letter-spacing:1.8px;
+  text-transform:uppercase; color:var(--u-blue);
+}
+/* The emoji becomes a quiet mark rather than a sticker. */
+/* The emoji become quiet marks: held in a soft tile and pulled back towards
+   the palette, so six cards do not read as six stickers. */
+body.screen-unit .unitView .stageIcon{
+  margin:0; font-size:1.02rem; line-height:1;
+  width:34px; height:34px; border-radius:11px;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(70,101,138,0.07);
+  filter:grayscale(0.42) saturate(0.82);
+}
+body.screen-unit .unitView .stageCard h3{
+  margin:0 0 16px; font-size:1.38rem; font-weight:500; line-height:1.2;
+  letter-spacing:-0.2px; color:var(--u-navy);
+}
+
+/* The category strip: an icon, a muted word, the faintest tint. */
+body.screen-unit .unitView .stageCats{
+  display:flex; flex-wrap:wrap; gap:6px; margin:0 0 20px;
+}
+body.screen-unit .unitView .stageCat{
+  display:inline-flex; align-items:center; gap:4px;
+  padding:3px 9px 3px 7px; border-radius:7px;
+  font-size:0.7rem; font-weight:500; letter-spacing:0.1px;
+  color:var(--u-mute); background:rgba(70,101,138,0.055);
+}
+body.screen-unit .unitView .stageCat i{
+  font-style:normal; font-size:0.72rem;
+  filter:grayscale(0.55) saturate(0.75); opacity:0.85;
+}
+body.screen-unit .unitView .stageCat.cat-vocabulary{ background:rgba(201,162,90,0.09); }
+body.screen-unit .unitView .stageCat.cat-grammar   { background:rgba(70,101,138,0.07); }
+body.screen-unit .unitView .stageCat.cat-reading   { background:rgba(143,166,140,0.12); }
+body.screen-unit .unitView .stageCat.cat-writing   { background:rgba(70,101,138,0.07); }
+body.screen-unit .unitView .stageCat.cat-review    { background:rgba(201,162,90,0.09); }
+body.screen-unit .unitView .stageCat.cat-warmup    { background:rgba(201,162,90,0.09); }
+
+/* One thin rail and one line of text — no badge, no score. */
+body.screen-unit .unitView .stageFoot{ margin-top:auto; }
+body.screen-unit .unitView .stageCard .pbarOuter{
+  height:3px; background:var(--u-hair); border-radius:2px; margin:0 0 9px;
+}
+body.screen-unit .unitView .stageCard .pbarInner{
+  background:var(--u-sage); border-radius:2px;
+}
+body.screen-unit .unitView .stageState{
+  font-size:0.72rem; font-weight:500; letter-spacing:0.2px; color:var(--u-mute);
+}
+/* No opacity here: it would pull the smallest line on the card under the
+   contrast floor. The colour alone carries the quietness. */
+body.screen-unit .unitView .stageState.muted{ color:var(--u-mute); }
+body.screen-unit .unitView .stageState.done{ color:#5C7F5E; font-weight:600; }
+
+/* ------------------------------------------------------------- tablet */
+@media(max-width:980px){
+  body.screen-unit .unitView .stageGrid{ grid-template-columns:repeat(2, 1fr); }
+  body.screen-unit .unitView .hero{ height:208px; }
+  body.screen-unit .unitView .heroInner{ padding:0 34px; max-width:68%; }
+  body.screen-unit .unitView .heroTitle{ font-size:2.4rem; }
+}
+
+/* ------------------------------------------------------------- mobile */
+@media(max-width:620px){
+  body.screen-unit .topbar{ padding:8px 14px; }
+  body.screen-unit .crumbs{ margin:16px 0 12px; }
+
+  body.screen-unit .unitView .stageGrid{ grid-template-columns:1fr; gap:14px; }
+  body.screen-unit .unitView .stageCard{ padding:20px 20px 18px; border-radius:16px; }
+  body.screen-unit .unitView .stageCard h3{ font-size:1.25rem; margin-bottom:14px; }
+
+  body.screen-unit .unitView .hero{
+    height:188px; border-radius:16px; margin-bottom:20px;
+    align-items:flex-end;
+  }
+  body.screen-unit .unitView .heroInner{ padding:0 20px 20px; max-width:100%; }
+  /* The text crosses the whole band on a phone, so the gradient does too — the
+     sky stays visible above it. */
+  body.screen-unit .unitView .hero.hasImg::after{
+    background:linear-gradient(178deg,
+      rgba(17,36,54,0.20) 0%, rgba(17,36,54,0.66) 16%,
+      rgba(17,36,54,0.88) 48%, rgba(17,36,54,0.94) 100%);
+  }
+  /* The eyebrow repeats the masthead that is already two lines above it in the
+     top bar. On a phone the band carries the unit, not the brand — and losing
+     the line lets the whole block sit lower, where the shade is. */
+  body.screen-unit .unitView .heroEyebrow{ display:none; }
+  body.screen-unit .unitView .heroTitle{ font-size:2rem; }
+  body.screen-unit .unitView .heroSub{ font-size:0.92rem; margin-top:8px; }
+  body.screen-unit .unitView .heroMeta{
+    font-size:0.68rem; margin-top:11px; padding-top:9px; letter-spacing:0.9px;
+  }
+  body.screen-unit .unitView .sectionNote{ margin-bottom:22px; font-size:0.75rem; }
+}

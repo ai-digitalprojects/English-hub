@@ -17,7 +17,16 @@ function categoryStrip(part){
   const groups = groupByCategory(visibleActivities(part));
   if(!groups.length) return '';
   return `<p class="stageCats">${groups.map(g =>
-    `<span class="stageCat cat-${g.key}" title="${g.def.en}">${g.def.icon} ${g.def.en}</span>`).join('')}</p>`;
+    `<span class="stageCat cat-${g.key}" title="${g.def.en}"><i aria-hidden="true">${g.def.icon}</i>${g.def.en}</span>`
+  ).join('')}</p>`;
+}
+
+/* The progress line reads as a sentence, not a score: a count while there is
+   something left, a single word once there is not. */
+function stageProgress(pr){
+  if(pr.total && pr.done === pr.total) return '<span class="stageState done">Complete</span>';
+  if(pr.done) return `<span class="stageState">${pr.done} of ${pr.total} done</span>`;
+  return `<span class="stageState muted">${pr.total} activities</span>`;
 }
 
 function stageCard(sectionId, part){
@@ -25,14 +34,16 @@ function stageCard(sectionId, part){
   const done = pr.total && pr.done === pr.total;
   return `
   <a class="stageCard${done ? ' done' : ''}" href="${hashFor({ view:'part', sectionId, partId:part.id })}">
-    <div class="stageTop">
+    <div class="stageHead">
       <span class="stageNum">${part.number ? 'Part ' + part.number : 'Review'}</span>
-      <span class="stageTick">${done ? '<span class="fxTick">✓</span>' : pr.done ? pr.done + '/' + pr.total : ''}</span>
+      <span class="stageIcon" aria-hidden="true">${part.icon}</span>
     </div>
-    <span class="stageIcon" aria-hidden="true">${part.icon}</span>
-    <h3>${part.title}</h3>
+    <h3 class="serif">${part.title}</h3>
     ${categoryStrip(part)}
-    <div class="pbarOuter thin"><div class="pbarInner" style="width:${pr.pct}%"></div></div>
+    <div class="stageFoot">
+      <div class="pbarOuter thin"><div class="pbarInner" style="width:${pr.pct}%"></div></div>
+      ${stageProgress(pr)}
+    </div>
   </a>`;
 }
 
@@ -51,10 +62,12 @@ function renderSection(){
   });
 
   if(hasParts(section)){
-    const note = section.titleNote ? `<p class="sectionNote">${section.titleNote}</p>` : '';
-    return hero + note + `<div class="stageGrid">${
+    const note = section.titleNote
+      ? `<p class="sectionNote"><span class="noteMark" aria-hidden="true"></span>${section.titleNote}</p>`
+      : '';
+    return `<div class="unitView">${hero}${note}<div class="stageGrid">${
       section.parts.map(p => stageCard(section.id, p)).join('')
-    }</div>`;
+    }</div></div>`;
   }
   /* A section without parts still offers the printable word worksheet, which
      only the Part screen used to draw. */
