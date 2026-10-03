@@ -383,56 +383,6 @@
           "step": 1
         },
         {
-          "id": "read-better-long-a",
-          "type": "read-better",
-          "title": "Read Better: long a",
-          "skill": "phonics",
-          "level": null,
-          "lane": "learn",
-          "category": "vocabulary",
-          "step": 2,
-          "source": {
-            "book": "students",
-            "page": 12
-          },
-          "origin": "book",
-          "render": "bins",
-          "bins": [
-            "ai, ay",
-            "a_e"
-          ],
-          "instruction": [
-            "We write ai or ay, or a_e. We say the long a sound. Put each word in its group.",
-            "כותבים ai או ay, או a_e. אומרים את צליל ה-a הארוך. שימו כל מילה בקבוצה שלה."
-          ],
-          "items": [
-            {
-              "v": "afraid",
-              "bin": "ai, ay"
-            },
-            {
-              "v": "wait",
-              "bin": "ai, ay"
-            },
-            {
-              "v": "always",
-              "bin": "ai, ay"
-            },
-            {
-              "v": "take",
-              "bin": "a_e"
-            },
-            {
-              "v": "game",
-              "bin": "a_e"
-            },
-            {
-              "v": "late",
-              "bin": "a_e"
-            }
-          ]
-        },
-        {
           "id": "choose-pictures",
           "type": "choose-the-correct-pictures",
           "title": "Choose the Correct Picture",
