@@ -1184,7 +1184,7 @@
             "page": 15,
             "exercise": 4
           },
-          "origin": "book",
+          "origin": "adapted",
           "render": "reading",
           "chunks": [
             "<b class=\"rHead\">A · My favorite tea house</b><br>The tea house is in a beautiful garden. We don't wear shoes in the tea house. We leave our shoes outside. We sit on the floor. It's a custom <span dir=\"rtl\">(מנהג)</span> in Japan. We can see how they make the tea. Their green tea is the best.",
@@ -1313,7 +1313,11 @@
               "p": "Haruki wrote this for Lisa. Write at least two things Haruki plans to do with her."
             }
           ],
-          "lane": "practice"
+          "lane": "practice",
+          "scene": [
+            "The text is exactly as printed in the book. The questions after it were built from the text itself.",
+            "הטקסט מועתק מהספר במדויק. השאלות שאחריו נבנו מתוך הטקסט עצמו."
+          ]
         },
         {
           "id": "write-sentences",
@@ -3156,10 +3160,14 @@
       "sources": {
         "studentsBook": [
           28,
-          29
+          29,
+          30
         ],
         "workbook": [
-          24
+          24,
+          25,
+          26,
+          27
         ]
       },
       "vocabulary": [
@@ -3180,8 +3188,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3190,7 +3197,7 @@
         },
         {
           "en": "take a train",
-          "he": "לנסוע ברכבת",
+          "he": "לקחת רכבת",
           "ar": null,
           "definition": null,
           "example": null,
@@ -3205,8 +3212,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3215,7 +3221,7 @@
         },
         {
           "en": "take (something) away",
-          "he": "לקחת (משהו) משם",
+          "he": "לקחת (משהו)",
           "ar": null,
           "definition": null,
           "example": null,
@@ -3230,8 +3236,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3240,7 +3245,7 @@
         },
         {
           "en": "Take care!",
-          "he": "שמרו על עצמכם!",
+          "he": "תשמור / תשמרי על עצמך",
           "ar": null,
           "definition": null,
           "example": null,
@@ -3255,8 +3260,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3265,7 +3269,7 @@
         },
         {
           "en": "take (something) off",
-          "he": "להוריד (בגד)",
+          "he": "להוריד (משהו)",
           "ar": null,
           "definition": null,
           "example": null,
@@ -3280,8 +3284,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3305,8 +3308,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3330,8 +3332,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3355,8 +3356,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3380,8 +3380,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3405,8 +3404,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3415,7 +3413,7 @@
         },
         {
           "en": "get off",
-          "he": "לרדת (מכלי תחבורה)",
+          "he": "לרדת",
           "ar": null,
           "definition": null,
           "example": null,
@@ -3430,8 +3428,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3440,7 +3437,7 @@
         },
         {
           "en": "get on",
-          "he": "לעלות (על כלי תחבורה)",
+          "he": "לעלות",
           "ar": null,
           "definition": null,
           "example": null,
@@ -3455,8 +3452,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3465,7 +3461,7 @@
         },
         {
           "en": "visitor",
-          "he": "מבקר, אורח",
+          "he": "אורח/ת, מבקר/ת",
           "ar": null,
           "definition": null,
           "example": null,
@@ -3480,8 +3476,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3490,7 +3485,7 @@
         },
         {
           "en": "welcome",
-          "he": "ברוכים הבאים",
+          "he": "ברוך/כה הבא/ה, ברוכים הבאים",
           "ar": null,
           "definition": null,
           "example": null,
@@ -3505,8 +3500,7 @@
               "page": 24
             }
           ],
-          "heSource": "added-for-teaching",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -3516,6 +3510,34 @@
       ],
       "grammar": [],
       "activities": [
+        {
+          "id": "warm-up",
+          "type": "think-about",
+          "title": "Think About… trains",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "category": "warmup",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Think about trains. Write what you think.",
+            "חשבו על רכבות. כתבו מה אתם חושבים."
+          ],
+          "items": [
+            {
+              "p": "Why do people ride trains?"
+            },
+            {
+              "p": "Do you ride the train sometimes? Where do you go? Who do you ride with?"
+            }
+          ]
+        },
         {
           "id": "learn-words-take",
           "type": "flashcards",
@@ -3544,21 +3566,7 @@
           "status": "planned",
           "title": "Learn the Words — Riding the Train",
           "category": "vocabulary",
-          "step": 1
-        },
-        {
-          "id": "write-the-words",
-          "type": "write-the-words",
-          "skill": "vocabulary",
-          "level": null,
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 24
-          },
-          "status": "planned",
-          "category": "vocabulary",
-          "step": 6
+          "step": 2
         },
         {
           "id": "match-to-pictures",
@@ -3597,7 +3605,7 @@
             }
           ],
           "category": "vocabulary",
-          "step": 2
+          "step": 3
         },
         {
           "id": "match-a-b",
@@ -3636,58 +3644,575 @@
             }
           ],
           "category": "vocabulary",
-          "step": 2
+          "step": 4,
+          "title": "Match A and B: take"
         },
         {
           "id": "choose-pictures",
           "type": "choose-the-correct-pictures",
+          "title": "Choose the Correct Picture",
           "skill": "vocabulary",
           "level": null,
-          "lane": "practice",
+          "category": "vocabulary",
+          "step": 5,
           "source": {
             "book": "students",
             "page": 29,
             "exercise": 4
           },
-          "status": "planned",
-          "render": "mc",
           "origin": "adapted",
+          "render": "mc",
+          "shuffle": false,
+          "scene": [
+            "The book shows two pictures for each word. They are described here in words.",
+            "בספר מופיעות שתי תמונות לכל מילה. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Choose the picture that matches the word or phrase.",
+            "בחרו את התמונה שמתאימה למילה או לצירוף."
+          ],
           "items": [
             {
-              "p": "You are standing on the platform and the train doors open. What do you do?",
+              "p": "<b>get on</b> the train",
               "o": [
-                "get on the train",
-                "get off the train"
+                "A man stepping through the open door of a train from the platform.",
+                "A woman sitting inside a train carriage with a backpack."
               ],
-              "a": "get on the train"
+              "a": "A man stepping through the open door of a train from the platform."
             },
             {
-              "p": "The bus has arrived at your stop. What do you do?",
+              "p": "<b>Welcome</b> home!",
               "o": [
-                "get on the bus",
-                "get off the bus"
+                "People with balloons standing under a banner that says Welcome Home.",
+                "A man thinking about a house."
               ],
-              "a": "get off the bus"
+              "a": "People with balloons standing under a banner that says Welcome Home."
             },
             {
-              "p": "Someone arrives at your house and you are happy to see them. What do you say?",
+              "p": "<b>get off</b> the bus",
               "o": [
-                "Welcome home!",
-                "Take care!"
+                "Someone stepping down out of a bus doorway onto the pavement.",
+                "A boy with a backpack stepping up into a bus."
               ],
-              "a": "Welcome home!"
+              "a": "Someone stepping down out of a bus doorway onto the pavement."
             },
             {
-              "p": "The road goes straight there with no turns. How do you go?",
+              "p": "<b>directly</b>",
               "o": [
-                "directly",
-                "comfortable"
+                "A map where the red route goes the short way from the house to the building.",
+                "A map where the red route goes all the way around the outside of the town."
               ],
-              "a": "directly"
+              "a": "A map where the red route goes the short way from the house to the building."
             }
           ],
+          "lane": "practice"
+        },
+        {
+          "id": "circle-true",
+          "type": "circle-true-or-false",
+          "title": "Which Sentence Is Not True?",
+          "skill": "vocabulary",
+          "level": 1,
           "category": "vocabulary",
-          "step": 3
+          "step": 6,
+          "source": {
+            "book": "workbook",
+            "page": 25,
+            "exercise": 1
+          },
+          "origin": "adapted",
+          "render": "mc",
+          "shuffle": false,
+          "scene": [
+            "Workbook p.25 shows a platform with a red train. Alex is at a train window, waving. Mark is on the platform, waving, and the speech bubble beside him says \"Take care!\". Don is further along the platform with his suitcases. Emma is walking with a stroller and carrying a teddy bear; Ari is the baby in the stroller. Anna is holding up her phone.",
+            "בעמוד 25 בחוברת מופיע רציף עם רכבת אדומה. אלכס בחלון הרכבת ומנופף. מארק על הרציף ומנופף, ובועת הדיבור לידו אומרת \"!Take care\". דון נמצא הלאה על הרציף עם המזוודות שלו. אמה הולכת עם עגלה ומחזיקה דובי; ארי הוא התינוק בעגלה. אנה מרימה את הטלפון שלה."
+          ],
+          "instruction": [
+            "Four of these sentences are true. Choose the one that is not true.",
+            "ארבעה מהמשפטים נכונים. בחרו את המשפט שאינו נכון."
+          ],
+          "items": [
+            {
+              "p": "Which sentence is <b>not</b> true?",
+              "o": [
+                "Emma is saying \"Take care!\"",
+                "Alex is taking a train.",
+                "Emma is taking a toy away from Ari.",
+                "Anna is taking pictures.",
+                "Don is taking his coat off."
+              ],
+              "a": "Emma is saying \"Take care!\"",
+              "hint": [
+                "Look at who the speech bubble belongs to.",
+                "הסתכלו למי שייכת בועת הדיבור."
+              ]
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "write-correct-words",
+          "type": "write-the-correct-words",
+          "title": "Write the Correct Word",
+          "skill": "vocabulary",
+          "level": 1,
+          "category": "vocabulary",
+          "step": 7,
+          "source": {
+            "book": "workbook",
+            "page": 25,
+            "exercise": 2
+          },
+          "origin": "adapted",
+          "render": "mc",
+          "shuffle": false,
+          "scene": [
+            "Workbook p.25 shows five photographs. They are described here in words.",
+            "בעמוד 25 בחוברת מופיעות חמש תמונות. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Choose the correct word for each picture.",
+            "בחרו את המילה הנכונה לכל תמונה."
+          ],
+          "items": [
+            {
+              "p": "A man lying back on a sofa with headphones on.",
+              "o": [
+                "comfortable",
+                "welcome",
+                "cost"
+              ],
+              "a": "comfortable"
+            },
+            {
+              "p": "A red T-shirt with a price tag that says 10 Shekels.",
+              "o": [
+                "cost",
+                "comfortable",
+                "get on"
+              ],
+              "a": "cost"
+            },
+            {
+              "p": "A woman with a backpack holding the door of a train at the platform.",
+              "o": [
+                "get on",
+                "get off",
+                "welcome"
+              ],
+              "a": "get on"
+            },
+            {
+              "p": "People walking down the steps from an aeroplane.",
+              "o": [
+                "get off",
+                "get on",
+                "cost"
+              ],
+              "a": "get off"
+            },
+            {
+              "p": "A woman greeting another woman at the door of a home.",
+              "o": [
+                "welcome",
+                "comfortable",
+                "get off"
+              ],
+              "a": "welcome"
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "match-a-b-wb",
+          "type": "match-a-to-b",
+          "title": "Match A and B",
+          "skill": "vocabulary",
+          "level": 2,
+          "category": "vocabulary",
+          "step": 8,
+          "source": {
+            "book": "workbook",
+            "page": 26,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "pairs",
+          "instruction": [
+            "Match A and B to make sentences.",
+            "התאימו A ל-B כדי לחבר משפטים."
+          ],
+          "items": [
+            {
+              "a": "Helen likes to take pictures",
+              "b": "of nature."
+            },
+            {
+              "a": "We can get off the bus",
+              "b": "at the next stop."
+            },
+            {
+              "a": "You can take your coat off",
+              "b": "and put it on the chair."
+            },
+            {
+              "a": "We say \"welcome\"",
+              "b": "when we open the door to our home."
+            },
+            {
+              "a": "A new phone costs",
+              "b": "a lot of money."
+            },
+            {
+              "a": "The bus goes directly",
+              "b": "from Ashdod to Haifa."
+            },
+            {
+              "a": "Let's take a train to",
+              "b": "Tel Aviv tomorrow."
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "circle-correct-sentences",
+          "type": "circle-the-correct-words",
+          "title": "Circle the Correct Sentence",
+          "skill": "vocabulary",
+          "level": 2,
+          "category": "vocabulary",
+          "step": 9,
+          "source": {
+            "book": "workbook",
+            "page": 26,
+            "exercise": 4
+          },
+          "origin": "adapted",
+          "render": "mc",
+          "shuffle": false,
+          "scene": [
+            "Each picture in the workbook is described at the start of the question.",
+            "כל תמונה בחוברת מתוארת בתחילת השאלה."
+          ],
+          "instruction": [
+            "Choose the sentence that is true for the picture.",
+            "בחרו את המשפט שנכון לפי התמונה."
+          ],
+          "items": [
+            {
+              "p": "<i>A boy giving flowers to an older woman in a hospital bed.</i>",
+              "o": [
+                "Dor is a visitor at the hospital.",
+                "Dor's grandma is not comfortable."
+              ],
+              "a": "Dor is a visitor at the hospital."
+            },
+            {
+              "p": "<i>A girl with a backpack walking past a dance studio. Inside, a class is already dancing.</i>",
+              "o": [
+                "Linda goes directly to dance class after school.",
+                "Linda always arrives early to dance class."
+              ],
+              "a": "Linda goes directly to dance class after school."
+            },
+            {
+              "p": "<i>A woman standing on a platform holding a ticket, with a train beside her.</i>",
+              "o": [
+                "The woman is catching a train to work.",
+                "The woman is taking pictures of the train."
+              ],
+              "a": "The woman is catching a train to work."
+            },
+            {
+              "p": "<i>Two children leaning out of a train window, smiling.</i>",
+              "o": [
+                "The children are taking a train to visit their grandmother.",
+                "The children are getting off the train."
+              ],
+              "a": "The children are taking a train to visit their grandmother."
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "ori-text",
+          "type": "complete-the-sentences",
+          "title": "Complete the Text",
+          "skill": "vocabulary",
+          "level": null,
+          "category": "vocabulary",
+          "step": 10,
+          "source": {
+            "book": "students",
+            "page": 30,
+            "exercise": 6
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "passage": [
+            "Ori is at the train station. It's 14:25. He plans to <b>1 …</b> to Haifa. The ticket <b>2 …</b> 30 shekels.",
+            "Ori buys a ticket and <b>3 …</b> the train. He sits down in a <b>4 …</b> seat. The train leaves the station. The train is going <b>5 …</b> to Haifa. After 20 minutes, the train stops. Why does it stop? It isn't in Haifa. Ori is angry. He wants to <b>6 …</b> in Haifa. Then Ori sees a cow in front of the train. It's very funny. Ori laughs and <b>7 …</b> ."
+          ],
+          "instruction": [
+            "Complete the text with the words below.",
+            "השלימו את הטקסט עם המילים שלמטה."
+          ],
+          "items": [
+            {
+              "p": "<b>1</b> &nbsp; He plans to ______ to Haifa.",
+              "o": [
+                "catch a train",
+                "costs",
+                "gets on"
+              ],
+              "a": "catch a train"
+            },
+            {
+              "p": "<b>2</b> &nbsp; The ticket ______ 30 shekels.",
+              "o": [
+                "costs",
+                "catch a train",
+                "arrive"
+              ],
+              "a": "costs"
+            },
+            {
+              "p": "<b>3</b> &nbsp; Ori buys a ticket and ______ the train.",
+              "o": [
+                "gets on",
+                "catch a train",
+                "takes a picture"
+              ],
+              "a": "gets on"
+            },
+            {
+              "p": "<b>4</b> &nbsp; He sits down in a ______ seat.",
+              "o": [
+                "comfortable",
+                "directly",
+                "arrive"
+              ],
+              "a": "comfortable"
+            },
+            {
+              "p": "<b>5</b> &nbsp; The train is going ______ to Haifa.",
+              "o": [
+                "directly",
+                "comfortable",
+                "gets on"
+              ],
+              "a": "directly"
+            },
+            {
+              "p": "<b>6</b> &nbsp; He wants to ______ in Haifa.",
+              "o": [
+                "arrive",
+                "gets on",
+                "costs"
+              ],
+              "a": "arrive"
+            },
+            {
+              "p": "<b>7</b> &nbsp; Ori laughs and ______ .",
+              "o": [
+                "takes a picture",
+                "catch a train",
+                "directly"
+              ],
+              "a": "takes a picture"
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "write-the-words",
+          "type": "write-the-words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "source": {
+            "book": "workbook",
+            "page": 24
+          },
+          "status": "planned",
+          "category": "vocabulary",
+          "step": 11
+        },
+        {
+          "id": "translate-sentences",
+          "type": "translate-the-sentences",
+          "title": "Translate the Sentences",
+          "skill": "writing",
+          "level": null,
+          "category": "writing",
+          "step": 1,
+          "source": {
+            "book": "students",
+            "page": 30,
+            "exercise": 5
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Translate the sentences. Then say which sentences are true for you.",
+            "תרגמו את המשפטים. אחר כך אמרו אילו משפטים נכונים לגביכם."
+          ],
+          "items": [
+            {
+              "p": "I catch a train to school every day."
+            },
+            {
+              "p": "I go directly home after school."
+            },
+            {
+              "p": "I get off the bus near my house."
+            },
+            {
+              "p": "I wear comfortable shoes to school."
+            },
+            {
+              "p": "Every weekend we have visitors at my house."
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "complete-sentences-wb",
+          "type": "complete-the-sentences",
+          "title": "Complete the Sentences",
+          "skill": "writing",
+          "level": 2,
+          "category": "writing",
+          "step": 2,
+          "source": {
+            "book": "workbook",
+            "page": 27,
+            "exercise": 5
+          },
+          "origin": "book",
+          "render": "writing",
+          "wordBank": [
+            "catch",
+            "get on",
+            "takes my phone away",
+            "Take care!",
+            "arrives",
+            "visitors",
+            "comfortable"
+          ],
+          "instruction": [
+            "Complete the sentences with the words below. More than one answer may be correct.",
+            "השלימו את המשפטים עם המילים שלמטה. ייתכן יותר מתשובה אחת נכונה."
+          ],
+          "items": [
+            {
+              "p": "Every year, Disney World has a lot of … &nbsp; <i>(the book's example: visitors)</i>"
+            },
+            {
+              "p": "Your new sofa is very … ."
+            },
+            {
+              "p": "We … the bus after it stops."
+            },
+            {
+              "p": "Amber writes \"…\" at the end of her email."
+            },
+            {
+              "p": "My teacher … if I use it in class."
+            },
+            {
+              "p": "We can … the next train."
+            },
+            {
+              "p": "My father usually … home at six o'clock in the evening."
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "about-you",
+          "type": "about-you",
+          "title": "About You",
+          "skill": "writing",
+          "level": null,
+          "category": "writing",
+          "step": 3,
+          "source": {
+            "book": "students",
+            "page": 29,
+            "exercise": 3
+          },
+          "linkedTo": {
+            "book": "students",
+            "page": 30,
+            "exercise": 7
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Answer about yourself. Do as many as you can.",
+            "ענו על עצמכם. עשו כמה שאתם יכולים."
+          ],
+          "items": [
+            {
+              "p": "What things do you like to take pictures of?"
+            },
+            {
+              "p": "I usually <b>arrive</b> at school …"
+            },
+            {
+              "p": "Many <b>visitors</b> come to see …"
+            },
+            {
+              "p": "<b>Welcome</b> …"
+            },
+            {
+              "p": "I like to <b>take the train</b> to …"
+            },
+            {
+              "p": "I always <b>take</b> my hat <b>off</b> …"
+            }
+          ],
+          "lane": "practice"
+        },
+        {
+          "id": "answer-questions",
+          "type": "answer-the-questions",
+          "title": "Answer the Questions",
+          "skill": "writing",
+          "level": 3,
+          "category": "writing",
+          "step": 4,
+          "source": {
+            "book": "workbook",
+            "page": 27,
+            "exercise": 6
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Answer the questions in full sentences.",
+            "ענו על השאלות במשפטים שלמים."
+          ],
+          "items": [
+            {
+              "p": "Where do you <b>take</b> your shoes <b>off</b>?"
+            },
+            {
+              "p": "What <b>costs</b> a lot of money?"
+            },
+            {
+              "p": "Where are you <b>comfortable</b>?"
+            },
+            {
+              "p": "What time do you <b>arrive</b> at school?"
+            },
+            {
+              "p": "When do you like to <b>take pictures</b>?"
+            }
+          ],
+          "lane": "practice"
         }
       ],
       "skills": {
