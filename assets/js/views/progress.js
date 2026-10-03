@@ -26,7 +26,7 @@ function sectionBlock(section){
     : [getPart(section.id, null)].filter(Boolean);
   return `
   <div class="progUnit">
-    <h3>${section.icon} ${section.label}</h3>
+    <h3><span class="progIcon" aria-hidden="true">${section.icon}</span>${section.label}</h3>
     <div class="pbarOuter"><div class="pbarInner" style="width:${pr.pct}%;background:${colorVar(section.color)}"></div></div>
     <div class="pctLabel">${pr.pct}% &middot; ${pr.done} of ${pr.total} available activities</div>
     ${parts.map(p => partRow(section.id, p)).join('')}
