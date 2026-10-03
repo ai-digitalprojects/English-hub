@@ -106,9 +106,21 @@ function getActivity(sectionId, partId, activityId){
 /* A part can hold more than one word group (Part 3 has Word Power 1 and 2,
    Part 5 has New Words 1 and 2). Each activity works on the group it is
    printed with, matched by the book page it cites. */
+/* A drill runs over the whole word list, which is fine for a Part but not for
+   the Unit Check, whose list is the entire unit — 78 words make one unusable
+   matching grid and a puzzle run nobody finishes. A part that needs it says
+   how many words a drill should take; the sample is spread evenly across the
+   list so both halves of the unit are practised. */
+function drillWords(part, all){
+  const cap = part.drillCap;
+  if(!cap || all.length <= cap) return all;
+  const step = all.length / cap;
+  return Array.from({ length: cap }, (_, i) => all[Math.floor(i * step)]);
+}
+
 function wordsForActivity(part, activity){
   const all = part.vocabulary || [];
-  if(activity && activity.origin === 'word-list') return all;
+  if(activity && activity.origin === 'word-list') return drillWords(part, all);
   const src = activity && activity.source;
   if(!src) return all;
   const hit = src.book === 'students'

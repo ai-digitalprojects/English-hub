@@ -7473,10 +7473,1884 @@
         ],
         "workbook": [
           41,
-          42
+          42,
+          43
         ]
       },
-      "vocabulary": [],
+      "vocabulary": [
+        {
+          "en": "about",
+          "he": "בערך",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "afraid",
+          "he": "פוחד",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "anything",
+          "he": "כל דבר, שום דבר",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "arrive",
+          "he": "להגיע",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "catch (a train)",
+          "he": "לתפוס (רכבת)",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "clever",
+          "he": "חכם",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "comfortable",
+          "he": "נוח",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "cost",
+          "he": "לעלות (כסף)",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "Dear ...",
+          "he": "… היקר",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "decide",
+          "he": "להחליט",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "directly",
+          "he": "ישירות",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "famous",
+          "he": "מפורסם",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "get off",
+          "he": "לרדת",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "get on",
+          "he": "לעלות",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "glad",
+          "he": "שמח",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "hit",
+          "he": "להכות",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "island",
+          "he": "אי",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "leave",
+          "he": "להשאיר",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "love",
+          "he": "לאהוב",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "million",
+          "he": "מיליון",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "mountain",
+          "he": "הר",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "nature",
+          "he": "טבע",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "order",
+          "he": "להזמין",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "pick",
+          "he": "לבחור",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "popular",
+          "he": "פופולרי",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "reason",
+          "he": "סיבה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "return",
+          "he": "לחזור",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "saw",
+          "he": "ראה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "several",
+          "he": "כמה, אחדים",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "still",
+          "he": "עדיין",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "take (something) away",
+          "he": "לקחת (משהו)",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "take (something) off",
+          "he": "להוריד (משהו)",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "take a picture",
+          "he": "לצלם",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "take a train",
+          "he": "לקחת רכבת",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "Take care!",
+          "he": "תשמור / תשמרי על עצמך",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 28
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "team",
+          "he": "קבוצה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 12
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "the cold",
+          "he": "הקור",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "thousand",
+          "he": "אלף",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 20
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "visitor",
+          "he": "אורח/ת, מבקר/ת",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "welcome",
+          "he": "ברוך/כה הבא/ה, ברוכים הבאים",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-1-3",
+          "source": {
+            "book": "students",
+            "page": 29
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "a while",
+          "he": "זמן מה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "against",
+          "he": "נגד",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "all the time",
+          "he": "כל הזמן",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "almost",
+          "he": "כמעט",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "believe",
+          "he": "להאמין",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "both",
+          "he": "שני, שניהם",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "collect",
+          "he": "לאסוף",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "come home",
+          "he": "לחזור הביתה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "competition",
+          "he": "תחרות",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "could",
+          "he": "(היה) יכול",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "date",
+          "he": "פגישה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "excellent",
+          "he": "מצוין",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "feel well",
+          "he": "להרגיש טוב",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "full",
+          "he": "מלא",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "get better",
+          "he": "להחלים",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "get the flu",
+          "he": "לחלות בשפעת",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "if",
+          "he": "אם",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "instead",
+          "he": "במקום",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "invite",
+          "he": "להזמין",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "keep",
+          "he": "להמשיך",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "kiss",
+          "he": "נשיקה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "make a mistake",
+          "he": "לטעות",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "mean",
+          "he": "פירושו",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "medical",
+          "he": "רפואי",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "message",
+          "he": "הודעה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "miss",
+          "he": "לפספס",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "much",
+          "he": "הרבה",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "nurse",
+          "he": "אחות",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "only",
+          "he": "רק",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "perfect",
+          "he": "מושלם",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "pocket",
+          "he": "כיס",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "really",
+          "he": "מאוד",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "see",
+          "he": "לפגוש",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "should",
+          "he": "רצוי, צריך",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "so",
+          "he": "כך ש-, לכן",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "sorry",
+          "he": "מצטער",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "tasty",
+          "he": "טעים",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 34
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        },
+        {
+          "en": "tell a story",
+          "he": "לספר סיפור",
+          "ar": null,
+          "definition": null,
+          "example": null,
+          "group": "parts-4-5",
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "alsoOn": [
+            {
+              "book": "students",
+              "page": 51
+            }
+          ],
+          "heSource": "book",
+          "missing": [
+            "ar",
+            "definition",
+            "example"
+          ]
+        }
+      ],
       "reviewsParts": [
         "part-1",
         "part-2",
@@ -7484,54 +9358,83 @@
         "part-4",
         "part-5"
       ],
-      "grammar": [
-        {
-          "id": "review-to-be",
-          "topic": "to be — positive / negative",
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 42,
-            "exercise": 1
-          }
-        },
-        {
-          "id": "review-have-has",
-          "topic": "have / has",
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 42,
-            "exercise": 2
-          }
-        }
-      ],
+      "grammar": [],
       "activities": [
         {
           "id": "word-list",
           "type": "word-list-reference",
+          "title": "All the Words",
           "skill": "vocabulary",
           "level": null,
           "lane": "learn",
+          "category": "vocabulary",
+          "step": 1,
           "source": {
             "book": "students",
             "page": 51
           },
-          "status": "planned",
-          "render": "wordlist",
           "origin": "book",
+          "render": "wordlist",
+          "instruction": [
+            "Every word and phrase from Unit 1, in the order the book lists them.",
+            "כל המילים והצירופים של יחידה 1, לפי הסדר שבספר."
+          ],
           "items": [
+            {
+              "en": "about",
+              "he": "בערך"
+            },
             {
               "en": "afraid",
               "he": "פוחד"
             },
             {
               "en": "anything",
-              "he": "כל דבר"
+              "he": "כל דבר, שום דבר"
+            },
+            {
+              "en": "arrive",
+              "he": "להגיע"
+            },
+            {
+              "en": "catch (a train)",
+              "he": "לתפוס (רכבת)"
+            },
+            {
+              "en": "clever",
+              "he": "חכם"
+            },
+            {
+              "en": "comfortable",
+              "he": "נוח"
+            },
+            {
+              "en": "cost",
+              "he": "לעלות (כסף)"
             },
             {
               "en": "Dear ...",
-              "he": null
+              "he": "… היקר"
+            },
+            {
+              "en": "decide",
+              "he": "להחליט"
+            },
+            {
+              "en": "directly",
+              "he": "ישירות"
+            },
+            {
+              "en": "famous",
+              "he": "מפורסם"
+            },
+            {
+              "en": "get off",
+              "he": "לרדת"
+            },
+            {
+              "en": "get on",
+              "he": "לעלות"
             },
             {
               "en": "glad",
@@ -7558,6 +9461,14 @@
               "he": "מיליון"
             },
             {
+              "en": "mountain",
+              "he": "הר"
+            },
+            {
+              "en": "nature",
+              "he": "טבע"
+            },
+            {
               "en": "order",
               "he": "להזמין"
             },
@@ -7568,34 +9479,6 @@
             {
               "en": "popular",
               "he": "פופולרי"
-            },
-            {
-              "en": "team",
-              "he": "קבוצה"
-            },
-            {
-              "en": "about",
-              "he": "בערך"
-            },
-            {
-              "en": "clever",
-              "he": "חכם"
-            },
-            {
-              "en": "decide",
-              "he": "להחליט"
-            },
-            {
-              "en": "famous",
-              "he": "מפורסם"
-            },
-            {
-              "en": "mountain",
-              "he": "הר"
-            },
-            {
-              "en": "nature",
-              "he": "טבע"
             },
             {
               "en": "reason",
@@ -7611,11 +9494,35 @@
             },
             {
               "en": "several",
-              "he": "כמה"
+              "he": "כמה, אחדים"
             },
             {
               "en": "still",
               "he": "עדיין"
+            },
+            {
+              "en": "take (something) away",
+              "he": "לקחת (משהו)"
+            },
+            {
+              "en": "take (something) off",
+              "he": "להוריד (משהו)"
+            },
+            {
+              "en": "take a picture",
+              "he": "לצלם"
+            },
+            {
+              "en": "take a train",
+              "he": "לקחת רכבת"
+            },
+            {
+              "en": "Take care!",
+              "he": "תשמור / תשמרי על עצמך"
+            },
+            {
+              "en": "team",
+              "he": "קבוצה"
             },
             {
               "en": "the cold",
@@ -7626,60 +9533,16 @@
               "he": "אלף"
             },
             {
-              "en": "take a picture",
-              "he": null
-            },
-            {
-              "en": "take a train",
-              "he": null
-            },
-            {
-              "en": "take (something) away",
-              "he": null
-            },
-            {
-              "en": "Take care!",
-              "he": null
-            },
-            {
-              "en": "take (something) off",
-              "he": null
-            },
-            {
-              "en": "arrive",
-              "he": null
-            },
-            {
-              "en": "catch (a train)",
-              "he": null
-            },
-            {
-              "en": "comfortable",
-              "he": null
-            },
-            {
-              "en": "cost",
-              "he": null
-            },
-            {
-              "en": "directly",
-              "he": null
-            },
-            {
-              "en": "get off",
-              "he": null
-            },
-            {
-              "en": "get on",
-              "he": null
-            },
-            {
               "en": "visitor",
-              "he": null
+              "he": "אורח/ת, מבקר/ת"
             },
             {
               "en": "welcome",
-              "he": null
+              "he": "ברוך/כה הבא/ה, ברוכים הבאים"
+            },
+            {
+              "en": "a while",
+              "he": "זמן מה"
             },
             {
               "en": "against",
@@ -7690,8 +9553,24 @@
               "he": "כל הזמן"
             },
             {
+              "en": "almost",
+              "he": "כמעט"
+            },
+            {
+              "en": "believe",
+              "he": "להאמין"
+            },
+            {
+              "en": "both",
+              "he": "שני, שניהם"
+            },
+            {
               "en": "collect",
               "he": "לאסוף"
+            },
+            {
+              "en": "come home",
+              "he": "לחזור הביתה"
             },
             {
               "en": "competition",
@@ -7699,19 +9578,79 @@
             },
             {
               "en": "could",
-              "he": "יכול (היה)"
+              "he": "(היה) יכול"
+            },
+            {
+              "en": "date",
+              "he": "פגישה"
+            },
+            {
+              "en": "excellent",
+              "he": "מצוין"
+            },
+            {
+              "en": "feel well",
+              "he": "להרגיש טוב"
+            },
+            {
+              "en": "full",
+              "he": "מלא"
+            },
+            {
+              "en": "get better",
+              "he": "להחלים"
+            },
+            {
+              "en": "get the flu",
+              "he": "לחלות בשפעת"
+            },
+            {
+              "en": "if",
+              "he": "אם"
             },
             {
               "en": "instead",
               "he": "במקום"
             },
             {
+              "en": "invite",
+              "he": "להזמין"
+            },
+            {
+              "en": "keep",
+              "he": "להמשיך"
+            },
+            {
+              "en": "kiss",
+              "he": "נשיקה"
+            },
+            {
+              "en": "make a mistake",
+              "he": "לטעות"
+            },
+            {
               "en": "mean",
               "he": "פירושו"
             },
             {
+              "en": "medical",
+              "he": "רפואי"
+            },
+            {
               "en": "message",
               "he": "הודעה"
+            },
+            {
+              "en": "miss",
+              "he": "לפספס"
+            },
+            {
+              "en": "much",
+              "he": "הרבה"
+            },
+            {
+              "en": "nurse",
+              "he": "אחות"
             },
             {
               "en": "only",
@@ -7726,238 +9665,267 @@
               "he": "כיס"
             },
             {
-              "en": "so",
-              "he": "כך"
-            },
-            {
-              "en": "tasty",
-              "he": "טעים"
-            },
-            {
-              "en": "come home",
-              "he": "לחזור הביתה"
-            },
-            {
-              "en": "date",
-              "he": "תאריך"
-            },
-            {
-              "en": "excellent",
-              "he": "מצוין"
-            },
-            {
-              "en": "feel well",
-              "he": "להרגיש טוב"
-            },
-            {
-              "en": "get the flu",
-              "he": "לחלות בשפעת"
-            },
-            {
-              "en": "if",
-              "he": "אם"
-            },
-            {
-              "en": "invite",
-              "he": "להזמין"
-            },
-            {
-              "en": "keep",
-              "he": "להמשיך"
-            },
-            {
-              "en": "make a mistake",
-              "he": "לטעות"
-            },
-            {
               "en": "really",
               "he": "מאוד"
-            },
-            {
-              "en": "should",
-              "he": "צריך, כדאי"
-            },
-            {
-              "en": "tell a story",
-              "he": "לספר סיפור"
-            },
-            {
-              "en": "a while",
-              "he": "זמן מה"
-            },
-            {
-              "en": "almost",
-              "he": "כמעט"
-            },
-            {
-              "en": "believe",
-              "he": "להאמין"
-            },
-            {
-              "en": "both",
-              "he": "שניהם, שתיהן"
-            },
-            {
-              "en": "full",
-              "he": "מלא"
-            },
-            {
-              "en": "get better",
-              "he": "להחלים"
-            },
-            {
-              "en": "kiss",
-              "he": "נשיקה"
-            },
-            {
-              "en": "medical",
-              "he": "רפואי"
-            },
-            {
-              "en": "miss",
-              "he": "להתגעגע"
-            },
-            {
-              "en": "much",
-              "he": "הרבה"
-            },
-            {
-              "en": "nurse",
-              "he": "אחות"
             },
             {
               "en": "see",
               "he": "לפגוש"
             },
             {
+              "en": "should",
+              "he": "רצוי, צריך"
+            },
+            {
+              "en": "so",
+              "he": "כך ש-, לכן"
+            },
+            {
               "en": "sorry",
               "he": "מצטער"
+            },
+            {
+              "en": "tasty",
+              "he": "טעים"
+            },
+            {
+              "en": "tell a story",
+              "he": "לספר סיפור"
             }
-          ],
-          "category": "review",
-          "step": 1
+          ]
         },
         {
           "id": "find-two-words",
           "type": "find-words-for-category",
+          "title": "Find Two Words",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 2,
           "source": {
             "book": "students",
             "page": 51,
             "exercise": 1
           },
-          "status": "planned",
-          "render": "bins",
           "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Look at the list of words and phrases in <b>All the Words</b>. Find at least two words or phrases for each of the following.",
+            "הסתכלו ברשימת המילים והצירופים בכרטיס <b>All the Words</b>. מצאו לפחות שתי מילים או צירופים לכל אחד מהבאים."
+          ],
           "items": [
             {
-              "v": "catch a train",
-              "bin": "At a train station"
+              "p": "things you do at a train station"
             },
             {
-              "v": "get on",
-              "bin": "At a train station"
+              "p": "things you do on your birthday"
             },
             {
-              "v": "get off",
-              "bin": "At a train station"
+              "p": "things your teacher does in class"
             },
             {
-              "v": "arrive",
-              "bin": "At a train station"
+              "p": "what you want to do when you are sick"
             },
             {
-              "v": "invite",
-              "bin": "On your birthday"
-            },
-            {
-              "v": "a date",
-              "bin": "On your birthday"
-            },
-            {
-              "v": "a competition",
-              "bin": "On your birthday"
-            },
-            {
-              "v": "get better",
-              "bin": "When you are sick"
-            },
-            {
-              "v": "a nurse",
-              "bin": "When you are sick"
-            },
-            {
-              "v": "medical",
-              "bin": "When you are sick"
-            },
-            {
-              "v": "feel well",
-              "bin": "When you are sick"
+              "p": "how you feel when everyone likes your idea"
             }
-          ],
-          "bins": [
-            "At a train station",
-            "On your birthday",
-            "When you are sick"
-          ],
-          "category": "review",
-          "step": 5
+          ]
         },
         {
           "id": "build-phrases",
-          "type": "match-a-to-b",
+          "type": "make-phrases",
+          "title": "Make Phrases",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 3,
           "source": {
             "book": "students",
             "page": 51,
             "exercise": 2
           },
-          "status": "planned",
-          "render": "pairs",
           "origin": "book",
+          "render": "writing",
+          "wordBank": [
+            "a visitor",
+            "a train",
+            "a bus",
+            "a friend",
+            "better",
+            "a story",
+            "a mistake"
+          ],
+          "instruction": [
+            "Match the words below to the words in A to make phrases. There are many possible answers. Then translate them.",
+            "התאימו את המילים שלמטה למילים ב-A כדי לחבר צירופים. יש תשובות רבות אפשריות. לאחר מכן, תרגמו אותם."
+          ],
           "items": [
             {
-              "a": "get off",
-              "b": "a bus"
+              "p": "<b>get off</b> …"
             },
             {
-              "a": "get on",
-              "b": "a train"
+              "p": "<b>make</b> …"
             },
             {
-              "a": "catch",
-              "b": "a train"
+              "p": "<b>love</b> …"
             },
             {
-              "a": "make",
-              "b": "a mistake"
+              "p": "<b>pick</b> …"
             },
             {
-              "a": "tell",
-              "b": "a story"
+              "p": "<b>get on</b> …"
             },
             {
-              "a": "invite",
-              "b": "a friend"
+              "p": "<b>tell</b> …"
             },
             {
-              "a": "get",
-              "b": "better"
+              "p": "<b>catch</b> …"
+            },
+            {
+              "p": "<b>invite</b> …"
+            },
+            {
+              "p": "<b>get</b> …"
+            },
+            {
+              "p": "<b>believe</b> …"
             }
+          ]
+        },
+        {
+          "id": "replace-the-words",
+          "type": "replace-the-words",
+          "title": "Replace the Words",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 4,
+          "source": {
+            "book": "students",
+            "page": 52,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Replace the words in bold with the words below to make new sentences.",
+            "החליפו את המילים המודגשות במילים שלמטה כדי לחבר משפטים חדשים."
           ],
-          "category": "review",
-          "step": 2
+          "items": [
+            {
+              "p": "We <b>need to</b> eat fruit and vegetables every day.",
+              "o": [
+                "should",
+                "decide",
+                "leave"
+              ],
+              "a": "should"
+            },
+            {
+              "p": "Please <b>put</b> your shoes next to the door.",
+              "o": [
+                "leave",
+                "should",
+                "both my"
+              ],
+              "a": "leave"
+            },
+            {
+              "p": "When <b>are we going to meet</b>?",
+              "o": [
+                "is our date",
+                "the reason",
+                "decide"
+              ],
+              "a": "is our date"
+            },
+            {
+              "p": "Tell me <b>why</b>.",
+              "o": [
+                "the reason",
+                "is our date",
+                "both my"
+              ],
+              "a": "the reason"
+            },
+            {
+              "p": "I want to <b>think about and choose</b> where to go.",
+              "o": [
+                "decide",
+                "leave",
+                "should"
+              ],
+              "a": "decide"
+            },
+            {
+              "p": "I'm inviting <b>my two</b> best friends to come home with me.",
+              "o": [
+                "both my",
+                "the reason",
+                "leave"
+              ],
+              "a": "both my"
+            }
+          ]
+        },
+        {
+          "id": "where-can-you",
+          "type": "answer-the-questions",
+          "title": "Where Can You…?",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 5,
+          "source": {
+            "book": "students",
+            "page": 52,
+            "exercise": 4
+          },
+          "origin": "book",
+          "render": "writing",
+          "wordBank": [
+            "at a restaurant",
+            "in Hollywood",
+            "at home",
+            "at a pool",
+            "at a hospital"
+          ],
+          "instruction": [
+            "Answer the questions. Use the phrases below or your own phrases.",
+            "ענו על השאלות. השתמשו בצירופים שלמטה או בצירופים משלכם."
+          ],
+          "items": [
+            {
+              "p": "Where can you <b>speak to a nurse</b>?"
+            },
+            {
+              "p": "Where can you <b>order tasty food</b>?"
+            },
+            {
+              "p": "Where can you <b>see famous people</b>?"
+            },
+            {
+              "p": "Where can you <b>take your shoes off</b>?"
+            },
+            {
+              "p": "Where can you <b>have a swimming competition</b>?"
+            }
+          ]
         },
         {
           "id": "sort-parts-of-speech",
           "type": "sort-into-columns",
+          "title": "Nouns, Verbs or Adjectives?",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 6,
           "source": {
             "book": "workbook",
             "page": 41,
@@ -7967,9 +9935,17 @@
             "book": "students",
             "page": 52
           },
-          "status": "planned",
-          "render": "bins",
           "origin": "book",
+          "render": "bins",
+          "bins": [
+            "Nouns",
+            "Verbs",
+            "Adjectives"
+          ],
+          "instruction": [
+            "Put each word in the correct group.",
+            "כתבו את המילים שלמטה בקבוצה הנכונה."
+          ],
           "items": [
             {
               "v": "competition",
@@ -8043,54 +10019,187 @@
               "v": "glad",
               "bin": "Adjectives"
             }
-          ],
-          "bins": [
-            "Nouns",
-            "Verbs",
-            "Adjectives"
-          ],
-          "category": "review",
-          "step": 5
+          ]
         },
         {
-          "id": "write-the-words",
-          "type": "write-the-words",
+          "id": "two-words-for-each",
+          "type": "find-words-for-category",
+          "title": "Two Words for Each",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 7,
           "source": {
             "book": "workbook",
             "page": 41,
             "exercise": 2
           },
-          "status": "planned",
-          "category": "review",
-          "step": 6
+          "origin": "book",
+          "render": "bins",
+          "bins": [
+            "special",
+            "forest",
+            "hospital",
+            "hundred",
+            "see you soon"
+          ],
+          "instruction": [
+            "Put each word in the correct group. Each group takes two words.",
+            "כתבו את המילים שלמטה בקבוצה הנכונה. בכל קבוצה שתי מילים."
+          ],
+          "items": [
+            {
+              "v": "famous",
+              "bin": "special"
+            },
+            {
+              "v": "popular",
+              "bin": "special"
+            },
+            {
+              "v": "mountain",
+              "bin": "forest"
+            },
+            {
+              "v": "island",
+              "bin": "forest"
+            },
+            {
+              "v": "nurse",
+              "bin": "hospital"
+            },
+            {
+              "v": "medical",
+              "bin": "hospital"
+            },
+            {
+              "v": "million",
+              "bin": "hundred"
+            },
+            {
+              "v": "thousand",
+              "bin": "hundred"
+            },
+            {
+              "v": "Take care!",
+              "bin": "see you soon"
+            },
+            {
+              "v": "Dear ...",
+              "bin": "see you soon"
+            }
+          ]
+        },
+        {
+          "id": "circle-two-correct",
+          "type": "circle-two-correct-answers",
+          "title": "Circle the TWO Correct Answers",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 8,
+          "source": {
+            "book": "workbook",
+            "page": 41,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Circle the TWO correct answers.",
+            "הקיפו את שתי התשובות הנכונות."
+          ],
+          "items": [
+            {
+              "p": "Jim wants to … to Paris tomorrow.",
+              "o": [
+                "catch a train",
+                "take their shoes off",
+                "return"
+              ],
+              "a": [
+                "catch a train",
+                "return"
+              ]
+            },
+            {
+              "p": "I want you to … soon.",
+              "o": [
+                "come home",
+                "love",
+                "decide"
+              ],
+              "a": [
+                "come home",
+                "decide"
+              ]
+            },
+            {
+              "p": "I don't like to … .",
+              "o": [
+                "get better",
+                "get the flu",
+                "make mistakes"
+              ],
+              "a": [
+                "get the flu",
+                "make mistakes"
+              ]
+            },
+            {
+              "p": "… children want to play outside.",
+              "o": [
+                "Several",
+                "Both",
+                "Excellent"
+              ],
+              "a": [
+                "Several",
+                "Both"
+              ]
+            },
+            {
+              "p": "You can … the restaurant.",
+              "o": [
+                "return to",
+                "order food from",
+                "tell a story to"
+              ],
+              "a": [
+                "return to",
+                "order food from"
+              ]
+            }
+          ]
         },
         {
           "id": "complete-sentences",
           "type": "complete-the-sentences",
+          "title": "Complete the Sentences",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 9,
           "source": {
             "book": "workbook",
             "page": 42,
             "exercise": 4
           },
-          "status": "planned",
-          "render": "mc",
           "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Complete the sentences with the words below.",
+            "השלימו את המשפטים עם המילים שלמטה."
+          ],
+          "passage": [
+            "<i>1. Our football <b>team</b> always wins.</i>"
+          ],
           "items": [
-            {
-              "p": "Our football ______ always wins.",
-              "o": [
-                "team",
-                "pockets",
-                "a while"
-              ],
-              "a": "team"
-            },
             {
               "p": "I like to watch TV for ______ when I wake up in the morning.",
               "o": [
@@ -8110,7 +10219,7 @@
               "a": "should"
             },
             {
-              "p": "My pants have two ______.",
+              "p": "My pants have two ______ .",
               "o": [
                 "pockets",
                 "team",
@@ -8154,25 +10263,323 @@
               ],
               "a": "loves"
             }
+          ]
+        },
+        {
+          "id": "memory-game",
+          "type": "quick-recall",
+          "title": "Memory Game",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 10,
+          "source": {
+            "book": "students",
+            "page": 52,
+            "exercise": 5
+          },
+          "origin": "adapted",
+          "render": "recall",
+          "instruction": [
+            "The book asks you to pick 15 words from the list and play a memory game with a partner. Here are 15 of them — three from each Part. Write each one in English.",
+            "הספר מבקש לבחור 15 מילים מהרשימה ולשחק משחק זיכרון עם בן/בת זוג. כאן 15 מהן — שלוש מכל חלק. כתבו כל אחת באנגלית."
           ],
-          "category": "review",
-          "step": 3
+          "items": [
+            {
+              "en": "island",
+              "he": "אי"
+            },
+            {
+              "en": "team",
+              "he": "קבוצה"
+            },
+            {
+              "en": "popular",
+              "he": "פופולרי"
+            },
+            {
+              "en": "clever",
+              "he": "חכם"
+            },
+            {
+              "en": "nature",
+              "he": "טבע"
+            },
+            {
+              "en": "thousand",
+              "he": "אלף"
+            },
+            {
+              "en": "arrive",
+              "he": "להגיע"
+            },
+            {
+              "en": "comfortable",
+              "he": "נוח"
+            },
+            {
+              "en": "directly",
+              "he": "ישירות"
+            },
+            {
+              "en": "competition",
+              "he": "תחרות"
+            },
+            {
+              "en": "pocket",
+              "he": "כיס"
+            },
+            {
+              "en": "instead",
+              "he": "במקום"
+            },
+            {
+              "en": "nurse",
+              "he": "אחות"
+            },
+            {
+              "en": "almost",
+              "he": "כמעט"
+            },
+            {
+              "en": "believe",
+              "he": "להאמין"
+            }
+          ]
+        },
+        {
+          "id": "to-be",
+          "type": "circle-the-correct-words",
+          "title": "Circle the Correct Words: am / is / are",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "category": "grammar",
+          "step": 1,
+          "source": {
+            "book": "workbook",
+            "page": 42,
+            "exercise": 1,
+            "note": "Grammar"
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Circle the correct words.",
+            "הקיפו את התשובות הנכונות."
+          ],
+          "passage": [
+            "<i>1. I <b>am</b> 13 years old.</i>"
+          ],
+          "items": [
+            {
+              "p": "My parents ______ at work all day.",
+              "o": [
+                "am",
+                "is",
+                "are"
+              ],
+              "a": "are"
+            },
+            {
+              "p": "Elena and Ann ______ good dancers.",
+              "o": [
+                "am",
+                "is",
+                "are"
+              ],
+              "a": "are"
+            },
+            {
+              "p": "Alex ______ afraid of big dogs.",
+              "o": [
+                "am not",
+                "isn't",
+                "aren't"
+              ],
+              "a": "isn't"
+            },
+            {
+              "p": "We ______ tired.",
+              "o": [
+                "am not",
+                "isn't",
+                "aren't"
+              ],
+              "a": "aren't"
+            }
+          ]
+        },
+        {
+          "id": "have-has",
+          "type": "circle-the-correct-words",
+          "title": "Circle the Correct Words: have / has",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "category": "grammar",
+          "step": 2,
+          "source": {
+            "book": "workbook",
+            "page": 42,
+            "exercise": 2,
+            "note": "Grammar"
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Circle the correct words.",
+            "הקיפו את התשובות הנכונות."
+          ],
+          "passage": [
+            "<i>1. The house <b>has</b> big windows.</i>"
+          ],
+          "items": [
+            {
+              "p": "I ______ a birthday present for you.",
+              "o": [
+                "have",
+                "has"
+              ],
+              "a": "have"
+            },
+            {
+              "p": "Romi ______ a problem.",
+              "o": [
+                "have",
+                "has"
+              ],
+              "a": "has"
+            },
+            {
+              "p": "The children ______ a lot of homework.",
+              "o": [
+                "have",
+                "has"
+              ],
+              "a": "have"
+            }
+          ]
+        },
+        {
+          "id": "write-the-answers",
+          "type": "answer-the-questions",
+          "title": "Write the Answers",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "category": "grammar",
+          "step": 3,
+          "source": {
+            "book": "workbook",
+            "page": 43,
+            "exercise": 3
+          },
+          "origin": "adapted",
+          "render": "writing",
+          "scene": [
+            "Workbook p.43 shows a photograph above each question. They are described here in words.",
+            "בעמוד 43 בחוברת מופיעה תמונה מעל כל שאלה. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Write the answers. Write full sentences.",
+            "ענו על השאלות לפי התמונות. כתבו משפטים שלמים."
+          ],
+          "passage": [
+            "<i>A closed yellow shutter on a green wall. — Is the window open? — No, it isn't. The window is closed.</i>"
+          ],
+          "items": [
+            {
+              "p": "Two people are sitting on a bench on a train-station platform.<br><b>Are they at the train station?</b>"
+            },
+            {
+              "p": "A cat is eating from a bowl. The name <i>Lola</i> is written on the bowl.<br><b>What is your cat's name?</b>"
+            },
+            {
+              "p": "A plate of star-shaped cookies on a wooden table.<br><b>Where are the cookies?</b>"
+            }
+          ]
+        },
+        {
+          "id": "present-simple",
+          "type": "complete-the-sentences",
+          "title": "Complete the Sentences — Present Simple",
+          "skill": "grammar",
+          "level": null,
+          "lane": "practice",
+          "category": "grammar",
+          "step": 4,
+          "source": {
+            "book": "workbook",
+            "page": 43,
+            "exercise": 4
+          },
+          "origin": "book",
+          "render": "writing",
+          "wordBank": [
+            "do",
+            "study",
+            "buy",
+            "watch",
+            "miss",
+            "ride",
+            "go"
+          ],
+          "instruction": [
+            "Complete the sentences with the correct verbs below. Remember to add s, es or ies to the verb when you need to.",
+            "השלימו את המשפטים עם הפעלים הנכונים שלמטה. ודאו שאתם מוסיפים s, es או ies לפעלים כשצריך."
+          ],
+          "passage": [
+            "<i>1. Mark sometimes <b>misses</b> the bus to school.</i>"
+          ],
+          "items": [
+            {
+              "p": "Ella ______ to the beach in the summer."
+            },
+            {
+              "p": "We ______ milk at the store near my house."
+            },
+            {
+              "p": "Jeff's brother ______ lots of football games on TV."
+            },
+            {
+              "p": "I ______ my bike in the park every day."
+            },
+            {
+              "p": "Dan ______ hard for his tests."
+            },
+            {
+              "p": "Ella and Lucy sometimes ______ homework together."
+            }
+          ]
         },
         {
           "id": "translate",
           "type": "translate-the-sentences",
+          "title": "Translate the Sentences",
           "skill": "writing",
           "level": null,
           "lane": "practice",
+          "category": "writing",
+          "step": 1,
           "source": {
             "book": "workbook",
             "page": 42,
             "exercise": 5
           },
-          "status": "planned",
-          "render": "writing",
           "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Translate the sentences.",
+            "תרגמו את המשפטים."
+          ],
           "items": [
+            {
+              "p": "My grandmother <b>takes</b> good <b>pictures</b>. &nbsp; <i><span dir=\"rtl\">סבתא שלי מצלמת תמונות טובות.</span></i>"
+            },
             {
               "p": "My friends play basketball <b>all the time</b>."
             },
@@ -8185,27 +10592,99 @@
             {
               "p": "You can <b>get off</b> the bus soon."
             }
+          ]
+        },
+        {
+          "id": "word-maps",
+          "type": "word-maps",
+          "title": "Word Maps",
+          "skill": "writing",
+          "level": null,
+          "lane": "practice",
+          "category": "writing",
+          "step": 2,
+          "source": {
+            "book": "students",
+            "page": 52,
+            "exercise": 6
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Make word maps for at least one subject. Then write sentences about the subject. Use words from the list or your own words.",
+            "בנו מפת מילים לנושא אחד לפחות. לאחר מכן, כתבו משפטים על הנושא. השתמשו במילים מהרשימה או במילים שלכם."
           ],
-          "category": "review",
-          "step": 7
+          "passage": [
+            "<i>Nature → island · the cold · mountain · take a picture</i>"
+          ],
+          "items": [
+            {
+              "p": "<b>Nature</b> — write the words that go with this subject."
+            },
+            {
+              "p": "<b>Going to a new place</b> — write the words that go with this subject."
+            },
+            {
+              "p": "Now write sentences about one of the subjects."
+            }
+          ]
+        },
+        {
+          "id": "about-you",
+          "type": "about-you",
+          "title": "About You",
+          "skill": "writing",
+          "level": null,
+          "lane": "practice",
+          "category": "writing",
+          "step": 3,
+          "source": {
+            "book": "workbook",
+            "page": 43,
+            "exercise": 5
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Complete the sentences so that they are true for you.",
+            "השלימו את המשפטים כך שיהיו נכונים לגביכם."
+          ],
+          "items": [
+            {
+              "p": "On Mondays, I …"
+            },
+            {
+              "p": "In English class, my teacher …"
+            },
+            {
+              "p": "In the summer, my family …"
+            },
+            {
+              "p": "After school, I …"
+            },
+            {
+              "p": "On the weekend, my friend …"
+            }
+          ]
         }
       ],
       "skills": {
         "reading": {
           "active": false,
-          "reason": "No reading text for this part in the scanned material."
+          "reason": "The Extra Reading (Workbook p.44) is not among the pages in scope for this project."
         },
         "listening": {
           "active": false,
-          "reason": "No listening material for this part in the scanned material."
+          "reason": "No listening material for the Unit Check in the pages in scope."
         },
         "speaking": {
           "active": false,
-          "reason": "No speaking page for this part in the scanned material."
+          "reason": "The book's partner tasks (Student's Book 52.5 and 52.6) are included here as written tasks; Student's Book 52.7 sends you back to p.11, which is not in scope."
         }
       },
       "phonics": null,
-      "hero": "unit-check"
+      "hero": "unit-check",
+      "drillCap": 12
     }
   ],
   "vocabulary": [],

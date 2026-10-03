@@ -41,7 +41,10 @@ const TYPE_TITLES = {
   'write-a-blog': 'Write a Blog',
   'choose-the-best-meanings': 'Choose the Best Meaning',
   'match-sentences-to-people': 'Who Says It?',
-  'translate-and-tick': 'Translate and Tick'
+  'translate-and-tick': 'Translate and Tick',
+  'make-phrases': 'Make Phrases',
+  'replace-the-words': 'Replace the Words',
+  'word-maps': 'Word Maps'
 };
 
 const SKILL_LABELS = {
