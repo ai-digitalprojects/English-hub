@@ -235,6 +235,51 @@ const writing = {
   }
 };
 
+/* ---------------------------------------------------- sentence table
+   Six numbered rows, each with the words the student may build a sentence
+   from and one box to write it in. It is the writing renderer in a table:
+   the text lives in the same A.answers array, so every row is saved on its
+   own by the ordinary draft machinery and nothing here is auto-marked.
+
+   Items are {words:[…]}; a row with no words is a free one. */
+const sentenceTable = {
+  render(items){
+    if(A.answers === undefined) A.answers = items.map(() => '');
+    const he = s => /[֐-׿]/.test(s);
+    const row = (it, i) => `
+      <tr>
+        <td class="stNum">${i + 1}</td>
+        <td class="stWords">
+          ${(it.words || []).map(w =>
+            `<span class="stChip${he(w) ? ' he' : ''}"${he(w) ? ' dir="rtl"' : ''}>${w}</span>`).join('')}
+        </td>
+        <td class="stWrite">
+          <span class="stLabel">${bi('Write your sentence', 'כתבו את המשפט שלכם')}</span>
+          <textarea class="freeText sentBox" rows="2" data-action="wrItem" data-idx="${i}"
+            aria-label="Sentence ${i + 1}"
+            placeholder="${escapeAttr('Sentence ' + (i + 1) + '…')}">${escapeAttr(A.answers[i] || '')}</textarea>
+        </td>
+      </tr>`;
+    return `
+      <div class="sentTableWrap">
+        <table class="sentTable">
+          <thead>
+            <tr>
+              <th class="stNum">#</th>
+              <th class="stWords">${bi('Words to help you', 'מילים שיעזרו לכם')}</th>
+              <th class="stWrite">${bi('Write your sentence', 'כתבו את המשפט שלכם')}</th>
+            </tr>
+          </thead>
+          <tbody>${items.map(row).join('')}</tbody>
+        </table>
+      </div>
+      <div class="navRowR">${finish('done')}</div>`;
+  },
+  handle(){ return false; },
+  /* The same box and the same store as the writing renderer. */
+  input(act, t){ return writing.input(act, t); }
+};
+
 /* --------------------------------------------------------- unscramble
    Scrambled letters with a clue. Items are {answer, clue}. */
 const unscramble = {
@@ -326,6 +371,9 @@ const wordlist = {
 
 import { reading, recall } from './reading.js';
 
-const RENDERERS = { mc, pairs, bins, writing, unscramble, wordlist, reading, recall };
+const RENDERERS = {
+  mc, pairs, bins, writing, unscramble, wordlist, reading, recall,
+  'sentence-table': sentenceTable
+};
 
 export { RENDERERS };

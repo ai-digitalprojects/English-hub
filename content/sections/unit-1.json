@@ -1131,56 +1131,61 @@
             "exercise": 5
           },
           "origin": "adapted",
-          "render": "writing",
-          "wordBank": [
-            "Maya",
-            "A ball",
-            "Will and Jake",
-            "The dog",
-            "Mom",
-            "The babies",
-            "is",
-            "isn't",
-            "are",
-            "aren't",
-            "have",
-            "has",
-            "red hair",
-            "near the table",
-            "under a tree",
-            "a book",
-            "tired",
-            "hats"
-          ],
-          "scene": [
-            "Workbook p.13 shows a park. Will and Jake kneel on the grass under a big tree, playing a board game. Two babies sit in a stroller, yawning. Mom is at a picnic table with an open book and a plate of rolls. Maya sits at the table — she has red hair. A dog lies on the grass near the table, and a ball is on the grass.",
-            "בעמוד 13 בחוברת מופיע פארק. וויל וג'ייק כורעים על הדשא מתחת לעץ גדול ומשחקים משחק לוח. שני תינוקות יושבים בעגלה ומפהקים. אמא ליד שולחן פיקניק עם ספר פתוח וצלחת לחמניות. מאיה יושבת ליד השולחן — יש לה שיער אדום. כלב שוכב על הדשא ליד השולחן, וכדור מונח על הדשא."
-          ],
+          "render": "sentence-table",
           "instruction": [
-            "Write six sentences about the picture. Use the words in the table.",
-            "כתבו שישה משפטים על התמונה. השתמשו במילים שבטבלה."
+            "Look at the picture and write six sentences. Use the words in the table to help you.",
+            "התבוננו בתמונה וכתבו שישה משפטים. השתמשו במילים שבטבלה כדי לעזור לכם."
           ],
           "items": [
             {
-              "p": "Sentence 1 &nbsp; <i>(the book's example: Maya isn't under a tree.)</i>"
+              "words": [
+                "Nina",
+                "under a tree",
+                "is"
+              ]
             },
             {
-              "p": "Sentence 2 &nbsp; <i>(the book's example: Mom has a book.)</i>"
+              "words": [
+                "Omer",
+                "a blue cap",
+                "has"
+              ]
             },
             {
-              "p": "Sentence 3"
+              "words": [
+                "Gal",
+                "on a bench",
+                "is"
+              ]
             },
             {
-              "p": "Sentence 4"
+              "words": [
+                "Shira",
+                "a picnic basket",
+                "has"
+              ]
             },
             {
-              "p": "Sentence 5"
+              "words": [
+                "The dog and the ball",
+                "on the grass",
+                "are"
+              ]
             },
             {
-              "p": "Sentence 6"
+              "words": [
+                "Your own sentence",
+                "משפט משלכם"
+              ],
+              "free": true
             }
           ],
-          "lane": "practice"
+          "lane": "practice",
+          "image": {
+            "file": "scene-park.webp",
+            "alt": "A park. Nina and Omer kneel on the grass under a big tree. Gal sits on a bench eating an apple. A baby sits in a stroller. Shira sits on a picnic blanket with a basket, sandwiches, grapes and strawberries. A dog lies on the grass beside a ball. There is a lake with ducks behind them and a playground on the right.",
+            "altHe": "פארק. נינה ועומר כורעים על הדשא מתחת לעץ גדול. גל יושב על ספסל ואוכל תפוח. תינוקת יושבת בעגלה. שירה יושבת על שמיכת פיקניק עם סל, כריכים, ענבים ותותים. כלב שוכב על הדשא ליד כדור. מאחור אגם עם ברווזים, ומימין גן שעשועים."
+          }
         }
       ],
       "skills": {

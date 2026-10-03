@@ -86,6 +86,18 @@ function scene(act){
   return s ? `<p class="exHint sub scene">🖼️ ${bi(s[0], s[1])}</p>` : '';
 }
 
+/* An exercise that has a picture of its own shows it before the instruction,
+   because the instruction is about the picture. The alt text carries the same
+   description a scene paragraph would have, for anyone not seeing it. */
+function sceneImage(act){
+  const img = act.image;
+  if(!img || !img.file) return '';
+  return `
+  <figure class="sceneFig">
+    <img src="assets/img/${img.file}" alt="${escapeAttr(img.alt || '')}" loading="lazy">
+  </figure>`;
+}
+
 /* A text the student reads before writing — the book's model paragraph. */
 function passage(act){
   const p = act.passage;
@@ -120,7 +132,7 @@ function renderActivity(){
       ${levelBadge(act.level)}${done ? '<span class="doneFlag">✓ Done</span>' : ''}
     </div>
     ${sourceRef(act)}
-    ${taskLine(act)}${scene(act)}${passage(act)}
+    ${sceneImage(act)}${taskLine(act)}${scene(act)}${passage(act)}
     ${body}
   </div>
   <div class="stepNav"><a class="stepLink prev" href="${upHref}">← Back to ${part.title}</a></div>`;
