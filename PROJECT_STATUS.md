@@ -2,7 +2,8 @@
 
 **Last updated:** 2026-10-03
 **Branch:** `english-hub-v2`
-**Commit:** `1ad2430` — *Drop Read Better: long a and add a dictation practice link*
+**Commit:** `9b92d2f` — *Rebuild Write Sentences around the park picture and a writing table*
+**Plus the housekeeping commit on top of it, which adds `favicon.ico` and this file.**
 **Working tree:** clean
 **`main`:** `865802c`, unchanged and identical to `origin/main`
 **Not deployed. Not merged. No PR.**
@@ -11,7 +12,8 @@
 
 ## Where the project stands
 
-Content and visual work are both complete and awaiting final review.
+Content and visual work are complete. A full pre-deployment check has been run
+and passed; the project is waiting for the go-ahead to deploy.
 
 | | |
 |---|---|
@@ -20,8 +22,12 @@ Content and visual work are both complete and awaiting final review.
 | Print button removed from the student interface | ✅ |
 | Nine hero images integrated | ✅ |
 | One design language across every screen | ✅ |
-| Dictation practice link on every section with a word list | ✅ |
-| 140 activities tested | ✅ |
+| Dictation practice link on all 7 sections with a word list | ✅ |
+| Write Sentences rebuilt around the park picture and a writing table | ✅ |
+| Full responsive testing — 320, 375, 768, 1120 | ✅ |
+| 140 activities tested, all opened successfully | ✅ |
+| Zero broken links · zero missing images · zero overflow · zero JS errors | ✅ |
+| `/favicon.ico` 404 fixed | ✅ |
 | `main` untouched | ✅ |
 
 ---
@@ -63,6 +69,27 @@ rather than stored, so the unit card, the progress rows and the site total
 followed on their own. The Unit Check's word list is the whole unit, so its
 drills take an even sample of 12 (`drillCap`) rather than all 78 — a 78-word
 matching grid is unusable.
+
+### Part 1 · Write Sentences — rebuilt (`9b92d2f`)
+
+The task had six loose boxes under a paragraph describing a picture the project
+did not have. It now has the picture — `assets/img/scene-park.webp`, above the
+instruction, because the instruction is about it — and the paragraph is gone;
+the image's alt text carries the description instead.
+
+The six boxes became one table: a number, the words the row offers, and a box to
+write the sentence in. The helper words are only what the picture supports —
+Nina under the tree, Omer's blue cap, Gal on the bench, Shira's basket, the dog
+and the ball on the grass — with *is / has / are*, so the row still practises the
+part's two verbs. The sixth row is the student's own sentence.
+
+The book's example named Mom; the woman in the picture is labelled Shira, so she
+is called Shira. Nothing is asserted that the picture does not show.
+
+It is the writing renderer in a table (`render: "sentence-table"`): the text
+lives in the same `A.answers` array, so each row saves on its own through the
+ordinary draft machinery and nothing is auto-marked. On a phone the table stops
+being a table — each row becomes its own card, so nothing scrolls sideways.
 
 ### The method, applied to every section
 
@@ -174,6 +201,13 @@ The scrim is measured, not guessed. The Part bands carry a long page list, so
 their ellipse reaches further right than the unit's; the unit keeps the tighter
 one it was approved with, which lets more of the picture through.
 
+One further picture is not a hero: `scene-park.webp`, the park that Part 1's
+Write Sentences is about. It sits inside the activity, held to 620px rather than
+cropped, because every name in it has to stay readable.
+
+The site icon is `favicon.ico` at the project root alongside
+`assets/favicon.svg`; both are declared in `<head>`.
+
 ---
 
 ## 6. Visual polish — one design language
@@ -199,28 +233,59 @@ ask for**, so one palette reaches every component.
 
 ---
 
-## 7. Test results
+## 7. Test results — full pre-deployment check
+
+Every activity was opened and exercised, not merely counted.
 
 ```
-140 activity cards      all open · all have controls · all bilingual
-                        every card carries its Hebrew title
-0 empty cards           0 console errors · 0 image 404s
-Horizontal overflow     0 px at 375, 768 and 1120
+Activities              140 / 140 opened          0 empty · 0 without controls
+Bilingual               0 cards without Hebrew    0 activities without a
+                                                  two-language instruction
+Console errors          0
+Network                 0 non-200 · 57 files checked directly against the server
+Images                  9 heroes + 1 scene, all 200, all painted
+Horizontal overflow     0 px at 320, 375, 768 and 1120
 Grids                   Home 2→1 · Unit 1 3→2→1 · Parts 2→2→1
-Hero height             214 / 208 / 188, identical on all nine bands
+Hero height             214 / 208 / 188, identical on all ten bands
 Hero contrast           worst line 5.0 desktop · 3.8 phone (large text, floor 3.0)
 Card and page text      every measured value above AA
-Dictation panel         7 screens · link loads · opens in a new tab
-                        counted on no total
+Dictation panel         7 sections · one href · opens in a new tab · destination
+                        loads · counted on no total
+Routing                 breadcrumbs, the Back button, browser back/forward and a
+                        reload on a deep link all resolve
+Progress                3 marked done → part, unit card, Home and My Progress all
+                        agreed; Reset cancels and clears correctly
 ```
 
-Five colours failed the contrast floor during the polish pass and were corrected
-rather than kept: `--correct` and `--retry` were too pale to be read on their own
-tint in a feedback row; the level badge could not be coloured and stay legible at
-0.7rem; the reading eyebrow's sage was too light; and a solved match was faded to
-70%, which left it at 3.0 against its own background. A sixth was caught later,
-on the dictation button: the Hebrew half carried an opacity that left it at 3.8
-against the gold, and both halves of a button have to be readable.
+Renderers were driven, not just rendered:
+
+```
+mc            right answer scores · wrong answer says Try again and does NOT
+              reveal the correct option
+pairs         solved in full → 6 / 6 → Complete → counted
+bins          word selected · dropped in a group · marked
+unscramble    letters, Hebrew clue, input, Puzzle 1 of 14
+reading       14 steps, a paragraph revealed per step
+flashcards    next / previous / counter / speaker
+sentence-table  three rows typed, activity left and re-entered, all restored,
+              a fourth typed without disturbing them, progress untouched
+```
+
+### The one 404, and its fix
+
+`/favicon.ico` returned 404 on every page load. The site never referenced it —
+`index.html` declared `assets/favicon.svg`, which served correctly — but with no
+`.ico` declared the browser probes the root for one on its own.
+
+`favicon.ico` now sits at the project root, rendered from the existing SVG
+artwork at six sizes (16–256). The artwork was not redesigned: the shapes were
+replayed from the source file at its own coordinates, since no SVG rasteriser is
+installed. Both icons are declared in `<head>`, the `.ico` first with
+`sizes="any"`.
+
+Verified in a clean browser tab: `/favicon.ico` → 200, `assets/favicon.svg` →
+200, 47 resources loaded, **console completely empty**, and a control request for
+a file that genuinely does not exist still returns 404.
 
 ---
 
@@ -229,7 +294,7 @@ against the gold, and both halves of a button have to be readable.
 ```
 main             865802c   live site — untouched, equals origin/main
 rebuild          ba95e7d   3 commits never deployed
-english-hub-v2   1ad2430   ← current work
+english-hub-v2   9b92d2f   ← the last feature commit, plus housekeeping
 tag              v1-single-file
 ```
 
@@ -247,8 +312,8 @@ Apps Script.
 
 ## 9. Open items
 
-- **Awaiting final visual review** of the global design pass before any merge or
-  deployment is considered.
+- **Awaiting the go-ahead to deploy.** The design pass is approved and the full
+  pre-deployment check has passed; nothing is merged or deployed.
 - **Provenance flags on Parts 1 and 2.** Their 26 words still carry
   `heSource: "site"` from before the PDF audits, and `saw` (Part 2) is still
   flagged `needsReview`, although both parts were validated against the source.
