@@ -5,7 +5,7 @@ import { S, A, isDone } from '../state.js';
 import { getSection, getPart, getActivity, wordsForActivity } from '../content/model.js';
 import { escapeAttr } from '../helpers.js';
 import { hashFor } from '../router.js';
-import { activityTitle, levelBadge, sourceRef } from './labels.js';
+import { activityTitle, titleHeLine, levelBadge, sourceRef } from './labels.js';
 import { exerciseFor } from '../exercises/index.js';
 import { RENDERERS } from '../exercises/engine.js';
 import { ins, ui, bi } from './bilingual.js';
@@ -113,7 +113,10 @@ function renderActivity(){
   return `
   <div class="card">
     <div class="actHeadRow">
-      <h2>${activityTitle(act)}</h2>
+      <div class="actHeadText">
+        <h2>${activityTitle(act)}</h2>
+        ${titleHeLine(act)}
+      </div>
       ${levelBadge(act.level)}${done ? '<span class="doneFlag">✓ Done</span>' : ''}
     </div>
     ${sourceRef(act)}

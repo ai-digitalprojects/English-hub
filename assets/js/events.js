@@ -19,7 +19,6 @@ function initEvents(){
     const part = getPart(S.sectionId, S.partId);
 
     if(act === 'speak'){ speak(t.dataset.text); return; }
-    if(act === 'printWorksheet'){ window.print(); return; }
 
     /* Exercise drills own their own actions. */
     if(act === 'ex'){

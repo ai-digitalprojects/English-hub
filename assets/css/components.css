@@ -279,6 +279,9 @@ a.actItem:hover{ border-color:var(--ink-soft); }
 .partProgress{ margin:18px 0 4px; }
 .actHeadRow{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 .actHeadRow h2{ margin:0; }
+/* The title and its Hebrew are one block, so the level badge sits beside the
+   pair instead of being pushed onto a line of its own. */
+.actHeadText{ display:flex; flex-direction:column; }
 .doneFlag{ font-size:0.75rem; font-weight:700; color:var(--green); }
 .wordSrc{ font-size:0.72rem; color:var(--ink-soft); margin-top:10px; }
 .missingHe{ color:var(--ink-soft); font-style:italic; }
@@ -321,7 +324,6 @@ a.statRow.link:hover{ background:rgba(0,0,0,0.03); }
 
 /* ===== PHASE 6 — polish ===== */
 .printOnly{ display:none; }
-.printRow{ margin:18px 0 4px; }
 
 /* Bins are buttons now; keep them looking like drop zones. */
 button.bin{ width:100%; text-align:left; font:inherit; display:block; }
@@ -671,6 +673,30 @@ a.actItem:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lift); }
 .actItem h4{ margin:2px 0 12px; font-size:1.18rem; line-height:1.3; font-weight:800; color:var(--navy); }
 .actTick{ margin-left:auto; }
 
+/* ---- The card's title, in both languages ----
+   The English leads and the Hebrew sits directly under it, a size smaller and
+   in the softer ink: a student who does not know the English task can still
+   read the card, and the second line does not compete with the first.
+   The pair is wrapped so the spacing belongs to the block rather than to the
+   heading, which three earlier layers of this file also give a margin. */
+.actTitle{ margin:2px 0 12px; }
+.actItem .actTitle h4{ margin:0; }
+.actTitleHe{
+  margin:4px 0 0;
+  font-size:0.92rem; line-height:1.4; font-weight:600;
+  /* Not --ink-soft: at this size it clears the contrast floor on a plain card
+     but falls to 4.17 on a finished one, whose background is green. This tone
+     is just as quiet and holds at 5.7 and 5.1. */
+  color:#5A6773;
+  /* The line reads right to left, but it is aligned with the English above it
+     rather than with the far edge of an otherwise left-to-right card. */
+  text-align:left;
+}
+.actHeadText .actTitleHe{ font-size:1rem; }
+@media(max-width:620px){
+  .actTitleHe{ font-size:0.95rem; }
+}
+
 .cat-vocabulary a.actItem:hover{ border-color:var(--c-vocabulary); }
 .cat-grammar    a.actItem:hover{ border-color:var(--c-grammar); }
 .cat-reading    a.actItem:hover{ border-color:var(--c-reading); }
@@ -699,7 +725,6 @@ a.actItem:hover{ transform:translateY(-2px); box-shadow:var(--shadow-lift); }
 /* ---- misc ---- */
 .partProgress{ margin:4px 0 10px; }
 .partProgress .pctLabel{ margin-top:8px; }
-.printRow{ margin:0 0 6px; }
 .sectionNote{ font-size:0.85rem; color:var(--ink-soft); font-style:italic; margin:0 0 18px; }
 .pbarOuter{ height:7px; background:var(--line-soft); }
 

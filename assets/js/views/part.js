@@ -9,7 +9,7 @@ import { partProgress } from '../progress.js';
 import { getSection, getPart, visibleActivities } from '../content/model.js';
 import { bi } from './bilingual.js';
 import { hashFor } from '../router.js';
-import { activityTitle, levelBadge, sourceRef } from './labels.js';
+import { activityTitle, titleHeLine, levelBadge, sourceRef } from './labels.js';
 import { groupByCategory, categoryHeading, categoryOf } from './categories.js';
 import { renderHero } from './hero.js';
 
@@ -32,7 +32,10 @@ function activityCard(sectionId, part, a, n){
       ${levelBadge(a.level)}
       <span class="actTick">${done ? '<span class="fxTick">✓</span>' : ''}</span>
     </div>
-    <h4>${activityTitle(a)}</h4>
+    <div class="actTitle">
+      <h4>${activityTitle(a)}</h4>
+      ${titleHeLine(a)}
+    </div>
     ${sourceRef(a)}
     ${originBadge(a)}
   </a>`;
@@ -61,7 +64,10 @@ function categorySection(sectionId, part, group){
 }
 
 /* A printable vocabulary worksheet: the word list with a blank column.
-   Hidden on screen, laid out by print.css when the page is printed. */
+   Never shown on screen and no longer offered by a button — the student
+   interface does not carry a print action. It is the print layout of the page,
+   so a teacher who prints a Part from the browser gets the word sheet rather
+   than a screenshot of the cards. */
 function worksheet(section, part){
   const words = part.vocabulary || [];
   if(!words.length) return '';
@@ -100,9 +106,6 @@ function renderLanes(sectionId, part){
     <div class="pbarOuter"><div class="pbarInner" style="width:${pr.pct}%;background:${colorVar('teal')}"></div></div>
     <div class="pctLabel">${bi(`${pr.done} of ${pr.total} done`, `${pr.done} מתוך ${pr.total} הושלמו`)}</div>
   </div>
-  ${(part.vocabulary || []).length ? `<div class="printRow printHide">
-    <button class="pill outline" data-action="printWorksheet">${bi('🖨 Print a word worksheet', 'הדפיסו דף מילים')}</button>
-  </div>` : ''}
   ${groups.map(g => categorySection(sectionId, part, g)).join('')}`;
 }
 
