@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-10-03
 **Branch:** `english-hub-v2`
-**Commit:** `25669a1` — *Carry the Unit 1 design language across the whole site*
+**Commit:** `1ad2430` — *Drop Read Better: long a and add a dictation practice link*
 **Working tree:** clean
 **`main`:** `865802c`, unchanged and identical to `origin/main`
 **Not deployed. Not merged. No PR.**
@@ -20,7 +20,8 @@ Content and visual work are both complete and awaiting final review.
 | Print button removed from the student interface | ✅ |
 | Nine hero images integrated | ✅ |
 | One design language across every screen | ✅ |
-| 141 activities tested | ✅ |
+| Dictation practice link on every section with a word list | ✅ |
+| 140 activities tested | ✅ |
 | `main` untouched | ✅ |
 
 ---
@@ -45,16 +46,21 @@ built, corrected, tested and approved on its own before the next one began.
 | Section | Cards | Words | Source pages | Commit |
 |---|---|---|---|---|
 | Getting Started | 15 | 22 | WB 4–7 | `55367c4` |
-| Part 1 · A Trip to Japan | 17 | 13 | SB 12, 13, 15 · WB 10–13 | `0bd5062` |
+| Part 1 · A Trip to Japan | 16 | 13 | SB 12, 13, 15 · WB 10–13 | `0bd5062` `1ad2430` |
 | Part 2 · Snow Monkeys | 27 | 13 | SB 20, 22–25, 27 · WB 16–21 | `80068f0` |
 | Part 3 · Let's Go | 18 | 14 | SB 28, 29, 30 · WB 24–27 | `9002742` |
 | Part 4 · Made in Japan | 26 | 13 | SB 34, 35, 39–41 · WB 28–33 | `d386c94` |
 | Part 5 · Story | 19 | 25 | SB 42, 43, 47 · WB 36–39 | `a756da1` |
 | Unit Check | 19 | 78 | SB 51, 52 · WB 41–43 | `2a9faae` |
-| | **141** | | | |
+| | **140** | | | |
 
 A card count is the book's own exercises plus the drills the site builds over
-that part's word list. The Unit Check's word list is the whole unit, so its
+that part's word list. **Part 1's *Read Better: long a* was removed on request**
+(`1ad2430`): 17 cards became 16. Nothing else referenced it, and the part still
+holds two other sorting exercises, so the site's own sort-the-words drill stays
+suppressed and the drill set is unchanged. Every count on the site is derived
+rather than stored, so the unit card, the progress rows and the site total
+followed on their own. The Unit Check's word list is the whole unit, so its
 drills take an even sample of 12 (`drillCap`) rather than all 78 — a 78-word
 matching grid is unusable.
 
@@ -114,7 +120,40 @@ with a blank column rather than a picture of the cards.
 
 ---
 
-## 4. Hero images
+## 4. Dictation practice — an external resource
+
+A link out to <https://www.hachtava.co.il/> for practising the words before a
+dictation, added on request (`1ad2430`). The site is a free Hebrew and English
+dictation trainer: it carries ready word lists and takes a typed list of your
+own, which is what makes it usable with this unit's vocabulary.
+
+```
+Practice for Dictation          תרגול והכנה להכתבה
+Practice your words before      תרגלו את המילים והתכוננו להכתבה.
+the dictation.
+Start Dictation Practice →      התחילו תרגול הכתבה
+```
+
+**Where it appears.** On every section that has a word list — the five Parts,
+Getting Started and the Unit Check — placed with the word count and the progress
+bar, above the first category block. It is not drawn on Home, on the Unit 1
+overview or on My Progress, where there is nothing to practise.
+
+**What it is not.** It is an `<aside>`, not an activity card. It sits outside the
+numbered sequence because it is a site off this one rather than an exercise from
+the book, nothing marks it done, and it touches no total: `partProgress` counts
+visible activities only.
+
+**How it behaves.** The link opens in a new tab with
+`rel="noopener noreferrer"`. It is the one gold element on a Part screen — the
+same warm card as everything else, an accent rule down its edge, a tinted tile
+for the mark and a gold-outlined button — which is what makes it findable
+without being loud. On a phone the button goes full width and the mark rises to
+sit with the title.
+
+---
+
+## 5. Hero images
 
 All nine slots carry artwork (`b1cb9eb`, `22d9f7f`). `assets/js/views/hero.js`
 holds the slot names and a focal point per image, written straight into
@@ -137,7 +176,7 @@ one it was approved with, which lets more of the picture through.
 
 ---
 
-## 5. Visual polish — one design language
+## 6. Visual polish — one design language
 
 `assets/css/polish.css` loads last and carries the language that was designed
 and approved on the Unit 1 overview (`f660e5f`) to every screen (`25669a1`).
@@ -160,10 +199,10 @@ ask for**, so one palette reaches every component.
 
 ---
 
-## 6. Test results
+## 7. Test results
 
 ```
-141 activity cards      all open · all have controls · all bilingual
+140 activity cards      all open · all have controls · all bilingual
                         every card carries its Hebrew title
 0 empty cards           0 console errors · 0 image 404s
 Horizontal overflow     0 px at 375, 768 and 1120
@@ -171,22 +210,26 @@ Grids                   Home 2→1 · Unit 1 3→2→1 · Parts 2→2→1
 Hero height             214 / 208 / 188, identical on all nine bands
 Hero contrast           worst line 5.0 desktop · 3.8 phone (large text, floor 3.0)
 Card and page text      every measured value above AA
+Dictation panel         7 screens · link loads · opens in a new tab
+                        counted on no total
 ```
 
 Five colours failed the contrast floor during the polish pass and were corrected
 rather than kept: `--correct` and `--retry` were too pale to be read on their own
 tint in a feedback row; the level badge could not be coloured and stay legible at
 0.7rem; the reading eyebrow's sage was too light; and a solved match was faded to
-70%, which left it at 3.0 against its own background.
+70%, which left it at 3.0 against its own background. A sixth was caught later,
+on the dictation button: the Hebrew half carried an opacity that left it at 3.8
+against the gold, and both halves of a button have to be readable.
 
 ---
 
-## 7. Branch state
+## 8. Branch state
 
 ```
 main             865802c   live site — untouched, equals origin/main
 rebuild          ba95e7d   3 commits never deployed
-english-hub-v2   25669a1   ← current work
+english-hub-v2   1ad2430   ← current work
 tag              v1-single-file
 ```
 
@@ -202,7 +245,7 @@ Apps Script.
 
 ---
 
-## 8. Open items
+## 9. Open items
 
 - **Awaiting final visual review** of the global design pass before any merge or
   deployment is considered.
