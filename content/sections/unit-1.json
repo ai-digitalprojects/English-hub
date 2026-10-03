@@ -60,12 +60,9 @@
         "studentsBook": [
           12,
           13,
-          15,
-          17,
-          18
+          15
         ],
         "workbook": [
-          8,
           10,
           11,
           12,
@@ -84,12 +81,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -107,12 +99,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -130,12 +117,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": null,
           "needsReview": false,
           "missing": [
@@ -156,12 +138,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -179,12 +156,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -202,12 +174,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -225,12 +192,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -248,12 +210,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -271,12 +228,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -294,12 +246,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -317,12 +264,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -340,12 +282,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -363,12 +300,7 @@
             "book": "students",
             "page": 12
           },
-          "alsoOn": [
-            {
-              "book": "workbook",
-              "page": 8
-            }
-          ],
+          "alsoOn": [],
           "heSource": "site",
           "needsReview": false,
           "missing": [
@@ -385,11 +317,6 @@
             "book": "workbook",
             "page": 10
           },
-          "linkedTo": {
-            "book": "students",
-            "page": 17,
-            "exercise": 1
-          },
           "points": [
             "I am / He is / You are",
             "contractions: I'm not, He isn't, We aren't"
@@ -402,11 +329,6 @@
           "source": {
             "book": "workbook",
             "page": 11
-          },
-          "linkedTo": {
-            "book": "students",
-            "page": 18,
-            "exercise": 3
           },
           "points": [
             "I / You / We / They have",
@@ -472,10 +394,6 @@
           "source": {
             "book": "students",
             "page": 12
-          },
-          "linkedTo": {
-            "book": "workbook",
-            "page": 232
           },
           "origin": "book",
           "render": "bins",
@@ -654,74 +572,19 @@
           "lane": "practice"
         },
         {
-          "id": "word-snake",
-          "type": "circle-write-translate",
-          "skill": "vocabulary",
-          "level": 1,
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 8,
-            "exercise": 1
-          },
-          "linkedTo": {
-            "book": "students",
-            "page": 17,
-            "exercise": 2
-          },
-          "status": "planned",
-          "render": "unscramble",
-          "origin": "adapted",
-          "items": [
-            {
-              "answer": "hit",
-              "clue": "להכות"
-            },
-            {
-              "answer": "team",
-              "clue": "קבוצה"
-            },
-            {
-              "answer": "order",
-              "clue": "להזמין"
-            },
-            {
-              "answer": "afraid",
-              "clue": "פוחד"
-            },
-            {
-              "answer": "popular",
-              "clue": "פופולרי"
-            },
-            {
-              "answer": "love",
-              "clue": "לאהוב"
-            },
-            {
-              "answer": "glad",
-              "clue": "שמח"
-            },
-            {
-              "answer": "island",
-              "clue": "אי"
-            }
-          ],
-          "category": "vocabulary",
-          "step": 5
-        },
-        {
           "id": "write-the-words",
           "type": "write-the-words",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
           "source": {
-            "book": "workbook",
-            "page": 8
+            "book": "students",
+            "page": 12
           },
           "status": "planned",
           "category": "vocabulary",
-          "step": 7
+          "step": 7,
+          "origin": "word-list"
         },
         {
           "id": "highlight-to-be",
@@ -732,11 +595,6 @@
           "source": {
             "book": "workbook",
             "page": 10,
-            "exercise": 1
-          },
-          "linkedTo": {
-            "book": "students",
-            "page": 17,
             "exercise": 1
           },
           "status": "planned",
@@ -818,11 +676,6 @@
             "page": 11,
             "exercise": 1
           },
-          "linkedTo": {
-            "book": "students",
-            "page": 18,
-            "exercise": 3
-          },
           "status": "planned",
           "render": "bins",
           "origin": "book",
@@ -885,11 +738,6 @@
             "book": "workbook",
             "page": 11,
             "exercise": 1
-          },
-          "linkedTo": {
-            "book": "students",
-            "page": 18,
-            "exercise": 3
           },
           "origin": "book",
           "render": "bins",
@@ -1387,12 +1235,15 @@
       ],
       "skills": {
         "reading": {
-          "active": false,
-          "reason": "No reading text for this part in the scanned material."
+          "active": true,
+          "source": {
+            "book": "students",
+            "page": 15
+          }
         },
         "listening": {
           "active": false,
-          "reason": "The comparison task exists (Workbook p.13) but the audio it refers to (Book p.18, exercises 1-2) was not in the scanned material.",
+          "reason": "The comparison task is printed on Workbook p.13, but the audio it refers to (Student's Book p.18) is not among the pages in scope for this project.",
           "task": {
             "type": "tick-two-columns",
             "source": {
@@ -1419,7 +1270,7 @@
         },
         "speaking": {
           "active": false,
-          "reason": "No speaking page for this part in the scanned material."
+          "reason": "No speaking page for this part in the pages in scope."
         }
       },
       "phonics": null,
@@ -1848,10 +1699,6 @@
           "source": {
             "book": "students",
             "page": 20
-          },
-          "linkedTo": {
-            "book": "workbook",
-            "page": 233
           },
           "origin": "book",
           "render": "bins",
@@ -3123,10 +2970,6 @@
           "book": "students",
           "page": 20
         },
-        "practiceOn": {
-          "book": "workbook",
-          "page": 233
-        },
         "patterns": [
           {
             "spelling": "ea",
@@ -3145,8 +2988,7 @@
             ]
           }
         ],
-        "active": false,
-        "reason": "The phonics practice pages (Workbook p.233) were not in the scanned material."
+        "active": true
       },
       "hero": "part-2"
     },
