@@ -1,58 +1,35 @@
 # Project Status — English Hub
 
-**Last updated:** 2026-10-02
+**Last updated:** 2026-10-03
 **Branch:** `english-hub-v2`
-**Commit:** `80068f0` — *Correct Part 2 against the source PDFs*
+**Commit:** `25669a1` — *Carry the Unit 1 design language across the whole site*
 **Working tree:** clean
 **`main`:** `865802c`, unchanged and identical to `origin/main`
 **Not deployed. Not merged. No PR.**
 
 ---
 
-## 1. Completed
+## Where the project stands
 
-### Visual direction (v2)
-- `assets/css/tokens.css` rebuilt around the approved palette — navy and indigo
-  for structure, ivory and warm white for surfaces, four muted accents that mark
-  *type of learning* rather than decorating:
+Content and visual work are both complete and awaiting final review.
 
-  | | | |
-  |---|---|---|
-  | Vocabulary | blush | Grammar · teal |
-  | Reading | sage | Writing · indigo |
-  | Review | gold | |
-
-  Cards stay white. Legacy colour aliases kept so older rules still resolve.
-- `assets/css/effects.css` — tick, six sparks, retry turn, hint, finish block.
-  Every animation disabled under `prefers-reduced-motion`.
-
-### Learning sequence
-- `assets/js/views/categories.js` — **Warm Up → Vocabulary → Grammar → Reading →
-  Writing → Review**. A category with no activities is never drawn.
-- `part.js`, `home.js`, `section.js` rewritten. Stage cards show a category strip
-  so the student sees what a Part contains before opening it.
-- Grammar rules render before grammar practice.
-
-### Feedback model
-- `assets/js/exercises/feedback.js` + engine changes.
-  `HINT_AT = 2`, `REVEAL_AT = 4`. A wrong answer says *Try again* and clears the
-  choice; the correct option is never marked while the student is still trying.
-  The final score counts answers right on the first attempt.
-
-### Hero component
-- `assets/js/views/hero.js` — 8 named image slots, painted as
-  `background-image: var(--heroImg), var(--heroTone)` so a missing file falls
-  through to a palette gradient. No substitute artwork was created.
-
-### Part 2 — Snow Monkeys, corrected against the source PDFs
-Completed 2026-10-02 in commit `80068f0`. See section 3.
+| | |
+|---|---|
+| Every section built from the source PDFs | ✅ |
+| Bilingual activity titles on every card | ✅ |
+| Print button removed from the student interface | ✅ |
+| Nine hero images integrated | ✅ |
+| One design language across every screen | ✅ |
+| 141 activities tested | ✅ |
+| `main` untouched | ✅ |
 
 ---
 
-## 2. What the PDF audit found
+## 1. Content — all sections validated against the PDFs
 
-Five source PDFs (53 pages) were read in full. They interleave **Student's Book**
-and **Workbook** pages:
+Five source PDFs (53 pages) are the **complete and authoritative scope** of this
+project. Nothing outside them has been built, and a page that is not in them is
+never cited on a card a student can open.
 
 ```
 00.pdf  WB 4–7                                   Getting Started
@@ -62,186 +39,154 @@ and **Workbook** pages:
 04.pdf  SB 51,52 · WB 41,42,43                   Unit Check
 ```
 
-### The central finding — now resolved
+Each section was read in the PDFs first, compared against what was already
+built, corrected, tested and approved on its own before the next one began.
 
-> **The Part 2 reading text is SNOW MONKEYS (Student's Book 22–23), not Rex.**
+| Section | Cards | Words | Source pages | Commit |
+|---|---|---|---|---|
+| Getting Started | 15 | 22 | WB 4–7 | `55367c4` |
+| Part 1 · A Trip to Japan | 17 | 13 | SB 12, 13, 15 · WB 10–13 | `0bd5062` |
+| Part 2 · Snow Monkeys | 27 | 13 | SB 20, 22–25, 27 · WB 16–21 | `80068f0` |
+| Part 3 · Let's Go | 18 | 14 | SB 28, 29, 30 · WB 24–27 | `9002742` |
+| Part 4 · Made in Japan | 26 | 13 | SB 34, 35, 39–41 · WB 28–33 | `d386c94` |
+| Part 5 · Story | 19 | 25 | SB 42, 43, 47 · WB 36–39 | `a756da1` |
+| Unit Check | 19 | 78 | SB 51, 52 · WB 41–43 | `2a9faae` |
+| | **141** | | | |
 
-Rex is **Workbook 21, exercise 3 ★★★**, headed *Read and write*, on a page titled
-WRITING: Sentences. Its printed Hebrew instruction is
-*"קראו על רקס. לאחר מכן, כתבו על חיית מחמד שאתם מכירים."* — it is a **writing
-model paragraph**. The hub had turned it into a ten-step Reading activity, which
-both misfiled it and left the unit's real text out of the site entirely.
+A card count is the book's own exercises plus the drills the site builds over
+that part's word list. The Unit Check's word list is the whole unit, so its
+drills take an even sample of 12 (`drillCap`) rather than all 78 — a 78-word
+matching grid is unusable.
 
-### What the audit confirmed as correct
+### The method, applied to every section
 
-- **Every Book / Workbook reference and page number was accurate.** All 16 Part 2
-  activities were checked individually; no page errors.
-- All 13 Part 2 vocabulary words (SB 20) present, in the original English, with
-  the book's Hebrew.
-- Eight workbook exercises reproduce the source word for word, with correct
-  answers: WB 16/1, WB 17/2, WB 17/3, WB 17/4, WB 18/1, WB 19/1, WB 19/2, WB 19/3.
-- ★ levels matched the book everywhere except one activity.
-- The Rex paragraph itself is quoted verbatim.
+1. Read that section's pages in the PDFs before touching content.
+2. List the discrepancies against what is built, and get them approved.
+3. Build from the book's own exercises. Where a printed exercise leans on a
+   picture, describe the picture in words and mark the activity `adapted`.
+4. Where an answer lives in a text, make the options real sentences from that
+   text rather than writing distractors.
+5. Carry the book's own ★ levels; Student's Book exercises carry none.
+6. Name anything deliberately left out, and why.
+7. Test, then stop for review before moving on.
 
----
+### The scope rule
 
-## 3. Part 2 — corrected ✅
-
-All audit findings for Part 2 are resolved. **27 cards** — 25 from the books plus
-2 drills generated over the word list.
-
-### The real reading is in
-**Snow Monkeys, Student's Book 22–23**, the *Nature 4 Kids Magazine* article,
-built as 14 short screens:
-
-```
-1     Before you read   fur · the cold · reason · thousand · several
-2     Read              A · What are snow monkeys?   paragraph 1
-3–4   Find it           colours · why they are called snow monkeys
-5     Read              paragraph 2        6   how many live in Japan
-7     Read              paragraph 3        8   food in the winter
-9     Read              paragraph 4       10   how they sleep in winter
-11    Read              B · Why are snow monkeys famous?
-12–13 Find it           why they began · why in winter
-14    Now you write     Find examples from the text
-```
-
-Built from the book's own exercises: **SB 23.3** (six comprehension questions),
-**SB 23.4** (sleeping — pictures described in words), **SB 23.5** (find examples).
-**Every option offered is a real sentence from the text**, so the questions ask
-the student to locate rather than guess — nothing was invented. The text is
-revealed a paragraph at a time, and a question never shows a paragraph the
-student has not reached.
-
-### Rex is back in Writing
-At **★★★**, the level the workbook gives it, with the model paragraph shown above
-the task and the book's own instruction.
-
-### Restored content
-
-| Restored | Source |
-|---|---|
-| Read Better: long *e* (ea / ee sort) | SB 20 · WB 233 |
-| Is or Are? — **introduces short answers** | SB 25.2 |
-| Highlight and Translate: Wh- questions | WB 19.2 (Highlight block) |
-| Complete the Questions: All Question Words | WB 20.4a |
-| Complete the Dialogues ★★★ | WB 20.5 |
-| Write Your Own Questions — rebuilt from the book | SB 25.4 + WB 20.4b |
-| Write About the Picture — the real writing page | SB 27.1 |
-| About You: Your Family | SB 27.2 |
-| After You Read | SB 24.6 + SB 24.7 |
-
-**Workbook p.20 had been entirely unused; it is now in.**
-
-### Also fixed
-- **Warm Up** — three fabricated multiple-choice items replaced by the book's two
-  open questions. Two of the discarded distractors (`directly`, `pocket`) came
-  from Parts 3 and 4, which the student has not met.
-- **`writing-complete`** — the paired `… It has …` structure and the shared word
-  bank restored as the workbook prints them.
-- **`several`** — now reads `כמה, אחדים` as printed on SB 20.
-- **Star levels** — removed from Student's Book activities; the SB prints none.
-- **`origin` flags** — picture-dependent exercises are described in words and
-  marked `adapted`, never presented as the original.
-
-### Three engine fixes made along the way
-- A two-option question no longer offers a hint that would give the answer away.
-- Word banks are a list to read from, not buttons that did nothing when tapped.
-- Word-list drills moved to Vocabulary, so the Writing block keeps the book's own
-  ★ → ★★ → ★★★ progression unbroken.
-
-### Source pages used
-```
-Student's Book   20 · 22 · 23 · 24 · 25 · 27
-Workbook         16 · 17 · 18 · 19 · 20 · 21     (+ 233, Read Better reference)
-```
-
-### Deliberately left out of Part 2
-- **SB 25.3** — the question chart. A partner speaking task.
-- **SB 27 TASK** — animal fact file. Needs a picture, and the checklist on
-  WB 262 is not in the scans.
-- **SB 21 · SB 26 · WB 22–23** — not scanned. No source, nothing invented.
-
-### Test results — all passed
-```
-86 activities site-wide   all open · all have controls · all bilingual
-0 empty cards             0 console errors
-Reading sequence          14/14 steps · text reveal 1→2→3→4→5 paragraphs ✓
-Retry model               answer never shown on a wrong try ✓
-                          hint after two misses, grounded in the text ✓
-                          6 sparks on a correct answer ✓
-Horizontal overflow       0 px at 375 and at 1024
-```
+An out-of-scope page may be named **only inside an inactive skill record**,
+where it is the reason a task cannot run. It is never a citation on a card.
+Two such records survive by design: SB 18 (the Part 1 listening audio) and
+SB 45 (a Part 5 reading). `09f4ce3` removed the last activity that broke this
+rule — Part 1's word snake, which cited WB 8 and SB 17.
 
 ---
 
-## 4. Remaining Parts
+## 2. Bilingual activity titles
 
-The learning-sequence system has been applied and validated on **Part 2 only**.
-Each remaining Part needs the same treatment *and* its own check against the PDFs
-before building:
+Every student-facing card shows the English title with the Hebrew directly
+underneath, smaller, in the muted ink and right to left. The same pair heads the
+activity screen itself. Source labels — `Book p.34`, `Workbook p.28.1` — are
+never translated.
 
-| | Source pages available |
-|---|---|
-| Getting Started | WB 4–7 |
-| Part 1 — A Trip to Japan | SB 12, 13, 15 · WB 10–13 |
-| Part 3 — Let's Go | SB 28, 29, 30 · WB 24–27 |
-| Part 4 — Made in Japan | SB 34, 35, 39, 40, 41 · WB 28–33 |
-| Part 5 — Story | SB 42, 43, 47 · WB 36–39 |
-| Unit Check | SB 51, 52 · WB 41–43 |
+The Hebrew is **read off the English, not stored 137 times**
+(`assets/js/views/labels.js`):
 
-### Carried over from the audit
+- an activity type carries both languages;
+- a title the content writes out in full is listed by its English;
+- the book names its exercises in a pattern — a task, then what it is about — so
+  the task is looked up and the qualifier is carried across, which is why
+  *Write the Words 2 — Word Power 2* needs no entry of its own.
 
-**Part 3 Hebrew is already in the book.** 14 words are still flagged
-`heSource: added-for-teaching` / `needsReview`. The printed Hebrew exists on
-SB 28 (Word Power 1) and SB 29 (Word Power 2). Six of our 14 match the book
-exactly; eight differ:
+Only prose is translated. A grammar form (`to be`, `am / is / are`, `s / es /
+ies`), a sound (`long a`) and a heading printed in the book (`Word Power 1`,
+`New Words 2`) stay in English, because that is the string in front of the
+student.
 
-| | Book | Site |
-|---|---|---|
-| take a train | לקחת רכבת | לנסוע ברכבת |
-| take (something) away | לקחת (משהו) | לקחת (משהו) **משם** |
-| Take care! | תשמור / תשמרי על עצמך | שמרו על עצמכם! |
-| take (something) off | להוריד (משהו) | להוריד (**בגד**) |
-| get off | לרדת | לרדת (**מכלי תחבורה**) |
-| get on | לעלות | לעלות (**על כלי תחבורה**) |
-| visitor | אורח/ת, מבקר/ת | מבקר, אורח |
-| welcome | ברוך/כה הבא/ה, ברוכים הבאים | ברוכים הבאים |
-
-All 14 can move to `heSource: book` and the review flags can be dropped.
-
-**Open question, now informed by Part 2:** the book's own order is
-*Vocabulary → Reading → more Vocabulary → Grammar → Speaking → Writing*. Our
-approved order puts Reading after Grammar. Part 2 reads well either way, but in a
-Part whose reading carries the vocabulary, it is worth re-deciding consciously.
+**106 distinct English → Hebrew pairs resolve; none is missing.**
 
 ---
 
-## 5. Hero images
+## 3. Print button removed
 
-Eight slots are wired and waiting. Until the files exist, each renders a palette
-gradient — which is why the console shows one 404 per slot. **These will be
-integrated later, during the final visual-polish stage**, not while content work
-is in progress. Place in `assets/img/` (see [README](assets/img/README.md)):
-
-```
-hero-home.webp              hero-part-2.webp
-hero-getting-started.webp   hero-part-3.webp
-hero-unit-1.webp            hero-part-4.webp
-hero-part-1.webp            hero-part-5.webp
-                            hero-unit-check.webp
-```
-
-1600×500 · WebP · under 200 KB · calm left third (text sits there).
+The *Print a word worksheet* button is gone from Getting Started, from every
+Part and from the Unit Check, along with its click handler. The hidden print
+layout stays: a teacher who presses Ctrl+P on a Part still gets the word sheet
+with a blank column rather than a picture of the cards.
 
 ---
 
-## 6. Branch state
+## 4. Hero images
+
+All nine slots carry artwork (`b1cb9eb`, `22d9f7f`). `assets/js/views/hero.js`
+holds the slot names and a focal point per image, written straight into
+`background-image` — a relative `url()` inside a custom property resolves
+against the stylesheet, not the page, which is what sent the first attempt
+looking for `assets/css/assets/img/`.
+
+```
+hero-home.webp              hero-part-2.webp      hero-part-5.webp
+hero-getting-started.webp   hero-part-3.webp      hero-unit-check.webp
+hero-unit-1.webp            hero-part-4.webp      hero-part-1.webp
+```
+
+Every band is the same height — **214px desktop · 208 tablet · 188 phone** — with
+a 20px radius, the text left-aligned and the counts under a hairline.
+
+The scrim is measured, not guessed. The Part bands carry a long page list, so
+their ellipse reaches further right than the unit's; the unit keeps the tighter
+one it was approved with, which lets more of the picture through.
+
+---
+
+## 5. Visual polish — one design language
+
+`assets/css/polish.css` loads last and carries the language that was designed
+and approved on the Unit 1 overview (`f660e5f`) to every screen (`25669a1`).
+Most of the work is done by **redefining the tokens the earlier layers already
+ask for**, so one palette reaches every component.
+
+```
+--navy  #152B40     --ivory #F6F2EA     --gold #C9A25A
+--blue  #46658A     --white #FFFDF9     --sage #8FA68C
+--ink   #1C2733     --ink-soft #5A6773  --line #E8E1D5
+```
+
+- **One card** everywhere: warm white, a hairline, an 18px radius, a soft shadow.
+- **One quiet label**: an icon, a muted word, the faintest tint. The level star,
+  the book reference and the Extra/Adapted tag all wear it.
+- **One progress rail**: a sage hairline and a line of text, never a score.
+- Section and category emoji sit in the same soft desaturated tile.
+- Activity titles are set in the serif at 500; the Hebrew stays in the sans.
+- The top bar is thinner, the gold band is now a hairline, buttons read as links.
+
+---
+
+## 6. Test results
+
+```
+141 activity cards      all open · all have controls · all bilingual
+                        every card carries its Hebrew title
+0 empty cards           0 console errors · 0 image 404s
+Horizontal overflow     0 px at 375, 768 and 1120
+Grids                   Home 2→1 · Unit 1 3→2→1 · Parts 2→2→1
+Hero height             214 / 208 / 188, identical on all nine bands
+Hero contrast           worst line 5.0 desktop · 3.8 phone (large text, floor 3.0)
+Card and page text      every measured value above AA
+```
+
+Five colours failed the contrast floor during the polish pass and were corrected
+rather than kept: `--correct` and `--retry` were too pale to be read on their own
+tint in a feedback row; the level badge could not be coloured and stay legible at
+0.7rem; the reading eyebrow's sage was too light; and a solved match was faded to
+70%, which left it at 3.0 against its own background.
+
+---
+
+## 7. Branch state
 
 ```
 main             865802c   live site — untouched, equals origin/main
 rebuild          ba95e7d   3 commits never deployed
-english-hub-v2   80068f0   ← current work
+english-hub-v2   25669a1   ← current work
 tag              v1-single-file
 ```
 
@@ -249,35 +194,45 @@ tag              v1-single-file
 `rebuild`.**
 
 The live site still runs `865802c`, which shows `SB` / `WB` labels and 47 locked
-cards. The three `rebuild` commits (Book/Workbook labels, larger cards, 89
-clickable activities, bilingual instructions) remain undeployed — still an open
-decision.
+cards. The three `rebuild` commits remain undeployed — still an open decision.
 
-### Not being built at this stage
+### Not being built
 Identity, login, student name or class, teacher tracking, Google Sheets,
 Apps Script.
 
 ---
 
-## Next step when we resume
+## 8. Open items
 
-**Apply the validated learning model to Parts 1, 3, 4, 5 and Unit Check, checking
-each one against the PDFs.**
+- **Awaiting final visual review** of the global design pass before any merge or
+  deployment is considered.
+- **Provenance flags on Parts 1 and 2.** Their 26 words still carry
+  `heSource: "site"` from before the PDF audits, and `saw` (Part 2) is still
+  flagged `needsReview`, although both parts were validated against the source.
+  This is bookkeeping in the data, not something a student sees; the flags were
+  left alone rather than changed during a visual-only pass.
+- **Getting Started glosses.** Its 22 words carry the book's Hebrew
+  (`heSource: book`) with `glossSource: "added-for-teaching"` — the definitions
+  and examples were written for the site, as WB 4–7 prints none.
+- **The three `rebuild` commits** and what the live site should eventually run.
 
-Part 2 is the worked example of what "correct" means here, and it set the method:
+---
 
-1. Read that Part's pages in the PDFs first, before touching content.
-2. List discrepancies against what is already built, and get them approved.
-3. Build from the book's own exercises. Where a printed exercise leans on a
-   picture, describe the picture in words and flag the activity `adapted`.
-4. Where an answer lives in a text, make the options real sentences from that
-   text rather than writing distractors.
-5. Carry the book's own ★ levels; Student's Book exercises carry none.
-6. Name anything deliberately left out, and why.
-7. Test, then stop for review before moving to the next Part.
+## Running it locally
 
-Suggested order: **Part 1** (its reading, *Things to do in Tokyo*, SB 15, is the
-closest parallel to Part 2), then Part 3, Part 4, Part 5, Unit Check.
+```
+python tools/devserver.py        →  http://localhost:8123
+```
 
-Local server: `python tools/devserver.py` → <http://localhost:8123>
-(ES modules need `http://`; opening `index.html` from disk will not work.)
+ES modules need `http://`; opening `index.html` from disk will not work.
+
+```
+assets/css/   tokens · base · components · effects · polish · print
+assets/js/    app · render · router · state · progress · events · nav
+              drafts · storage · speech · helpers
+              content/   load · model · validate      (Content Model v2)
+              views/     home · section · part · activity · progress · navbar
+                         hero · labels · categories · bilingual · breadcrumbs
+              exercises/ engine · feedback + seven drills over a word list
+content/      manifest.json · sections/getting-started.json · sections/unit-1.json
+```
