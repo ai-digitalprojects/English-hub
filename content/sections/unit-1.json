@@ -5985,13 +5985,14 @@
       "sources": {
         "studentsBook": [
           42,
-          45,
+          43,
           47
         ],
         "workbook": [
           36,
+          37,
           38,
-          40
+          39
         ]
       },
       "vocabulary": [
@@ -6012,8 +6013,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6022,7 +6022,7 @@
         },
         {
           "en": "date",
-          "he": "תאריך",
+          "he": "פגישה",
           "ar": null,
           "definition": null,
           "example": null,
@@ -6037,8 +6037,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6062,8 +6061,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6087,8 +6085,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6112,8 +6109,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6137,8 +6133,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6162,8 +6157,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6187,8 +6181,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6212,8 +6205,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6237,8 +6229,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6247,7 +6238,7 @@
         },
         {
           "en": "should",
-          "he": "צריך, כדאי",
+          "he": "רצוי, צריך",
           "ar": null,
           "definition": null,
           "example": null,
@@ -6262,8 +6253,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6287,8 +6277,7 @@
               "page": 36
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6312,8 +6301,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6337,8 +6325,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6362,8 +6349,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6372,7 +6358,7 @@
         },
         {
           "en": "both",
-          "he": "שניהם, שתיהן",
+          "he": "שני, שניהם",
           "ar": null,
           "definition": null,
           "example": null,
@@ -6387,8 +6373,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6412,8 +6397,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6437,8 +6421,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6462,8 +6445,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6487,8 +6469,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6497,7 +6478,7 @@
         },
         {
           "en": "miss",
-          "he": "להתגעגע",
+          "he": "לפספס",
           "ar": null,
           "definition": null,
           "example": null,
@@ -6512,8 +6493,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6537,8 +6517,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6562,8 +6541,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6587,8 +6565,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6612,8 +6589,7 @@
               "page": 38
             }
           ],
-          "heSource": "book-scan",
-          "needsReview": true,
+          "heSource": "book",
           "missing": [
             "ar",
             "definition",
@@ -6624,52 +6600,80 @@
       "grammar": [],
       "activities": [
         {
-          "id": "learn-words-1",
-          "type": "flashcards",
+          "id": "warm-up",
+          "type": "think-about",
+          "title": "Think About… making wishes",
           "skill": "vocabulary",
           "level": null,
           "lane": "learn",
+          "category": "warmup",
+          "step": 1,
           "source": {
             "book": "students",
             "page": 42
           },
-          "status": "planned",
-          "title": "Learn the Words 1",
-          "category": "vocabulary",
-          "step": 1
+          "origin": "book",
+          "render": "writing",
+          "scene": [
+            "The book shows a photograph for each of these ways of making a wish.",
+            "בספר מופיעה תמונה לכל אחת מהדרכים האלה לבקשת משאלה."
+          ],
+          "instruction": [
+            "Think about making wishes — how do you think people make wishes?",
+            "חשבו על בקשת משאלות — איך לדעתכם אנשים מבקשים משאלות?"
+          ],
+          "passage": [
+            "<b>on a star</b> · <b>on birthday candles</b> · <b>on paper cranes</b> <span dir=\"rtl\">(עגורים)</span> · <b>on a magic lamp</b> · <b>on a fountain</b>"
+          ],
+          "items": [
+            {
+              "p": "How do you think people make wishes?"
+            }
+          ]
         },
         {
-          "id": "learn-words-2",
+          "id": "learn-words-1",
           "type": "flashcards",
+          "title": "Learn the Words 1",
           "skill": "vocabulary",
           "level": null,
           "lane": "learn",
+          "category": "vocabulary",
+          "step": 1,
           "source": {
             "book": "students",
-            "page": 47
+            "page": 42
           },
-          "status": "planned",
-          "title": "Learn the Words 2",
-          "category": "vocabulary",
-          "step": 1
+          "status": "planned"
         },
         {
           "id": "choose-phrases",
           "type": "choose-the-correct-phrases",
+          "title": "Choose the Correct Phrase",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 2,
           "source": {
             "book": "students",
             "page": 42,
             "exercise": 1
           },
-          "status": "planned",
-          "render": "mc",
           "origin": "adapted",
+          "render": "mc",
+          "shuffle": false,
+          "scene": [
+            "The book shows four pictures. They are described here in words.",
+            "בספר מופיעות ארבע תמונות. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Choose the correct phrases or sentence for the pictures.",
+            "בחרו את הצירופים או המשפט הנכונים לתמונות."
+          ],
           "items": [
             {
-              "p": "Your calendar says: Meet Karen at 5:00. What is that?",
+              "p": "A calendar page. On one of the days someone has written and circled: <i>Meet Karen at 5:00</i>.",
               "o": [
                 "It's a date.",
                 "What's the date today?"
@@ -6677,7 +6681,7 @@
               "a": "It's a date."
             },
             {
-              "p": "The weather outside is beautiful.",
+              "p": "A green park with tall trees and a path, with sunlight shining through the leaves.",
               "o": [
                 "bad weather",
                 "excellent weather"
@@ -6685,7 +6689,7 @@
               "a": "excellent weather"
             },
             {
-              "p": "Someone is running happily in the sunshine.",
+              "p": "A boy in an orange T-shirt riding a skateboard along a path outdoors.",
               "o": [
                 "feel well",
                 "feel sick"
@@ -6693,81 +6697,426 @@
               "a": "feel well"
             },
             {
-              "p": "A father is reading to his child at bedtime.",
+              "p": "A man and a boy sitting close together, looking at an open book.",
               "o": [
                 "tell a story",
                 "write a story"
               ],
               "a": "tell a story"
             }
-          ],
+          ]
+        },
+        {
+          "id": "choose-meanings",
+          "type": "choose-the-best-meanings",
+          "title": "Choose the Best Meaning",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
           "category": "vocabulary",
-          "step": 3
+          "step": 3,
+          "source": {
+            "book": "students",
+            "page": 43,
+            "exercise": 2
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Choose the best meanings for the words.",
+            "בחרו את המשמעות הטובה ביותר לכל מילה."
+          ],
+          "items": [
+            {
+              "p": "<b>excellent</b>",
+              "o": [
+                "great",
+                "very bad"
+              ],
+              "a": "great"
+            },
+            {
+              "p": "<b>come home</b>",
+              "o": [
+                "go away",
+                "return"
+              ],
+              "a": "return"
+            },
+            {
+              "p": "<b>keep doing something</b>",
+              "o": [
+                "stop doing something",
+                "do something again and again"
+              ],
+              "a": "do something again and again"
+            },
+            {
+              "p": "<b>really</b>",
+              "o": [
+                "a lot",
+                "a little"
+              ],
+              "a": "a lot"
+            },
+            {
+              "p": "<b>make a mistake</b>",
+              "o": [
+                "get something right",
+                "get something wrong"
+              ],
+              "a": "get something wrong"
+            }
+          ]
+        },
+        {
+          "id": "match-people",
+          "type": "match-sentences-to-people",
+          "title": "Who Says It?",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 4,
+          "source": {
+            "book": "students",
+            "page": 43,
+            "exercise": 3
+          },
+          "origin": "adapted",
+          "render": "pairs",
+          "scene": [
+            "Student's Book p.43 shows a shopping centre with a food court. Five people have their names beside them and an empty speech bubble. They are described here in words.",
+            "בעמוד 43 בספר מופיע קניון עם אזור מזון. לחמישה אנשים רשום השם ויש בועת דיבור ריקה. כאן הם מתוארים במילים."
+          ],
+          "instruction": [
+            "Match the sentences to the people in the picture who say them.",
+            "התאימו את המשפטים לאנשים בתמונה שאומרים אותם."
+          ],
+          "items": [
+            {
+              "a": "You <b>should</b> wash your hands.",
+              "b": "Ron — handing an ice cream to a small girl whose hands are covered in melted ice cream."
+            },
+            {
+              "a": "This is <b>really</b> tasty.",
+              "b": "Noam — eating a slice of pizza at a table with a friend."
+            },
+            {
+              "a": "We can eat lunch <b>if</b> you're hungry.",
+              "b": "Dikla — pointing up at the menu above the burger counter."
+            },
+            {
+              "a": "I think you are <b>getting the flu</b>.",
+              "b": "Hila — with her hand on a little girl's forehead. The girl is sneezing."
+            },
+            {
+              "a": "You can <b>invite</b> fifteen friends.",
+              "b": "Tali — at the party shop, holding balloons and a bag of party things."
+            }
+          ]
+        },
+        {
+          "id": "circle-pictures",
+          "type": "choose-the-correct-pictures",
+          "title": "Choose the Correct Picture",
+          "skill": "vocabulary",
+          "level": 1,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 5,
+          "source": {
+            "book": "workbook",
+            "page": 37,
+            "exercise": 1
+          },
+          "origin": "adapted",
+          "render": "mc",
+          "shuffle": false,
+          "scene": [
+            "Workbook p.37 shows two photographs for each phrase. They are described here in words.",
+            "בעמוד 37 בחוברת מופיעות שתי תמונות לכל צירוף. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Choose the correct picture for each phrase.",
+            "בחרו את התמונה הנכונה לכל צירוף מילים."
+          ],
+          "items": [
+            {
+              "p": "<b>get the flu</b>",
+              "o": [
+                "A girl sitting with her leg in a cast, with crutches beside her.",
+                "A girl lying in bed with a thermometer in her mouth and a hand on her forehead."
+              ],
+              "a": "A girl lying in bed with a thermometer in her mouth and a hand on her forehead."
+            },
+            {
+              "p": "<b>tell a story</b>",
+              "o": [
+                "A woman holding an open book, with children sitting on the floor around her, listening.",
+                "Two boys lying on the floor, looking at a phone together."
+              ],
+              "a": "A woman holding an open book, with children sitting on the floor around her, listening."
+            },
+            {
+              "p": "<b>keep walking</b>",
+              "o": [
+                "A man walking along a path in a park.",
+                "Two men standing still on the street, looking at a phone."
+              ],
+              "a": "A man walking along a path in a park."
+            },
+            {
+              "p": "<b>come home</b>",
+              "o": [
+                "A woman walking down the front steps of a house, away from the door.",
+                "A woman with a shoulder bag opening her front door and stepping inside."
+              ],
+              "a": "A woman with a shoulder bag opening her front door and stepping inside."
+            },
+            {
+              "p": "<b>feel well</b>",
+              "o": [
+                "A boy holding his head in his hand, looking unwell.",
+                "A boy playing basketball outside."
+              ],
+              "a": "A boy playing basketball outside."
+            },
+            {
+              "p": "<b>make a mistake</b>",
+              "o": [
+                "The word <i>realy</i> written on a line, with a red ✗ beside it.",
+                "The word <i>really</i> written on a line, with a green ✓ beside it."
+              ],
+              "a": "The word <i>realy</i> written on a line, with a red ✗ beside it."
+            }
+          ]
+        },
+        {
+          "id": "match-a-b-wb37",
+          "type": "match-a-to-b",
+          "title": "Match A and B: Word Practice 1",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 6,
+          "source": {
+            "book": "workbook",
+            "page": 37,
+            "exercise": 2
+          },
+          "origin": "book",
+          "render": "pairs",
+          "instruction": [
+            "Match A and B to make sentences.",
+            "התאימו A ל-B כדי לחבר משפטים."
+          ],
+          "items": [
+            {
+              "a": "The movie is <b>excellent</b> so",
+              "b": "I'm watching it again."
+            },
+            {
+              "a": "When I <b>get the flu</b>,",
+              "b": "I stay in bed."
+            },
+            {
+              "a": "My family <b>really</b> likes to",
+              "b": "travel in the summer."
+            },
+            {
+              "a": "<b>Keep</b> studying",
+              "b": "if you want to do well on the test."
+            },
+            {
+              "a": "Sara wants to <b>invite</b> us",
+              "b": "to dinner on Friday."
+            },
+            {
+              "a": "<b>If</b> you are hungry,",
+              "b": "you can eat an apple."
+            }
+          ]
+        },
+        {
+          "id": "complete-sentences-wb37",
+          "type": "complete-the-sentences",
+          "title": "Complete the Sentences — Word Practice 1",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 7,
+          "source": {
+            "book": "workbook",
+            "page": 37,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Complete the sentences with the words below.",
+            "השלימו את המשפטים עם המילים שלמטה."
+          ],
+          "passage": [
+            "<i>1. Ben is very sick. I hope he <b>feels well</b> soon.</i>"
+          ],
+          "items": [
+            {
+              "p": "My grandmother likes to ______ when we see her.",
+              "o": [
+                "tell stories",
+                "comes home",
+                "date"
+              ],
+              "a": "tell stories"
+            },
+            {
+              "p": "I made a ______ to meet my friend for ice cream.",
+              "o": [
+                "date",
+                "should",
+                "makes mistakes"
+              ],
+              "a": "date"
+            },
+            {
+              "p": "John plays the piano really well and never ______ .",
+              "o": [
+                "makes mistakes",
+                "feels well",
+                "tell stories"
+              ],
+              "a": "makes mistakes"
+            },
+            {
+              "p": "Jack ______ from work at 16:00.",
+              "o": [
+                "comes home",
+                "should",
+                "date"
+              ],
+              "a": "comes home"
+            },
+            {
+              "p": "You ______ take an umbrella. It's raining!",
+              "o": [
+                "should",
+                "comes home",
+                "makes mistakes"
+              ],
+              "a": "should"
+            }
+          ]
+        },
+        {
+          "id": "write-the-words-1",
+          "type": "write-the-words",
+          "title": "Write the Words 1",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 8,
+          "source": {
+            "book": "workbook",
+            "page": 36
+          },
+          "status": "planned"
+        },
+        {
+          "id": "learn-words-2",
+          "type": "flashcards",
+          "title": "Learn the Words 2",
+          "skill": "vocabulary",
+          "level": null,
+          "lane": "learn",
+          "category": "vocabulary",
+          "step": 9,
+          "source": {
+            "book": "students",
+            "page": 47
+          },
+          "status": "planned"
         },
         {
           "id": "match-a-b",
           "type": "match-a-to-b",
+          "title": "Match A and B: New Words 2",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 10,
           "source": {
             "book": "students",
             "page": 47,
             "exercise": 1
           },
-          "status": "planned",
-          "render": "pairs",
           "origin": "book",
+          "render": "pairs",
+          "instruction": [
+            "Match A and B to make sentences.",
+            "התאימו A ל-B כדי לחבר משפטים."
+          ],
           "items": [
             {
-              "a": "I'm sorry to hear",
+              "a": "I'm <b>sorry</b> to hear",
               "b": "that you hurt your foot."
             },
             {
-              "a": "I am almost finished",
+              "a": "I am <b>almost</b> finished",
               "b": "my homework."
             },
             {
               "a": "Be careful. The cup is",
-              "b": "full of water."
+              "b": "<b>full</b> of water."
             },
             {
-              "a": "How much",
+              "a": "How <b>much</b>",
               "b": "does this ticket cost?"
             },
             {
-              "a": "Both of my parents",
+              "a": "<b>Both</b> of my parents",
               "b": "like pizza."
             },
             {
               "a": "My sister is sick. I want her to",
-              "b": "get better soon."
+              "b": "<b>get better</b> soon."
             },
             {
-              "a": "You shouldn't believe",
+              "a": "You shouldn't <b>believe</b>",
               "b": "everything that you read."
             }
-          ],
-          "category": "vocabulary",
-          "step": 2
+          ]
         },
         {
           "id": "choose-two",
           "type": "choose-two-answers",
+          "title": "Choose Two Answers",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 11,
           "source": {
             "book": "students",
             "page": 47,
             "exercise": 2
           },
-          "status": "planned",
-          "render": "mc",
           "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Choose two answers to follow each of the verbs in bold.",
+            "בחרו שתי תשובות שמתאימות לכל פועל מודגש."
+          ],
           "items": [
             {
-              "p": "<b>see</b> ...",
+              "p": "<b>see</b> …",
               "o": [
                 "a doctor",
                 "a friend",
@@ -6779,7 +7128,7 @@
               ]
             },
             {
-              "p": "<b>miss</b> ...",
+              "p": "<b>miss</b> …",
               "o": [
                 "a bus",
                 "a pocket",
@@ -6791,7 +7140,7 @@
               ]
             },
             {
-              "p": "<b>call</b> ...",
+              "p": "<b>call</b> …",
               "o": [
                 "a nurse",
                 "a neighbor",
@@ -6803,7 +7152,7 @@
               ]
             },
             {
-              "p": "<b>send</b> ...",
+              "p": "<b>send</b> …",
               "o": [
                 "a year",
                 "a message",
@@ -6815,7 +7164,7 @@
               ]
             },
             {
-              "p": "<b>work at</b> ...",
+              "p": "<b>work at</b> …",
               "o": [
                 "a medical center",
                 "a school",
@@ -6827,7 +7176,7 @@
               ]
             },
             {
-              "p": "<b>wait for</b> ...",
+              "p": "<b>wait for</b> …",
               "o": [
                 "a while",
                 "an island",
@@ -6838,138 +7187,240 @@
                 "an hour"
               ]
             }
-          ],
-          "category": "vocabulary",
-          "step": 3
+          ]
         },
         {
-          "id": "write-the-words-1",
-          "type": "write-the-words",
+          "id": "write-correct-words-wb39",
+          "type": "write-the-correct-words",
+          "title": "Write the Correct Word",
           "skill": "vocabulary",
-          "level": null,
+          "level": 1,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 12,
           "source": {
             "book": "workbook",
-            "page": 36
+            "page": 39,
+            "exercise": 1
           },
-          "status": "planned",
-          "title": "Write the Words 1",
+          "origin": "adapted",
+          "render": "mc",
+          "shuffle": false,
+          "scene": [
+            "Workbook p.39 shows five photographs. They are described here in words.",
+            "בעמוד 39 בחוברת מופיעות חמש תמונות. כאן הן מתוארות במילים."
+          ],
+          "instruction": [
+            "Choose the correct word for each picture.",
+            "בחרו את המילה הנכונה לכל תמונה."
+          ],
+          "passage": [
+            "<i>1. Two boys meeting each other outside, one holding a football — <b>see</b></i>"
+          ],
+          "items": [
+            {
+              "p": "A nurse in green scrubs standing in a hospital corridor, holding a clipboard.",
+              "o": [
+                "nurse",
+                "get better",
+                "see"
+              ],
+              "a": "nurse"
+            },
+            {
+              "p": "A glass of water standing on a wooden table, filled to the top.",
+              "o": [
+                "full",
+                "kiss",
+                "nurse"
+              ],
+              "a": "full"
+            },
+            {
+              "p": "A boy sitting up in a hospital bed, smiling, with a man beside him holding his hand.",
+              "o": [
+                "get better",
+                "full",
+                "see"
+              ],
+              "a": "get better"
+            },
+            {
+              "p": "A woman kissing a boy on the cheek.",
+              "o": [
+                "kiss",
+                "see",
+                "get better"
+              ],
+              "a": "kiss"
+            }
+          ]
+        },
+        {
+          "id": "translate-and-tick",
+          "type": "translate-and-tick",
+          "title": "Translate and Tick",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
           "category": "vocabulary",
-          "step": 6
+          "step": 13,
+          "source": {
+            "book": "workbook",
+            "page": 39,
+            "exercise": 2
+          },
+          "origin": "book",
+          "render": "writing",
+          "instruction": [
+            "Translate the words in bold. Then tick ✓ the sentences that are true for you.",
+            "תרגמו את המילים המודגשות. לאחר מכן, סמנו ב-✓ את המשפטים שנכונים לגביכם."
+          ],
+          "items": [
+            {
+              "p": "My mother is a <b>nurse</b>. &nbsp; <i><span dir=\"rtl\">אחות</span></i>"
+            },
+            {
+              "p": "I <b>see</b> my grandparents every week."
+            },
+            {
+              "p": "<b>Both</b> of my parents are teachers."
+            },
+            {
+              "p": "I don't like to <b>miss</b> school."
+            },
+            {
+              "p": "I give my parents a <b>kiss</b> before I go to sleep."
+            },
+            {
+              "p": "I feel <b>sorry</b> for cats that live in the street."
+            }
+          ]
+        },
+        {
+          "id": "complete-sentences-wb39",
+          "type": "complete-the-sentences",
+          "title": "Complete the Sentences — Word Practice 2",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 14,
+          "source": {
+            "book": "workbook",
+            "page": 39,
+            "exercise": 3
+          },
+          "origin": "book",
+          "render": "mc",
+          "shuffle": false,
+          "instruction": [
+            "Complete the sentences with the words below.",
+            "השלימו את המשפטים עם המילים שלמטה."
+          ],
+          "passage": [
+            "<i>1. It's <b>almost</b> time to go. Are you ready?</i>"
+          ],
+          "items": [
+            {
+              "p": "Yossi wants to get on the bus, but it's ______ .",
+              "o": [
+                "full",
+                "almost",
+                "much"
+              ],
+              "a": "full"
+            },
+            {
+              "p": "It takes Maya ______ to do her homework every day.",
+              "o": [
+                "a while",
+                "much",
+                "believe"
+              ],
+              "a": "a while"
+            },
+            {
+              "p": "Sam is busy and doesn't have ______ time to watch TV.",
+              "o": [
+                "much",
+                "a while",
+                "full"
+              ],
+              "a": "much"
+            },
+            {
+              "p": "Some people ______ that they can do anything they want.",
+              "o": [
+                "believe",
+                "full",
+                "almost"
+              ],
+              "a": "believe"
+            }
+          ]
         },
         {
           "id": "write-the-words-2",
           "type": "write-the-words",
+          "title": "Write the Words 2",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
+          "category": "vocabulary",
+          "step": 15,
           "source": {
             "book": "workbook",
             "page": 38
           },
-          "status": "planned",
-          "title": "Write the Words 2",
-          "category": "vocabulary",
-          "step": 6
+          "status": "planned"
         },
         {
           "id": "text-messages",
           "type": "write-text-messages",
+          "title": "Write Text Messages",
           "skill": "writing",
           "level": 3,
           "lane": "practice",
+          "category": "writing",
+          "step": 1,
           "source": {
             "book": "workbook",
             "page": 38,
             "exercise": 4
           },
-          "status": "planned",
-          "render": "writing",
           "origin": "book",
-          "items": [
-            {
-              "p": "<b>Dad:</b> Your birthday is next week. Do you want to have a party?<br>Write your answer."
-            },
-            {
-              "p": "<b>Nina:</b> Do you want to come over tomorrow at 13:00?<br>Write your answer."
-            },
-            {
-              "p": "<b>Tom:</b> Let's play basketball.<br>Write your answer."
-            }
-          ],
-          "category": "writing",
-          "step": 1
-        },
-        {
-          "id": "hospital-complete",
-          "type": "complete-the-sentences",
-          "skill": "vocabulary",
-          "level": 2,
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 40,
-            "exercise": 4
-          },
-          "status": "planned",
           "render": "writing",
-          "origin": "adapted",
+          "wordBank": [
+            "should",
+            "invite",
+            "really",
+            "excellent",
+            "if",
+            "feel well",
+            "date"
+          ],
+          "instruction": [
+            "Write answers to the text messages. Use at least four of the words below.",
+            "כתבו תגובות למסרונים. השתמשו בארבע מילים לפחות מהמילים שלמטה."
+          ],
           "items": [
             {
-              "p": "______ is going home because he is getting <b>better</b>. (Jim)"
+              "p": "<b>Dad:</b> Your birthday is next week. Do you want to have a party?"
             },
             {
-              "p": "______, ______ and ______ still have <b>medical</b> problems."
+              "p": "<b>Nina:</b> Do you want to come over tomorrow at 13:00?"
             },
             {
-              "p": "______ hurt <b>both</b> her arm and her leg."
-            },
-            {
-              "p": "______, ______ and ______ are <b>nurses</b>."
-            },
-            {
-              "p": "______'s room is <b>full</b> of flowers."
+              "p": "<b>Tom:</b> Let's play basketball."
             }
-          ],
-          "category": "vocabulary",
-          "step": 7
-        },
-        {
-          "id": "answer-questions",
-          "type": "answer-the-questions",
-          "skill": "writing",
-          "level": 3,
-          "lane": "practice",
-          "source": {
-            "book": "workbook",
-            "page": 40,
-            "exercise": 5
-          },
-          "status": "planned",
-          "render": "writing",
-          "origin": "book",
-          "items": [
-            {
-              "p": "When do you <b>miss</b> school?"
-            },
-            {
-              "p": "Who do you like to <b>see</b> on the weekends?"
-            },
-            {
-              "p": "Do you <b>believe</b> people will live on the moon one day?"
-            },
-            {
-              "p": "What do you do <b>almost</b> every day?"
-            }
-          ],
-          "category": "writing",
-          "step": 1
+          ]
         }
       ],
       "skills": {
         "reading": {
           "active": false,
-          "reason": "The comprehension task exists (Workbook p.36) but the reading text itself (Book p.45) was not in the scanned material.",
+          "reason": "The comprehension task is printed on Workbook p.36, but the story it asks about (Student's Book p.45) is not among the pages in scope for this project.",
           "task": {
             "type": "tick-two-columns",
             "source": {
@@ -6997,15 +7448,15 @@
         },
         "listening": {
           "active": false,
-          "reason": "No listening material for this part in the scanned material."
+          "reason": "No listening material for this part in the pages in scope."
         },
         "speaking": {
           "active": false,
-          "reason": "No speaking page for this part in the scanned material."
+          "reason": "No speaking page for this part in the pages in scope."
         }
       },
       "phonics": null,
-      "notes": "No grammar section for this part appeared in the scanned material.",
+      "notes": "Part 5 has no grammar page among the pages in scope for this project.",
       "hero": "part-5"
     },
     {

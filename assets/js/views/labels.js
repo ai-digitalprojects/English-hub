@@ -38,7 +38,10 @@ const TYPE_TITLES = {
   'write-examples': 'Write Examples',
   'highlight-and-write': 'Highlight and Write',
   'fact-file': 'My Fact File',
-  'write-a-blog': 'Write a Blog'
+  'write-a-blog': 'Write a Blog',
+  'choose-the-best-meanings': 'Choose the Best Meaning',
+  'match-sentences-to-people': 'Who Says It?',
+  'translate-and-tick': 'Translate and Tick'
 };
 
 const SKILL_LABELS = {
