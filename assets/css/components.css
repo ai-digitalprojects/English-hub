@@ -505,11 +505,24 @@ button.bin{ width:100%; text-align:left; font:inherit; display:block; }
   background-position:center, center;
   color:#fff;
 }
+/* The scrim. A band with no artwork keeps the flat wash it always had; a band
+   with a photograph gets a reading gradient instead, heavy under the text on
+   the left and clearing towards the right so the picture is still a picture. */
 .hero::after{
   content:''; position:absolute; inset:0;
   background:linear-gradient(100deg, rgba(24,50,74,0.88) 0%, rgba(24,50,74,0.62) 46%, rgba(24,50,74,0.28) 100%);
 }
+.hero.hasImg::after{
+  background:
+    linear-gradient(95deg, rgba(14,32,51,0.92) 0%, rgba(14,32,51,0.84) 36%,
+                           rgba(14,32,51,0.50) 64%, rgba(14,32,51,0.22) 100%),
+    linear-gradient(rgba(14,32,51,0.10), rgba(14,32,51,0.10));
+}
 .heroInner{ position:relative; z-index:1; padding:26px 30px; max-width:62%; }
+.hero.hasImg .heroTitle,
+.hero.hasImg .heroSub,
+.hero.hasImg .heroEyebrow,
+.hero.hasImg .heroMeta{ text-shadow:0 1px 3px rgba(10,24,38,0.55); }
 .heroEyebrow{
   margin:0 0 6px; font-size:0.72rem; font-weight:800;
   letter-spacing:1.4px; text-transform:uppercase; color:rgba(255,255,255,0.78);
@@ -525,12 +538,32 @@ button.bin{ width:100%; text-align:left; font:inherit; display:block; }
 .tone-gold  { --heroTone:linear-gradient(118deg, #3A2E1E 0%, #8A6B33 55%, #D6AA5D 100%); }
 .tone-blush { --heroTone:linear-gradient(118deg, #43242A 0%, #9B6670 55%, #DFA6AE 100%); }
 
+/* Tablet: the text column stops being a column and the scrim follows it. */
+@media(max-width:900px){
+  .heroInner{ max-width:76%; }
+  .hero.hasImg::after{
+    background:
+      linear-gradient(97deg, rgba(14,32,51,0.92) 0%, rgba(14,32,51,0.86) 50%,
+                             rgba(14,32,51,0.56) 80%, rgba(14,32,51,0.28) 100%),
+      linear-gradient(rgba(14,32,51,0.10), rgba(14,32,51,0.10));
+  }
+}
+
 @media(max-width:620px){
   .hero{ min-height:146px; margin:12px 0 20px; }
   .heroInner{ padding:18px 20px; max-width:100%; }
   .heroTitle{ font-size:1.45rem; }
   .heroSub{ font-size:0.88rem; }
   .hero::after{ background:linear-gradient(170deg, rgba(24,50,74,0.72) 0%, rgba(24,50,74,0.88) 100%); }
+  /* On a phone the text sits across the whole band, so the scrim goes
+     top-to-bottom: the sky stays visible above it, the words stay readable. */
+  .hero.hasImg::after{
+    background:linear-gradient(177deg, rgba(14,32,51,0.26) 0%, rgba(14,32,51,0.72) 28%,
+                                       rgba(14,32,51,0.88) 70%, rgba(14,32,51,0.92) 100%);
+  }
+  /* The page list is the longest line in the band. Smaller on a phone, so it
+     wraps to two lines instead of three and the banner stays short. */
+  .heroMeta{ font-size:0.74rem; line-height:1.5; margin-top:8px; }
 }
 
 /* ===================================================================

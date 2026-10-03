@@ -1,8 +1,12 @@
 # Hero images
 
-Drop the eight hero images here using exactly these names. Each one appears on
-its screen automatically — no code change. Until a file exists, that screen
-shows a palette gradient instead.
+Drop the hero images here using exactly these names, then add the slot key to
+`HAVE` in `assets/js/views/hero.js` so the page asks for the file. A slot that
+is not in `HAVE` shows a palette gradient instead and requests nothing, so the
+console stays clean while artwork is still missing.
+
+**In place:** Getting Started, Parts 1–5, Unit Check.
+**Still a gradient:** Home, Unit 1 overview.
 
 | File | Screen |
 |---|---|
@@ -18,6 +22,13 @@ shows a palette gradient instead.
 
 **Size** 1600 × 500 · **Format** WebP (JPG works too, rename the extension in
 `assets/js/views/hero.js`) · **Weight** under 200 KB each.
+
+**Framing.** The band is much wider than the artwork on a desktop and narrower
+than it on a phone, so every image is cropped one way or the other. `FOCUS` in
+`hero.js` says which point each one keeps in frame — the vertical figure holds
+the horizon on a wide screen, the horizontal one holds the subject on a narrow
+one. The text sits on the left third, under a reading scrim, so put the part of
+the picture that matters towards the middle or the right.
 
 The title sits over the left third of the band, so keep that area calm — sky,
 water, a wall, anything without detail. A dark scrim is laid over the whole
