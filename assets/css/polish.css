@@ -451,8 +451,23 @@ a.actItem:hover{
 
 .exHint{ font-size:0.98rem; line-height:1.65; margin:18px 0 18px; }
 .exHint.actTask{ font-weight:500; color:var(--ink); }
-.exHint.sub{ font-size:0.85rem; color:var(--ink-soft); }
+/* The second instruction line was 13.6px, and its Hebrew 12.8px — too small to
+   take in at a glance for the line that actually says what to do. */
+.exHint.sub{ font-size:0.92rem; color:var(--ink-soft); }
 .biHe{ border-left-color:var(--line); }
+
+/* ---- The Hebrew half of an instruction ----
+   Hebrew has no ascenders or descenders, so at a matched point size it still
+   reads a shade smaller than the Latin beside it. Set to parity rather than to
+   the 94% it had, with a little more leading and one step of weight, it lands
+   where it should: clearly the second language, not a footnote. The muted ink
+   is what keeps it secondary, not the size. */
+.exHint .biHe,
+.fxHint .biHe{
+  font-size:1em;
+  line-height:1.8;
+  font-weight:500;
+}
 
 /* ---- Answer buttons: the matching pairs and the multiple-choice options ----
 
