@@ -693,6 +693,118 @@
       ]
     },
     {
+      "id": "vocabulary-review",
+      "type": "vocabulary-review",
+      "title": "Vocabulary Review",
+      "skill": "vocabulary",
+      "level": 2,
+      "lane": "practice",
+      "category": "vocabulary",
+      "step": 5,
+      "source": {
+        "book": "workbook",
+        "page": 4
+      },
+      "origin": "word-list",
+      "render": "mc",
+      "instruction": [
+        "Choose the word that best completes each sentence.",
+        "בחרו את המילה המתאימה ביותר להשלמת כל משפט."
+      ],
+      "items": [
+        {
+          "p": "Please _____ your name.",
+          "a": "spell",
+          "o": [
+            "spell",
+            "folder",
+            "example"
+          ]
+        },
+        {
+          "p": "Read the _____ before you start the task.",
+          "a": "instructions",
+          "o": [
+            "surname",
+            "instructions",
+            "keyboard"
+          ]
+        },
+        {
+          "p": "Use a _____ to find the meaning of a word.",
+          "a": "dictionary",
+          "o": [
+            "conversation",
+            "document",
+            "dictionary"
+          ]
+        },
+        {
+          "p": "_____ your hand if you know the answer.",
+          "a": "Raise",
+          "o": [
+            "Raise",
+            "Repeat",
+            "Guess"
+          ]
+        },
+        {
+          "p": "I did not hear you. Can you _____ that, please?",
+          "a": "repeat",
+          "o": [
+            "describe",
+            "repeat",
+            "complete"
+          ]
+        },
+        {
+          "p": "Your _____ is your family name.",
+          "a": "surname",
+          "o": [
+            "first name",
+            "quiz",
+            "surname"
+          ]
+        },
+        {
+          "p": "Hot is the _____ of cold.",
+          "a": "opposite",
+          "o": [
+            "opposite",
+            "example",
+            "task"
+          ]
+        },
+        {
+          "p": "Can you _____ your new school to me?",
+          "a": "describe",
+          "o": [
+            "spell",
+            "describe",
+            "raise"
+          ]
+        },
+        {
+          "p": "We type on a _____.",
+          "a": "keyboard",
+          "o": [
+            "folder",
+            "dictionary",
+            "keyboard"
+          ]
+        },
+        {
+          "p": "The cat is sleeping _____ the bed.",
+          "a": "below",
+          "o": [
+            "below",
+            "correct",
+            "guess"
+          ]
+        }
+      ]
+    },
+    {
       "id": "learn-words-2",
       "type": "flashcards",
       "title": "Learn the Words 2",
@@ -940,36 +1052,47 @@
         "exercise": 4
       },
       "origin": "adapted",
-      "render": "writing",
-      "wordBank": [
-        "vocabulary",
-        "raise",
-        "dictionary",
-        "spell",
-        "find out",
-        "instructions",
-        "below"
-      ],
-      "scene": [
-        "Workbook p.6 shows four pictures. They are described here in words.",
-        "בעמוד 6 בחוברת מופיעות ארבע תמונות. כאן הן מתוארות במילים."
-      ],
+      "render": "scene-cards",
       "instruction": [
-        "Write a sentence for each picture. Use at least one of the words below in each sentence.",
-        "כתבו משפט עבור כל תמונה. השתמשו במילה אחת לפחות לכל תמונה."
-      ],
-      "passage": [
-        "<i>1. A classroom. The teacher is at the board, which says <b>New Words</b>. Several children have their hands up. — Raise your hand.</i>"
+        "Look at each picture and write one sentence. Use at least one word from the word bank.",
+        "התבוננו בכל תמונה וכתבו משפט אחד. השתמשו לפחות במילה אחת ממאגר המילים."
       ],
       "items": [
         {
-          "p": "A boy is sitting at a desk, writing in his notebook. An open book is next to him."
+          "img": "scene-classroom.svg",
+          "alt": "A classroom. The teacher is at the board, which says New Words. Several children have their hands up.",
+          "words": [
+            "raise",
+            "vocabulary",
+            "instructions"
+          ]
         },
         {
-          "p": "Three children are sitting on the floor with board games. One of them is reading a card."
+          "img": "scene-desk.svg",
+          "alt": "A boy is sitting at a desk, writing in his notebook. An open book is next to him.",
+          "words": [
+            "spell",
+            "dictionary",
+            "complete"
+          ]
         },
         {
-          "p": "A boy is asleep in bed. A cat is lying on a mat below the bed."
+          "img": "scene-games.svg",
+          "alt": "Three children are sitting on the floor with board games. One of them is reading a card.",
+          "words": [
+            "instructions",
+            "find out",
+            "repeat"
+          ]
+        },
+        {
+          "img": "scene-sleeping.svg",
+          "alt": "A boy is asleep in bed. A cat is lying on a mat below the bed.",
+          "words": [
+            "below",
+            "describe",
+            "opposite"
+          ]
         }
       ]
     },
@@ -1030,5 +1153,8 @@
     }
   },
   "phonics": null,
-  "hero": "getting-started"
+  "hero": "getting-started",
+  "skipDrills": [
+    "sort-groups"
+  ]
 }

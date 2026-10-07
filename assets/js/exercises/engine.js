@@ -280,6 +280,45 @@ const sentenceTable = {
   input(act, t){ return writing.input(act, t); }
 };
 
+/* -------------------------------------------------------- scene cards
+   A picture, a few words to use with it, and one box to write in — four
+   times over. It is the writing renderer given pictures: the text lives in
+   the same A.answers array, so every card is saved on its own by the ordinary
+   draft machinery and nothing here is auto-marked.
+
+   Items are {img, alt, words:[…]}. The alt text carries the description of
+   the picture for anyone not seeing it, which is the only place that
+   description now appears — the student reads the picture, not a paragraph
+   about it. */
+const sceneCards = {
+  render(items){
+    if(A.answers === undefined) A.answers = items.map(() => '');
+    const he = s => /[֐-׿]/.test(s);
+    const card = (it, i) => `
+      <li class="sceneCard">
+        <span class="scLabel scNum">${bi('Picture ' + (i + 1), 'תמונה ' + (i + 1))}</span>
+        <figure class="scFig">
+          <img src="assets/img/${it.img}" alt="${escapeAttr(it.alt || '')}" loading="lazy">
+        </figure>
+        <span class="scLabel">${bi('Words to help you', 'מילים שיעזרו לכם')}</span>
+        <div class="scWords">
+          ${(it.words || []).map(w =>
+            `<span class="stChip${he(w) ? ' he' : ''}"${he(w) ? ' dir="rtl"' : ''}>${w}</span>`).join('')}
+        </div>
+        <span class="scLabel">${bi('Write your sentence', 'כתבו את המשפט שלכם')}</span>
+        <textarea class="freeText sentBox" rows="3" data-action="wrItem" data-idx="${i}"
+          aria-label="Sentence for picture ${i + 1}"
+          placeholder="${escapeAttr('Sentence ' + (i + 1) + '…')}">${escapeAttr(A.answers[i] || '')}</textarea>
+      </li>`;
+    return `
+      <ol class="sceneGrid">${items.map(card).join('')}</ol>
+      <div class="navRowR">${finish('done')}</div>`;
+  },
+  handle(){ return false; },
+  /* The same box and the same store as the writing renderer. */
+  input(act, t){ return writing.input(act, t); }
+};
+
 /* --------------------------------------------------------- unscramble
    Scrambled letters with a clue. Items are {answer, clue}. */
 const unscramble = {
@@ -373,7 +412,8 @@ import { reading, recall } from './reading.js';
 
 const RENDERERS = {
   mc, pairs, bins, writing, unscramble, wordlist, reading, recall,
-  'sentence-table': sentenceTable
+  'sentence-table': sentenceTable,
+  'scene-cards': sceneCards
 };
 
 export { RENDERERS };

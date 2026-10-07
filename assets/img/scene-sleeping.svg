@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="t">
+<title id="t">A boy is asleep in bed. A cat is lying on a mat below the bed.</title>
+<rect width="320" height="200" fill="#F6F2EA"/>
+<!-- headboard -->
+<rect x="24" y="40" width="16" height="92" rx="7" fill="#B08F4C"/>
+<!-- mattress -->
+<rect x="24" y="96" width="256" height="22" rx="7" fill="#FFFDF9" stroke="#D8CDB8" stroke-width="2"/>
+<!-- pillow -->
+<rect x="44" y="80" width="54" height="22" rx="10" fill="#FFFDF9" stroke="#D8CDB8" stroke-width="2"/>
+<!-- sleeping boy: head on the pillow, blanket over the rest -->
+<circle cx="86" cy="86" r="15" fill="#D9B892"/>
+<path d="M86 71a15 15 0 0 1 15 12 35 35 0 0 0-24-1 15 15 0 0 1 9-11z" fill="#4A3B2E"/>
+<path d="M80 88q4 3 8 0" stroke="#4A3B2E" stroke-width="2" stroke-linecap="round" fill="none"/>
+<path d="M104 96h150a8 8 0 0 1 8 8v8H104z" fill="#46658A"/>
+<path d="M104 104h158" stroke="#3B5578" stroke-width="2"/>
+<!-- bed legs -->
+<rect x="30" y="118" width="10" height="26" rx="4" fill="#B08F4C"/>
+<rect x="264" y="118" width="10" height="26" rx="4" fill="#B08F4C"/>
+<!-- Zzz -->
+<g fill="#8FA68C" font-family="Rubik, sans-serif" font-weight="700">
+  <text x="112" y="56" font-size="16">z</text>
+  <text x="126" y="44" font-size="20">z</text>
+  <text x="144" y="30" font-size="25">z</text>
+</g>
+<!-- the mat below the bed -->
+<rect x="92" y="158" width="128" height="18" rx="9" fill="#C9A25A" opacity="0.5"/>
+<path d="M104 167h104" stroke="#B08F4C" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+<!-- the cat, curled up on the mat -->
+<ellipse cx="150" cy="152" rx="34" ry="19" fill="#5A6773"/>
+<circle cx="122" cy="146" r="14" fill="#5A6773"/>
+<path d="M112 136l-1-11 10 6z" fill="#5A6773"/>
+<path d="M128 135l6-9 3 10z" fill="#5A6773"/>
+<path d="M117 146q4 3 8 0" stroke="#F6F2EA" stroke-width="2" stroke-linecap="round" fill="none"/>
+<path d="M182 150q16-6 10-18" stroke="#5A6773" stroke-width="9" stroke-linecap="round" fill="none"/>
+</svg>

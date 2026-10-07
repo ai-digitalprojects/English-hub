@@ -62,8 +62,15 @@ function derivedActivities(part){
      only worth adding when it practises in a shape the part does not have. */
   const covered = new Set((part.activities || []).map(a => a.render).filter(Boolean));
 
+  /* A part can also name a drill it does not want, for a reason the shape
+     cannot see — Getting Started has nothing worth sorting into groups, since
+     its two word sets are just the two halves of one list. Turning the drill
+     off here leaves every other part's set untouched. */
+  const skip = new Set(part.skipDrills || []);
+
   const out = [];
   EXERCISES.forEach(ex => {
+    if(skip.has(ex.id)) return;
     if(!ex.needs(words)) return;
     const format = DRILL_FORMAT[ex.id] || ex.id;
     if(covered.has(format)) return;

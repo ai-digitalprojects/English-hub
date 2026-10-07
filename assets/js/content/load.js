@@ -28,7 +28,11 @@ function partsOf(section){
     icon: section.icon, color: section.color, sources: section.sources,
     vocabulary: section.vocabulary || [], grammar: section.grammar || [],
     activities: section.activities || [], skills: section.skills || {},
-    phonics: section.phonics || null
+    phonics: section.phonics || null,
+    /* A section can turn off a drill it would otherwise be given. The field
+       has to be copied across explicitly: a pseudo-part is built field by
+       field, so anything left out here never reaches the model. */
+    skipDrills: section.skipDrills || []
   }];
 }
 

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="t">
+<title id="t">A boy sits at a desk writing in his notebook. An open book lies next to him.</title>
+<rect width="320" height="200" fill="#F6F2EA"/>
+<!-- boy -->
+<circle cx="96" cy="62" r="19" fill="#D9B892"/>
+<path d="M96 43a19 19 0 0 1 19 16 44 44 0 0 0-38 0 19 19 0 0 1 19-16z" fill="#4A3B2E"/>
+<path d="M74 142v-28a22 22 0 0 1 44 0v28z" fill="#46658A"/>
+<!-- writing arm, reaching to the notebook -->
+<path d="M116 122 L162 136" stroke="#D9B892" stroke-width="11" stroke-linecap="round"/>
+<!-- pencil -->
+<g transform="rotate(38 168 132)">
+  <rect x="160" y="112" width="7" height="26" rx="2" fill="#C9A25A"/>
+  <path d="M160 138 h7 l-3.5 7z" fill="#4A3B2E"/>
+</g>
+<!-- desk -->
+<rect x="56" y="142" width="248" height="10" rx="5" fill="#C9A25A"/>
+<rect x="68" y="152" width="7" height="34" rx="3.5" fill="#B08F4C"/>
+<rect x="288" y="152" width="7" height="34" rx="3.5" fill="#B08F4C"/>
+<!-- notebook, open, being written in -->
+<rect x="140" y="128" width="62" height="16" rx="3" fill="#FFFDF9" stroke="#D8CDB8" stroke-width="2"/>
+<g stroke="#C9BDA7" stroke-width="2" stroke-linecap="round">
+  <path d="M148 134h46"/><path d="M148 139h32"/>
+</g>
+<!-- open book beside him -->
+<path d="M216 142 L216 118 Q246 110 248 122 L248 142z" fill="#FFFDF9" stroke="#46658A" stroke-width="2.5"/>
+<path d="M280 142 L280 118 Q250 110 248 122 L248 142z" fill="#FFFDF9" stroke="#46658A" stroke-width="2.5"/>
+<g stroke="#C9BDA7" stroke-width="2" stroke-linecap="round">
+  <path d="M224 126h18"/><path d="M224 132h18"/><path d="M254 126h18"/><path d="M254 132h18"/>
+</g>
+</svg>
