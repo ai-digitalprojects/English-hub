@@ -542,6 +542,17 @@ a.actItem:hover{
   font-size:1.14rem; line-height:1.5;
 }
 
+/* ---- The state that was never drawn ----
+   The renderer has always put .selected on the option you tap, and no layer
+   has ever styled it: tapping an answer changed nothing on screen, on every
+   multiple-choice activity on the site. It gets the same mark the matching
+   pairs already use, so the two controls agree. */
+.opt.selected{
+  border-color:var(--indigo); background:rgba(70,101,138,0.12);
+  color:var(--navy); font-weight:600;
+  box-shadow:0 0 0 1px var(--indigo) inset;
+}
+
 .opt.correct, .matchItem.matched{
   background:var(--correct-bg); border-color:var(--correct);
   color:var(--correct); font-weight:600;
@@ -886,7 +897,7 @@ a.statRow.link:hover b{ color:var(--indigo); }
 }
 .scLabel{
   display:block; margin:16px 0 8px;
-  font-size:0.84rem; font-weight:600; letter-spacing:0.4px;
+  font-size:0.92rem; font-weight:600; letter-spacing:0.4px;
   text-transform:uppercase; color:var(--ink-soft);
 }
 .scLabel .bi{ gap:8px; }
@@ -918,4 +929,34 @@ a.statRow.link:hover b{ color:var(--indigo); }
 @media(max-width:620px){
   .sceneCard{ padding:16px 16px 14px; border-radius:16px; }
   .scLabel{ margin:14px 0 7px; }
+}
+
+/* ------------------------------------------------------- picture options
+   Where the choice is between two pictures, the picture is the whole button:
+   no caption under it, because the sentence that used to describe the picture
+   is now its alt text. Two across at every width — a pair of pictures read
+   side by side is the exercise; stacked, it is two separate questions. */
+/* Held to 560px: at the full width of the card a pair of upright pictures runs
+   past 500px tall each and pushes the Check button off the screen, which is
+   the one control the student needs while they are still looking. */
+.opts.optsPic{ grid-template-columns:1fr 1fr; gap:16px; max-width:560px; }
+.opt.optPic{
+  padding:7px; overflow:hidden; line-height:0;
+}
+.opt.optPic img{
+  display:block; width:100%; height:auto;
+  border-radius:8px;
+}
+/* The frame carries the answer, so it is drawn a touch heavier here than on a
+   word button: it has to read against a picture rather than a flat tint. */
+.opt.optPic.selected{ box-shadow:0 0 0 2px var(--indigo) inset; }
+.opt.optPic.correct{ box-shadow:0 0 0 2px var(--correct) inset; }
+.opt.optPic.incorrect{ box-shadow:0 0 0 2px var(--retry) inset; }
+/* Written at the same weight as the state rules above and after them, so the
+   keyboard ring is not swallowed by a selected picture. */
+.opt.optPic:focus-visible{ box-shadow:0 0 0 3px rgba(70,101,138,0.5); }
+
+@media(max-width:620px){
+  .opts.optsPic{ gap:11px; }
+  .opt.optPic{ padding:5px; }
 }

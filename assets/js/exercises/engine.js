@@ -31,9 +31,13 @@ const mc = {
     const answers = Array.isArray(q.a) ? q.a : [q.a];
     const want = answers.length;
     const done = A.checked;
-    const opts = q.o.map(o => {
+    const opts = q.o.map((o, oi) => {
+      /* An option may be a picture instead of a sentence. The sentence is still
+         what the option *is* — it is the stored value, the answer and the alt
+         text — so nothing about the checking changes; only what is drawn. */
+      const pic = (q.oImg || [])[oi];
       let cls = 'opt';
-      const he = /[֐-׿]/.test(o);
+      const he = !pic && /[֐-׿]/.test(o);
       /* While the student is still trying, only their own choice is marked —
          the correct option is never given away. */
       if(A.solved){
@@ -46,8 +50,11 @@ const mc = {
         cls += ' incorrect';
       } else if(A.picked.includes(o)) cls += ' selected';
       if(A.hinted && A.hinted.includes(o)) cls += ' dim';
-      return `<button class="${cls}${he ? ' he' : ''}"${he ? ' dir="rtl"' : ''} data-action="ex" data-do="pick"
-        data-val="${escapeAttr(o)}" ${done ? 'data-locked="1"' : ''}>${o}</button>`;
+      const body = pic
+        ? `<img src="assets/img/${pic}" alt="${escapeAttr(o)}" loading="lazy">`
+        : o;
+      return `<button class="${cls}${pic ? ' optPic' : ''}${he ? ' he' : ''}"${he ? ' dir="rtl"' : ''} data-action="ex" data-do="pick"
+        data-val="${escapeAttr(o)}" ${done ? 'data-locked="1"' : ''}>${body}</button>`;
     }).join('');
     const got = A.picked.filter(p => answers.includes(p)).length;
     return `
@@ -56,7 +63,7 @@ const mc = {
       <div class="qWrap">
         <div class="qCounter">Question ${A.i + 1} of ${A.qs.length}${want > 1 ? ' · choose ' + want : ''}</div>
         <div class="prompt">${q.p}</div>
-        <div class="opts">${opts}</div>
+        <div class="opts${q.oImg ? ' optsPic' : ''}">${opts}</div>
         ${A.solved ? correctRow()
           : A.revealed ? revealRow(answers.join(' + '))
           : A.wrong ? retryRow() : ''}

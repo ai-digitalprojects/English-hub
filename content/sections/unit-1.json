@@ -398,10 +398,6 @@
           "origin": "adapted",
           "render": "mc",
           "shuffle": false,
-          "scene": [
-            "The book shows two pictures for each phrase. They are described here in words.",
-            "בספר מופיעות שתי תמונות לכל צירוף. כאן הן מתוארות במילים."
-          ],
           "instruction": [
             "Choose the picture that matches the phrase.",
             "בחרו את התמונה שמתאימה לצירוף."
@@ -410,16 +406,24 @@
             {
               "p": "<b>love</b> horses",
               "o": [
-                "A child hugging a horse's face and smiling.",
+                "A girl hugging a horse's face and smiling.",
                 "A boy standing with his hands on his hips, looking cross."
               ],
-              "a": "A child hugging a horse's face and smiling."
+              "oImg": [
+                "pic-hug-horse.webp",
+                "pic-angry-boy.webp"
+              ],
+              "a": "A girl hugging a horse's face and smiling."
             },
             {
               "p": "<b>hit</b> the ball",
               "o": [
-                "A baseball player swinging a bat at the ball.",
-                "A girl catching a basketball with both hands."
+                "A girl catching a basketball with both hands.",
+                "A baseball player swinging a bat at the ball."
+              ],
+              "oImg": [
+                "pic-basketball.webp",
+                "pic-baseball.webp"
               ],
               "a": "A baseball player swinging a bat at the ball."
             },
@@ -429,13 +433,21 @@
                 "A customer at a counter pointing at the pizzas he wants.",
                 "A chef in a kitchen putting toppings on a pizza."
               ],
+              "oImg": [
+                "pic-order-pizza.webp",
+                "pic-chef-pizza.webp"
+              ],
               "a": "A customer at a counter pointing at the pizzas he wants."
             },
             {
               "p": "don't want <b>anything</b>",
               "o": [
-                "A man at a table full of food, holding up his hands to say no.",
-                "A man pointing at the food on a waiter's tray."
+                "A man pointing at the food on a waiter's tray.",
+                "A man at a table full of food, holding up his hands to say no."
+              ],
+              "oImg": [
+                "pic-point-food.webp",
+                "pic-refuse-food.webp"
               ],
               "a": "A man at a table full of food, holding up his hands to say no."
             },
@@ -443,33 +455,49 @@
               "p": "a small <b>island</b>",
               "o": [
                 "A small green island with palm trees in the sea.",
-                "A town with houses and trees."
+                "A town with houses and trees along a road."
+              ],
+              "oImg": [
+                "pic-island.webp",
+                "pic-village.webp"
               ],
               "a": "A small green island with palm trees in the sea."
             },
             {
               "p": "<b>Dear</b> Mom,",
               "o": [
-                "A new email on a screen, beginning \"Dear Mom\".",
-                "Two women sitting in a waiting room."
+                "Two women sitting and talking in a waiting room.",
+                "A new message on a screen, beginning “Dear Mom”."
               ],
-              "a": "A new email on a screen, beginning \"Dear Mom\"."
+              "oImg": [
+                "pic-waiting-room.webp",
+                "pic-dear-mom.webp"
+              ],
+              "a": "A new message on a screen, beginning “Dear Mom”."
             },
             {
               "p": "<b>Leave</b> your umbrellas near the door.",
               "o": [
-                "Closed umbrellas standing on the floor next to a door.",
-                "Three people indoors holding open umbrellas."
+                "Three closed umbrellas standing by the front door.",
+                "A family indoors holding their umbrellas open."
               ],
-              "a": "Closed umbrellas standing on the floor next to a door."
+              "oImg": [
+                "pic-umbrellas-door.webp",
+                "pic-umbrellas-indoors.webp"
+              ],
+              "a": "Three closed umbrellas standing by the front door."
             },
             {
               "p": "<b>pick</b> a book",
               "o": [
-                "A girl at a bookshelf reaching up to take a book.",
-                "A girl sitting under a lamp, reading a book."
+                "A girl curled up in an armchair, reading a book.",
+                "A girl reaching up to take a book off the shelf."
               ],
-              "a": "A girl at a bookshelf reaching up to take a book."
+              "oImg": [
+                "pic-reading.webp",
+                "pic-pick-book.webp"
+              ],
+              "a": "A girl reaching up to take a book off the shelf."
             }
           ],
           "lane": "practice"
