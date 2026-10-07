@@ -312,7 +312,7 @@ fa12201  Set the top bar at reading size
 8a5e4b2  Rebuild Write Sentences around pictures and replace Task 7
 4d2d9ea  Record the checkpoint: five commits waiting on review
 3279e8c  Use the supplied photographs and reword task 5
-330d4b4  Record the photographs and the task 5 wording
+(this one) Record the photographs and the task 5 wording
 ```
 
 ### Answer buttons and instructions (`0352332`, `053f503`)
