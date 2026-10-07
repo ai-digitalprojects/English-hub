@@ -891,10 +891,22 @@ a.statRow.link:hover b{ color:var(--indigo); }
 }
 .scLabel .bi{ gap:8px; }
 .scLabel .biHe{ text-transform:none; letter-spacing:0; border-left-color:var(--line); }
-.scNum{ margin:0 0 10px; color:var(--indigo); }
+/* The card's own number, in the same tile the activity cards use, so a student
+   reading down the page counts pictures the way they count everything else. */
+.scHead{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+.scStep{
+  flex:none; display:flex; align-items:center; justify-content:center;
+  width:28px; height:28px; border-radius:9px;
+  font-size:0.86rem; font-weight:600; color:#4E5B68;
+  background:var(--c-writing-bg);
+}
+.scTitle{ margin:0; color:var(--indigo); }
+/* The pictures fill their frame, so the frame is a hairline and a radius and
+   nothing else — no backdrop to show through. */
 .scFig{
   margin:0; overflow:hidden;
   border:1px solid var(--line); border-radius:13px; background:var(--ivory);
+  line-height:0;
 }
 .scFig img{ display:block; width:100%; height:auto; }
 .scWords{ display:flex; flex-wrap:wrap; gap:0; }

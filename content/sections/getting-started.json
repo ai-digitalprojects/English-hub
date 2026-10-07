@@ -533,7 +533,7 @@
     {
       "id": "circle-correct",
       "type": "circle-the-correct-words",
-      "title": "Circle the Correct Words",
+      "title": "Choose the Correct Words",
       "skill": "vocabulary",
       "level": 2,
       "lane": "practice",
@@ -548,8 +548,8 @@
       "render": "mc",
       "shuffle": false,
       "instruction": [
-        "Circle the correct words to complete the sentences.",
-        "הקיפו את המילים הנכונות כדי להשלים את המשפטים."
+        "Choose the correct words to complete the sentences.",
+        "בחרו את המילים הנכונות כדי להשלים את המשפטים."
       ],
       "items": [
         {
@@ -1059,39 +1059,39 @@
       ],
       "items": [
         {
-          "img": "scene-classroom.svg",
-          "alt": "A classroom. The teacher is at the board, which says New Words. Several children have their hands up.",
+          "img": "scene-new-words.webp",
+          "alt": "A classroom. The teacher stands at the whiteboard, which says New Words, and two of the three children at their desks have a hand up.",
           "words": [
             "raise",
             "vocabulary",
-            "instructions"
-          ]
-        },
-        {
-          "img": "scene-desk.svg",
-          "alt": "A boy is sitting at a desk, writing in his notebook. An open book is next to him.",
-          "words": [
-            "spell",
-            "dictionary",
-            "complete"
-          ]
-        },
-        {
-          "img": "scene-games.svg",
-          "alt": "Three children are sitting on the floor with board games. One of them is reading a card.",
-          "words": [
-            "instructions",
-            "find out",
             "repeat"
           ]
         },
         {
-          "img": "scene-sleeping.svg",
-          "alt": "A boy is asleep in bed. A cat is lying on a mat below the bed.",
+          "img": "scene-dictionary.webp",
+          "alt": "A boy sits at a desk writing in his notebook with a pencil. An open dictionary stands next to him, with a pencil case and books on the desk.",
           "words": [
-            "below",
-            "describe",
-            "opposite"
+            "dictionary",
+            "spell",
+            "complete"
+          ]
+        },
+        {
+          "img": "scene-instructions.webp",
+          "alt": "A girl and a boy sit together at a desk reading a sheet headed Instructions. The girl is pointing at it and they are talking.",
+          "words": [
+            "instructions",
+            "conversation",
+            "task"
+          ]
+        },
+        {
+          "img": "scene-tablet.webp",
+          "alt": "A boy sits in the library at a tablet with a keyboard, an open notebook beside him and a purple book labelled Vocabulary on the desk.",
+          "words": [
+            "vocabulary",
+            "keyboard",
+            "find out"
           ]
         }
       ]

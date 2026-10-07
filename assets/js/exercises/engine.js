@@ -296,7 +296,10 @@ const sceneCards = {
     const he = s => /[֐-׿]/.test(s);
     const card = (it, i) => `
       <li class="sceneCard">
-        <span class="scLabel scNum">${bi('Picture ' + (i + 1), 'תמונה ' + (i + 1))}</span>
+        <div class="scHead">
+          <span class="scStep">${i + 1}</span>
+          <span class="scLabel scTitle">${bi('Picture', 'תמונה')}</span>
+        </div>
         <figure class="scFig">
           <img src="assets/img/${it.img}" alt="${escapeAttr(it.alt || '')}" loading="lazy">
         </figure>

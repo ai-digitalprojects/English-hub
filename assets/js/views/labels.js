@@ -61,6 +61,9 @@ const TYPE_TITLES = {
 const HE_EXTRA = {
   /* Getting Started */
   'Complete the Puzzles':                'השלימו את התשבצים',
+  /* Nothing is circled on a screen, so this one says choose. The type's own
+     title still reads "Circle" for the printed exercises that do. */
+  'Choose the Correct Words':            'בחרו את המילים הנכונות',
   'Circle, Write and Translate':         'הקיפו, כתבו ותרגמו',
   'Complete the Sentences. Then Tick.':  'השלימו את המשפטים ואז סמנו',
 
