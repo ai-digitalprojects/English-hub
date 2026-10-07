@@ -2,12 +2,12 @@
 
 **Last updated:** 2026-10-07
 **Branch:** `english-hub-v2`
-**Commit:** `3279e8c` — *Use the supplied photographs and reword task 5*, plus
-this status update on top of it.
+**Commit:** `8181913` — *Picture the Part 5 tasks, sort by meaning, and give the
+tick a box*, plus this status update on top of it.
 **Working tree:** clean
 **`main`:** `5706a35`, unchanged and identical to `origin/main` — this is what the
 live site serves.
-**Eight commits sit on `english-hub-v2` ahead of `main`, none merged, none deployed.**
+**Eighteen commits sit on `english-hub-v2` ahead of `main`, none merged, none deployed.**
 
 ---
 
@@ -30,6 +30,10 @@ activities, finished and tested on the branch, **waiting for review**.
 | Top bar set at reading size | ✅ |
 | Getting Started Write Sentences rebuilt around four supplied pictures | ✅ |
 | Getting Started Task 7 replaced with Vocabulary Review | ✅ |
+| Every click-to-answer exercise says Choose, not Circle | ✅ |
+| Picture choices where the book shows pictures — 3 activities, 31 images | ✅ |
+| Matching never deals a row opposite its own answer | ✅ |
+| Direction audit — 140 activities, resting and after interaction | ✅ |
 | Full responsive testing — 320, 375, 768, 1120 | ✅ |
 | 140 activities tested, all opened successfully | ✅ |
 | Zero broken links · zero missing images · zero overflow · zero JS errors | ✅ |
@@ -253,7 +257,7 @@ Bilingual               0 cards without Hebrew    0 activities without a
                                                   two-language instruction
 Console errors          0
 Network                 0 non-200 · 57 files checked directly against the server
-Images                  9 heroes + 5 scene pictures, all 200
+Images                  9 heroes + 36 activity pictures, all 200
 Horizontal overflow     0 px at 320, 375, 768 and 1120
 Grids                   Home 2→1 · Unit 1 3→2→1 · Parts 2→2→1
 Hero height             214 / 208 / 188, identical on all ten bands
@@ -312,7 +316,16 @@ fa12201  Set the top bar at reading size
 8a5e4b2  Rebuild Write Sentences around pictures and replace Task 7
 4d2d9ea  Record the checkpoint: five commits waiting on review
 3279e8c  Use the supplied photographs and reword task 5
-(this one) Record the photographs and the task 5 wording
+9f28bd1  Record the photographs and the task 5 wording
+51865c6  Drop a hash a commit cannot know
+6b6e366  Give Choose the Correct Picture its pictures, and draw the selected state
+18ed24b  Put a picture beside each place in the Tokyo reading
+6f668ff  Call Part 2's matching exercise what it is
+f585e2e  Say choose, not circle, wherever the student clicks
+f74a7e3  Show the food court, and let a match item face the right way
+da1f1da  Give the Rex writing task something to start from
+7b992f2  Never deal a matching row opposite its own answer
+8181913  Picture the Part 5 tasks, sort by meaning, and give the tick a box
 ```
 
 ### Answer buttons and instructions (`0352332`, `053f503`)
@@ -435,11 +448,135 @@ Pictures             5 scene images, all 200, all decoded and painted
 
 ---
 
+## 8b. The review round — pictures, wording, direction
+
+A second review of the site produced eleven corrections. Each was checked
+against the live site before it was treated as a defect; two of the eleven
+turned out not to be defects, and are recorded as such.
+
+### Pictures where the book has pictures
+
+Three activities told students to look at a picture and then printed a
+paragraph describing one. All three now show the pictures, through one
+mechanism: an mc item may carry `oImg` beside its options, and the sentence
+that described the picture becomes the image's alt text, so the stored value,
+the answer and the reveal text are all unchanged and no other mc activity is
+touched.
+
+```
+Part 1 · Book p.13.1    Choose the Correct Picture    8 questions, 16 images
+Part 5 · WB p.37.1      Choose the Correct Picture    6 questions, 12 images
+Getting Started p.6.4   Write Sentences               4 scene cards
+Part 1 · SB p.15.4      Things to do in Tokyo         3 section pictures
+Part 5 · SB p.43.3      Who Says It?                  1 full scene
+```
+
+Supplied composites were split down the middle; where the panels carried A/B
+badges the badge was cropped off, because the correct answer alternates
+between the two positions and a badge would have put the pair out of order.
+The correct side alternates in every picture activity, so it cannot be found
+by where it sits.
+
+### Wording
+
+*Circle* is gone from every exercise the student clicks — two activity types
+renamed rather than each activity, since every activity of either type is
+multiple choice, which corrected the three screens carrying no title of their
+own. Six written-out titles and seven instructions followed, in both
+languages. One title keeps the word on purpose: Getting Started's *Circle,
+Write and Translate* is a typing exercise, and its instruction already
+explains that the workbook circles where the screen types.
+
+Part 2's *Match Sentences to Pictures* has no pictures in it; it is *Complete
+the Sentences*. Part 3's matching exercise has the same mismatch and is still
+open — it was out of scope when it was found.
+
+### Direction
+
+The right-hand match column was set `direction:rtl` outright, on the
+assumption that it is always the Hebrew one. It is Hebrew in the word-list
+drills and English everywhere else, which is what threw the full stop to the
+wrong end of an English sentence. Direction now follows what is written in
+the item, and `bi()` states it on both halves rather than letting the English
+lean on the page being left-to-right.
+
+The audit that followed covered every element of all 140 activities, in the
+resting state and again after selecting, checking, a wrong answer and a wrong
+drop. **Nothing was found.** The single hit was a false positive: an English
+`<b>` inside the English half of a bilingual line, computing left-to-right
+all the way up.
+
+### Matching
+
+Both columns were already shuffled independently — that was not the defect.
+What independent shuffling does not promise is that no row lands opposite its
+own answer, which a plain shuffle fails to do about 63% of the time whatever
+the number of pairs (measured over 20,000 trials: 63.1% at five pairs, 62.7%
+at twenty-two). The two columns are now dealt together and reshuffled until no
+row lines up. Display order only — scoring looks the partner up in the pair
+list and never reads either column.
+
+```
+Who Says It?          40 deals   0 lined up   37 distinct right-hand orders
+11 pairs activities   12 each    0 lined up
+2 word-list drills    12 each    0 lined up
+```
+
+### Part 5, rebuilt where it was teaching the wrong thing
+
+*Sort the Words* asked students to put the list back into New Words 1 and New
+Words 2 — a fact about the book's layout. It is now **Sort the Words by
+Meaning**, with three groups a Grade 6 reader can decide between:
+
+```
+Health / בריאות              get the flu · feel well · get better · medical · nurse
+Actions / פעולות             come home · invite · tell a story · make a mistake · believe
+How Much, How Good /         really · much · almost · full · excellent
+  כמה וכמה טוב
+```
+
+Every word was checked against its own gloss before it was placed. The
+suggested fourth group, *People*, would have held one word, so it is not
+there; ten words that do not sort cleanly — *if, should, both, keep, miss,
+see, kiss, sorry, date, a while* — are left out rather than forced into a
+group a student could not predict. Adding the activity suppresses the old
+drill on its own, because the part already covers that shape, so Part 5 still
+shows 19 cards.
+
+*Translate and Tick* told students to tick the sentences true for them and
+gave them nothing to tick. Each row now has the sentence, a field for the bold
+word in Hebrew, and a tick — 44px of target, full width on a phone. Ticks live
+in `A.ticks` beside the translations and persist with the draft. Nothing is
+marked: a translation is the student's own and the tick is about their own
+life.
+
+### Support for the open writing task
+
+Workbook p.21.3 — which is in **Part 2**, not Part 5 — asks a learner to read
+four sentences about a dog and then write about a pet, with nothing in
+between. Two boxes now sit above the writing area: fourteen words with their
+Hebrew, in two columns so the box finishes level with the one beside it, and
+seven sentences already begun. Both are optional fields on a writing activity,
+so the other five writing tasks are unchanged.
+
+### Still open
+
+- **Book p.42.1, Choose the Correct Phrase.** The four prompts are cut from a
+  paragraph each to a line each and the note about described pictures is gone,
+  but it has no pictures: the six files supplied with this round all belong to
+  p.37.1, and none of them is a calendar. Four pictures would finish it —
+  a calendar reading *Meet Karen at 5:00*, a sunny park, someone feeling well,
+  and a man and a boy reading together.
+- **Part 3's matching exercise** still inherits *Match Sentences to Pictures*
+  and has no pictures, the same mismatch corrected in Part 2.
+
+---
+
 ## 9. Branch state
 
 ```
 main             5706a35   the live site · equals origin/main · untouched today
-english-hub-v2   3279e8c+  8 commits ahead of main, none reviewed or deployed
+english-hub-v2   8181913+  18 commits ahead of main, none reviewed or deployed
 rebuild          ba95e7d   0 commits that are not already in main
 tag              v1-single-file
 ```
@@ -461,35 +598,29 @@ Apps Script.
 
 ### Unfinished
 
-Nothing is half-built. The working tree is clean and every change is committed.
-What is outstanding is **review**, not work:
-
-- **The commits on `english-hub-v2` have not been reviewed.** They are the
-  answer-button readability pass, the two Hebrew sizing passes, the top bar, the
-  two rebuilt Getting Started activities, and the supplied photographs with the
-  task 5 rewording.
+Nothing is half-built. The working tree is clean and every change is
+committed. What is outstanding is **review**, not work: eighteen commits sit
+on `english-hub-v2` and none has been seen.
 
 ### The exact next step when we resume
 
-> **Review the rebuilt Getting Started activities on the local preview:**
-> `http://localhost:8123/#/getting-started/write-sentences`,
-> `http://localhost:8123/#/getting-started/vocabulary-review` and
-> `http://localhost:8123/#/getting-started/circle-correct`.
-> Then say whether to keep them, change them, or revert.
+> **Review the Part 5 corrections on the local preview:**
+> `http://localhost:8123/#/unit-1/part-5/circle-pictures` (picture pairs),
+> `http://localhost:8123/#/unit-1/part-5/sort-by-meaning` (the three groups),
+> `http://localhost:8123/#/unit-1/part-5/translate-and-tick` (the new tick).
+> Then say whether the three semantic groups are the right ones, since that is
+> the one change here that is a teaching judgement rather than a repair.
 
-A note on sequencing, so the record is straight: the request to stop named the
-two rebuilds as the next work, and they had already been built and committed as
-`8a5e4b2` when it arrived. Work resumed afterwards on request, to swap in the
-supplied pictures and reword task 5. If a piece is not wanted, each is its own
-commit and can be reverted without touching the others.
+### Decisions waiting on you
 
-Two questions are worth deciding at the same time:
-
-- **Eight other screens still say Circle** (listed in §8). Task 5 was the only
-  one in scope; say whether the rest should follow.
-- **`.stChip` went from 13.8px to 15.2px**, which also enlarges the word chips in
-  Part 1's Write Sentences table. It was the last thing left at the old size. Say
-  if Part 1 should keep the smaller chip.
+- **Book p.42.1 needs four pictures** to finish item 4 of the review. Listed
+  in §8b.
+- **Part 3's matching exercise** has the mismatch that was corrected in
+  Part 2. One line to fix when wanted.
+- **The sorting groups.** Three, not the four suggested, and ten words left
+  out. §8b says which and why.
+- **`.stChip` went from 13.8px to 15.2px**, which also enlarges the word chips
+  in Part 1's Write Sentences table.
 
 ### Still open from before
 
