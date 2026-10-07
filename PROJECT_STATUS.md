@@ -573,9 +573,12 @@ so the other five writing tasks are unchanged.
   celebrating in a park, and a man and a boy reading on a sofa. The written
   descriptions are gone from the screen and survive as alt text, and the task
   reads *Look at the picture. Choose the correct phrase.*
-- **Part 3's matching exercise** still inherits *Match Sentences to Pictures*
-  and has no pictures, the same mismatch corrected in Part 2. This is the one
-  item from the review still open.
+- **Part 3's matching exercise** is corrected too. It now reads *Complete the
+  Sentences* with the same instruction as Part 2. Worth knowing: unlike Part 2,
+  its sentences are already complete — *She is taking a picture of the birds.*
+  matched to *take a picture* — so nothing is actually filled in. The wording
+  was specified; a title that described the task exactly would be *Match
+  Sentences to Phrases*.
 
 ---
 
@@ -605,13 +608,17 @@ Apps Script.
 Everything in §8 and §8b is live. The working tree is clean and `main` carries
 the whole review round.
 
-### The one item still open from the review
+### The review round is complete
 
-- **Part 3's matching exercise** inherits *Match Sentences to Pictures* and has
-  no pictures in it — it matches sentences to `take` phrases. It is the same
-  mismatch that was corrected in Part 2 and is a one-line change whenever it is
-  wanted. It was out of scope when it was found and has stayed out of scope
-  since.
+Every item from the review is done and deployed. The last one — Part 3's
+matching exercise, which inherited *Match Sentences to Pictures* without having
+any — now reads *Complete the Sentences*, matching Part 2.
+
+One nuance recorded rather than silently settled: Part 3's sentences are not
+gapped the way Part 2's are. A student matches *She is taking a picture of the
+birds.* to *take a picture*; nothing is completed. The wording was specified,
+and *Match Sentences to Phrases* would describe the task more exactly if that
+is preferred.
 
 ### Judgement calls worth confirming
 
