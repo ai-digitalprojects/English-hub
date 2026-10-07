@@ -101,6 +101,35 @@ body{ background:var(--ivory); }
   background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.14); color:#fff;
 }
 
+/* ---- Dictation practice ----
+   The one item in the bar that leaves the site, so it is the one gold thing in
+   it: gold is used nowhere else up here, which is what makes it findable. It
+   is an <a>, not a button, and it carries its Hebrew the way the rest of the
+   interface does. */
+.navDict{
+  display:inline-flex; align-items:baseline; gap:8px;
+  text-decoration:none;
+  color:#E8C98C;
+  background:rgba(201,162,90,0.11);
+  /* 3.16:1 against the bar. The gold text alone already carries 7.6, but the
+     outline is what tells you this is a thing to press, so it clears the 3:1
+     a control's own boundary has to meet. */
+  border-color:rgba(201,162,90,0.62);
+}
+.navDict:hover{
+  background:rgba(201,162,90,0.22); border-color:rgba(201,162,90,0.9); color:#F3DFB4;
+}
+.navDict .navMain{ display:inline-flex; align-items:baseline; gap:7px; }
+.navDict .navIcon{ font-size:0.95em; filter:grayscale(0.25) saturate(0.9); }
+.navDict .navHe{
+  direction:rtl; unicode-bidi:isolate; font-size:0.98em; font-weight:500;
+  padding-left:8px; border-left:1px solid rgba(201,162,90,0.55);
+  color:inherit;
+}
+/* One English label or the other, never both. display:none keeps the unused
+   one out of the accessibility tree as well. */
+.navDict .navShort{ display:none; }
+
 /* ------------------------------------------------------------ breadcrumb */
 .crumbs{ margin:22px 0 14px; font-size:0.78rem; }
 .crumb{ color:var(--ink-soft); }
@@ -186,7 +215,7 @@ body{ background:var(--ivory); }
 .homeCard .pbarInner{ background:var(--sage); }
 .homePct{ margin:9px 0 0; font-size:0.74rem; font-weight:500; color:var(--ink-soft); }
 .homeGo{
-  padding-top:18px; font-size:0.84rem; font-weight:600;
+  padding-top:18px; font-size:0.95rem; font-weight:600;
   letter-spacing:0.2px; color:var(--indigo);
 }
 /* On a phone the bilingual rule gives the Hebrew its own full-width line. In a
@@ -326,7 +355,11 @@ body{ background:var(--ivory); }
 .originTag.extra  { background:rgba(70,101,138,0.07); color:var(--ink-soft); }
 .originTag.adapted{ background:rgba(201,162,90,0.10); color:var(--ink-soft); }
 .originTag .bi{ gap:5px; }
-.originTag .biHe{ border:0; padding:0; color:inherit; opacity:0.85; }
+/* opacity:1 explicitly, not merely omitted: the components layer fades this
+   Hebrew to 0.75, which leaves the second half of the badge at 3.15 against its
+   own tint — under the 4.5 that text this size has to meet. At full strength it
+   sits with the English half at 5.29. */
+.originTag .biHe{ border:0; padding:0; color:inherit; opacity:1; }
 
 /* ========================================================== part screen */
 /* The progress line reads as a sentence, not a score. */
@@ -336,49 +369,6 @@ body{ background:var(--ivory); }
   margin-top:9px; font-size:0.74rem; font-weight:500; color:var(--ink-soft);
 }
 .pctLabel .biHe{ border-left-color:var(--line); }
-
-/* ---- Dictation practice ----
-   The one place on a Part screen that sends the student somewhere else, so it
-   is allowed to be the one gold thing: the same warm card as everything else,
-   with an accent rule down its edge and a tinted tile for the mark. Gold is
-   used nowhere else at this size, which is what makes it findable. */
-.practiceCard{
-  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
-  margin:26px 0 4px; padding:20px 24px;
-  background:var(--white);
-  border:1px solid var(--line);
-  border-left:3px solid var(--gold);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-}
-.practiceIcon{
-  flex:none; width:42px; height:42px; border-radius:13px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:1.25rem; background:rgba(201,162,90,0.13);
-  filter:grayscale(0.3) saturate(0.9);
-}
-.practiceBody{ flex:1 1 240px; min-width:0; }
-.practiceTitle{
-  font-family:'Frank Ruhl Libre', serif;
-  margin:0 0 4px; font-size:1.28rem; font-weight:500;
-  letter-spacing:-0.2px; color:var(--navy);
-}
-.practiceTitle .biHe{ font-size:0.78em; color:var(--ink-soft); border-left-color:var(--line); }
-.practiceLead{ margin:0; font-size:0.88rem; line-height:1.5; color:var(--ink-soft); }
-.practiceLead .biHe{ border-left-color:var(--line); }
-.practiceGo{
-  flex:none; display:inline-flex; align-items:center;
-  padding:11px 20px; border-radius:10px;
-  background:rgba(201,162,90,0.13); border:1px solid rgba(201,162,90,0.55);
-  color:#7A5B1E; font-size:0.86rem; font-weight:600; letter-spacing:0.1px;
-  text-decoration:none; white-space:nowrap;
-  transition:background .16s ease, border-color .16s ease;
-}
-.practiceGo:hover{ background:rgba(201,162,90,0.22); border-color:var(--gold); }
-.practiceGo .bi{ flex-wrap:nowrap; align-items:baseline; gap:9px; }
-/* No opacity on the Hebrew here: against the gold it drops the second half of
-   the button to 3.8, and both halves of a button have to be readable. */
-.practiceGo .biHe{ width:auto; color:inherit; border-left-color:rgba(122,91,30,0.35); }
 
 .catBlock{ margin-top:42px; }
 .catBlock:first-of-type{ margin-top:30px; }
@@ -442,7 +432,11 @@ a.actItem:hover{
 }
 /* The Hebrew stays in the sans face, so the two lines are told apart by more
    than size alone. */
-.actTitleHe{ color:var(--ink-soft); }
+.actTitleHe{
+  color:var(--ink-soft);
+  /* 0.92rem under a 1.3rem English title read as a caption. */
+  font-size:1.06rem; line-height:1.5;
+}
 
 /* ====================================================== activity screen */
 .card{
@@ -455,7 +449,7 @@ a.actItem:hover{
   font-size:1.72rem; font-weight:500; line-height:1.18;
   letter-spacing:-0.3px; color:var(--navy);
 }
-.actHeadText .actTitleHe{ font-size:1rem; margin-top:5px; }
+.actHeadText .actTitleHe{ font-size:1.16rem; line-height:1.45; margin-top:6px; }
 .doneFlag{
   font-size:0.69rem; font-weight:500; color:var(--correct);
   background:var(--correct-bg); padding:3px 9px; border-radius:7px;
@@ -467,20 +461,49 @@ a.actItem:hover{
 /* The second instruction line was 13.6px, and its Hebrew 12.8px — too small to
    take in at a glance for the line that actually says what to do. */
 .exHint.sub{ font-size:0.92rem; color:var(--ink-soft); }
-.biHe{ border-left-color:var(--line); }
+/* ---- The Hebrew half of a bilingual line ----
 
-/* ---- The Hebrew half of an instruction ----
    Hebrew has no ascenders or descenders, so at a matched point size it still
-   reads a shade smaller than the Latin beside it. Set to parity rather than to
-   the 94% it had, with a little more leading and one step of weight, it lands
-   where it should: clearly the second language, not a footnote. The muted ink
-   is what keeps it secondary, not the size. */
-.exHint .biHe,
-.fxHint .biHe{
+   reads a shade smaller than the Latin beside it. It is set here to parity
+   rather than to the 94% it had, with more leading and one step of weight, and
+   it is set once: every bilingual line on the site is a .biHe, so instructions,
+   leads, headings, buttons and progress labels all move together.
+
+   What keeps the Hebrew secondary is the muted ink and the rule that separates
+   it from the English — not a smaller size. */
+.biHe{
   font-size:1em;
-  line-height:1.8;
+  line-height:1.75;
   font-weight:500;
+  border-left-color:var(--line);
 }
+.exHint .biHe,
+.fxHint .biHe{ line-height:1.8; }
+
+/* Two rules in earlier layers set a size of their own at a specificity a single
+   class cannot reach. */
+.originTag .biHe,
+.catLead .biHe{ font-size:1em; }
+
+/* Inside a control the leading belongs to the control, not to the language:
+   1.75 would push a pill out of shape. */
+.biBtn .biHe,
+.homeGo .biHe,
+.originTag .biHe,
+.feedbackMsg .biHe,
+.fxRow .biHe{ line-height:1.35; }
+
+/* A display heading is already well above reading size. Its Hebrew is set one
+   step below parity so the pair still reads as one heading. */
+.catTitle .biHe{ font-size:0.9em; }
+
+/* ---- The small print that carries Hebrew ----
+   A label set at 11 or 12px leaves its Hebrew nowhere to go, so the English
+   comes up with it. These are the three places on a section screen where that
+   was still true. */
+.catLead{ font-size:0.9rem; }
+.originTag{ font-size:0.82rem; }
+.partProgress .pctLabel{ font-size:0.92rem; }
 
 /* ---- Answer buttons: the matching pairs and the multiple-choice options ----
 
@@ -512,11 +535,11 @@ a.actItem:hover{
   border-color:var(--indigo);
   box-shadow:0 0 0 3px rgba(70,101,138,0.28);
 }
-/* The Hebrew side is a size down from the English and no more: large enough
-   to read at a glance, quiet enough to stay the meaning rather than the word. */
+/* The Hebrew side of a pair sits level with the English: a hair under it, and
+   no more. It is the meaning the student is reading, not a gloss on the word. */
 .opt.he,
 .matchGrid .matchCol:last-child .matchItem{
-  font-size:1.08rem; line-height:1.55;
+  font-size:1.14rem; line-height:1.5;
 }
 
 .opt.correct, .matchItem.matched{
@@ -545,7 +568,7 @@ a.actItem:hover{
 @media(max-width:620px){
   .opt, .matchItem{ padding:14px 16px; font-size:1.1rem; }
   .opt.he,
-  .matchGrid .matchCol:last-child .matchItem{ font-size:1.04rem; }
+  .matchGrid .matchCol:last-child .matchItem{ font-size:1.1rem; }
   /* One column on a phone, so the two halves of a pair need telling apart. */
   .matchGrid{ gap:22px; }
   .matchCol{ gap:12px; }
@@ -567,10 +590,12 @@ a.actItem:hover{
 .flash{ background:var(--ivory); border-style:solid; }
 .letter{ border-radius:9px; background:rgba(201,162,90,0.12); border-color:rgba(201,162,90,0.45); }
 
-/* Buttons: smaller, softer and flatter. */
+/* Buttons: smaller, softer and flatter — but not so small that the Hebrew
+   inside them has nowhere to go. 13.4px was below the size the rest of the
+   interface reads at. */
 .pill{
-  border-radius:10px; padding:9px 17px;
-  font-size:0.84rem; font-weight:600; letter-spacing:0.1px;
+  border-radius:10px; padding:10px 18px;
+  font-size:0.95rem; font-weight:600; letter-spacing:0.1px;
 }
 .pill.outline{ border-color:var(--line); color:var(--ink-soft); background:var(--white); }
 .pill.outline:hover{ border-color:#C9BDA7; color:var(--ink); }
@@ -600,12 +625,12 @@ a.actItem:hover{
 .sentTable{ width:100%; border-collapse:collapse; }
 .sentTable th{
   text-align:left; padding:0 14px 10px;
-  font-size:0.72rem; font-weight:600; letter-spacing:0.6px;
+  font-size:0.84rem; font-weight:600; letter-spacing:0.5px;
   text-transform:uppercase; color:var(--ink-soft);
   border-bottom:1px solid var(--line);
 }
 .sentTable th .bi{ gap:8px; }
-.sentTable th .biHe{ font-size:0.92em; border-left-color:var(--line); text-transform:none; letter-spacing:0; }
+.sentTable th .biHe{ font-size:1em; border-left-color:var(--line); text-transform:none; letter-spacing:0; }
 .sentTable td{ padding:14px; vertical-align:top; border-bottom:1px solid var(--line-soft); }
 .sentTable tbody tr:last-child td{ border-bottom:0; }
 .sentTable .stNum{
@@ -672,7 +697,7 @@ a.actItem:hover{
 .ruleRow{ border-bottom-color:rgba(90,135,132,0.22); font-size:0.95rem; }
 .passage{ background:var(--white); border-left:2px solid var(--c-reading); }
 /* An eyebrow, not a heading: the sage was too pale to carry small text. */
-.readKind{ font-weight:600; letter-spacing:1.4px; color:var(--ink-soft); font-size:0.72rem; }
+.readKind{ font-weight:600; letter-spacing:1.2px; color:var(--ink-soft); font-size:0.84rem; }
 .stepDot{ height:4px; background:var(--line); }
 .stepDot.now{ box-shadow:0 0 0 3px rgba(124,150,121,0.18); }
 .preteachRow{ background:var(--c-reading-bg); border-radius:var(--radius-sm); }
@@ -760,6 +785,27 @@ a.statRow.link:hover b{ color:var(--indigo); }
   .topbar .brand small{ font-size:0.8rem; }
   .topbar .navbtns{ gap:4px; flex-wrap:wrap; }
   .navbtn{ padding:6px 11px; font-size:0.9rem; }
+  /* The bar has two rows on a phone. Rather than add a third for the dictation
+     link, the link moves up beside the brand, where the right-hand half of that
+     row is empty anyway, and sets its Hebrew under its English instead of next
+     to it. The bar grows by a few pixels rather than by a whole row.
+
+     Letting the nav's own box dissolve is what lets its children share a row
+     with the brand; the empty ::after is the line break between them. */
+  .topbar{ flex-wrap:wrap; justify-content:flex-start; }
+  .topbar .brand{ flex:1 1 auto; order:1; }
+  .topbar .navbtns{ display:contents; }
+  .topbar .navbtns::after{ content:""; order:2; flex-basis:100%; height:0; }
+  .navDict{ order:2; }
+  .navbtn:not(.navDict){ order:3; }
+
+  .navDict{
+    flex-direction:column; align-items:center; gap:1px;
+    padding:6px 12px; line-height:1.25;
+  }
+  .navDict .navLong{ display:none; }
+  .navDict .navShort{ display:inline; }
+  .navDict .navHe{ border-left:0; padding-left:0; font-size:0.96em; }
   .crumbs{ margin:16px 0 12px; }
 
   .homeGrid{ gap:16px; }
@@ -798,11 +844,8 @@ a.statRow.link:hover b{ color:var(--indigo); }
   /* On a phone the button goes full width under the text rather than being
      squeezed onto the same line, and the mark rises to sit with the title
      instead of drifting down beside the second line. */
-  .practiceCard{ padding:18px 18px 18px 16px; gap:14px; border-radius:16px; align-items:flex-start; }
-  .practiceIcon{ margin-top:1px; }
-  .practiceIcon{ width:36px; height:36px; border-radius:11px; font-size:1.1rem; }
-  .practiceTitle{ font-size:1.15rem; }
-  .practiceGo{ flex:1 1 100%; justify-content:center; padding:12px 18px; }
+
+  .actTitleHe{ font-size:1.02rem; }
 
   .catBlock{ margin-top:32px; }
   .catBlock:first-of-type{ margin-top:24px; }
@@ -823,7 +866,7 @@ a.statRow.link:hover b{ color:var(--indigo); }
    drops to a row of its own and the bar grows by half again. The words keep
    their size; the padding and the bar's own margins give way instead. */
 @media(max-width:360px){
-  .topbar{ padding:8px 12px; }
-  .topbar .navbtns{ gap:3px; }
+  .topbar{ padding:8px 12px; gap:5px; }
   .navbtn{ padding:6px 8px; }
+  .navDict{ padding:6px 10px; }
 }

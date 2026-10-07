@@ -97,29 +97,6 @@ function worksheet(section, part){
   </section>`;
 }
 
-/* Somewhere to practise the words out loud before a dictation.
-
-   It sits with the word count and the progress bar rather than in the numbered
-   sequence, because it is a site off this one, not an exercise from the book:
-   nothing here is marked done and nothing counts towards the total. It is only
-   drawn where there is a word list to practise. */
-const DICTATION = 'https://www.hachtava.co.il/';
-
-function dictation(part){
-  if(!(part.vocabulary || []).length) return '';
-  return `
-  <aside class="practiceCard">
-    <span class="practiceIcon" aria-hidden="true">✍️</span>
-    <div class="practiceBody">
-      <h3 class="practiceTitle">${bi('Practice for Dictation', 'תרגול והכנה להכתבה')}</h3>
-      <p class="practiceLead">${bi('Practice your words before the dictation.', 'תרגלו את המילים והתכוננו להכתבה.')}</p>
-    </div>
-    <a class="practiceGo" href="${DICTATION}" target="_blank" rel="noopener noreferrer">
-      ${bi('Start Dictation Practice &rarr;', 'התחילו תרגול הכתבה')}
-    </a>
-  </aside>`;
-}
-
 /* Shared by the Part screen and by part-less sections such as Getting Started. */
 function renderLanes(sectionId, part){
   const groups = groupByCategory(visibleActivities(part));
@@ -129,7 +106,6 @@ function renderLanes(sectionId, part){
     <div class="pbarOuter"><div class="pbarInner" style="width:${pr.pct}%;background:${colorVar('teal')}"></div></div>
     <div class="pctLabel">${bi(`${pr.done} of ${pr.total} done`, `${pr.done} מתוך ${pr.total} הושלמו`)}</div>
   </div>
-  ${dictation(part)}
   ${groups.map(g => categorySection(sectionId, part, g)).join('')}`;
 }
 
