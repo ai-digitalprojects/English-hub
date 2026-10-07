@@ -454,28 +454,74 @@ a.actItem:hover{
 .exHint.sub{ font-size:0.85rem; color:var(--ink-soft); }
 .biHe{ border-left-color:var(--line); }
 
-/* Answers and word chips: a soft rectangle, a hairline, and the page's own
-   warm white — no heavy outlines, no filled blocks until a choice is made. */
+/* ---- Answer buttons: the matching pairs and the multiple-choice options ----
+
+   These are things to press, so they are allowed to carry more weight than a
+   card does. They were warm white on a warm white card and all but vanished;
+   they now sit on a deeper tint of the same warm family with a border you can
+   actually see, and the word inside is set large enough to scan a column of
+   twenty without leaning in.
+
+   Only these two components change. The word chips in Sort the Words are a
+   different control and are left exactly as they were. */
 .opt, .matchItem{
-  background:var(--white); border:1px solid var(--line);
-  border-radius:var(--radius-sm); padding:13px 16px;
-  font-size:0.98rem; transition:border-color .14s ease, background .14s ease;
+  background:#F1EADB;
+  /* 3.05:1 against the card. Nothing lighter clears the 3:1 that a control's
+     own boundary has to meet, and the fill alone manages only 1.2. */
+  border:1.5px solid #A4906B;
+  border-radius:var(--radius-sm);
+  padding:16px 20px;
+  font-size:1.18rem; line-height:1.4; font-weight:500; color:var(--ink);
+  transition:border-color .14s ease, background .14s ease, box-shadow .14s ease;
 }
-.opt:hover, .matchItem:hover{ border-color:#C9BDA7; background:#FFFCF6; }
+.opt:hover, .matchItem:hover{
+  background:#EAE1CD; border-color:#8F7B57;
+}
+/* A ring rather than a colour change, so the keyboard state is unmistakable
+   against every one of the states below. */
+.opt:focus-visible, .matchItem:focus-visible{
+  outline:none;
+  border-color:var(--indigo);
+  box-shadow:0 0 0 3px rgba(70,101,138,0.28);
+}
+/* The Hebrew side is a size down from the English and no more: large enough
+   to read at a glance, quiet enough to stay the meaning rather than the word. */
+.opt.he,
+.matchGrid .matchCol:last-child .matchItem{
+  font-size:1.08rem; line-height:1.55;
+}
+
 .opt.correct, .matchItem.matched{
-  background:var(--correct-bg); border-color:rgba(74,125,98,0.45);
+  background:var(--correct-bg); border-color:var(--correct);
   color:var(--correct); font-weight:600;
 }
 .opt.incorrect, .matchItem.wrong{
-  background:var(--retry-bg); border-color:rgba(140,90,44,0.40);
+  background:var(--retry-bg); border-color:var(--retry);
   color:var(--retry); font-weight:600;
 }
 .matchItem.selected{
-  border-color:var(--indigo); background:rgba(70,101,138,0.07); font-weight:600;
+  border-color:var(--indigo); background:rgba(70,101,138,0.12);
+  color:var(--navy); font-weight:600;
+  box-shadow:0 0 0 1px var(--indigo) inset;
 }
 /* A solved pair was faded to 70%, which left it at 3.0 against its own tint.
    The green already says it is done; it does not need to be half erased. */
 .matchItem.matched{ opacity:1; }
+
+/* Room to breathe: between the rows, and between the two columns, which is
+   also the gap between a word and its meaning. */
+.matchGrid{ gap:30px; }
+.matchCol{ gap:14px; }
+.opts{ gap:14px; }
+
+@media(max-width:620px){
+  .opt, .matchItem{ padding:14px 16px; font-size:1.1rem; }
+  .opt.he,
+  .matchGrid .matchCol:last-child .matchItem{ font-size:1.04rem; }
+  /* One column on a phone, so the two halves of a pair need telling apart. */
+  .matchGrid{ gap:22px; }
+  .matchCol{ gap:12px; }
+}
 .feedbackMsg{
   border-radius:var(--radius-sm); font-size:0.88rem; font-weight:500;
   padding:11px 15px;
