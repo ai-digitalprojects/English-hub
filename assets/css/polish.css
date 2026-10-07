@@ -1044,3 +1044,54 @@ a.statRow.link:hover b{ color:var(--indigo); }
   .helpWords li:nth-last-child(2){ border-bottom:1px dotted var(--line); }
   .helpWords li:last-child{ border-bottom:0; }
 }
+
+/* ------------------------------------------------ translate, and tick it
+   One row per sentence: the sentence, the Hebrew for its bold word, and a box
+   to tick if the sentence is true for you. The tick is a real control a thumb
+   can find — 44px of target, not a 13px square. */
+.ttList{ list-style:none; margin:6px 0 2px; padding:0; counter-reset:tt; }
+.ttRow{
+  background:var(--white); border:1px solid var(--line);
+  border-radius:var(--radius-sm); padding:15px 18px 14px;
+  margin-bottom:12px;
+}
+.ttRow:last-child{ margin-bottom:0; }
+.ttSentence{
+  counter-increment:tt; margin:0 0 11px;
+  font-size:1.05rem; line-height:1.5; color:var(--ink);
+}
+.ttSentence::before{
+  content:counter(tt) ". "; color:var(--ink-soft); font-weight:600;
+}
+.ttFields{ display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+.ttTranslate{ flex:1 1 260px; min-width:0; display:block; }
+.ttLabel{
+  display:block; margin-bottom:5px;
+  font-size:0.86rem; font-weight:600; color:var(--ink-soft);
+}
+.ttLabel b{ color:var(--ink); }
+.ttInput{ min-height:0; width:100%; padding:9px 12px; font-size:1.02rem; }
+
+/* The whole label is the hit area, so the words beside the box work too. */
+.ttTick{
+  flex:0 0 auto; display:inline-flex; align-items:center; gap:10px;
+  min-height:44px; padding:6px 14px 6px 10px;
+  border:1.5px solid #A4906B; border-radius:999px; background:#F1EADB;
+  cursor:pointer; user-select:none;
+  transition:background .14s ease, border-color .14s ease;
+}
+.ttTick:hover{ background:#EAE1CD; border-color:#8F7B57; }
+.ttTick input{ width:22px; height:22px; accent-color:var(--correct); cursor:pointer; margin:0; }
+.ttTick:has(input:checked){
+  background:var(--correct-bg); border-color:var(--correct);
+}
+.ttTick:has(input:focus-visible){ box-shadow:0 0 0 3px rgba(70,101,138,0.28); }
+.ttTickText{ font-size:1rem; font-weight:500; color:var(--ink); }
+.ttTick:has(input:checked) .ttTickText{ color:var(--correct); font-weight:600; }
+
+@media(max-width:620px){
+  .ttRow{ padding:14px 15px 13px; }
+  .ttFields{ gap:12px; }
+  .ttTranslate{ flex:1 1 100%; }
+  .ttTick{ flex:1 1 100%; justify-content:center; }
+}

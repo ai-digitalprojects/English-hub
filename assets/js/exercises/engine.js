@@ -175,6 +175,14 @@ const pairs = {
 
 /* --------------------------------------------------------------- bins
    Sort words or phrases into named groups. Items are {v, bin}. */
+/* A group's heading. A bin is identified by a short key, and an activity may
+   give that key both languages; one that does not just shows the key, as the
+   word-list drill always has. */
+function binLabel(act, key){
+  const pair = (act && act.binLabels) ? act.binLabels[key] : null;
+  return pair ? bi(pair[0], pair[1]) : key;
+}
+
 const bins = {
   render(items, part, act){
     if(A.pool === undefined){
@@ -194,7 +202,7 @@ const bins = {
           data-action="ex" data-do="pick" data-idx="${i}">${it.v}</button>`).join('')}</div>
       <div class="binRow">${A.binNames.map(b => `
         <button type="button" class="bin" data-action="ex" data-do="drop" data-bin="${escapeAttr(b)}">
-          <div class="binHead">${b}</div>
+          <div class="binHead">${binLabel(act, b)}</div>
           <div class="binItems">${A.placed[b].map(v => `<span class="chip done">${v}</span>`).join('')
             || '<span class="stripHint">empty</span>'}</div>
         </button>`).join('')}</div>
@@ -272,6 +280,55 @@ const writing = {
     if(act !== 'wrItem') return false;
     if(A.answers === undefined) A.answers = [];
     A.answers[Number(t.dataset.idx)] = t.value;
+    return true;
+  }
+};
+
+/* ------------------------------------------------- translate and tick
+   The workbook prints a sentence, asks for the bold word in Hebrew, and has a
+   box to tick if the sentence is true for you. On screen the tick had nowhere
+   to go, so the second half of the task could not be done at all.
+
+   Each row now has the sentence, a field for the translation and a tick. The
+   translation goes in the same A.answers the writing renderer uses; the ticks
+   go in A.ticks, which the draft store keeps alongside it. Nothing is marked:
+   a translation is the student's own and the tick is about their own life. */
+const translateTick = {
+  render(items){
+    if(A.answers === undefined) A.answers = items.map(() => '');
+    if(A.ticks === undefined) A.ticks = items.map(() => false);
+    const row = (it, i) => `
+      <li class="ttRow">
+        <p class="ttSentence" dir="ltr">${it.p}</p>
+        <div class="ttFields">
+          <label class="ttTranslate">
+            <span class="ttLabel">${bi('Translate', 'תרגמו')}
+              <b dir="ltr">${it.word || ''}</b></span>
+            <input type="text" class="freeText ttInput" dir="rtl" lang="he"
+              data-action="wrItem" data-idx="${i}"
+              value="${escapeAttr(A.answers[i] || '')}"
+              placeholder="${escapeAttr('בעברית…')}">
+          </label>
+          <label class="ttTick">
+            <input type="checkbox" data-action="tickItem" data-idx="${i}"
+              ${A.ticks[i] ? 'checked' : ''}>
+            <span class="ttTickText">${bi('True for me', 'נכון לגביי')} ✓</span>
+          </label>
+        </div>
+      </li>`;
+    /* No hint of its own: the activity's own instruction already says to write
+       the Hebrew and tick what is true, and two lines saying it is one too
+       many for a reader working in a second language. */
+    return `
+      <ol class="ttList">${items.map(row).join('')}</ol>
+      <div class="navRowR">${finish('done')}</div>`;
+  },
+  handle(){ return false; },
+  input(act, t){
+    if(act === 'wrItem') return writing.input(act, t);
+    if(act !== 'tickItem') return false;
+    if(A.ticks === undefined) A.ticks = [];
+    A.ticks[Number(t.dataset.idx)] = t.checked;
     return true;
   }
 };
@@ -457,7 +514,8 @@ import { reading, recall } from './reading.js';
 const RENDERERS = {
   mc, pairs, bins, writing, unscramble, wordlist, reading, recall,
   'sentence-table': sentenceTable,
-  'scene-cards': sceneCards
+  'scene-cards': sceneCards,
+  'translate-tick': translateTick
 };
 
 export { RENDERERS };

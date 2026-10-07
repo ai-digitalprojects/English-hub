@@ -2,6 +2,8 @@
    Everything a student types by hand is kept so a refresh never loses work:
    Write It, the Challenge writing tasks, the free sentence in Build a
    Sentence, both Reading text answers, and the unscored open quiz question.
+   Translate and Tick keeps a row of ticks beside its translations; an array of
+   booleans survives isEmptyValue, so a sheet with one box ticked is saved.
 
    Drafts are stored separately from progress. Writing text is NOT progress —
    having a draft never marks an activity complete. */
@@ -9,7 +11,7 @@
 const KEY = 'english-hub:drafts:v1';
 
 /* The ephemeral (A) fields that hold student-authored text. */
-const FIELDS = ['answers', 'val', 'wValue', 'pValue', 'sbFreeText', 'rdFindText', 'rdThinkText', 'wrText', 'vpValues', 'crText', 'qzOpen'];
+const FIELDS = ['answers', 'ticks', 'val', 'wValue', 'pValue', 'sbFreeText', 'rdFindText', 'rdThinkText', 'wrText', 'vpValues', 'crText', 'qzOpen'];
 
 /* One slot per Unit / Part / Activity. '-' stands in for "no part yet"; once
    Phase 4 introduces parts the same key shape keeps them apart. */

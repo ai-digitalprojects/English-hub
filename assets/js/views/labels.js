@@ -48,7 +48,9 @@ const TYPE_TITLES = {
   'make-phrases':                ['Make Phrases',                'הרכיבו ביטויים'],
   'replace-the-words':           ['Replace the Words',           'החליפו את המילים'],
   'word-maps':                   ['Word Maps',                   'מפות מילים'],
-  'vocabulary-review':           ['Vocabulary Review',           'חזרה על אוצר המילים']
+  'vocabulary-review':           ['Vocabulary Review',           'חזרה על אוצר המילים'],
+  'sort-by-meaning':             ['Sort the Words by Meaning',   'מיינו את המילים לפי משמעות'],
+  'translate-and-tick':          ['Translate and Tick',          'תרגמו וסמנו']
 };
 
 /* Titles the content writes out in full, because the book's own exercise says

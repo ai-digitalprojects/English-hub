@@ -6575,17 +6575,13 @@
           "origin": "adapted",
           "render": "mc",
           "shuffle": false,
-          "scene": [
-            "The book shows four pictures. They are described here in words.",
-            "בספר מופיעות ארבע תמונות. כאן הן מתוארות במילים."
-          ],
           "instruction": [
-            "Choose the correct phrases or sentence for the pictures.",
-            "בחרו את הצירופים או המשפט הנכונים לתמונות."
+            "Choose the correct phrase for each picture.",
+            "בחרו את הביטוי הנכון לכל תמונה."
           ],
           "items": [
             {
-              "p": "A calendar page. On one of the days someone has written and circled: <i>Meet Karen at 5:00</i>.",
+              "p": "A calendar. One day says: <i>Meet Karen at 5:00</i>.",
               "o": [
                 "It's a date.",
                 "What's the date today?"
@@ -6593,7 +6589,7 @@
               "a": "It's a date."
             },
             {
-              "p": "A green park with tall trees and a path, with sunlight shining through the leaves.",
+              "p": "A sunny green park.",
               "o": [
                 "bad weather",
                 "excellent weather"
@@ -6601,7 +6597,7 @@
               "a": "excellent weather"
             },
             {
-              "p": "A boy in an orange T-shirt riding a skateboard along a path outdoors.",
+              "p": "A boy riding a skateboard outside.",
               "o": [
                 "feel well",
                 "feel sick"
@@ -6609,7 +6605,7 @@
               "a": "feel well"
             },
             {
-              "p": "A man and a boy sitting close together, looking at an open book.",
+              "p": "A man and a boy reading a book together.",
               "o": [
                 "tell a story",
                 "write a story"
@@ -6683,6 +6679,107 @@
           ]
         },
         {
+          "id": "sort-by-meaning",
+          "type": "sort-by-meaning",
+          "title": "Sort the Words by Meaning",
+          "skill": "vocabulary",
+          "level": 2,
+          "lane": "practice",
+          "category": "vocabulary",
+          "step": 5,
+          "source": {
+            "book": "students",
+            "page": 42
+          },
+          "origin": "word-list",
+          "render": "bins",
+          "instruction": [
+            "Tap a word, then choose the group it belongs to.",
+            "לחצו על מילה ולאחר מכן בחרו את הקבוצה שאליה היא שייכת."
+          ],
+          "bins": [
+            "health",
+            "actions",
+            "degree"
+          ],
+          "binLabels": {
+            "health": [
+              "Health",
+              "בריאות"
+            ],
+            "actions": [
+              "Actions",
+              "פעולות"
+            ],
+            "degree": [
+              "How Much, How Good",
+              "כמה וכמה טוב"
+            ]
+          },
+          "items": [
+            {
+              "v": "get the flu",
+              "bin": "health"
+            },
+            {
+              "v": "feel well",
+              "bin": "health"
+            },
+            {
+              "v": "get better",
+              "bin": "health"
+            },
+            {
+              "v": "medical",
+              "bin": "health"
+            },
+            {
+              "v": "nurse",
+              "bin": "health"
+            },
+            {
+              "v": "come home",
+              "bin": "actions"
+            },
+            {
+              "v": "invite",
+              "bin": "actions"
+            },
+            {
+              "v": "tell a story",
+              "bin": "actions"
+            },
+            {
+              "v": "make a mistake",
+              "bin": "actions"
+            },
+            {
+              "v": "believe",
+              "bin": "actions"
+            },
+            {
+              "v": "really",
+              "bin": "degree"
+            },
+            {
+              "v": "much",
+              "bin": "degree"
+            },
+            {
+              "v": "almost",
+              "bin": "degree"
+            },
+            {
+              "v": "full",
+              "bin": "degree"
+            },
+            {
+              "v": "excellent",
+              "bin": "degree"
+            }
+          ]
+        },
+        {
           "id": "match-people",
           "type": "match-sentences-to-people",
           "title": "Who Says It?",
@@ -6747,13 +6844,9 @@
           "origin": "adapted",
           "render": "mc",
           "shuffle": false,
-          "scene": [
-            "Workbook p.37 shows two photographs for each phrase. They are described here in words.",
-            "בעמוד 37 בחוברת מופיעות שתי תמונות לכל צירוף. כאן הן מתוארות במילים."
-          ],
           "instruction": [
-            "Choose the correct picture for each phrase.",
-            "בחרו את התמונה הנכונה לכל צירוף מילים."
+            "Look at the pictures. Choose the correct one.",
+            "הסתכלו על התמונות. בחרו את התמונה הנכונה."
           ],
           "items": [
             {
@@ -6762,7 +6855,11 @@
                 "A girl sitting with her leg in a cast, with crutches beside her.",
                 "A girl lying in bed with a thermometer in her mouth and a hand on her forehead."
               ],
-              "a": "A girl lying in bed with a thermometer in her mouth and a hand on her forehead."
+              "a": "A girl lying in bed with a thermometer in her mouth and a hand on her forehead.",
+              "oImg": [
+                "p37-broken-leg.webp",
+                "p37-get-flu.webp"
+              ]
             },
             {
               "p": "<b>tell a story</b>",
@@ -6770,7 +6867,11 @@
                 "A woman holding an open book, with children sitting on the floor around her, listening.",
                 "Two boys lying on the floor, looking at a phone together."
               ],
-              "a": "A woman holding an open book, with children sitting on the floor around her, listening."
+              "a": "A woman holding an open book, with children sitting on the floor around her, listening.",
+              "oImg": [
+                "p37-tell-story.webp",
+                "p37-boys-phone.webp"
+              ]
             },
             {
               "p": "<b>keep walking</b>",
@@ -6778,7 +6879,11 @@
                 "A man walking along a path in a park.",
                 "Two men standing still on the street, looking at a phone."
               ],
-              "a": "A man walking along a path in a park."
+              "a": "A man walking along a path in a park.",
+              "oImg": [
+                "p37-keep-walking.webp",
+                "p37-standing-phone.webp"
+              ]
             },
             {
               "p": "<b>come home</b>",
@@ -6786,7 +6891,11 @@
                 "A woman walking down the front steps of a house, away from the door.",
                 "A woman with a shoulder bag opening her front door and stepping inside."
               ],
-              "a": "A woman with a shoulder bag opening her front door and stepping inside."
+              "a": "A woman with a shoulder bag opening her front door and stepping inside.",
+              "oImg": [
+                "p37-leave-home.webp",
+                "p37-come-home.webp"
+              ]
             },
             {
               "p": "<b>feel well</b>",
@@ -6794,7 +6903,11 @@
                 "A boy holding his head in his hand, looking unwell.",
                 "A boy playing basketball outside."
               ],
-              "a": "A boy playing basketball outside."
+              "a": "A boy playing basketball outside.",
+              "oImg": [
+                "p37-feel-sick.webp",
+                "p37-feel-well.webp"
+              ]
             },
             {
               "p": "<b>make a mistake</b>",
@@ -6802,7 +6915,11 @@
                 "The word <i>realy</i> written on a line, with a red ✗ beside it.",
                 "The word <i>really</i> written on a line, with a green ✓ beside it."
               ],
-              "a": "The word <i>realy</i> written on a line, with a red ✗ beside it."
+              "a": "The word <i>realy</i> written on a line, with a red ✗ beside it.",
+              "oImg": [
+                "p37-mistake-wrong.webp",
+                "p37-mistake-right.webp"
+              ]
             }
           ]
         },
@@ -7184,29 +7301,35 @@
             "exercise": 2
           },
           "origin": "book",
-          "render": "writing",
+          "render": "translate-tick",
           "instruction": [
-            "Translate the words in bold. Then tick ✓ the sentences that are true for you.",
-            "תרגמו את המילים המודגשות. לאחר מכן, סמנו ב-✓ את המשפטים שנכונים לגביכם."
+            "Write the bold word in Hebrew. Then tick ✓ the sentences that are true for you.",
+            "כתבו את המילה המודגשת בעברית. לאחר מכן סמנו ב-✓ את המשפטים שנכונים לגביכם."
           ],
           "items": [
             {
-              "p": "My mother is a <b>nurse</b>. &nbsp; <i><span dir=\"rtl\">אחות</span></i>"
+              "p": "My mother is a <b>nurse</b>. &nbsp; <i><span dir=\"rtl\">אחות</span></i>",
+              "word": "nurse"
             },
             {
-              "p": "I <b>see</b> my grandparents every week."
+              "p": "I <b>see</b> my grandparents every week.",
+              "word": "see"
             },
             {
-              "p": "<b>Both</b> of my parents are teachers."
+              "p": "<b>Both</b> of my parents are teachers.",
+              "word": "Both"
             },
             {
-              "p": "I don't like to <b>miss</b> school."
+              "p": "I don't like to <b>miss</b> school.",
+              "word": "miss"
             },
             {
-              "p": "I give my parents a <b>kiss</b> before I go to sleep."
+              "p": "I give my parents a <b>kiss</b> before I go to sleep.",
+              "word": "kiss"
             },
             {
-              "p": "I feel <b>sorry</b> for cats that live in the street."
+              "p": "I feel <b>sorry</b> for cats that live in the street.",
+              "word": "sorry"
             }
           ]
         },

@@ -2,9 +2,13 @@
    next to it. The English carries the lesson; the Hebrew makes sure nobody is
    stuck on the instruction rather than on the exercise. */
 
+/* Both halves say which way they run. The Hebrew always had to; the English
+   said nothing and leaned on the page being left-to-right, which holds today
+   but makes the pair depend on its surroundings rather than on itself. */
 function bi(en, he){
-  if(!he) return `<span class="bi"><span class="biEn">${en}</span></span>`;
-  return `<span class="bi"><span class="biEn">${en}</span><span class="biHe" dir="rtl">${he}</span></span>`;
+  if(!he) return `<span class="bi"><span class="biEn" dir="ltr">${en}</span></span>`;
+  return `<span class="bi"><span class="biEn" dir="ltr">${en}</span>` +
+         `<span class="biHe" dir="rtl" lang="he">${he}</span></span>`;
 }
 
 /* Instructions, keyed by the renderer that shows them. */
