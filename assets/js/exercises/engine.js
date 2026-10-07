@@ -14,6 +14,17 @@ const finish = key =>
 const again = doWhat =>
   `<button class="pill outline biBtn" data-action="ex" data-do="${doWhat}">${ui('again')}</button>`;
 
+/* A question may be asked with a picture rather than with a sentence about a
+   picture. Where it is, the sentence that described it becomes the alt text
+   and no prompt is drawn — the picture is the question. */
+function qPicture(q){
+  if(!q.img || !q.img.file) return '';
+  return `
+    <figure class="qFig">
+      <img src="assets/img/${q.img.file}" alt="${escapeAttr(q.img.alt || '')}" loading="lazy">
+    </figure>`;
+}
+
 /* ---------------------------------------------------------------- mc
    One prompt, a few options. `multi: true` asks for two correct answers. */
 const mc = {
@@ -62,7 +73,7 @@ const mc = {
       ${q.intro ? `<p class="exHint sub">${q.intro}</p>` : ''}
       <div class="qWrap">
         <div class="qCounter">Question ${A.i + 1} of ${A.qs.length}${want > 1 ? ' · choose ' + want : ''}</div>
-        <div class="prompt">${q.p}</div>
+        ${qPicture(q)}${q.p ? `<div class="prompt">${q.p}</div>` : ''}
         <div class="opts${q.oImg ? ' optsPic' : ''}">${opts}</div>
         ${A.solved ? correctRow()
           : A.revealed ? revealRow(answers.join(' + '))

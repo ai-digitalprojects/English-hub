@@ -1095,3 +1095,15 @@ a.statRow.link:hover b{ color:var(--indigo); }
   .ttTranslate{ flex:1 1 100%; }
   .ttTick{ flex:1 1 100%; justify-content:center; }
 }
+
+/* ------------------------------------------------- a question's own picture
+   Where the question is a picture rather than a sentence about one. Held well
+   short of the card so the two answers stay on the screen beside it. */
+.qFig{
+  margin:4px 0 16px; max-width:430px; overflow:hidden; line-height:0;
+  border:1px solid var(--line); border-radius:13px; background:var(--ivory);
+}
+.qFig img{ display:block; width:100%; height:auto; }
+@media(max-width:620px){
+  .qFig{ max-width:100%; margin-bottom:14px; }
+}

@@ -6576,12 +6576,16 @@
           "render": "mc",
           "shuffle": false,
           "instruction": [
-            "Choose the correct phrase for each picture.",
-            "בחרו את הביטוי הנכון לכל תמונה."
+            "Look at the picture. Choose the correct phrase.",
+            "הסתכלו על התמונה. בחרו את הביטוי הנכון."
           ],
           "items": [
             {
-              "p": "A calendar. One day says: <i>Meet Karen at 5:00</i>.",
+              "img": {
+                "file": "p42-calendar.webp",
+                "alt": "A calendar on a desk. One day is circled in red and says: Meet Karen at 5:00."
+              },
+              "p": "",
               "o": [
                 "It's a date.",
                 "What's the date today?"
@@ -6589,7 +6593,11 @@
               "a": "It's a date."
             },
             {
-              "p": "A sunny green park.",
+              "img": {
+                "file": "p42-sunny-park.webp",
+                "alt": "A green park on a sunny day, with a path, a pond and a little bridge under a blue sky."
+              },
+              "p": "",
               "o": [
                 "bad weather",
                 "excellent weather"
@@ -6597,7 +6605,11 @@
               "a": "excellent weather"
             },
             {
-              "p": "A boy riding a skateboard outside.",
+              "img": {
+                "file": "p42-feel-well.webp",
+                "alt": "A boy in a park on a sunny day, smiling with both arms up in the air."
+              },
+              "p": "",
               "o": [
                 "feel well",
                 "feel sick"
@@ -6605,7 +6617,11 @@
               "a": "feel well"
             },
             {
-              "p": "A man and a boy reading a book together.",
+              "img": {
+                "file": "p42-story-time.webp",
+                "alt": "A man and a boy sitting together on a sofa, reading a picture book."
+              },
+              "p": "",
               "o": [
                 "tell a story",
                 "write a story"

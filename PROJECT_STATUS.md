@@ -1,21 +1,21 @@
 # Project Status — English Hub
 
 **Last updated:** 2026-10-07
-**Branch:** `english-hub-v2`
-**Commit:** `8181913` — *Picture the Part 5 tasks, sort by meaning, and give the
-tick a box*, plus this status update on top of it.
+**Branch:** `english-hub-v2`, merged to `main` and published
 **Working tree:** clean
-**`main`:** `5706a35`, unchanged and identical to `origin/main` — this is what the
-live site serves.
-**Eighteen commits sit on `english-hub-v2` ahead of `main`, none merged, none deployed.**
+**Live:** <https://ai-digitalprojects.github.io/English-hub/>
+**The whole review round is deployed.** Book p.42.1 was the last open item and
+is finished; the twenty commits that had been waiting are now on `main`.
 
 ---
 
 ## Where the project stands
 
-The site is live at <https://ai-digitalprojects.github.io/English-hub/> running
-`5706a35`. Everything since then is readability and two rebuilt Getting Started
-activities, finished and tested on the branch, **waiting for review**.
+The site is live at <https://ai-digitalprojects.github.io/English-hub/>. Two
+rounds of review are now deployed: the readability pass, and the corrections
+that put pictures where the book has pictures, fixed the Circle/Choose wording,
+straightened text direction, stopped matching from dealing a row opposite its
+own answer, and rebuilt four Part 5 activities.
 
 | | |
 |---|---|
@@ -31,7 +31,7 @@ activities, finished and tested on the branch, **waiting for review**.
 | Getting Started Write Sentences rebuilt around four supplied pictures | ✅ |
 | Getting Started Task 7 replaced with Vocabulary Review | ✅ |
 | Every click-to-answer exercise says Choose, not Circle | ✅ |
-| Picture choices where the book shows pictures — 3 activities, 31 images | ✅ |
+| Picture choices where the book shows pictures — 4 activities, 35 images | ✅ |
 | Matching never deals a row opposite its own answer | ✅ |
 | Direction audit — 140 activities, resting and after interaction | ✅ |
 | Full responsive testing — 320, 375, 768, 1120 | ✅ |
@@ -257,7 +257,7 @@ Bilingual               0 cards without Hebrew    0 activities without a
                                                   two-language instruction
 Console errors          0
 Network                 0 non-200 · 57 files checked directly against the server
-Images                  9 heroes + 36 activity pictures, all 200
+Images                  9 heroes + 40 activity pictures, all 200
 Horizontal overflow     0 px at 320, 375, 768 and 1120
 Grids                   Home 2→1 · Unit 1 3→2→1 · Parts 2→2→1
 Hero height             214 / 208 / 188, identical on all ten bands
@@ -466,10 +466,17 @@ touched.
 ```
 Part 1 · Book p.13.1    Choose the Correct Picture    8 questions, 16 images
 Part 5 · WB p.37.1      Choose the Correct Picture    6 questions, 12 images
+Part 5 · Book p.42.1    Choose the Correct Phrase     4 questions, 4 images
 Getting Started p.6.4   Write Sentences               4 scene cards
 Part 1 · SB p.15.4      Things to do in Tokyo         3 section pictures
 Part 5 · SB p.43.3      Who Says It?                  1 full scene
 ```
+
+Two shapes, because the two kinds of question are not the same one. Where the
+*answer* is a picture, the options carry `oImg`. Where the *question* is a
+picture — Book p.42.1 asks which phrase fits what you see — the item carries
+`img` and no prompt is drawn at all: the picture is the question, and the
+sentence that used to describe it is its alt text.
 
 Supplied composites were split down the middle; where the panels carried A/B
 badges the badge was cropped off, because the correct answer alternates
@@ -561,32 +568,29 @@ so the other five writing tasks are unchanged.
 
 ### Still open
 
-- **Book p.42.1, Choose the Correct Phrase.** The four prompts are cut from a
-  paragraph each to a line each and the note about described pictures is gone,
-  but it has no pictures: the six files supplied with this round all belong to
-  p.37.1, and none of them is a calendar. Four pictures would finish it —
-  a calendar reading *Meet Karen at 5:00*, a sunny park, someone feeling well,
-  and a man and a boy reading together.
+- **Book p.42.1 is finished.** The four pictures were supplied and are in: a
+  calendar reading *Meet Karen at 5:00*, a sunny park by a pond, a boy
+  celebrating in a park, and a man and a boy reading on a sofa. The written
+  descriptions are gone from the screen and survive as alt text, and the task
+  reads *Look at the picture. Choose the correct phrase.*
 - **Part 3's matching exercise** still inherits *Match Sentences to Pictures*
-  and has no pictures, the same mismatch corrected in Part 2.
+  and has no pictures, the same mismatch corrected in Part 2. This is the one
+  item from the review still open.
 
 ---
 
 ## 9. Branch state
 
 ```
-main             5706a35   the live site · equals origin/main · untouched today
-english-hub-v2   8181913+  18 commits ahead of main, none reviewed or deployed
-rebuild          ba95e7d   0 commits that are not already in main
+main             published   the live site · equals origin/main
+english-hub-v2   published   merged into main, kept
+rebuild          ba95e7d     0 commits that are not already in main
 tag              v1-single-file
 ```
 
-**Do not deploy. Do not merge to `main`. Do not create a PR. Do not delete
-`rebuild` or `english-hub-v2`. Do not rewrite history. Do not force push.**
-
-The live site at <https://ai-digitalprojects.github.io/English-hub/> serves
-`5706a35`. Every commit `rebuild` holds is already reachable from `main`, so
-nothing on it is at risk.
+**Do not delete `english-hub-v2` or `rebuild`. Do not rewrite history. Do not
+force push.** The repository and the public URL do not change:
+<https://ai-digitalprojects.github.io/English-hub/>.
 
 ### Not being built
 Identity, login, student name or class, teacher tracking, Google Sheets,
@@ -594,37 +598,31 @@ Apps Script.
 
 ---
 
-## 10. Where we stopped, and what comes next
+## 10. Where things stand, and what is left
 
-### Unfinished
+### Deployed
 
-Nothing is half-built. The working tree is clean and every change is
-committed. What is outstanding is **review**, not work: eighteen commits sit
-on `english-hub-v2` and none has been seen.
+Everything in §8 and §8b is live. The working tree is clean and `main` carries
+the whole review round.
 
-### The exact next step when we resume
+### The one item still open from the review
 
-> **Review the Part 5 corrections on the local preview:**
-> `http://localhost:8123/#/unit-1/part-5/circle-pictures` (picture pairs),
-> `http://localhost:8123/#/unit-1/part-5/sort-by-meaning` (the three groups),
-> `http://localhost:8123/#/unit-1/part-5/translate-and-tick` (the new tick).
-> Then say whether the three semantic groups are the right ones, since that is
-> the one change here that is a teaching judgement rather than a repair.
+- **Part 3's matching exercise** inherits *Match Sentences to Pictures* and has
+  no pictures in it — it matches sentences to `take` phrases. It is the same
+  mismatch that was corrected in Part 2 and is a one-line change whenever it is
+  wanted. It was out of scope when it was found and has stayed out of scope
+  since.
 
-### Decisions waiting on you
+### Judgement calls worth confirming
 
-- **Book p.42.1 needs four pictures** to finish item 4 of the review. Listed
-  in §8b.
-- **Part 3's matching exercise** has the mismatch that was corrected in
-  Part 2. One line to fix when wanted.
-- **The sorting groups.** Three, not the four suggested, and ten words left
-  out. §8b says which and why.
+- **Sort the Words by Meaning uses three groups**, not the four suggested:
+  *People* would have held one word. Ten words that do not sort cleanly are
+  left out rather than forced. §8b lists them.
 - **`.stChip` went from 13.8px to 15.2px**, which also enlarges the word chips
   in Part 1's Write Sentences table.
 
 ### Still open from before
 
-- **Awaiting the go-ahead to merge and deploy** anything above `5706a35`.
 - **Provenance flags on Parts 1 and 2.** Their 26 words still carry
   `heSource: "site"` from before the PDF audits, and `saw` (Part 2) is still
   flagged `needsReview`, although both parts were validated against the source.
