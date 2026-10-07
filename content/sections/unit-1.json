@@ -3722,7 +3722,7 @@
         {
           "id": "circle-correct-sentences",
           "type": "circle-the-correct-words",
-          "title": "Circle the Correct Sentence",
+          "title": "Choose the Correct Sentence",
           "skill": "vocabulary",
           "level": 2,
           "category": "vocabulary",
@@ -4658,7 +4658,7 @@
         {
           "id": "circle-pictures",
           "type": "circle-the-correct-words",
-          "title": "Circle the Correct Word for Each Picture",
+          "title": "Choose the Correct Word for Each Picture",
           "skill": "vocabulary",
           "level": 1,
           "lane": "practice",
@@ -4733,7 +4733,7 @@
           "render": "mc",
           "shuffle": false,
           "instruction": [
-            "Circle true or false.",
+            "Choose true or false.",
             "קבעו אם כל משפט נכון (true) או לא נכון (false)."
           ],
           "items": [
@@ -4790,7 +4790,7 @@
         {
           "id": "choose-two-answers",
           "type": "circle-two-correct-answers",
-          "title": "Circle the TWO Correct Answers",
+          "title": "Choose the TWO Correct Answers",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
@@ -4805,8 +4805,8 @@
           "render": "mc",
           "shuffle": false,
           "instruction": [
-            "Circle the TWO correct answers.",
-            "הקיפו את שתי התשובות הנכונות."
+            "Choose the TWO correct answers.",
+            "בחרו את שתי התשובות הנכונות."
           ],
           "items": [
             {
@@ -5208,7 +5208,7 @@
         {
           "id": "circle-present-simple",
           "type": "circle-the-correct-words",
-          "title": "Circle the Correct Verb",
+          "title": "Choose the Correct Verb",
           "skill": "grammar",
           "level": 1,
           "lane": "practice",
@@ -5223,8 +5223,8 @@
           "render": "mc",
           "shuffle": false,
           "instruction": [
-            "Circle the correct words to complete the sentences.",
-            "הקיפו את המילים הנכונות כדי להשלים את המשפטים."
+            "Choose the correct words to complete the sentences.",
+            "בחרו את המילים הנכונות כדי להשלים את המשפטים."
           ],
           "items": [
             {
@@ -9939,7 +9939,7 @@
         {
           "id": "circle-two-correct",
           "type": "circle-two-correct-answers",
-          "title": "Circle the TWO Correct Answers",
+          "title": "Choose the TWO Correct Answers",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
@@ -9954,8 +9954,8 @@
           "render": "mc",
           "shuffle": false,
           "instruction": [
-            "Circle the TWO correct answers.",
-            "הקיפו את שתי התשובות הנכונות."
+            "Choose the TWO correct answers.",
+            "בחרו את שתי התשובות הנכונות."
           ],
           "items": [
             {
@@ -10196,7 +10196,7 @@
         {
           "id": "to-be",
           "type": "circle-the-correct-words",
-          "title": "Circle the Correct Words: am / is / are",
+          "title": "Choose the Correct Words: am / is / are",
           "skill": "grammar",
           "level": null,
           "lane": "practice",
@@ -10212,8 +10212,8 @@
           "render": "mc",
           "shuffle": false,
           "instruction": [
-            "Circle the correct words.",
-            "הקיפו את התשובות הנכונות."
+            "Choose the correct words.",
+            "בחרו את התשובות הנכונות."
           ],
           "passage": [
             "<i>1. I <b>am</b> 13 years old.</i>"
@@ -10260,7 +10260,7 @@
         {
           "id": "have-has",
           "type": "circle-the-correct-words",
-          "title": "Circle the Correct Words: have / has",
+          "title": "Choose the Correct Words: have / has",
           "skill": "grammar",
           "level": null,
           "lane": "practice",
@@ -10276,8 +10276,8 @@
           "render": "mc",
           "shuffle": false,
           "instruction": [
-            "Circle the correct words.",
-            "הקיפו את התשובות הנכונות."
+            "Choose the correct words.",
+            "בחרו את התשובות הנכונות."
           ],
           "passage": [
             "<i>1. The house <b>has</b> big windows.</i>"

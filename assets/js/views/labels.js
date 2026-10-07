@@ -8,7 +8,7 @@ const TYPE_TITLES = {
   'write-the-words':             ['Write the Words',             'כתבו את המילים'],
   'match-sentences-to-pictures': ['Match Sentences to Pictures', 'התאימו משפטים לתמונות'],
   'complete-the-puzzles':        ['Word Puzzles',                'תשבצי מילים'],
-  'circle-the-correct-words':    ['Circle the Correct Words',    'הקיפו את המילים הנכונות'],
+  'circle-the-correct-words':    ['Choose the Correct Words',    'בחרו את המילים הנכונות'],
   'complete-the-sentences':      ['Complete the Sentences',      'השלימו את המשפטים'],
   'circle-write-translate':      ['Find the Words',              'מצאו את המילים'],
   'highlight-and-translate':     ['Highlight and Translate',     'סמנו ותרגמו'],
@@ -28,7 +28,7 @@ const TYPE_TITLES = {
   'answer-the-questions':        ['Answer the Questions',        'ענו על השאלות'],
   'word-list-reference':         ['All the Words',               'כל המילים'],
   'find-words-for-category':     ['Find Two Words',              'מצאו שתי מילים'],
-  'circle-two-correct-answers':  ['Circle TWO Correct Answers',  'הקיפו שתי תשובות נכונות'],
+  'circle-two-correct-answers':  ['Choose TWO Correct Answers',  'בחרו שתי תשובות נכונות'],
   'translate-the-sentences':     ['Translate the Sentences',     'תרגמו את המשפטים'],
   'think-about':                 ['Think About…',                'חשבו על…'],
   'read-better':                 ['Read Better',                 'קראו טוב יותר'],
@@ -61,9 +61,10 @@ const TYPE_TITLES = {
 const HE_EXTRA = {
   /* Getting Started */
   'Complete the Puzzles':                'השלימו את התשבצים',
-  /* Nothing is circled on a screen, so this one says choose. The type's own
-     title still reads "Circle" for the printed exercises that do. */
-  'Choose the Correct Words':            'בחרו את המילים הנכונות',
+  /* The only title here that keeps "circle": in the workbook you really do
+     circle the words in the snake. On screen the letters are scrambled and
+     you type, which the activity's own instruction explains — the exercise
+     is not a choosing one, so it is not renamed to one. */
   'Circle, Write and Translate':         'הקיפו, כתבו ותרגמו',
   'Complete the Sentences. Then Tick.':  'השלימו את המשפטים ואז סמנו',
 
@@ -83,16 +84,16 @@ const HE_EXTRA = {
   'Think About… trains':                 'חשבו על… רכבות',
   'Match A and B':                       'התאימו בין A ל-B',
   'Which Sentence Is Not True?':         'איזה משפט אינו נכון?',
-  'Circle the Correct Sentence':         'הקיפו את המשפט הנכון',
+  'Choose the Correct Sentence':         'בחרו את המשפט הנכון',
   'Complete the Text':                   'השלימו את הטקסט',
 
   /* Part 4 */
   'Think About… where things are from':  'חשבו על… מאיפה דברים באים',
   'Match Phrases to Pictures':           'התאימו ביטויים לתמונות',
-  'Circle the Correct Word for Each Picture': 'הקיפו את המילה הנכונה לכל תמונה',
-  'Circle the TWO Correct Answers':      'הקיפו את שתי התשובות הנכונות',
+  'Choose the Correct Word for Each Picture': 'בחרו את המילה הנכונה לכל תמונה',
+  'Choose the TWO Correct Answers':      'בחרו את שתי התשובות הנכונות',
   'Read About Asahi':                    'קראו על אסאהי',
-  'Circle the Correct Verb':             'הקיפו את הפועל הנכון',
+  'Choose the Correct Verb':             'בחרו את הפועל הנכון',
   'Write About Neta':                    'כתבו על נטע',
   'Write About Your Day':                'כתבו על היום שלכם',
   'Read Ali\'s Blog':                    'קראו את הבלוג של עלי',

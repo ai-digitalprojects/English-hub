@@ -916,7 +916,7 @@
       "render": "mc",
       "shuffle": false,
       "instruction": [
-        "Circle true or false.",
+        "Choose true or false.",
         "קבעו אם כל משפט נכון (true) או לא נכון (false)."
       ],
       "passage": [
