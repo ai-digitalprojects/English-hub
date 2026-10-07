@@ -573,12 +573,10 @@ so the other five writing tasks are unchanged.
   celebrating in a park, and a man and a boy reading on a sofa. The written
   descriptions are gone from the screen and survive as alt text, and the task
   reads *Look at the picture. Choose the correct phrase.*
-- **Part 3's matching exercise** is corrected too. It now reads *Complete the
-  Sentences* with the same instruction as Part 2. Worth knowing: unlike Part 2,
-  its sentences are already complete — *She is taking a picture of the birds.*
-  matched to *take a picture* — so nothing is actually filled in. The wording
-  was specified; a title that described the task exactly would be *Match
-  Sentences to Phrases*.
+- **Part 3's matching exercise** is corrected too. It reads *Match Sentences to
+  Phrases* / *התאימו משפטים לביטויים*, which is what the task is: its sentences
+  are already complete — *She is taking a picture of the birds.* matched to
+  *take a picture* — so unlike Part 2 nothing is filled in.
 
 ---
 
@@ -610,15 +608,21 @@ the whole review round.
 
 ### The review round is complete
 
-Every item from the review is done and deployed. The last one — Part 3's
+Every item from the review is done and deployed. The last one was Part 3's
 matching exercise, which inherited *Match Sentences to Pictures* without having
-any — now reads *Complete the Sentences*, matching Part 2.
+any.
 
-One nuance recorded rather than silently settled: Part 3's sentences are not
-gapped the way Part 2's are. A student matches *She is taking a picture of the
-birds.* to *take a picture*; nothing is completed. The wording was specified,
-and *Match Sentences to Phrases* would describe the task more exactly if that
-is preferred.
+The two matching exercises are now named for what each actually does, which is
+not the same thing:
+
+```
+Part 2 · WB p.17.3   Complete the Sentences        "The girl is ______."  ← clever
+                     השלימו את המשפטים              a gap to fill
+
+Part 3 · SB p.28.1   Match Sentences to Phrases    "She is taking a picture
+                     התאימו משפטים לביטויים          of the birds."  ← take a picture
+                                                    a complete sentence
+```
 
 ### Judgement calls worth confirming
 

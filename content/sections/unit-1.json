@@ -3483,7 +3483,7 @@
         {
           "id": "match-to-pictures",
           "type": "match-sentences-to-pictures",
-          "title": "Complete the Sentences",
+          "title": "Match Sentences to Phrases",
           "skill": "vocabulary",
           "level": null,
           "lane": "practice",
@@ -3520,8 +3520,8 @@
           "category": "vocabulary",
           "step": 3,
           "instruction": [
-            "Match each sentence with the correct word.",
-            "התאימו לכל משפט את המילה הנכונה."
+            "Match each sentence with the correct phrase.",
+            "התאימו כל משפט לביטוי המתאים."
           ]
         },
         {

@@ -85,6 +85,7 @@ const HE_EXTRA = {
   /* Part 3 */
   'Think About… trains':                 'חשבו על… רכבות',
   'Match A and B':                       'התאימו בין A ל-B',
+  'Match Sentences to Phrases':          'התאימו משפטים לביטויים',
   'Which Sentence Is Not True?':         'איזה משפט אינו נכון?',
   'Choose the Correct Sentence':         'בחרו את המשפט הנכון',
   'Complete the Text':                   'השלימו את הטקסט',
