@@ -68,21 +68,34 @@ body{ background:var(--ivory); }
 
 /* ---------------------------------------------------------------- top bar
    Thinner and quieter: a hairline instead of the gold band, and buttons that
-   read as links until you reach for them. */
+   read as links until you reach for them.
+
+   The type is set at reading size rather than at the size a chrome bar usually
+   gets. The bar stays low because the brand's two lines are set tight and the
+   buttons carry their height in padding, not in leading: the band grows by a
+   few pixels, the words by a third. */
 .topbar{
   background:var(--navy);
   padding:9px 22px;
   border-bottom:1px solid rgba(201,162,90,0.38);
   box-shadow:0 1px 14px rgba(21,43,64,0.10);
+  gap:16px;
 }
-.topbar .brand{ font-size:0.82rem; font-weight:700; letter-spacing:0.2px; }
+.topbar .brand{
+  font-size:1.04rem; font-weight:700; letter-spacing:0.2px;
+  line-height:1.2;
+}
 .topbar .brand small{
-  font-size:0.66rem; color:#9FAEBC; letter-spacing:0.3px; margin-top:1px;
+  font-size:0.84rem; color:#9FAEBC; letter-spacing:0.3px; margin-top:1px;
+  line-height:1.25;
 }
-.topbar .navbtns{ gap:4px; }
+.topbar .navbtns{ gap:5px; flex-wrap:nowrap; }
 .navbtn{
   background:transparent; border:1px solid transparent; color:#CBD6E0;
-  padding:5px 11px; font-size:0.76rem; font-weight:500; letter-spacing:0.2px;
+  padding:6px 13px; font-size:0.95rem; font-weight:500; letter-spacing:0.2px;
+  line-height:1.2;
+  /* "My Progress" and "← Back" are two words each: they belong on one line. */
+  white-space:nowrap;
 }
 .navbtn:hover{
   background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.14); color:#fff;
@@ -740,7 +753,13 @@ a.statRow.link:hover b{ color:var(--indigo); }
 
 /* ------------------------------------------------------------- mobile */
 @media(max-width:620px){
-  .topbar{ padding:8px 14px; }
+  /* The bar wraps to two rows on a phone, so the type can stay near its
+     desktop size without pushing the buttons off the edge. */
+  .topbar{ padding:8px 14px; gap:6px; }
+  .topbar .brand{ font-size:0.98rem; }
+  .topbar .brand small{ font-size:0.8rem; }
+  .topbar .navbtns{ gap:4px; flex-wrap:wrap; }
+  .navbtn{ padding:6px 11px; font-size:0.9rem; }
   .crumbs{ margin:16px 0 12px; }
 
   .homeGrid{ gap:16px; }
@@ -797,4 +816,14 @@ a.statRow.link:hover b{ color:var(--indigo); }
   .overallBarBox{ padding:22px 20px; border-radius:16px; }
   .overallBarBox .big{ font-size:1.5rem; }
   .progUnit{ padding:20px 18px 16px; border-radius:16px; }
+}
+
+/* -------------------------------------------------- the narrowest phones
+   At 320px the three nav buttons want 307px and have 292px: "My Progress"
+   drops to a row of its own and the bar grows by half again. The words keep
+   their size; the padding and the bar's own margins give way instead. */
+@media(max-width:360px){
+  .topbar{ padding:8px 12px; }
+  .topbar .navbtns{ gap:3px; }
+  .navbtn{ padding:6px 8px; }
 }
