@@ -989,3 +989,58 @@ a.statRow.link:hover b{ color:var(--indigo); }
   .passage .rBlock{ grid-template-columns:1fr; gap:12px; margin-bottom:20px; }
   .rFig{ border-radius:11px; }
 }
+
+/* --------------------------------------------- support for a writing task
+   Two boxes above the writing area: the words a learner is likely to need and
+   a few sentences already begun. They sit side by side where there is room and
+   stack where there is not. Quieter than the card they sit on — they are
+   there to be looked at while writing, not read first. */
+.helpGrid{
+  display:grid; grid-template-columns:1fr 1fr; gap:16px;
+  margin:4px 0 22px;
+}
+.helpBox{
+  background:var(--white); border:1px solid var(--line);
+  border-left:3px solid var(--c-writing, var(--sage));
+  border-radius:var(--radius-sm); padding:16px 18px 14px;
+}
+.helpTitle{
+  margin:0 0 12px;
+  font-size:0.92rem; font-weight:600; letter-spacing:0.4px;
+  text-transform:uppercase; color:var(--ink-soft);
+}
+.helpTitle .bi{ gap:8px; }
+.helpTitle .biHe{ text-transform:none; letter-spacing:0; border-left-color:var(--line); }
+
+/* A word and its meaning on one row, the English reading left and the Hebrew
+   right, so neither has to be hunted for. */
+/* Fourteen words in one column run to twice the height of the seven starters
+   beside them; in two they finish level with each other. */
+.helpWords{
+  list-style:none; margin:0; padding:0;
+  display:grid; grid-template-columns:1fr 1fr; column-gap:20px;
+}
+.helpWords li{
+  display:flex; align-items:baseline; justify-content:space-between; gap:14px;
+  padding:5px 0; border-bottom:1px dotted var(--line);
+}
+.helpWords li:nth-last-child(-n+2){ border-bottom:0; }
+.hwEn{ font-size:1.02rem; font-weight:500; color:var(--ink); }
+.hwHe{ font-size:1.02rem; font-weight:500; color:var(--ink-soft); text-align:right; }
+
+.helpStarters{ list-style:none; margin:0; padding:0; }
+.helpStarters li{
+  padding:7px 11px; margin-bottom:7px;
+  background:var(--ivory); border-radius:8px;
+  font-size:1.02rem; line-height:1.4; color:var(--ink);
+}
+.helpStarters li:last-child{ margin-bottom:0; }
+
+@media(max-width:620px){
+  .helpGrid{ grid-template-columns:1fr; gap:12px; margin-bottom:18px; }
+  .helpBox{ padding:14px 15px 12px; }
+  /* One column again on a phone: two would leave the Hebrew nowhere to sit. */
+  .helpWords{ grid-template-columns:1fr; }
+  .helpWords li:nth-last-child(2){ border-bottom:1px dotted var(--line); }
+  .helpWords li:last-child{ border-bottom:0; }
+}

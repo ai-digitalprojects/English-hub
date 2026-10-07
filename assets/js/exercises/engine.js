@@ -214,6 +214,35 @@ const bins = {
   }
 };
 
+/* ---- Support for a writing task ----
+   Two boxes above the writing area, for an open task where a learner can be
+   left staring at an empty box: the words they are likely to need, each with
+   its Hebrew, and a few sentences already started. Both are to read and copy,
+   not controls — nothing happens if you tap one.
+
+   Drawn only for an activity that asks for them, so every other writing task
+   is unchanged. */
+function writingHelp(act){
+  const words = act.helpWords || [];
+  const starters = act.starters || [];
+  if(!words.length && !starters.length) return '';
+  const wordBox = words.length ? `
+    <section class="helpBox">
+      <h4 class="helpTitle">${bi('Useful words', 'מילים שיעזרו לכם')}</h4>
+      <ul class="helpWords">${words.map(w => `
+        <li>
+          <span class="hwEn" dir="ltr">${w.en}</span>
+          <span class="hwHe" dir="rtl" lang="he">${w.he}</span>
+        </li>`).join('')}</ul>
+    </section>` : '';
+  const startBox = starters.length ? `
+    <section class="helpBox">
+      <h4 class="helpTitle">${bi('Sentence starters', 'התחלות למשפטים')}</h4>
+      <ul class="helpStarters">${starters.map(t => `<li dir="ltr">${t}</li>`).join('')}</ul>
+    </section>` : '';
+  return `<div class="helpGrid">${wordBox}${startBox}</div>`;
+}
+
 /* ------------------------------------------------------------ writing
    Prompts with a box under each. Nothing is auto-marked; the text is kept
    as a draft and the student decides when it is done. */
@@ -229,6 +258,7 @@ const writing = {
     return `
       <p class="exHint">${ins('writing')}</p>
       ${wordBank}
+      ${writingHelp(act)}
       ${items.map((it, i) => `
         <div class="writeItem">
           <div class="writePrompt">${i + 1}. ${it.p}</div>

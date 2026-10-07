@@ -2939,13 +2939,80 @@
           "passage": [
             "Rex is a beautiful dog. He is black and white and he has brown eyes. Rex isn't a big dog. He is small, but he has big ears."
           ],
+          "helpWords": [
+            {
+              "en": "dog",
+              "he": "כלב"
+            },
+            {
+              "en": "cat",
+              "he": "חתול"
+            },
+            {
+              "en": "pet",
+              "he": "חיית מחמד"
+            },
+            {
+              "en": "small",
+              "he": "קטן"
+            },
+            {
+              "en": "big",
+              "he": "גדול"
+            },
+            {
+              "en": "black",
+              "he": "שחור"
+            },
+            {
+              "en": "white",
+              "he": "לבן"
+            },
+            {
+              "en": "brown",
+              "he": "חום"
+            },
+            {
+              "en": "ears",
+              "he": "אוזניים"
+            },
+            {
+              "en": "eyes",
+              "he": "עיניים"
+            },
+            {
+              "en": "tail",
+              "he": "זנב"
+            },
+            {
+              "en": "beautiful",
+              "he": "יפה"
+            },
+            {
+              "en": "cute",
+              "he": "חמוד"
+            },
+            {
+              "en": "friendly",
+              "he": "ידידותי"
+            }
+          ],
+          "starters": [
+            "It is a ___.",
+            "It is ___ and ___.",
+            "It has ___ eyes.",
+            "It has ___ ears.",
+            "It isn't big.",
+            "It is small.",
+            "I like it."
+          ],
           "instruction": [
-            "Read about Rex. Then write about a pet you know.",
-            "קראו על רקס. לאחר מכן, כתבו על חיית מחמד שאתם מכירים."
+            "Write 3–4 short sentences about a pet you know. Use the words in the box. Try to use is / isn't / has.",
+            "כתבו 3–4 משפטים קצרים על חיית מחמד שאתם מכירים. השתמשו במילים מהתיבה. נסו להשתמש ב־ is / isn't / has."
           ],
           "items": [
             {
-              "p": "Write about a pet you know. Use <b>is / isn't / has</b>."
+              "p": "Write about a pet you know."
             }
           ],
           "lane": "practice"
