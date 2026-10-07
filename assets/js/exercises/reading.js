@@ -27,10 +27,27 @@ function dots(i, total){
   }</div>`;
 }
 
-/* The passage, kept visible from the moment it is first read. */
-function passage(chunks, upto){
+/* The passage, kept visible from the moment it is first read.
+
+   A text may carry a picture for a section — act.chunkImages, one entry per
+   chunk, null where there is none. The picture sits beside its own paragraph
+   so the two are read together; a chunk without one is the plain paragraph it
+   has always been, which is why no other reading activity changes. */
+function passage(chunks, upto, images){
+  const pics = images || [];
+  const block = (c, i) => {
+    const pic = pics[i];
+    if(!pic || !pic.file) return `<p>${c}</p>`;
+    return `
+      <div class="rBlock">
+        <figure class="rFig">
+          <img src="assets/img/${pic.file}" alt="${escapeAttr(pic.alt || '')}" loading="lazy">
+        </figure>
+        <p>${c}</p>
+      </div>`;
+  };
   return `<div class="passage">${chunks.slice(0, upto + 1)
-    .map(c => `<p>${c}</p>`).join('')}</div>`;
+    .map(block).join('')}</div>`;
 }
 
 const reading = {
@@ -72,13 +89,13 @@ const reading = {
       /* Remember how far the student has read, so the questions that follow
          never show a paragraph they have not reached yet. */
       A.readUpto = st.upto;
-      return head + passage(act.chunks || [], st.upto) + nextBtn(steps);
+      return head + passage(act.chunks || [], st.upto, act.chunkImages) + nextBtn(steps);
     }
 
     /* ---- write your own ---- */
     if(st.kind === 'write'){
       if(A.answers[A.rIdx] === undefined) A.answers[A.rIdx] = '';
-      return head + (act.keepText ? passage(act.chunks || [], 99) : '') + `
+      return head + (act.keepText ? passage(act.chunks || [], 99, act.chunkImages) : '') + `
         <p class="prompt">${st.p}</p>
         <textarea class="freeText" style="min-height:110px" data-action="rWrite"
           placeholder="Write here...">${escapeAttr(A.answers[A.rIdx])}</textarea>
@@ -106,7 +123,7 @@ const reading = {
     const upto = st.upto !== undefined ? st.upto
       : (A.readUpto !== undefined ? A.readUpto : 99);
     return head +
-      (showText ? passage(act.chunks || [], upto) : '') + `
+      (showText ? passage(act.chunks || [], upto, act.chunkImages) : '') + `
       <div class="qWrap">
         <div class="prompt">${st.p}</div>
         <div class="opts">${opts}</div>

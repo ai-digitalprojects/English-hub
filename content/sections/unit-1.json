@@ -1143,6 +1143,21 @@
           "scene": [
             "The text is exactly as printed in the book. The questions after it were built from the text itself.",
             "הטקסט מועתק מהספר במדויק. השאלות שאחריו נבנו מתוך הטקסט עצמו."
+          ],
+          "chunkImages": [
+            {
+              "file": "read-tea-house.webp",
+              "alt": "A tea house in a Japanese garden. Three children sit on the floor while a woman prepares green tea, and their shoes are left outside on a stone step."
+            },
+            {
+              "file": "read-ice-cream.webp",
+              "alt": "An ice cream store. The scoops are shaped like animals — rabbits, chickens, dogs and bears — and the server hands a girl a rabbit cone."
+            },
+            {
+              "file": "read-baseball.webp",
+              "alt": "A baseball game. The batter hits the ball while fans in team shirts and hats cheer from the stand."
+            },
+            null
           ]
         },
         {

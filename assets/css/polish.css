@@ -960,3 +960,29 @@ a.statRow.link:hover b{ color:var(--indigo); }
   .opts.optsPic{ gap:11px; }
   .opt.optPic{ padding:5px; }
 }
+
+/* ----------------------------------------------- a picture in a reading
+   A section of the text and the picture of that section, read as one block.
+   The picture is held to a fifth of the line length and sits in the left
+   column so the eye meets it before the paragraph, and the text keeps the
+   measure it had: the picture supports the reading rather than interrupting
+   it. Sections with no picture are untouched plain paragraphs. */
+.passage .rBlock{
+  display:grid; grid-template-columns:200px 1fr; gap:18px;
+  align-items:start;
+  margin:0 0 18px;
+}
+.passage .rBlock:last-child{ margin-bottom:0; }
+.passage .rBlock p{ margin:0; }
+.rFig{
+  margin:0; overflow:hidden; line-height:0;
+  border:1px solid var(--line); border-radius:12px; background:var(--ivory);
+}
+.rFig img{ display:block; width:100%; height:auto; }
+
+@media(max-width:620px){
+  /* Stacked, with the picture above its own paragraph — the pairing still
+     reads, and nothing is pushed sideways. */
+  .passage .rBlock{ grid-template-columns:1fr; gap:12px; margin-bottom:20px; }
+  .rFig{ border-radius:11px; }
+}
