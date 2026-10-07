@@ -2,11 +2,12 @@
 
 **Last updated:** 2026-10-07
 **Branch:** `english-hub-v2`
-**Commit:** `8a5e4b2` — *Rebuild Write Sentences around pictures and replace Task 7*
+**Commit:** `3279e8c` — *Use the supplied photographs and reword task 5*, plus
+this status update on top of it.
 **Working tree:** clean
 **`main`:** `5706a35`, unchanged and identical to `origin/main` — this is what the
 live site serves.
-**Five commits sit on `english-hub-v2` ahead of `main`, none merged, none deployed.**
+**Eight commits sit on `english-hub-v2` ahead of `main`, none merged, none deployed.**
 
 ---
 
@@ -27,7 +28,7 @@ activities, finished and tested on the branch, **waiting for review**.
 | Part 1 Write Sentences rebuilt around the park picture and a writing table | ✅ |
 | Hebrew set at the size of the English, site-wide | ✅ |
 | Top bar set at reading size | ✅ |
-| Getting Started Write Sentences rebuilt around four drawn pictures | ✅ |
+| Getting Started Write Sentences rebuilt around four supplied pictures | ✅ |
 | Getting Started Task 7 replaced with Vocabulary Review | ✅ |
 | Full responsive testing — 320, 375, 768, 1120 | ✅ |
 | 140 activities tested, all opened successfully | ✅ |
@@ -207,9 +208,9 @@ one it was approved with, which lets more of the picture through.
 
 Five further pictures are not heroes. `scene-park.webp` is the park that Part
 1's Write Sentences is about; it sits inside the activity, held to 620px rather
-than cropped, because every name in it has to stay readable. The four
-`scene-*.svg` files are the drawn pictures for Getting Started's Write Sentences
-(§8) — flat vector artwork in the site's palette, one per card.
+than cropped, because every name in it has to stay readable. The four other
+`scene-*.webp` files are the pictures for Getting Started's Write Sentences
+(§8), one per card, supplied by the teacher and resized to 1000px wide.
 
 The site icon is `favicon.ico` at the project root alongside
 `assets/favicon.svg`; both are declared in `<head>`.
@@ -252,7 +253,7 @@ Bilingual               0 cards without Hebrew    0 activities without a
                                                   two-language instruction
 Console errors          0
 Network                 0 non-200 · 57 files checked directly against the server
-Images                  9 heroes + 1 scene photo + 4 drawn scenes, all 200
+Images                  9 heroes + 5 scene pictures, all 200
 Horizontal overflow     0 px at 320, 375, 768 and 1120
 Grids                   Home 2→1 · Unit 1 3→2→1 · Parts 2→2→1
 Hero height             214 / 208 / 188, identical on all ten bands
@@ -309,6 +310,9 @@ tested; **none has been reviewed, merged or deployed.**
 fa12201  Set the top bar at reading size
 7944e7e  Set the Hebrew at reading size and move dictation into the bar
 8a5e4b2  Rebuild Write Sentences around pictures and replace Task 7
+4d2d9ea  Record the checkpoint: five commits waiting on review
+3279e8c  Use the supplied photographs and reword task 5
+330d4b4  Record the photographs and the task 5 wording
 ```
 
 ### Answer buttons and instructions (`0352332`, `053f503`)
@@ -350,19 +354,31 @@ smallest Hebrew anywhere on the site          13.1px at 5.19
 ### Getting Started · Write Sentences (`8a5e4b2`)
 
 Workbook p.6.4 asked for a sentence about each picture and then printed a
-paragraph describing the picture instead of showing one. The four pictures are
-now drawn: flat SVG illustrations built from the descriptions the activity
-already carried, in the site's own palette, in `assets/img/`.
+paragraph describing the picture instead of showing one. The four pictures were
+first drawn as SVG from the descriptions the activity carried; they were then
+**replaced by four supplied illustrations** (`3279e8c`), which is what the
+activity ships with. The drawn files were deleted rather than left unused.
 
 ```
-scene-classroom.svg   the teacher at the board, which says New Words
-scene-desk.svg        a boy writing in his notebook, an open book beside him
-scene-games.svg       three children on the floor with board games, one with a card
-scene-sleeping.svg    a boy asleep, a cat on a mat below the bed
+scene-new-words.webp      the teacher at the board, which says New Words,
+                          children with a hand up
+scene-dictionary.webp     a boy writing in his notebook, an open dictionary
+                          beside him
+scene-instructions.webp   two children reading a sheet headed Instructions
+scene-tablet.webp         a boy at a tablet with a keyboard and a Vocabulary book
 ```
 
-Each is a card — picture, three words to use, one box — two up on a desktop and
-one up on a phone, so a picture never parts company with its box. The
+Each word bank was rewritten to match what its new picture actually shows, and
+every word in it is one of the 22 verified Getting Started words:
+
+```
+1  raise · vocabulary · repeat        3  instructions · conversation · task
+2  dictionary · spell · complete      4  vocabulary · keyboard · find out
+```
+
+Each is a card — a numbered badge, the picture, three words to use, one box —
+two up on a desktop and one up on a phone, so a picture never parts company
+with its box. The
 descriptions survive as the images' `alt` text, which is where a description
 belongs. A new `scene-cards` renderer draws them and stores into the same
 `A.answers` array the writing renderer uses, so each card saves on its own
@@ -387,6 +403,19 @@ after a correct one are the behaviour every other question already has. The
 correct option sits at position 1, 2 and 3 in turn, so it cannot be guessed from
 where it is.
 
+### Getting Started · task 5 wording (`3279e8c`)
+
+*Circle the Correct Words* became **Choose the Correct Words** / *בחרו את המילים
+הנכונות*, on the card, on the activity heading and in the task line. Nothing is
+circled on a screen. The change is on this activity only: the type's own title
+still reads *Circle* for the printed exercises elsewhere that do ask for it.
+
+**Eight other screens still say Circle** and were deliberately left alone —
+Part 1 `circle-be-have`, Part 2 `circle-correct` and `circle-wh` (all three take
+their title from the type), Part 4 `circle-present-simple`, `true-false` and
+`choose-two-answers`, and Unit Check `to-be`, `have-has` and `circle-two-correct`.
+Changing them is a one-pass edit whenever it is wanted.
+
 ### Tested
 
 ```
@@ -401,6 +430,7 @@ Vocabulary Review    wrong answer → Try again, wrong choice marked, correct on
                      NOT revealed, retry allowed; correct → Great job!;
                      all ten questions run to the finish block
 Dictation link       destination loads in a new tab
+Pictures             5 scene images, all 200, all decoded and painted
 ```
 
 ---
@@ -409,7 +439,7 @@ Dictation link       destination loads in a new tab
 
 ```
 main             5706a35   the live site · equals origin/main · untouched today
-english-hub-v2   8a5e4b2   5 commits ahead of main, none reviewed or deployed
+english-hub-v2   3279e8c+  8 commits ahead of main, none reviewed or deployed
 rebuild          ba95e7d   0 commits that are not already in main
 tag              v1-single-file
 ```
@@ -434,28 +464,29 @@ Apps Script.
 Nothing is half-built. The working tree is clean and every change is committed.
 What is outstanding is **review**, not work:
 
-- **The five commits on `english-hub-v2` have not been reviewed.** They are the
-  answer-button readability pass, the two Hebrew sizing passes, the top bar, and
-  the two rebuilt Getting Started activities.
+- **The commits on `english-hub-v2` have not been reviewed.** They are the
+  answer-button readability pass, the two Hebrew sizing passes, the top bar, the
+  two rebuilt Getting Started activities, and the supplied photographs with the
+  task 5 rewording.
 
 ### The exact next step when we resume
 
-> **Review the two rebuilt Getting Started activities on the local preview:**
-> `http://localhost:8123/#/getting-started/write-sentences` and
-> `http://localhost:8123/#/getting-started/vocabulary-review`.
-> Then say whether to keep them, change them, or revert `8a5e4b2`.
+> **Review the rebuilt Getting Started activities on the local preview:**
+> `http://localhost:8123/#/getting-started/write-sentences`,
+> `http://localhost:8123/#/getting-started/vocabulary-review` and
+> `http://localhost:8123/#/getting-started/circle-correct`.
+> Then say whether to keep them, change them, or revert.
 
-A note on sequencing, so the record is straight: the request to stop named these
-two rebuilds as the next work. They had already been built and committed as
-`8a5e4b2` by the time that request arrived. Nothing further was started. If they
-are not wanted in this form, `8a5e4b2` is a single commit and can be reverted on
-its own without touching the four below it.
+A note on sequencing, so the record is straight: the request to stop named the
+two rebuilds as the next work, and they had already been built and committed as
+`8a5e4b2` when it arrived. Work resumed afterwards on request, to swap in the
+supplied pictures and reword task 5. If a piece is not wanted, each is its own
+commit and can be reverted without touching the others.
 
 Two questions are worth deciding at the same time:
 
-- **The four illustrations are drawn, not photographed.** They are faithful to
-  the descriptions the activity already stored, but they are the site's own
-  artwork rather than the workbook's pictures. Confirm that is acceptable.
+- **Eight other screens still say Circle** (listed in §8). Task 5 was the only
+  one in scope; say whether the rest should follow.
 - **`.stChip` went from 13.8px to 15.2px**, which also enlarges the word chips in
   Part 1's Write Sentences table. It was the last thing left at the old size. Say
   if Part 1 should keep the smaller chip.
