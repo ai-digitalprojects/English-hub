@@ -5,7 +5,7 @@
    activity names the renderer it wants in its `render` field. */
 
 import { A } from '../state.js';
-import { shuffle, escapeAttr } from '../helpers.js';
+import { shuffle, deal, escapeAttr } from '../helpers.js';
 import { bi, ins, ui } from '../views/bilingual.js';
 import { correctRow, retryRow, hintRow, revealRow, finishBlock, REVEAL_AT, HINT_AT } from './feedback.js';
 
@@ -126,8 +126,8 @@ const pairs = {
   render(items){
     if(A.pairs === undefined){
       A.pairs = items.map(it => [it.a, it.b]);
-      A.left = shuffle(A.pairs.map(p => p[0]));
-      A.right = shuffle(A.pairs.map(p => p[1]));
+      const d = deal(A.pairs);
+      A.left = d.left; A.right = d.right;
       A.matched = []; A.selL = null; A.selR = null; A.wrong = null;
     }
     if(A.matched.length === A.pairs.length){

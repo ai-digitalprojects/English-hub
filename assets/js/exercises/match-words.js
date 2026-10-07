@@ -1,5 +1,5 @@
 import { A } from '../state.js';
-import { shuffle, escapeAttr } from '../helpers.js';
+import { deal, escapeAttr } from '../helpers.js';
 import { bi, ui } from '../views/bilingual.js';
 
 /* Match each English word to its Hebrew. Pairs come straight from the book's
@@ -16,8 +16,8 @@ export default {
     const pairs = words.filter(w => w.he).map(w => [w.en, w.he]);
     if(A.mPairs === undefined){
       A.mPairs = pairs;
-      A.mLeft = shuffle(pairs.map(p => p[0]));
-      A.mRight = shuffle(pairs.map(p => p[1]));
+      const d = deal(pairs);
+      A.mLeft = d.left; A.mRight = d.right;
       A.mMatched = []; A.mSelLeft = null; A.mSelRight = null; A.mWrong = null;
     }
     if(A.mMatched.length === A.mPairs.length){
