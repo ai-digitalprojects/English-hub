@@ -6630,14 +6630,15 @@
             "exercise": 3
           },
           "origin": "adapted",
+          "image": {
+            "file": "scene-mall.webp",
+            "alt": "A shopping centre food court. Five people have their name beside them and an empty speech bubble. Noam is eating a slice of pizza at a table with a friend. Dikla is pointing up at the menu above the burger counter. Hila has her hand on a little girl's forehead while the girl sneezes. Ron is handing an ice cream to a small girl whose hands are covered in melted ice cream. Tali is at the party shop holding balloons and a bag of party things.",
+            "wide": true
+          },
           "render": "pairs",
-          "scene": [
-            "Student's Book p.43 shows a shopping centre with a food court. Five people have their names beside them and an empty speech bubble. They are described here in words.",
-            "בעמוד 43 בספר מופיע קניון עם אזור מזון. לחמישה אנשים רשום השם ויש בועת דיבור ריקה. כאן הם מתוארים במילים."
-          ],
           "instruction": [
-            "Match the sentences to the people in the picture who say them.",
-            "התאימו את המשפטים לאנשים בתמונה שאומרים אותם."
+            "Match each sentence with the person who says it.",
+            "התאימו כל משפט לדמות שאומרת אותו."
           ],
           "items": [
             {

@@ -628,6 +628,9 @@ a.actItem:hover{
   box-shadow:0 1px 2px rgba(21,43,64,0.04), 0 8px 20px rgba(21,43,64,0.05);
 }
 .sceneFig img{ display:block; width:100%; height:auto; }
+/* A scene the student has to read names out of needs the room; at 620px the
+   five labels in the food court are too small to tell apart. */
+.sceneFig.wide{ max-width:100%; }
 
 /* ---- Write a sentence for each row ----
    A table, because the three things a row holds — its number, the words it

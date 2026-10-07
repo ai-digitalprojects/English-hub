@@ -139,10 +139,14 @@ const pairs = {
         ? A.matched.includes(v)
         : A.matched.some(l => A.pairs.find(p => p[0] === l)[1] === v);
       const sel = (side === 'L' ? A.selL : A.selR) === v;
+      /* Said outright on every item, not only on the Hebrew ones. The right
+         column is Hebrew in the word-list drills and English here, and an
+         English sentence left to a right-to-left box puts its full stop at the
+         wrong end. */
       const he = /[֐-׿]/.test(v);
       const cls = 'matchItem' + (isMatched ? ' matched' : '') + (sel ? ' selected' : '')
                 + (A.wrong === side + ':' + v ? ' wrong' : '');
-      return `<button class="${cls}"${he ? ' dir="rtl"' : ''} data-action="ex" data-do="pick"
+      return `<button class="${cls}" dir="${he ? 'rtl' : 'ltr'}" data-action="ex" data-do="pick"
         data-side="${side}" data-val="${escapeAttr(v)}" ${isMatched ? 'disabled' : ''}>${v}</button>`;
     }).join('');
     return `<p class="exHint">${ins('pairs')}</p>

@@ -373,9 +373,12 @@ button.bin{ width:100%; text-align:left; font:inherit; display:block; }
 .uCard h2{ margin:0; font-size:1.15rem; }
 .partCard h3{ margin:4px 0; font-size:1.02rem; }
 
-/* The right-hand match column is always the Hebrew one. Setting direction here
-   as well as on the element keeps it correct even if markup changes. */
-.matchGrid .matchCol:last-child .matchItem{ direction:rtl; unicode-bidi:isolate; }
+/* The right-hand match column is Hebrew in the word-list drills and English in
+   the exercises that match a sentence to a person or a picture, so the
+   direction follows what is written in the item rather than which column it
+   sits in. Every item says which it is. */
+.matchGrid .matchItem[dir="rtl"]{ direction:rtl; unicode-bidi:isolate; }
+.matchGrid .matchItem[dir="ltr"]{ direction:ltr; unicode-bidi:isolate; }
 
 /* ===== Larger, roomier activity cards =====
    Same colours, same rounded shape, same lanes — only scale and breathing

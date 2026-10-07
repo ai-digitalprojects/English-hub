@@ -92,8 +92,11 @@ function scene(act){
 function sceneImage(act){
   const img = act.image;
   if(!img || !img.file) return '';
+  /* Most scene pictures are held well short of the card so they support the
+     task rather than crowd it. A picture the student has to read detail out of
+     — names written beside five people — says so and gets the full width. */
   return `
-  <figure class="sceneFig">
+  <figure class="sceneFig${img.wide ? ' wide' : ''}">
     <img src="assets/img/${img.file}" alt="${escapeAttr(img.alt || '')}" loading="lazy">
   </figure>`;
 }
