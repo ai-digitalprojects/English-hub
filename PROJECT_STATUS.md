@@ -1,19 +1,20 @@
 # Project Status — English Hub
 
-**Last updated:** 2026-10-03
+**Last updated:** 2026-10-07
 **Branch:** `english-hub-v2`
-**Commit:** `9b92d2f` — *Rebuild Write Sentences around the park picture and a writing table*
-**Plus the housekeeping commit on top of it, which adds `favicon.ico` and this file.**
+**Commit:** `8a5e4b2` — *Rebuild Write Sentences around pictures and replace Task 7*
 **Working tree:** clean
-**`main`:** `865802c`, unchanged and identical to `origin/main`
-**Not deployed. Not merged. No PR.**
+**`main`:** `5706a35`, unchanged and identical to `origin/main` — this is what the
+live site serves.
+**Five commits sit on `english-hub-v2` ahead of `main`, none merged, none deployed.**
 
 ---
 
 ## Where the project stands
 
-Content and visual work are complete. A full pre-deployment check has been run
-and passed; the project is waiting for the go-ahead to deploy.
+The site is live at <https://ai-digitalprojects.github.io/English-hub/> running
+`5706a35`. Everything since then is readability and two rebuilt Getting Started
+activities, finished and tested on the branch, **waiting for review**.
 
 | | |
 |---|---|
@@ -22,8 +23,12 @@ and passed; the project is waiting for the go-ahead to deploy.
 | Print button removed from the student interface | ✅ |
 | Nine hero images integrated | ✅ |
 | One design language across every screen | ✅ |
-| Dictation practice link on all 7 sections with a word list | ✅ |
-| Write Sentences rebuilt around the park picture and a writing table | ✅ |
+| Dictation practice — now one link in the top bar, site-wide | ✅ |
+| Part 1 Write Sentences rebuilt around the park picture and a writing table | ✅ |
+| Hebrew set at the size of the English, site-wide | ✅ |
+| Top bar set at reading size | ✅ |
+| Getting Started Write Sentences rebuilt around four drawn pictures | ✅ |
+| Getting Started Task 7 replaced with Vocabulary Review | ✅ |
 | Full responsive testing — 320, 375, 768, 1120 | ✅ |
 | 140 activities tested, all opened successfully | ✅ |
 | Zero broken links · zero missing images · zero overflow · zero JS errors | ✅ |
@@ -51,7 +56,7 @@ built, corrected, tested and approved on its own before the next one began.
 
 | Section | Cards | Words | Source pages | Commit |
 |---|---|---|---|---|
-| Getting Started | 15 | 22 | WB 4–7 | `55367c4` |
+| Getting Started | 15 | 22 | WB 4–7 | `55367c4` `8a5e4b2` |
 | Part 1 · A Trip to Japan | 16 | 13 | SB 12, 13, 15 · WB 10–13 | `0bd5062` `1ad2430` |
 | Part 2 · Snow Monkeys | 27 | 13 | SB 20, 22–25, 27 · WB 16–21 | `80068f0` |
 | Part 3 · Let's Go | 18 | 14 | SB 28, 29, 30 · WB 24–27 | `9002742` |
@@ -61,7 +66,9 @@ built, corrected, tested and approved on its own before the next one began.
 | | **140** | | | |
 
 A card count is the book's own exercises plus the drills the site builds over
-that part's word list. **Part 1's *Read Better: long a* was removed on request**
+that part's word list. **Getting Started's sort-the-words drill was replaced by
+a Vocabulary Review activity** (`8a5e4b2`), so its count is unchanged at 15; the
+drill still runs on Parts 3 and 5, which is where it earns its place. **Part 1's *Read Better: long a* was removed on request**
 (`1ad2430`): 17 cards became 16. Nothing else referenced it, and the part still
 holds two other sorting exercises, so the site's own sort-the-words drill stays
 suppressed and the drill set is unchanged. Every count on the site is derived
@@ -154,29 +161,26 @@ dictation, added on request (`1ad2430`). The site is a free Hebrew and English
 dictation trainer: it carries ready word lists and takes a typed list of your
 own, which is what makes it usable with this unit's vocabulary.
 
+**It lives in the top bar** (`7944e7e`), between Home and My Progress, so it is
+one item reachable from every screen rather than a panel repeated on seven of
+them. The large card it used to be is gone from Getting Started, from all five
+Parts and from the Unit Check.
+
 ```
-Practice for Dictation          תרגול והכנה להכתבה
-Practice your words before      תרגלו את המילים והתכוננו להכתבה.
-the dictation.
-Start Dictation Practice →      התחילו תרגול הכתבה
+✍️ Dictation Practice    תרגול הכתבה
 ```
 
-**Where it appears.** On every section that has a word list — the five Parts,
-Getting Started and the Unit Check — placed with the word count and the progress
-bar, above the first category block. It is not drawn on Home, on the Unit 1
-overview or on My Progress, where there is nothing to practise.
+**What it is not.** It is an `<a>`, not an activity. Nothing marks it done and it
+touches no total: `partProgress` counts visible activities only.
 
-**What it is not.** It is an `<aside>`, not an activity card. It sits outside the
-numbered sequence because it is a site off this one rather than an exercise from
-the book, nothing marks it done, and it touches no total: `partProgress` counts
-visible activities only.
+**How it behaves.** Opens in a new tab with `rel="noopener noreferrer"`. It is
+the one gold thing in the bar — gold is used nowhere else up there, which is what
+makes it findable. The gold text reads 7.6:1 on the navy and its outline 3.2:1,
+so the outline clears the 3:1 a control's own boundary has to meet.
 
-**How it behaves.** The link opens in a new tab with
-`rel="noopener noreferrer"`. It is the one gold element on a Part screen — the
-same warm card as everything else, an accent rule down its edge, a tinted tile
-for the mark and a gold-outlined button — which is what makes it findable
-without being loud. On a phone the button goes full width and the mark rises to
-sit with the title.
+**On a phone** it moves up beside the brand, where the right-hand half of that
+row was empty, shortens to *Dictation*, and sets its Hebrew under its English
+instead of beside it. The bar grows 20px rather than taking a third row.
 
 ---
 
@@ -201,9 +205,11 @@ The scrim is measured, not guessed. The Part bands carry a long page list, so
 their ellipse reaches further right than the unit's; the unit keeps the tighter
 one it was approved with, which lets more of the picture through.
 
-One further picture is not a hero: `scene-park.webp`, the park that Part 1's
-Write Sentences is about. It sits inside the activity, held to 620px rather than
-cropped, because every name in it has to stay readable.
+Five further pictures are not heroes. `scene-park.webp` is the park that Part
+1's Write Sentences is about; it sits inside the activity, held to 620px rather
+than cropped, because every name in it has to stay readable. The four
+`scene-*.svg` files are the drawn pictures for Getting Started's Write Sentences
+(§8) — flat vector artwork in the site's palette, one per card.
 
 The site icon is `favicon.ico` at the project root alongside
 `assets/favicon.svg`; both are declared in `<head>`.
@@ -229,7 +235,10 @@ ask for**, so one palette reaches every component.
 - **One progress rail**: a sage hairline and a line of text, never a score.
 - Section and category emoji sit in the same soft desaturated tile.
 - Activity titles are set in the serif at 500; the Hebrew stays in the sans.
-- The top bar is thinner, the gold band is now a hairline, buttons read as links.
+- The top bar is thinner, the gold band is now a hairline, buttons read as links —
+  but the type in it is set at reading size, not at chrome size (see §8).
+- The Hebrew half of a bilingual line is set once, on `.biHe`, at the size of the
+  English beside it (see §8).
 
 ---
 
@@ -243,14 +252,14 @@ Bilingual               0 cards without Hebrew    0 activities without a
                                                   two-language instruction
 Console errors          0
 Network                 0 non-200 · 57 files checked directly against the server
-Images                  9 heroes + 1 scene, all 200, all painted
+Images                  9 heroes + 1 scene photo + 4 drawn scenes, all 200
 Horizontal overflow     0 px at 320, 375, 768 and 1120
 Grids                   Home 2→1 · Unit 1 3→2→1 · Parts 2→2→1
 Hero height             214 / 208 / 188, identical on all ten bands
 Hero contrast           worst line 5.0 desktop · 3.8 phone (large text, floor 3.0)
 Card and page text      every measured value above AA
-Dictation panel         7 sections · one href · opens in a new tab · destination
-                        loads · counted on no total
+Dictation              one link in the top bar · opens in a new tab ·
+                        destination loads · counted on no total
 Routing                 breadcrumbs, the Back button, browser back/forward and a
                         reload on a deep link all resolve
 Progress                3 marked done → part, unit card, Home and My Progress all
@@ -289,20 +298,128 @@ a file that genuinely does not exist still returns 404.
 
 ---
 
-## 8. Branch state
+## 8. Readability, and two rebuilt Getting Started activities — 7 October
+
+Five commits sit on the branch above the live site. All five are finished and
+tested; **none has been reviewed, merged or deployed.**
 
 ```
-main             865802c   live site — untouched, equals origin/main
-rebuild          ba95e7d   3 commits never deployed
-english-hub-v2   9b92d2f   ← the last feature commit, plus housekeeping
+0352332  Make the answer buttons readable
+053f503  Set the Hebrew in an instruction to the size of the English
+fa12201  Set the top bar at reading size
+7944e7e  Set the Hebrew at reading size and move dictation into the bar
+8a5e4b2  Rebuild Write Sentences around pictures and replace Task 7
+```
+
+### Answer buttons and instructions (`0352332`, `053f503`)
+
+The matching and multiple-choice buttons were warm white on a warm white card
+and all but vanished. They now sit on a deeper tint of the same family with a
+`#A4906B` border — 3.05:1 against the card, the lightest tone that clears the
+3:1 a control's own boundary has to meet — at 18.9px with more padding and more
+space between rows. Sort the Words was deliberately left alone at the time, and
+has since been replaced outright.
+
+### The top bar (`fa12201`)
+
+The header was the smallest type on the site. The brand went 13.1 → 16.6px, its
+school line 10.6 → 13.4, the buttons 12.2 → 15.2. The band itself grew 1.5px,
+because the leading is tight and the buttons carry their height in padding. At
+320px the three buttons wanted 307px of a 292px row, so below 360px the padding
+gives way rather than the words.
+
+### Hebrew, set once (`7944e7e`)
+
+The Hebrew half of a bilingual line was at 94% of the English. Hebrew carries no
+ascenders or descenders, so it read smaller still. It is now set to parity on
+`.biHe` — one rule — with more leading and one step of weight, which moves
+instructions, category headings and leads, origin badges, progress labels,
+buttons, table headings and card titles together. What keeps it secondary is the
+muted ink, not the size. A few English labels set at 11 or 12px came up with it,
+because a label that small leaves its Hebrew nowhere to go.
+
+One trap worth recording: the origin badge needed `opacity:1` written out rather
+than merely omitted. The components layer fades that Hebrew to 0.75, which left
+the second half of the badge at 3.15 against its own tint.
+
+```
+lowest-contrast Hebrew anywhere on the site   4.67
+smallest Hebrew anywhere on the site          13.1px at 5.19
+```
+
+### Getting Started · Write Sentences (`8a5e4b2`)
+
+Workbook p.6.4 asked for a sentence about each picture and then printed a
+paragraph describing the picture instead of showing one. The four pictures are
+now drawn: flat SVG illustrations built from the descriptions the activity
+already carried, in the site's own palette, in `assets/img/`.
+
+```
+scene-classroom.svg   the teacher at the board, which says New Words
+scene-desk.svg        a boy writing in his notebook, an open book beside him
+scene-games.svg       three children on the floor with board games, one with a card
+scene-sleeping.svg    a boy asleep, a cat on a mat below the bed
+```
+
+Each is a card — picture, three words to use, one box — two up on a desktop and
+one up on a phone, so a picture never parts company with its box. The
+descriptions survive as the images' `alt` text, which is where a description
+belongs. A new `scene-cards` renderer draws them and stores into the same
+`A.answers` array the writing renderer uses, so each card saves on its own
+through the existing draft machinery and nothing is auto-marked. Still ★★★,
+still `Workbook p.6.4`.
+
+### Getting Started · Task 7 (`8a5e4b2`)
+
+Task 7 was *Sort the Words*, a derived drill that asked students to sort the list
+back into Word Power 1 and Word Power 2 — the two halves of one list, which is a
+fact about the book's layout rather than anything about English.
+
+A part can now name a drill it does not want (`skipDrills` in the section file,
+honoured in `derivedActivities`), and Getting Started names that one. No other
+part's drill set changes.
+
+In its place, **Vocabulary Review** / *חזרה על אוצר המילים*: ten sentences with
+three choices each, built only from the 22 verified Getting Started words —
+answers and distractors alike. It is an ordinary `mc` activity of the content
+model, so retry, the answer staying hidden after a first mistake, and the praise
+after a correct one are the behaviour every other question already has. The
+correct option sits at position 1, 2 and 3 in turn, so it cannot be guessed from
+where it is.
+
+### Tested
+
+```
+Getting Started      15 cards — unchanged (Task 7 replaced, not added to)
+Site total           140 activities — unchanged
+1000px               140 / 140 open · 0 overflow · 0 console errors
+375px                140 / 140 open · 0 overflow
+320px                header on two rows, nothing clipped
+Draft saving         two cards typed, left the activity, returned, both restored;
+                     a third typed without disturbing them; nothing marked done
+Vocabulary Review    wrong answer → Try again, wrong choice marked, correct one
+                     NOT revealed, retry allowed; correct → Great job!;
+                     all ten questions run to the finish block
+Dictation link       destination loads in a new tab
+```
+
+---
+
+## 9. Branch state
+
+```
+main             5706a35   the live site · equals origin/main · untouched today
+english-hub-v2   8a5e4b2   5 commits ahead of main, none reviewed or deployed
+rebuild          ba95e7d   0 commits that are not already in main
 tag              v1-single-file
 ```
 
 **Do not deploy. Do not merge to `main`. Do not create a PR. Do not delete
-`rebuild`.**
+`rebuild` or `english-hub-v2`. Do not rewrite history. Do not force push.**
 
-The live site still runs `865802c`, which shows `SB` / `WB` labels and 47 locked
-cards. The three `rebuild` commits remain undeployed — still an open decision.
+The live site at <https://ai-digitalprojects.github.io/English-hub/> serves
+`5706a35`. Every commit `rebuild` holds is already reachable from `main`, so
+nothing on it is at risk.
 
 ### Not being built
 Identity, login, student name or class, teacher tracking, Google Sheets,
@@ -310,19 +427,49 @@ Apps Script.
 
 ---
 
-## 9. Open items
+## 10. Where we stopped, and what comes next
 
-- **Awaiting the go-ahead to deploy.** The design pass is approved and the full
-  pre-deployment check has passed; nothing is merged or deployed.
+### Unfinished
+
+Nothing is half-built. The working tree is clean and every change is committed.
+What is outstanding is **review**, not work:
+
+- **The five commits on `english-hub-v2` have not been reviewed.** They are the
+  answer-button readability pass, the two Hebrew sizing passes, the top bar, and
+  the two rebuilt Getting Started activities.
+
+### The exact next step when we resume
+
+> **Review the two rebuilt Getting Started activities on the local preview:**
+> `http://localhost:8123/#/getting-started/write-sentences` and
+> `http://localhost:8123/#/getting-started/vocabulary-review`.
+> Then say whether to keep them, change them, or revert `8a5e4b2`.
+
+A note on sequencing, so the record is straight: the request to stop named these
+two rebuilds as the next work. They had already been built and committed as
+`8a5e4b2` by the time that request arrived. Nothing further was started. If they
+are not wanted in this form, `8a5e4b2` is a single commit and can be reverted on
+its own without touching the four below it.
+
+Two questions are worth deciding at the same time:
+
+- **The four illustrations are drawn, not photographed.** They are faithful to
+  the descriptions the activity already stored, but they are the site's own
+  artwork rather than the workbook's pictures. Confirm that is acceptable.
+- **`.stChip` went from 13.8px to 15.2px**, which also enlarges the word chips in
+  Part 1's Write Sentences table. It was the last thing left at the old size. Say
+  if Part 1 should keep the smaller chip.
+
+### Still open from before
+
+- **Awaiting the go-ahead to merge and deploy** anything above `5706a35`.
 - **Provenance flags on Parts 1 and 2.** Their 26 words still carry
   `heSource: "site"` from before the PDF audits, and `saw` (Part 2) is still
   flagged `needsReview`, although both parts were validated against the source.
-  This is bookkeeping in the data, not something a student sees; the flags were
-  left alone rather than changed during a visual-only pass.
+  This is bookkeeping in the data, not something a student sees.
 - **Getting Started glosses.** Its 22 words carry the book's Hebrew
   (`heSource: book`) with `glossSource: "added-for-teaching"` — the definitions
   and examples were written for the site, as WB 4–7 prints none.
-- **The three `rebuild` commits** and what the live site should eventually run.
 
 ---
 
